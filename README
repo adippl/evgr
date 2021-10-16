@@ -1,0 +1,7 @@
+This is my custom gentoo repo.
+
+All ebuilds have standard gentoo ebuild licence headers becuse repoman 
+checks for them, and I don't care about license headers as long as it's GPL.  
+
+Some of the ebulds are my edits of some ebuilds I've found online. 
+Message me if me uploading your ebuild here a big deal for you.

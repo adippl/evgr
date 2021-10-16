@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gentoo.maintainer@acmelab.top</email>
+		<name>adip</name>
+	</maintainer>
+	<use>
+		<flag name="tlp-suggests">install packges suggested by tlp (smartmontools ethtool lsb-release linux-misc-apps</flag>
+		<flag name="tpacpi-bundled">install with tpacpi-bundled</flag>
+		<flag name="rdw">enable support for rdw (Radio Device Wizard)</flag>
+		<flag name="bluetooth">Enable bluetooth support</flag>
+	</use>
+</pkgmetadata>
