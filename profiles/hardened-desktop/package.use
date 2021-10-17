@@ -25,6 +25,8 @@ app-crypt/pinentry				gtk
 app-crypt/gcr					gtk
 media-libs/freetype				harfbuzz
 x11-terms/rxvt-unicode			perl
+x11-themes/gtk-engines-murrine	-themes
+media-libs/mesa					d3d9
 
 
 #desktop-gtk
@@ -41,7 +43,7 @@ media-sound/pulseaudio gtk
 app-emulation/wine-vanilla		-ldap -udisks -realtime 
 media-tv/v4l-utils				-bpf
 app-text/mupdf					-opengl -javascript
-app-office/abiword				spell -goffice -readline -introspection
+app-office/abiword				spell latex math -goffice -readline -introspection
 app-crypt/pinentry				gtk
 #app-crypt/gcr					 gtk
 dev-libs/libpcre2				pcre32
@@ -63,12 +65,17 @@ net-print/hplip					hpijs minimal -X -snmp
 #libreoffice
 dev-libs/xmlsec					nss
 app-office/libreoffice			-gtk
+sci-mathematics/octave			gnuplot
+app-text/poppler				cairo
 
 
 #gms
 media-libs/sdl2-mixer smpeg mad
 games-simulation/openttd -timidity -fluidsynth
 #games-roguelike/cataclysm-dda::raiagent xdg sdl sound -nls
+games-roguelike/cataclysm-dda xdg sdl sound -nls
+games-fps/gzdoom -non-free
+
 
 #trash
 dev-ruby/bundler	-doc

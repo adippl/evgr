@@ -6,6 +6,7 @@ app-misc/resolve-march-native
 app-portage/cpuid2cpuflags
 app-portage/eix
 app-portage/portage-utils
+app-shells/bash-completion
 net-firewall/nftables
 net-fs/nfs-utils
 net-misc/dhcpcd
@@ -13,6 +14,7 @@ net-misc/ntp
 net-vpn/wireguard-tools
 sys-apps/ed
 sys-apps/firejail
+sys-apps/kexec-tools
 sys-apps/lm-sensors
 sys-apps/nvme-cli
 sys-apps/pciutils
@@ -28,4 +30,3 @@ sys-process/htop
 virtual/cron
 virtual/logger
 virtual/mta
-sys-apps/kexec-tools
