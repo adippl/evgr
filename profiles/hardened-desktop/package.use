@@ -7,7 +7,7 @@ app-crypt/pinentry				-gnome-keyring
 dev-libs/libjcat				gpg pkcs7
 net-analyzer/wireshark			qt5
 #for M$ Teams
-www-client/chromium				hangouts proprietary-codecs
+www-client/chromium				hangouts proprietary-codecs -js-type-check -suid 
 media-video/ffmpeg				bluray libcaca openh264 openal jpeg2k v4l
 x11-drivers/xf86-video-intel	dri
 x11-base/xorg-server			xephyr kdrive
