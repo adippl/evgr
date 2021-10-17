@@ -1,0 +1,39 @@
+app-emulation/libvirt		rbd iscsi iscsi-direct
+app-emulation/qemu			rbd iscsi
+
+sys-block/open-iscsi		rdma
+sys-fs/multipath-tools		rbd
+
+media-video/ffmpeg			bluray libcaca openh264 opus twolame x264 x265 wavpack vorbis openal jpeg2k mp3 webp nvidia -opengl -opencl -svg
+
+sys-apps/fwupd				minimal
+dev-libs/libjcat			pkcs7 gpg
+
+#mail server
+dev-libs/openssl        -bindist
+mail-filter/opendkim    -sasl
+mail-mta/postfix        sasl dovecot-sasl berkdb
+net-mail/dovecot        sieve managesieve
+net-mail/mailutils      -ipv6 -pam -ssl -sasl
+
+dev-lang/php pdo gd mysql curl intl zip truetype xmlwriter xmlreader apache2 
+media-gfx/imagemagick -openmp
+www-apps/nextcloud mysql
+
+sci-libs/tensorflow -cuda -python
+
+#fdupes
+dev-libs/libpcre2 pcre32
+
+net-fs/samba -ldap -system-mitkrb5 -regedit quota
+net-dns/avahi -dbus -introspection
+net-dns/getdns  stubby -unbound 
+#sys-libs/zlib static-libs
+app-emulation/containerd btrfs
+app-emulation/docker btrfs
+sys-fs/lvm2 -thin
+
+dev-db/mysql-connector-c -ldap
+net-analyzer/suricata logrotate
+
+

@@ -1,0 +1,7 @@
+dev-python/parallax ~amd64
+
+net-analyzer/ntopng ~amd64
+	net-libs/nDPI ~amd64
+net-analyzer/suricata ~amd64
+	net-libs/libhtp ~amd64
+

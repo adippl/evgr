@@ -1,4 +1,4 @@
-# Copyright 2011-2020 Gentoo Authors
+# Copyright 2011-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -13,8 +13,12 @@ EGIT_REPO_URI="https://github.com/OpenXRay/xray-16.git"
 EGIT_BRANCH="dev"
 SRC_URI=""
 
+if [[ ${PVR} != "9999" ]] ; then
+	EGIT_COMMIT="v${PVR}"
+	KEYWORDS="~amd64"
+fi
+
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE="clang debug"
 RESTRICT=""
 # contains all the shared libraries required by game executable
@@ -27,6 +31,9 @@ DEPEND="
 		clang? (
 				sys-devel/clang:=
 		)
+		debug? (
+			media-libs/libglvnd
+			)
 		app-crypt/libmd
 		dev-libs/libbsd
 		dev-libs/libpcre
@@ -47,8 +54,6 @@ DEPEND="
 		net-libs/libasyncns
 		net-libs/liblockfile
 		sys-apps/dbus
-		sys-apps/util-linux
-		sys-libs/glibc
 		sys-libs/zlib
 		x11-libs/libICE
 		x11-libs/libSM
@@ -63,11 +68,9 @@ DEPEND="
 		x11-libs/libXtst
 		x11-libs/libXxf86vm
 		x11-libs/libxcb
-		debug? (
-			media-libs/libglvnd
-			)
-
 "
+# ^^^ DEPEND contains all the libraries I've found via ldd
+
 #RDEPEND=${DEPEND}
 # 	
 #	dev-libs/libpcre2

@@ -1,0 +1,53 @@
+#system
+#sys-apps/openrc					sysv-utils
+sys-apps/util-linux				-suid udev tty-helpers
+sys-firmware/intel-microcode	initramfs
+sys-kernel/gentoo-sources		symlink
+sys-fs/lvm2						-thin
+sys-apps/fwupd				minimal nvme uefi -systemd -introspection -elogind
+net-mail/mailutils				-ipv6 -pam -ssl -sasl
+net-fs/nfs-utils				nfsv41
+net-misc/spice-gtk				usbredir
+net-fs/nfs-utils				nfsv41
+net-vpn/wireguard-tools			-wg-quick
+sys-process/procps				-elogind -nls
+net-nds/openldap				minimal
+sys-apps/util-linux				udev
+net-misc/openssh				-bindist
+dev-libs/openssl				-bindist
+
+#libvirt
+app-emulation/libvirt			vepa virt-network lvm nfs
+app-emulation/qemu				usb usbredir virgl virtfs nfs spice
+sys-boot/grub					device-mapper
+net-dns/dnsmasq					script
+net-misc/spice-gtk				usbredir
+dev-vcs/git						-pcre -perl
+sys-kernel/gentoo-kernel-bin	-initramfs
+sys-devel/gcc					lto go fortran
+app-emulation/containerd		btrfs -device-mapper -overlay
+app-emulation/docker			btrfs -device-mapper -overlay
+app-emulation/libguestfs		-ocaml 
+app-emulation/podman			-fuse btrfs 
+sys-block/fio			aio 
+
+
+#cli
+net-misc/curl adns -threads
+net-dns/c-ares abi_x86_32
+mail-client/mutt mbox berkdb -lmdb
+
+#server
+sys-cluster/ceph		fuse
+
+
+#dev
+app-misc/jq			-oniguruma
+dev-python/numpy	lapack
+net-libs/nodejs		-snapshot -npm inspector
+dev-lang/mono		minimal
+dev-lang/rust-bin	abi_x86_32
+
+
+
+

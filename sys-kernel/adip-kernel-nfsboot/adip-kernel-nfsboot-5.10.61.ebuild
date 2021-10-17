@@ -1,14 +1,15 @@
-# Copyright 2011-2020 Gentoo Authors
+# Copyright 2011-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 DESCRIPTION="precomiled linux kernel configured for servers running with root on NFS"
 HOMEPAGE="https://github.com/adippl/gentoo-kernel-config"
-SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-5.10.61-gentoo-nfsboot.tar.xz"
+SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PVR}-gentoo-nfsboot.tar.xz"
 
 LICENSE="GPL-2"
-SLOT="5.10.61"
+#SLOT="${PVR}"
+SLOT="0"
 KEYWORDS="amd64"
 IUSE="nfsboot-client nfsboot-server"
 

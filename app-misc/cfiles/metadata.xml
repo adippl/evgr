@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gentoo.maintainer@acmelab.top</email>
+		<name>adip</name>
+	</maintainer>
+	<use>
+		<flag name="fzf">enable fzf search</flag>
+		<flag name="img-view">image preview with w3m</flag>
+		<flag name="mediainfo">enable multimedia file info with mediainfo</flag>
+		<flag name="atool">archive contents preview</flag>
+		<flag name="pdf">enable pdf file preview via poppler (pdftpppm)</flag>
+	</use>
+</pkgmetadata>

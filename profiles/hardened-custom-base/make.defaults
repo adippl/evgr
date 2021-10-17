@@ -1,0 +1,10 @@
+USE="${USE} "
+
+#misc
+USE="${USE} icu vim-syntax curl zstd lzma threads -bindist"
+
+#security
+USE="${USE} -ldap -smartcard -upnp ssh openssl"
+
+#bloat
+USE="${USE} -systemd -vala -pcre -perl"

@@ -1,18 +1,25 @@
-# Copyright 2011-2020 Gentoo Authors
+# Copyright 2011-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 DESCRIPTION="installer for precomiled linux kernel configured for laptops"
 HOMEPAGE="https://github.com/adippl/gentoo-kernel-config"
-SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-5.10.61-gentoo-x270.tar.xz"
+SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PVR}-gentoo-x270.tar.xz"
 
 LICENSE="GPL-2"
-SLOT="5.10.61"
+SLOT="${PVR}"
 KEYWORDS="amd64"
 IUSE="grub-update uefi uefi-test"
 
+REQUIRED_USE="
+	^^ ( uefi uefi-test )
+	"
+
 DEPEND="
+	grub-update? ( sys-boot/grub )
+	uefi? ( sys-boot/efibootmgr )
+	uefi-test? ( sys-boot/efibootmgr )
 	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
