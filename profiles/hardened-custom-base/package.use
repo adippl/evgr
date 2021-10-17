@@ -33,7 +33,7 @@ sys-block/fio			aio
 
 
 #cli
-net-misc/curl adns -threads
+net-misc/curl adns -threads -ssh
 net-dns/c-ares abi_x86_32
 mail-client/mutt mbox berkdb -lmdb
 

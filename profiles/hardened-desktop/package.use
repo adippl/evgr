@@ -101,6 +101,8 @@ media-libs/harfbuzz				abi_x86_32
 ###MISC
 media-libs/libglvnd abi_x86_32
 dev-util/wayland-scanner abi_x86_32
+net-libs/nghttp2 abi_x86_32
+
 
 ### pulseaudio
 x11-libs/libXau abi_x86_32
@@ -116,6 +118,10 @@ dev-libs/fribidi abi_x86_32
 x11-libs/libXft abi_x86_32
 sys-libs/binutils-libs abi_x86_32
 x11-libs/pixman abi_x86_32
+
+#FFMPEG
+media-libs/libvpx abi_x86_32
+
 
 ### STEAM
 app-arch/bzip2 abi_x86_32
