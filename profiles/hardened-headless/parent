@@ -1,1 +1,2 @@
 evgr:hardened-custom-base
+gentoo:default/linux/amd64/17.1/no-multilib/hardened
