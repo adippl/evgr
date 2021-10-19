@@ -1,5 +1,5 @@
 #system
-sys-apps/openrc					-sysv-utils
+sys-apps/openrc					sysv-utils
 sys-apps/util-linux				-suid udev tty-helpers
 sys-firmware/intel-microcode	initramfs
 sys-kernel/gentoo-sources		symlink
