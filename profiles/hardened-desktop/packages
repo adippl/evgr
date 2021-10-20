@@ -3,4 +3,5 @@
 *net-vpn/wireguard-tools
 *net-wireless/wpa_supplicant
 *sys-apps/firejail
+*sys-kernel/genkernel
 *sys-power/powertop

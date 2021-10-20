@@ -6,3 +6,6 @@ localPushCopy:
 
 find:
 	find -name '*ebuild'
+
+p:
+	git push github master
