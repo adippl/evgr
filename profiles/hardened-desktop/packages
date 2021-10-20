@@ -1,2 +1,2 @@
-net-wireless/wpa_supplicant
-sys-power/powertop
+*net-wireless/wpa_supplicant
+*sys-power/powertop

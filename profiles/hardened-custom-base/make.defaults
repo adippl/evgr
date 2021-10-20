@@ -8,3 +8,8 @@ USE="${USE} -ldap -smartcard -upnp openssl"
 
 #bloat
 USE="${USE} -systemd -vala -pcre -perl"
+
+GRUB_PLATFORMS="efi-64"
+QEMU_USER_TARGETS="i386 x86_64 arm aarch64"
+QEMU_SOFTMMU_TARGETS="i386 x86_64 arm aarch64"
+LLVM_TARGETS="x86"

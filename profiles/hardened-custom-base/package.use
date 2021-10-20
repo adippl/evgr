@@ -4,7 +4,7 @@ sys-apps/util-linux				-suid udev tty-helpers
 sys-firmware/intel-microcode	initramfs
 sys-kernel/gentoo-sources		symlink
 sys-fs/lvm2						-thin
-sys-apps/fwupd				minimal nvme uefi -systemd -introspection -elogind
+sys-apps/fwupd					minimal nvme uefi -systemd -introspection -elogind
 net-mail/mailutils				-ipv6 -pam -ssl -sasl
 net-fs/nfs-utils				nfsv41
 net-misc/spice-gtk				usbredir
