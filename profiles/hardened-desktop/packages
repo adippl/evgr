@@ -1,2 +1,6 @@
+*net-misc/dhcpcd
+*net-misc/ntp
+*net-vpn/wireguard-tools
 *net-wireless/wpa_supplicant
+*sys-apps/firejail
 *sys-power/powertop

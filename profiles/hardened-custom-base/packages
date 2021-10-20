@@ -9,12 +9,8 @@
 *app-portage/portage-utils
 *app-shells/bash-completion
 *net-firewall/nftables
-*net-misc/dhcpcd
-*net-misc/ntp
-*net-vpn/wireguard-tools
 *sys-apps/busybox
 *sys-apps/ed
-*sys-apps/firejail
 *sys-apps/kexec-tools
 *sys-apps/lm-sensors
 *sys-apps/nvme-cli
