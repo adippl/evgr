@@ -6,6 +6,11 @@ EAPI=7
 DESCRIPTION="lpmd small power management daemon for linux laptops"
 HOMEPAGE="https://github.com/adippl/lpmd"
 
+if [[ ${PVR} != "9999" ]] ; then
+	EGIT_COMMIT="${PVR}"
+	KEYWORDS="amd64"
+fi
+
 inherit git-r3
 EGIT_REPO_URI="https://github.com/adippl/lpmd"
 

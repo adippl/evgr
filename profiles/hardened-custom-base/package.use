@@ -31,11 +31,11 @@ app-emulation/containerd		btrfs -device-mapper -overlay
 app-emulation/docker			btrfs -device-mapper -overlay
 app-emulation/libguestfs		-ocaml 
 app-emulation/podman			-fuse btrfs 
-sys-block/fio			aio 
+sys-block/fio			aio curl
 
 
 #cli
-net-misc/curl adns -threads -ssh
+net-misc/curl adns -threads -ssh -http2 -nghttp3
 net-dns/c-ares abi_x86_32
 mail-client/mutt mbox berkdb -lmdb
 

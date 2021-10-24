@@ -33,7 +33,7 @@ sys-devel/distcc gtk
 net-analyzer/ettercap gtk
 app-emulation/winetricks gtk
 app-emulation/virt-manager gtk
-app-emulation/qemu gtk
+app-emulation/qemu gtk 
 media-sound/pulseaudio gtk
 
 
@@ -66,7 +66,7 @@ dev-libs/xmlsec					nss
 app-office/libreoffice			-gtk
 sci-mathematics/octave			gnuplot
 app-text/poppler				cairo
-app-emulation/qemu				virgl
+app-emulation/qemu				virgl ssh
 sys-apps/hwloc					cairo
 
 #gms
