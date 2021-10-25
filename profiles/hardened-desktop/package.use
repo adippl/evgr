@@ -65,9 +65,9 @@ net-print/hplip					hpijs minimal -X -snmp
 dev-libs/xmlsec					nss
 app-office/libreoffice			-gtk
 sci-mathematics/octave			gnuplot
-app-text/poppler				cairo
 app-emulation/qemu				virgl ssh
-sys-apps/hwloc					cairo
+#app-text/poppler				cairo
+#sys-apps/hwloc					cairo
 
 #gms
 media-libs/sdl2-mixer smpeg mad
