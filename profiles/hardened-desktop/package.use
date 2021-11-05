@@ -111,6 +111,7 @@ media-libs/harfbuzz				abi_x86_32
 media-libs/libglvnd abi_x86_32
 dev-util/wayland-scanner abi_x86_32
 net-libs/nghttp2 abi_x86_32
+sys-libs/libxcrypt		abi_x86_32
 
 
 ### pulseaudio
