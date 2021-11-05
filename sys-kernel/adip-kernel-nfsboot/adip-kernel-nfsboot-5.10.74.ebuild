@@ -32,13 +32,13 @@ src_install() {
 	if use nfsboot-client ; then
 		dodir /var/lib/libvirt/images/
 		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}/boot/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}/boot/initramfs-gentoo${mPR}-nfsboot.img"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}/boot/initramfs-gentoo-nfsboot.img"
 		rm -rf "${D}/boot" "${D}/lib"
 	fi
 	if use nfsboot-server ; then
 		dodir "/var/tftp"
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}/var/tftp/vmlinuz-gentoo${mPR}-nfsboot"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}/var/tftp/initramfs-gentoo${mPR}-nfsboot.img"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}/var/tftp/vmlinuz-gentoo-nfsboot"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}/var/tftp/initramfs-gentoo-nfsboot.img"
 		rm -rf "${D}/boot" "${D}/lib"
 	fi
 }
