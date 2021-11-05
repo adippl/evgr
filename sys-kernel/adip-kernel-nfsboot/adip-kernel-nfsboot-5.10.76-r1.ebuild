@@ -7,7 +7,7 @@ DESCRIPTION="precomiled linux kernel configured for servers running with root on
 HOMEPAGE="https://github.com/adippl/gentoo-kernel-config"
 [ "${PR}" != "" ] && mPR="-${PR}"
 [ "${PR}" = "r0" ] && mPR=""
-SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PV}-gentoo${mPR}-srv.tar.xz"
+SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PV}-gentoo${mPR}-nfsboot.tar.xz"
 
 LICENSE="GPL-2"
 #SLOT="${PV}"
@@ -26,19 +26,19 @@ src_install() {
 	cp -r "${S}/boot/" "${D}/boot/"
 	dodir /lib/
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
-	unlink "${D}/lib/modules/${PV}-gentoo${mPR}x270/build"
-	unlink "${D}/lib/modules/${PV}-gentoo${mPR}x270/source"
+	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-nfsboot/build"
+	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-nfsboot/source"
 
 	if use nfsboot-client ; then
 		dodir /var/lib/libvirt/images/
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}nfsboot" "${D}/boot/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}nfsboot.img" "${D}/boot/initramfs-gentoo${mPR}nfsboot.img"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}/boot/vmlinuz"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}/boot/initramfs-gentoo${mPR}-nfsboot.img"
 		rm -rf "${D}/boot" "${D}/lib"
 	fi
 	if use nfsboot-server ; then
 		dodir "/var/tftp"
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}nfsboot" "${D}/var/tftp/vmlinuz-gentoo${mPR}nfsboot"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}nfsboot.img" "${D}/var/tftp/initramfs-gentoo${mPR}nfsboot.img"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}/var/tftp/vmlinuz-gentoo${mPR}-nfsboot"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}/var/tftp/initramfs-gentoo${mPR}-nfsboot.img"
 		rm -rf "${D}/boot" "${D}/lib"
 	fi
 }
