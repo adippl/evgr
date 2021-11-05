@@ -3,17 +3,19 @@
 
 EAPI=7
 
-DESCRIPTION="precomiled linux kernel configured for servers running with root on NFS"
+DESCRIPTION="installer for precompiled linux kernel configured for KVM virtual machines"
 HOMEPAGE="https://github.com/adippl/gentoo-kernel-config"
-SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PVR}-gentoo-nfsboot.tar.xz"
+
+[ "${PR}" != "" ] && PR="-${PR}" || PR=""
+SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PV}-gentoo${PR}-srv.tar.xz"
 
 LICENSE="GPL-2"
-#SLOT="${PVR}"
-SLOT="0"
+SLOT="${PVR}"
 KEYWORDS="amd64"
-IUSE="nfsboot-client nfsboot-server"
+IUSE="+grub-update"
 
 DEPEND="
+	grub-update? ( sys-boot/grub )
 	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
@@ -24,21 +26,8 @@ src_install() {
 	cp -r "${S}/boot/" "${D}/boot/"
 	dodir /lib/
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
-	unlink "${D}/lib/modules/${PVR}-gentoo-x270/build"
-	unlink "${D}/lib/modules/${PVR}-gentoo-x270/source"
-
-	if use nfsboot-client ; then
-		dodir /var/lib/libvirt/images/
-		cp "${S}/boot/vmlinuz-x86_64-${PVR}-gentoo-nfsboot" "${D}/boot/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PVR}-gentoo-nfsboot.img" "${D}/boot/initramfs-gentoo-nfsboot.img"
-		rm -rf "${D}/boot" "${D}/lib"
-	fi
-	if user nfsboot-server ; then
-		dodir "/var/tftp"
-		cp "${S}/boot/vmlinuz-x86_64-${PVR}-gentoo-nfsboot" "${D}/var/tftp/vmlinuz-gentoo-nfsboot"
-		cp "${S}/boot/initramfs-x86_64-${PVR}-gentoo-nfsboot.img" "${D}/var/tftp/initramfs-gentoo-nfsboot.img"
-		rm -rf "${D}/boot" "${D}/lib"
-	fi
+	unlink "${D}/lib/modules/${PV}-gentoo${PR}-x270/build"
+	unlink "${D}/lib/modules/${PV}-gentoo${PR}-x270/source"
 }
 
 #pkg_preinst(){
@@ -57,12 +46,12 @@ pkg_postinst(){
 
 pkg_prerm(){
 	mount /boot || ewarn "couldn't umount /boot"
-	if use uefi || use uefi-test ;then
+	if test -d /boot/efi ;then
 		mount /boot/efi || ewarn "couldn't umount /boot/efi"
 	fi
 }
 pkg_postrm(){
-	if use uefi || use uefi-test ;then
+	if test -d /boot/efi ;then
 		umount /boot/efi || ewarn "couldn't unmount /boot/efi"
 	fi
 	if use grub-update ;then

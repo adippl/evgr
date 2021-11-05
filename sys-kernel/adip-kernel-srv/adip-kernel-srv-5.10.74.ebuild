@@ -3,23 +3,19 @@
 
 EAPI=7
 
-DESCRIPTION="installer for precomiled linux kernel configured for laptops"
+DESCRIPTION="installer for precompiled linux kernel configured for KVM virtual machines"
 HOMEPAGE="https://github.com/adippl/gentoo-kernel-config"
-SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PVR}-gentoo-x270.tar.xz"
+[ "${PR}" != "" ] && mPR="-${PR}"
+[ "${PR}" = "r0" ] && mPR=""
+SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PV}-gentoo${mPR}-srv.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="${PVR}"
 KEYWORDS="amd64"
-IUSE="grub-update uefi uefi-test"
-
-REQUIRED_USE="
-	^^ ( uefi uefi-test )
-	"
+IUSE="+grub-update"
 
 DEPEND="
 	grub-update? ( sys-boot/grub )
-	uefi? ( sys-boot/efibootmgr )
-	uefi-test? ( sys-boot/efibootmgr )
 	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
@@ -32,32 +28,11 @@ src_install() {
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
 	unlink "${D}/lib/modules/${PVR}-gentoo-x270/build"
 	unlink "${D}/lib/modules/${PVR}-gentoo-x270/source"
-
-	dodir /boot/efi
-	if use uefi ; then
-#		dodir /boot/efi
-		cp "${S}/boot/vmlinuz-x86_64-${PVR}-gentoo-x270" "${D}/boot/efi/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PVR}-gentoo-x270.img" "${D}/boot/efi/initrd"
-	fi
-	if use uefi-test ; then
-#		dodir /boot/efi
-		cp "${S}/boot/vmlinuz-x86_64-${PVR}-gentoo-x270" "${D}/boot/efi/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PVR}-gentoo-x270.img" "${D}/boot/efi/initrd"
-	fi
 }
 
-pkg_preinst(){
-#	mount /boot ||ewarn "couldn't mount boot"
-#	[ "$?" == "32" ] && /boot already mounted
-	mount /boot || ewarn "couldn't umount /boot"
-	if use uefi ;then
-		mount /boot/efi
-		elog "backing up current kernel and initramfs on efi partition"
-		cp /boot/efi/vmlinuz /boot/efi/vmlinuz.old
-		cp /boot/efi/initrd /boot/efi/initrd.old
-
-	fi
-	}
+#pkg_preinst(){
+#	mount /boot
+#	}
 pkg_postinst(){
 	if use grub-update ;then
 		mount /boot ||ewarn "couldn't mount boot"
@@ -65,6 +40,8 @@ pkg_postinst(){
 		grub-mkconfig -o /boot/grub/grub.cfg
 		umount /boot
 	fi
+
+	umount /boot
 	}
 
 pkg_prerm(){
