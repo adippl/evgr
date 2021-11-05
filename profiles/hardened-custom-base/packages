@@ -8,6 +8,7 @@
 *app-portage/eix
 *app-portage/portage-utils
 *app-shells/bash-completion
+*dev-vcs/git
 *net-firewall/nftables
 *sys-apps/busybox
 *sys-apps/ed
