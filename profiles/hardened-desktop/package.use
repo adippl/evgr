@@ -97,6 +97,8 @@ sys-libs/pam					abi_x86_32
 x11-libs/libva-intel-driver		abi_x86_32
 x11-libs/libva					abi_x86_32
 app-arch/zstd					abi_x86_32
+media-libs/speexdsp				abi_x86_32
+
 
 media-libs/dav1d				abi_x86_32
 virtual/libcrypt				abi_x86_32

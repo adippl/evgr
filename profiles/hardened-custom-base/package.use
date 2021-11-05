@@ -40,6 +40,8 @@ net-dns/c-ares abi_x86_32
 mail-client/mutt mbox berkdb -lmdb
 
 
+net-p2p/transmission	cli
+
 #server
 sys-cluster/ceph		fuse
 
