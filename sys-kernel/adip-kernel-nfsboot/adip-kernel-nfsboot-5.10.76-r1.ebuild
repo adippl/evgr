@@ -31,9 +31,7 @@ src_install() {
 
 	if use nfsboot-client ; then
 		dodir /var/lib/libvirt/images/
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}/boot/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}/boot/initramfs-gentoo-nfsboot.img"
-		rm -rf "${D}/boot" "${D}/lib"
+		rm -rf "${D}/boot"
 	fi
 	if use nfsboot-server ; then
 		dodir "/var/tftp"
