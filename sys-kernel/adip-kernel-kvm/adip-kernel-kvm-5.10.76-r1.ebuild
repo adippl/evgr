@@ -6,8 +6,9 @@ EAPI=7
 DESCRIPTION="installer for precompiled linux kernel configured for KVM virtual machines"
 HOMEPAGE="https://github.com/adippl/gentoo-kernel-config"
 
-[ "${PR}" != "" ] && PR="-${PR}"
-SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PV}-gentoo${PR}-kvm.tar.xz"
+[ "${PR}" != "" ] && mPR="-${PR}"
+[ "${PR}" = "r0" ] && mPR=""
+SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PV}-gentoo${mPR}-kvm.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="${PVR}"
@@ -28,25 +29,25 @@ src_install() {
 	cp -r "${S}/boot/" "${D}/boot/"
 	dodir /lib/
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
-	unlink "${D}/lib/modules/${PV}-gentoo${PR}-x270/build"
-	unlink "${D}/lib/modules/${PV}-gentoo${PR}-x270/source"
+	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/build"
+	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/source"
 
 	if use libvirt-local ; then
 		dodir /var/lib/libvirt/images/
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${PR}-kvm" "${D}/var/lib/libvirt/images/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${PR}-kvm.img" "${D}/var/lib/libvirt/images/initramfs"
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${PR}-kvm" "${D}/var/lib/libvirt/images/vmlinuz-kvm"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${PR}-kvm.img" "${D}/var/lib/libvirt/images/initramfs-kvm"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-kvm" "${D}/var/lib/libvirt/images/vmlinuz"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-kvm.img" "${D}/var/lib/libvirt/images/initramfs"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-kvm" "${D}/var/lib/libvirt/images/vmlinuz-kvm"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-kvm.img" "${D}/var/lib/libvirt/images/initramfs-kvm"
 		rm -rf "${D}/boot" "${D}/lib"
 	fi
 	if use libvirt-ceph ; then
 		local LC_PATH="/var/lib/libvirt/images/cephfs-libvirt/kernel/"
 		dodir "${LC_PATH}"
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${PR}-kvm" "${D}${LC_PATH}/gk-lx"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${PR}-kvm.img" "${D}${LC_PATH}/gk-ifs"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-kvm" "${D}${LC_PATH}/gk-lx"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-kvm.img" "${D}${LC_PATH}/gk-ifs"
 
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${PR}-kvm" "${D}${LC_PATH}/vmlinuz-kvm"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${PR}-kvm.img" "${D}${LC_PATH}/initramfs-kvm"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-kvm" "${D}${LC_PATH}/vmlinuz-kvm"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-kvm.img" "${D}${LC_PATH}/initramfs-kvm"
 		rm -rf "${D}/boot" "${D}/lib"
 	fi
 }
