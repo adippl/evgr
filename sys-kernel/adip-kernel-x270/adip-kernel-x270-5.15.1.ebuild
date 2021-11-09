@@ -24,7 +24,10 @@ DEPEND="
 	uefi-test? ( sys-boot/efibootmgr )
 	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="${DEPEND}"
+
+function kw_check_stable() { return $([ "$KEYWORDS" = "amd64" ]); }
+function kw_check_testing() { return $([ "$KEYWORDS" = "~amd64" ]); }
 
 S="${WORKDIR}"
 
@@ -34,54 +37,44 @@ src_install() {
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/build"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/source"
-
-	dodir /boot/efi
-	if use uefi ; then
-#		dodir /boot/efi
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-x270" "${D}/boot/efi/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-x270.img" "${D}/boot/efi/initrd"
-	fi
-	if use uefi-test ; then
-#		dodir /boot/efi
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-x270" "${D}/boot/efi/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-x270.img" "${D}/boot/efi/initrd"
-	fi
+	mkdir "${D}/boot/kag"
+	touch "${D}/${PV}-gentoo${mPR}-x270"
+	dobin "${D}/efigen2"
 }
 
 pkg_preinst(){
-#	mount /boot ||ewarn "couldn't mount boot"
-#	[ "$?" == "32" ] && /boot already mounted
-	mount /boot || ewarn "couldn't umount /boot"
-	if use uefi ;then
-		mount /boot/efi
-		elog "backing up current kernel and initramfs on efi partition"
-		cp /boot/efi/vmlinuz /boot/efi/vmlinuz.old
-		cp /boot/efi/initrd /boot/efi/initrd.old
-
-	fi
+	mount /boot 2>/dev/null
+	#ec==32 when already mounted
+	[ "$?" != "32" ] && ewarn "couldn't mount /boot"
 	}
 pkg_postinst(){
 	if use grub-update ;then
-		mount /boot ||ewarn "couldn't mount boot"
+		mount /boot 2>/dev/null
+		#ec==32 when already mounted
+		[ "$?" != "32" ] && ewarn "couldn't mount /boot"
 		elog "updating grub config after kernel update"
 		grub-mkconfig -o /boot/grub/grub.cfg
-		umount /boot
 	fi
+	if use uefi ; then
+		/usr/bin/efigen2
+	fi
+	umount /boot
+	[ "$?" != "32" ] && ewarn "couldn't umount /boot"
 	}
 
 pkg_prerm(){
-	mount /boot || ewarn "couldn't umount /boot"
-	if test -d /boot/efi ;then
-		mount /boot/efi || ewarn "couldn't umount /boot/efi"
-	fi
+	mount /boot 2>/dev/null
+	#ec==32 when already mounted
+	["$?" != "32" ] && ewarn "couldn't umount /boot"
 }
 pkg_postrm(){
-	if test -d /boot/efi ;then
-		umount /boot/efi || ewarn "couldn't unmount /boot/efi"
-	fi
 	if use grub-update ;then
 		elog "updating grub config after kernel removal"
 		grub-mkconfig -o /boot/grub/grub.cfg
 	fi
-	umount /boot || ewarn "couldn't unmount /boot"
+	if use uefi ;then
+		/usr/bin/efigen2
+	fi
+	umount /boot
+	[ "$?" != "32" ] && ewarn "couldn't umount /boot"
 }
