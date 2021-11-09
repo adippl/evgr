@@ -3,3 +3,4 @@
 net-libs/gloox
 dev-util/premake:5
 
+net-im/signal-desktop-bin

@@ -26,6 +26,7 @@ media-libs/freetype				harfbuzz
 x11-terms/rxvt-unicode			perl
 x11-themes/gtk-engines-murrine	-themes
 media-libs/mesa					d3d9
+net-im/telegram-desktop			-gtk
 
 
 #desktop-gtk
@@ -67,7 +68,9 @@ app-office/libreoffice			-gtk
 sci-mathematics/octave			gnuplot
 app-emulation/qemu				virgl ssh
 #app-text/poppler				cairo
-#sys-apps/hwloc					cairo
+sys-apps/hwloc					cairo
+dev-qt/qtwebengine				widgets
+
 
 #gms
 media-libs/sdl2-mixer smpeg mad

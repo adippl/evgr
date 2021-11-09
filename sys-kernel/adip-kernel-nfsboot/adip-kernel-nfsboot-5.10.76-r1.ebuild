@@ -30,7 +30,6 @@ src_install() {
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-nfsboot/source"
 
 	if use nfsboot-client ; then
-		dodir /var/lib/libvirt/images/
 		rm -rf "${D}/boot"
 	fi
 	if use nfsboot-server ; then
