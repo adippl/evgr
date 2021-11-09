@@ -32,19 +32,19 @@ src_install() {
 	cp -r "${S}/boot/" "${D}/boot/"
 	dodir /lib/
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
-	unlink "${D}/lib/modules/${PV}-gentoo${mPR}x270/build"
-	unlink "${D}/lib/modules/${PV}-gentoo${mPR}x270/source"
+	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/build"
+	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/source"
 
 	dodir /boot/efi
 	if use uefi ; then
 #		dodir /boot/efi
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}x270" "${D}/boot/efi/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}x270.img" "${D}/boot/efi/initrd"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-x270" "${D}/boot/efi/vmlinuz"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-x270.img" "${D}/boot/efi/initrd"
 	fi
 	if use uefi-test ; then
 #		dodir /boot/efi
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}x270" "${D}/boot/efi/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}x270.img" "${D}/boot/efi/initrd"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-x270" "${D}/boot/efi/vmlinuz"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-x270.img" "${D}/boot/efi/initrd"
 	fi
 }
 
