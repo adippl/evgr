@@ -39,7 +39,7 @@ src_install() {
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/source"
 	mkdir "${D}/boot/kag"
 	touch "${D}/${PV}-gentoo${mPR}-x270"
-	dobin "${D}/efigen2"
+#	dobin "${D}/efigen2"
 }
 
 pkg_preinst(){
@@ -56,7 +56,7 @@ pkg_postinst(){
 		grub-mkconfig -o /boot/grub/grub.cfg
 	fi
 	if use uefi ; then
-		/usr/bin/efigen2
+		/usr/local/bin/efigen2
 	fi
 	umount /boot
 	[ "$?" != "32" ] && ewarn "couldn't umount /boot"
@@ -73,7 +73,7 @@ pkg_postrm(){
 		grub-mkconfig -o /boot/grub/grub.cfg
 	fi
 	if use uefi ;then
-		/usr/bin/efigen2
+		/usr/local/bin/efigen2
 	fi
 	umount /boot
 	[ "$?" != "32" ] && ewarn "couldn't umount /boot"
