@@ -38,7 +38,7 @@ src_install() {
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/build"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/source"
 	mkdir "${D}/boot/kag"
-	touch "${D}/${PV}-gentoo${mPR}-x270"
+	touch "${D}/boot/kag/${PV}-gentoo${mPR}-x270"
 #	dobin "${D}/efigen2"
 }
 
