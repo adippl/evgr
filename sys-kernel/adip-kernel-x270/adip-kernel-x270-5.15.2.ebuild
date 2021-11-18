@@ -37,8 +37,10 @@ src_install() {
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/build"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/source"
-	mkdir "${D}/boot/kag"
-	touch "${D}/boot/kag/${PV}-gentoo${mPR}-x270"
+	if use uefi || use uefi-test ; then
+		mkdir "${D}/boot/kag"
+		touch "${D}/boot/kag/${PV}-gentoo${mPR}-x270"
+	fi
 #	dobin "${D}/efigen2"
 }
 
@@ -55,7 +57,7 @@ pkg_postinst(){
 		elog "updating grub config after kernel update"
 		grub-mkconfig -o /boot/grub/grub.cfg
 	fi
-	if use uefi ; then
+	if use uefi || use uefi-test ; then
 		/usr/local/bin/efigen2
 	fi
 	umount /boot
@@ -72,7 +74,7 @@ pkg_postrm(){
 		elog "updating grub config after kernel removal"
 		grub-mkconfig -o /boot/grub/grub.cfg
 	fi
-	if use uefi ;then
+	if use uefi || use uefi-test  ;then
 		/usr/local/bin/efigen2
 	fi
 	umount /boot

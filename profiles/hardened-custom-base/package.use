@@ -37,7 +37,7 @@ sys-block/fio			aio curl
 #cli
 net-misc/curl adns -threads -ssh -http2 -nghttp3
 net-dns/c-ares abi_x86_32
-mail-client/mutt mbox berkdb -lmdb
+mail-client/mutt mbox berkdb gpeme -lmdb 
 
 
 net-p2p/transmission	cli
