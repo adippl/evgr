@@ -4,3 +4,13 @@ net-libs/gloox
 dev-util/premake:5
 
 net-im/signal-desktop-bin
+
+app-shells/rc
+
+net-misc/gallery-dl
+
+net-p2p/go-ethereum
+
+games-fps/openxrayx16
+lxde-base/lxappearance
+net-misc/nextcloud-client

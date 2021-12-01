@@ -93,13 +93,10 @@ x11-libs/libxcb					abi_x86_32
 x11-libs/libX11					abi_x86_32
 x11-libs/libXdmcp				abi_x86_32
 x11-libs/libXau					abi_x86_32
-x11-libs/libXinerama			abi_x86_32
 media-gfx/graphite2				abi_x86_32
-dev-libs/lzo					abi_x86_32
 sys-libs/pam					abi_x86_32
 x11-libs/libva-intel-driver		abi_x86_32
 x11-libs/libva					abi_x86_32
-app-arch/zstd					abi_x86_32
 media-libs/speexdsp				abi_x86_32
 
 
@@ -111,10 +108,13 @@ media-libs/harfbuzz				abi_x86_32
 
 
 ###MISC
-media-libs/libglvnd abi_x86_32
-dev-util/wayland-scanner abi_x86_32
-net-libs/nghttp2 abi_x86_32
-sys-libs/libxcrypt		abi_x86_32
+media-libs/libglvnd			abi_x86_32
+dev-util/wayland-scanner	abi_x86_32
+net-libs/nghttp2			abi_x86_32
+sys-libs/libxcrypt			abi_x86_32
+dev-libs/lzo				abi_x86_32
+app-arch/zstd				abi_x86_32
+virtual/rust				abi_x86_32
 
 
 ### pulseaudio
