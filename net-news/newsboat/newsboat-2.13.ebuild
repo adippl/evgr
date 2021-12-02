@@ -1,20 +1,24 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=8
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/newsboat/newsboat.git"
+	EGIT_REPO_URI="https://github.com/adippl/newsboat"
 else
 	KEYWORDS="amd64 x86"
-	SRC_URI="https://newsboat.org/releases/${PV}/${P}.tar.xz"
+	#SRC_URI="https://newsboat.org/releases/${PV}/${P}.tar.xz"
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/adippl/newsboat"
+	EGIT_BRANCH="2.13-master"
+	EGIT_COMMIT="a1402ec009e8fb2644efd9c105c0abd5d44651e1"
 fi
 
 inherit toolchain-funcs
 
-DESCRIPTION="An RSS/Atom feed reader for text terminals"
-HOMEPAGE="https://newsboat.org/ https://github.com/newsboat/newsboat"
+DESCRIPTION="Last version of newsboat witout "
+HOMEPAGE="https://newsboat.org/ https://github.com/adippl/newsboat"
 
 LICENSE="MIT"
 SLOT="0"
@@ -34,9 +38,9 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 "
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-2.11-flags.patch
-)
+#PATCHES=(
+#	"${FILESDIR}"/${PN}-2.11-flags.patch
+#)
 
 src_configure() {
 	./config.sh || die
