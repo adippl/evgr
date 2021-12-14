@@ -14,3 +14,7 @@ net-p2p/go-ethereum
 games-fps/openxrayx16
 lxde-base/lxappearance
 net-misc/nextcloud-client
+
+games-emulation/ppsspp
+games-util/game-device-udev-rules::gentoo
+
