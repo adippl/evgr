@@ -16,5 +16,5 @@ lxde-base/lxappearance
 net-misc/nextcloud-client
 
 games-emulation/ppsspp
-games-util/game-device-udev-rules::gentoo
+games-util/game-device-udev-rules
 
