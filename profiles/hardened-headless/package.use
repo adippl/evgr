@@ -29,8 +29,8 @@ net-fs/samba -ldap -system-mitkrb5 -regedit quota
 net-dns/avahi -dbus -introspection
 net-dns/getdns  stubby -unbound 
 #sys-libs/zlib static-libs
-app-emulation/containerd btrfs
-app-emulation/docker btrfs
+app-containers/containerd btrfs
+app-containers/docker btrfs
 sys-fs/lvm2 -thin
 
 dev-db/mysql-connector-c -ldap

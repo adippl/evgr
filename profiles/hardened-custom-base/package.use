@@ -27,10 +27,10 @@ net-misc/spice-gtk				usbredir
 dev-vcs/git						-pcre -perl
 sys-kernel/gentoo-kernel-bin	-initramfs
 sys-devel/gcc					lto go fortran
-app-emulation/containerd		btrfs -device-mapper -overlay
-app-emulation/docker			btrfs -device-mapper -overlay
-app-emulation/libguestfs		-ocaml 
-app-emulation/podman			-fuse btrfs 
+app-containers/containerd		btrfs -device-mapper -overlay
+app-containers/docker			btrfs -device-mapper -overlay
+app-containers/libguestfs		-ocaml 
+app-containers/podman			-fuse btrfs 
 sys-block/fio			aio curl
 
 
