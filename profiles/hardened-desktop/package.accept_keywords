@@ -3,7 +3,7 @@
 net-libs/gloox
 dev-util/premake:5
 
-net-im/signal-desktop-bin
+#net-im/signal-desktop-bin
 
 app-shells/rc
 
@@ -18,3 +18,4 @@ net-misc/nextcloud-client
 games-emulation/ppsspp
 games-util/game-device-udev-rules
 
+sys-apps/bss **

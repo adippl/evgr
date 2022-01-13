@@ -30,7 +30,7 @@ sys-devel/gcc					lto go fortran
 app-containers/containerd		btrfs -device-mapper -overlay
 app-containers/docker			btrfs -device-mapper -overlay
 app-containers/libguestfs		-ocaml 
-app-containers/podman			-fuse btrfs 
+app-containers/podman			-fuse btrfs -rootless
 sys-block/fio			aio curl
 
 

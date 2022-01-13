@@ -5,3 +5,11 @@ net-analyzer/ntopng ~amd64
 net-analyzer/suricata ~amd64
 	net-libs/libhtp ~amd64
 
+sys-cluster/minikube ~amd64
+
+net-misc/apt-cacher-ng ~amd64
+
+sys-apps/bss **
+
+sys-cluster/crmsh ~amd64
+
