@@ -1,9 +1,7 @@
 #system
 *net-fs/nfs-utils
 *net-misc/dhcpcd
-*net-vpn/wireguard-tools
 *net-wireless/wpa_supplicant
-*sys-apps/hdparm
 *sys-apps/lm-sensors
 *sys-apps/nvme-cli
 *sys-boot/efibootmgr
@@ -15,43 +13,16 @@
 *sys-power/powertop
 
 # CLI
-*app-admin/pass
-*app-admin/pass-otp
 *app-misc/fdupes
 *app-misc/ranger
-*mail-client/mutt
 *media-sound/cmus
 *net-analyzer/nethogs
-*net-analyzer/traceroute
 *net-fs/sshfs
-*net-irc/irssi
-*sys-apps/firejail
 *sys-fs/dosfstools
 *sys-fs/fuseiso
 *sys-fs/ncdu
 
-# dev
-*app-admin/ansible
-*app-emulation/libvirt
-*app-emulation/qemu
-*app-emulation/virt-manager
-*app-misc/jq
-*app-portage/repoman
-*dev-lang/go
-*dev-util/ctags
-*dev-util/strace
-*dev-util/valgrind
-*net-analyzer/ettercap
-*net-analyzer/nmap
-*net-analyzer/wireshark
-*net-dialup/picocom
-*net-misc/iperf
-*sys-apps/ipmitool
-*sys-devel/crossdev
-*sys-fs/inotify-tools
-
 # X and friends
-*app-office/gnumeric
 *mail-client/thunderbird-bin
 *media-fonts/terminus-font
 *media-gfx/feh
