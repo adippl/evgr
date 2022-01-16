@@ -3,32 +3,27 @@
 *net-misc/dhcpcd
 *net-wireless/wpa_supplicant
 *sys-apps/lm-sensors
-*sys-apps/nvme-cli
 *sys-boot/efibootmgr
 *sys-boot/grub
 *sys-fs/fuse
-*sys-fs/fuse:2
+*sys-fs/fuse:0
 *sys-fs/ntfs3g
-*sys-kernel/genkernel
-*sys-power/powertop
 
 # CLI
-*app-misc/fdupes
 *app-misc/ranger
 *media-sound/cmus
-*net-analyzer/nethogs
 *net-fs/sshfs
 *sys-fs/dosfstools
 *sys-fs/fuseiso
 *sys-fs/ncdu
 
+#wine
+*virtual/wine
+
 # X and friends
-*mail-client/thunderbird-bin
 *media-fonts/terminus-font
 *media-gfx/feh
-*media-gfx/gimp
 *media-gfx/scrot
-*media-video/mpv
 *www-client/firefox-bin
 *x11-apps/xbacklight
 *x11-apps/xinput
@@ -44,11 +39,9 @@
 *x11-misc/redshift
 *x11-misc/rofi
 *x11-misc/urxvt-font-size
-
 *x11-misc/xautolock
 *x11-misc/xidle
 *x11-misc/xss-lock
-*x11-plugins/enigmail
 *x11-terms/rxvt-unicode
 *x11-wm/i3
 *xfce-base/thunar

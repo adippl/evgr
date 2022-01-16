@@ -1,16 +1,11 @@
 #system
-*net-fs/nfs-utils
-*net-misc/dhcpcd
 *net-vpn/wireguard-tools
-*net-wireless/wpa_supplicant
 *sys-apps/hdparm
-*sys-apps/lm-sensors
-*sys-apps/nvme-cli
 *sys-boot/efibootmgr
 *sys-boot/grub
-*sys-fs/fuse
-*sys-fs/fuse:2
 *sys-fs/ntfs3g
+*sys-kernel/genkernel
+*sys-power/powertop
 *sys-kernel/genkernel
 *sys-power/powertop
 
@@ -18,17 +13,12 @@
 *app-admin/pass
 *app-admin/pass-otp
 *app-misc/fdupes
-*app-misc/ranger
 *mail-client/mutt
 *media-sound/cmus
 *net-analyzer/nethogs
 *net-analyzer/traceroute
-*net-fs/sshfs
 *net-irc/irssi
 *sys-apps/firejail
-*sys-fs/dosfstools
-*sys-fs/fuseiso
-*sys-fs/ncdu
 
 # dev
 *app-admin/ansible
@@ -53,34 +43,6 @@
 # X and friends
 *app-office/gnumeric
 *mail-client/thunderbird-bin
-*media-fonts/terminus-font
-*media-gfx/feh
 *media-gfx/gimp
-*media-gfx/scrot
 *media-video/mpv
-*www-client/firefox-bin
-*x11-apps/xbacklight
-*x11-apps/xinput
-*x11-apps/xkill
-*x11-apps/xmodmap
-*x11-apps/xrandr
-*x11-base/xorg-drivers
-*x11-base/xorg-server
-*x11-misc/arandr
-*x11-misc/dmenu
-*x11-misc/i3lock
-*x11-misc/i3status
-*x11-misc/redshift
-*x11-misc/rofi
-*x11-misc/urxvt-font-size
-
-*x11-misc/xautolock
-*x11-misc/xidle
-*x11-misc/xss-lock
 *x11-plugins/enigmail
-*x11-terms/rxvt-unicode
-*x11-wm/i3
-*xfce-base/thunar
-*xfce-extra/thunar-archive-plugin
-*xfce-extra/thunar-media-tags-plugin
-*xfce-extra/thunar-vcs-plugin
