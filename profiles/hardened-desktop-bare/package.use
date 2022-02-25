@@ -52,7 +52,7 @@ app-text/ghostscript-gpl		cups
 app-text/mupdf					-opengl -javascript
 dev-libs/libpcre2				pcre32
 dev-libs/xmlsec					nss
-dev-python/PyQt5 widgets gui multimedia declarative network printsupport sql webchannel dbus
+dev-python/PyQt5				widgets gui multimedia declarative network printsupport sql webchannel dbus
 dev-qt/qtwebengine				widgets
 dev-qt/qtwebchannel				qml
 media-gfx/imagemagick			cxx xml
@@ -70,6 +70,8 @@ net-print/hplip					hpijs minimal -X -snmp
 sci-mathematics/octave			gnuplot
 sys-apps/hwloc					cairo
 sys-libs/zlib					minizip
+media-sound/mpd					-alsa -network -ipv6
+media-sound/ncmpcpp				lto taglib visualizer
 
 
 #gms
