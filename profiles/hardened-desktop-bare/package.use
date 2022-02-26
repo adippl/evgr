@@ -71,7 +71,7 @@ sci-mathematics/octave			gnuplot
 sys-apps/hwloc					cairo
 sys-libs/zlib					minizip
 media-sound/mpd					-alsa -network -ipv6
-media-sound/ncmpcpp				lto taglib visualizer
+media-sound/ncmpcpp				lto taglib visualizer outputs
 
 
 #gms
