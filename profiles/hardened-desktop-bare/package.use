@@ -1,6 +1,5 @@
 
 #desktop
-#for M$ Teams
 app-admin/pass					dmenu -git
 app-admin/pass-otp				-qrcode
 app-crypt/gcr					gtk
@@ -8,7 +7,7 @@ app-crypt/pinentry				-gnome-keyring
 app-crypt/pinentry				gtk
 dev-libs/libjcat				gpg pkcs7
 media-libs/freetype				harfbuzz
-media-libs/mesa					d3d9
+media-libs/mesa					d3d9 wayland
 media-sound/cmus				-elogind
 media-sound/pulseaudio			bluetooth dbus
 media-video/ffmpeg				bluray libcaca openh264 openal jpeg2k v4l
@@ -18,14 +17,15 @@ net-im/telegram-desktop			-gtk
 net-wireless/wpa_supplicant		qt5
 www-client/chromium				hangouts proprietary-codecs -js-type-check -suid 
 www-client/w3m					imlib
-x11-base/xorg-server			xephyr kdrive  -suid
+x11-base/xorg-server			xephyr kdrive  -suid -minimal
 x11-drivers/xf86-video-intel	dri
-x11-libs/gtk+					cups
+x11-libs/gtk+					cups wayland
 x11-misc/redshift				-gtk
 x11-terms/rxvt-unicode			perl
 x11-themes/gtk-engines-murrine	-themes
 xfce-base/thunar				-pcre -trash-panel-plugin
 xfce-extra/thunar-vcs-plugin	-subversion
+ays-auth/elogind -policykit
 
 
 #desktop-gtk
@@ -59,7 +59,7 @@ media-gfx/imagemagick			cxx xml
 media-libs/libvpx				svc
 media-sound/audacity			id3tag
 media-tv/v4l-utils				-bpf
-media-video/mkvtoolnix			qt5
+media-video/mkvtoolnix			qt5 gui
 media-video/obs-studio			imagemagick v4l
 net-analyzer/hydra				libssh -gtk
 net-im/pidgin					-xscreensaver -dbus -gstreamer
@@ -104,6 +104,9 @@ x11-libs/libXt					abi_x86_32
 x11-libs/libva					abi_x86_32
 x11-libs/libva-intel-driver		abi_x86_32
 x11-libs/libxcb					abi_x86_32
+dev-libs/libbsd					abi_x86_32
+app-crypt/libmd					abi_x86_32
+
 
 ###MISC
 app-arch/zstd				abi_x86_32
