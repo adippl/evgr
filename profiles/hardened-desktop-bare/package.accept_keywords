@@ -7,15 +7,31 @@ dev-util/premake:5
 
 app-shells/rc
 
-net-misc/gallery-dl
-
-net-p2p/go-ethereum
-
-games-fps/openxrayx16
-lxde-base/lxappearance
-net-misc/nextcloud-client
+games-fps/openxrayx16 **
 
 games-emulation/ppsspp
 games-util/game-device-udev-rules
 
-sys-apps/bss **
+net-misc/gallery-dl
+
+games-misc/lolcat
+dev-ruby/paint
+media-video/obs-studio
+
+#dev
+net-p2p/go-ethereum
+sys-cluster/minikube
+
+#work
+net-im/zoom
+net-misc/seafile-client
+net-misc/seafile
+net-libs/libsearpc
+
+sys-kernel/adip-kernel-x270
+app-laptop/lpmd
+
+# TODO maybe move to hardened-custom-base
+app-benchmarks/bootchart2
+
+

@@ -1,4 +1,4 @@
-# Copyright 2011-2020 Gentoo Authors
+# Copyright 2011-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -10,9 +10,14 @@ SRC_URI=""
 inherit git-r3
 EGIT_REPO_URI="https://github.com/adippl/openrc-tmux-rtorrent"
 
+if [[ ${PVR} != "9999" ]] ; then
+	EGIT_COMMIT="${PVR}"
+	KEYWORDS="amd64"
+fi
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+#KEYWORDS="~amd64 ~x86"
 IUSE="+wg"
 
 DEPEND="
