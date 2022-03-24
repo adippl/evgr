@@ -1,4 +1,4 @@
-# Copyright 2011-2021 Gentoo Authors
+# Copyright 2011-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PV}-g
 
 LICENSE="GPL-2"
 SLOT="${PV}"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE="grub-update uefi uefi-test"
 
 REQUIRED_USE="
