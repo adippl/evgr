@@ -48,3 +48,8 @@
 *xfce-extra/thunar-archive-plugin
 *xfce-extra/thunar-media-tags-plugin
 *xfce-extra/thunar-vcs-plugin
+*x11-themes/numix-gtk-theme
+*x11-themes/numix-icon-theme
+*x11-drivers/xf86-input-evdev
+*x11-drivers/xf86-input-synaptics
+*x11-drivers/xf86-video-intel

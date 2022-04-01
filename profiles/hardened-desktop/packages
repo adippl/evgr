@@ -40,6 +40,13 @@
 *sys-devel/crossdev
 *sys-fs/inotify-tools
 
+# work
+*www-client/chromium
+*net-vpn/openvpn
+*dev-python/python-ironicclient
+*dev-python/openstacksdk
+
+
 # X and friends
 *app-office/gnumeric
 *mail-client/thunderbird-bin
