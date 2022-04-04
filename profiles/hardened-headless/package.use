@@ -10,8 +10,8 @@ sys-apps/fwupd				minimal
 dev-libs/libjcat			pkcs7 gpg
 
 #mail server
-dev-libs/openssl        -bindist
 mail-filter/opendkim    -sasl
+:Xa
 mail-mta/postfix        sasl dovecot-sasl berkdb
 net-mail/dovecot        sieve managesieve
 net-mail/mailutils      -ipv6 -pam -ssl -sasl

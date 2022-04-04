@@ -13,8 +13,6 @@ net-vpn/wireguard-tools			-wg-quick
 sys-process/procps				-elogind -nls
 net-nds/openldap				minimal
 sys-apps/util-linux				udev
-net-misc/openssh				-bindist
-dev-libs/openssl				-bindist
 sys-process/procps				-elogind
 net-mail/isync					sasl
 

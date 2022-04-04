@@ -1,7 +1,7 @@
 USE="${USE} "
 
 #misc
-USE="${USE} icu vim-syntax zstd lzma threads -bindist"
+USE="${USE} icu vim-syntax zstd lzma threads bindist"
 
 #security
 USE="${USE} -ldap -smartcard -upnp openssl"
