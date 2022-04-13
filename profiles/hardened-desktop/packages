@@ -19,6 +19,7 @@
 *net-analyzer/traceroute
 *net-irc/irssi
 *sys-apps/firejail
+*net-mail/isync
 
 # dev
 *app-admin/ansible
@@ -45,6 +46,8 @@
 *net-vpn/openvpn
 *dev-python/python-ironicclient
 *dev-python/openstacksdk
+*sys-fs/squashfs-tools
+*app-emulation/diskimage-builder
 
 
 # X and friends
