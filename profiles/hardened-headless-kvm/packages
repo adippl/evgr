@@ -1,0 +1,6 @@
+-*sys-apps/lm-sensors
+-*sys-apps/usbutils
+-*sys-fs/cryptsetup
+-*sys-fs/lvm2
+-*sys-kernel/linux-firmware
+-*sys-power/acpid

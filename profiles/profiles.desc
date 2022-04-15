@@ -2,3 +2,4 @@ amd64 hardened-custom-base dev
 amd64 hardened-desktop dev
 amd64 hardened-desktop-bare dev
 amd64 hardened-headless dev
+amd64 hardened-headless-kvm dev
