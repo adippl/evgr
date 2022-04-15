@@ -15,7 +15,6 @@
 *net-fs/sshfs
 *sys-fs/dosfstools
 *sys-fs/fuseiso
-*sys-fs/ncdu
 
 #wine
 *virtual/wine

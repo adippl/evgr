@@ -27,6 +27,7 @@
 *sys-fs/btrfs-progs
 *sys-fs/cryptsetup
 *sys-fs/lvm2
+*sys-fs/ncdu
 *sys-kernel/linux-firmware
 *sys-power/acpid
 *sys-process/htop
