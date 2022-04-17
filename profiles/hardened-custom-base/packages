@@ -1,4 +1,3 @@
-*evgr:sys-apps/bss
 *app-admin/doas
 *app-admin/logrotate
 *app-admin/sysstat
@@ -15,6 +14,7 @@
 *dev-vcs/git
 *net-firewall/nftables
 *net-misc/ntp
+*sys-apps/bss
 *sys-apps/busybox
 *sys-apps/ed
 *sys-apps/inxi
