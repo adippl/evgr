@@ -20,23 +20,26 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+RESTRICT="strip"
+
 S="${WORKDIR}"
 
 src_install() {
 	cp -r "${S}/boot/" "${D}/boot/"
-	dodir /lib/
+	dodir "/lib/modules"
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-nfsboot/build"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-nfsboot/source"
 
-	if use nfsboot-client ; then
-		rm -rf "${D}/boot"
-	fi
 	if use nfsboot-server ; then
 		dodir "/var/tftp"
+#		dodir "/lib/modules"
+		dodir "/lib/net_boot"
 		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}/var/tftp/vmlinuz-gentoo-nfsboot"
 		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}/var/tftp/initramfs-gentoo-nfsboot.img"
-		rm -rf "${D}/boot" "${D}/lib"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}/lib/net_boot/vmlinuz"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}/lib/net_boot/initramfs"
+		rm -rf "${D}/boot"
 	fi
 }
 
