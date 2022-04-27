@@ -21,7 +21,7 @@ x11-base/xorg-server			xephyr kdrive  -suid -minimal
 x11-drivers/xf86-video-intel	dri
 x11-libs/gtk+					cups wayland
 x11-misc/redshift				-gtk
-x11-terms/rxvt-unicode			perl
+x11-terms/rxvt-unicode			perl fading-colors
 x11-themes/gtk-engines-murrine	-themes
 xfce-base/thunar				-pcre -trash-panel-plugin
 xfce-extra/thunar-vcs-plugin	-subversion
