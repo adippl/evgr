@@ -11,7 +11,7 @@ media-libs/mesa					d3d9 wayland
 media-sound/cmus				-elogind
 media-sound/pulseaudio			bluetooth dbus
 media-video/ffmpeg				bluray libcaca openh264 openal jpeg2k v4l
-media-video/mpv					cli archive -egl 
+media-video/mpv					cli archive libmpv -egl 
 net-analyzer/wireshark			qt5
 net-im/telegram-desktop			-gtk
 net-wireless/wpa_supplicant		qt5

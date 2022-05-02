@@ -35,3 +35,5 @@ app-laptop/lpmd
 app-benchmarks/bootchart2
 
 
+media-video/jellyfin-media-player
+media-video/jellyfin-web-jmp-bin
