@@ -20,7 +20,6 @@ media-video/obs-studio
 
 #dev
 net-p2p/go-ethereum
-sys-cluster/minikube
 
 #work
 net-im/zoom
