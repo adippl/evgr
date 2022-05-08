@@ -41,6 +41,7 @@
 *sys-devel/crossdev
 *sys-fs/inotify-tools
 *sys-cluster/minikube
+*sys-cluster/kubectl
 
 # work
 *www-client/chromium
