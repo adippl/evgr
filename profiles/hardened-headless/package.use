@@ -34,3 +34,4 @@ dev-db/mysql-connector-c -ldap
 net-analyzer/suricata logrotate
 
 
+dev-libs/boost python context
