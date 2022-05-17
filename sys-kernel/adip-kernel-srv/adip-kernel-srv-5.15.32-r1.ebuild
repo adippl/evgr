@@ -3,7 +3,7 @@
 
 EAPI=7
 
-DESCRIPTION="installer for precompiled linux kernel configured for KVM virtual machines"
+DESCRIPTION="installer for precompiled linux kernel configured hardware servers"
 HOMEPAGE="https://github.com/adippl/gentoo-kernel-config"
 [ "${PR}" != "" ] && mPR="-${PR}"
 [ "${PR}" = "r0" ] && mPR=""
@@ -26,8 +26,8 @@ src_install() {
 	cp -r "${S}/boot/" "${D}/boot/"
 	dodir /lib/
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
-	unlink "${D}/lib/modules/${PVR}-gentoo-x270/build"
-	unlink "${D}/lib/modules/${PVR}-gentoo-x270/source"
+	unlink "${D}/lib/modules/${PVR}-gentoo-srv/build"
+	unlink "${D}/lib/modules/${PVR}-gentoo-srv/source"
 }
 
 #pkg_preinst(){
