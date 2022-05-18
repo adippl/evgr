@@ -12,12 +12,10 @@ SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PV}-g
 LICENSE="GPL-2"
 SLOT="${PVR}"
 KEYWORDS="amd64"
-IUSE="grub-update libvirt-local libvirt-ceph"
+IUSE="grub-update"
 
 DEPEND="
 	grub-update? ( sys-boot/grub )
-	libvirt-local? ( app-emulation/libvirt )
-	libvirt-ceph? ( app-emulation/libvirt )
 	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
@@ -31,24 +29,6 @@ src_install() {
 	unlink "${D}/lib/modules/${PVR}-gentoo-x270/build"
 	unlink "${D}/lib/modules/${PVR}-gentoo-x270/source"
 
-	if use libvirt-local ; then
-		dodir /var/lib/libvirt/images/
-		cp "${S}/boot/vmlinuz-x86_64-${PVR}-gentoo-kvm" "${D}/var/lib/libvirt/images/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PVR}-gentoo-kvm.img" "${D}/var/lib/libvirt/images/initramfs"
-		cp "${S}/boot/vmlinuz-x86_64-${PVR}-gentoo-kvm" "${D}/var/lib/libvirt/images/vmlinuz-kvm"
-		cp "${S}/boot/initramfs-x86_64-${PVR}-gentoo-kvm.img" "${D}/var/lib/libvirt/images/initramfs-kvm"
-		rm -rf "${D}/boot" "${D}/lib"
-	fi
-	if use libvirt-ceph ; then
-		local LC_PATH="/var/lib/libvirt/images/cephfs-libvirt/kernel/"
-		dodir "${LC_PATH}"
-		cp "${S}/boot/vmlinuz-x86_64-${PVR}-gentoo-kvm" "${D}${LC_PATH}/gk-lx"
-		cp "${S}/boot/initramfs-x86_64-${PVR}-gentoo-kvm.img" "${D}${LC_PATH}/gk-ifs"
-
-		cp "${S}/boot/vmlinuz-x86_64-${PVR}-gentoo-kvm" "${D}${LC_PATH}/vmlinuz-kvm"
-		cp "${S}/boot/initramfs-x86_64-${PVR}-gentoo-kvm.img" "${D}${LC_PATH}/initramfs-kvm"
-		rm -rf "${D}/boot" "${D}/lib"
-	fi
 }
 
 #pkg_preinst(){
