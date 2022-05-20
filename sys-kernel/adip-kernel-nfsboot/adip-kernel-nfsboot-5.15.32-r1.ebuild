@@ -7,7 +7,9 @@ DESCRIPTION="precomiled linux kernel configured for servers running with root on
 HOMEPAGE="https://github.com/adippl/gentoo-kernel-config"
 [ "${PR}" != "" ] && mPR="-${PR}"
 [ "${PR}" = "r0" ] && mPR=""
-SRC_URI="https://github.com/adippl/gentoo-kernel-config/raw/master/linux-${PV}-gentoo${mPR}-nfsboot.tar.xz"
+#MIRR="https://github.com/adippl/gentoo-kernel-config/raw/master"
+MIRR="http://files.acmelab.top/kernels"
+SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-nfsboot.tar.xz"
 
 LICENSE="GPL-2"
 #SLOT="${PV}"
@@ -27,7 +29,7 @@ S="${WORKDIR}"
 src_install() {
 	cp -r "${S}/boot/" "${D}/boot/"
 	dodir "/lib/modules"
-	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
+	cp -r "${S}/lib/modules/*" "${D}/lib/modules/"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-nfsboot/build"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-nfsboot/source"
 
