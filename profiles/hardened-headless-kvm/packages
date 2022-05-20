@@ -4,6 +4,7 @@
 -*sys-fs/lvm2
 -*sys-kernel/linux-firmware
 -*sys-power/acpid
+-*sys-apps/smartmontools
 *app-emulation/qemu-guest-agent
 *sys-kernel/adip-kernel-kvm
 *sys-fs/fuse
