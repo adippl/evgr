@@ -6,7 +6,6 @@
 		<name>adip</name>
 	</maintainer>
 	<use>
-		<flag name="nfsboot-client">install only parts required on client with root on nfs</flag>
 		<flag name="nfsboot-server">install only parts required on boot server</flag>
 	</use>
 </pkgmetadata>
