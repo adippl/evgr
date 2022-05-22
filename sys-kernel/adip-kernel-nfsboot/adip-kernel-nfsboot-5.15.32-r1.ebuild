@@ -34,12 +34,18 @@ src_install() {
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-nfsboot/source"
 
 	if use nfsboot-server ; then
-		dodir "/var/tftp"
-		dodir "/lib/net_boot"
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}/var/tftp/vmlinuz-gentoo-nfsboot"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}/var/tftp/initramfs-gentoo-nfsboot.img"
-		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}/lib/net_boot/vmlinuz"
-		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}/lib/net_boot/initramfs"
+		tftp_path="/var/tftp"
+		nfs_path="/lib/net_boot"
+		http_path="/var/www/files"
+		dodir "${tftp_path}"
+		dodir "${nfs_path}"
+		dodir "${http_path}"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}${tftp_path}/vmlinuz-gentoo-nfsboot"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}${tftp_path}/initramfs-gentoo-nfsboot.img"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}${nfs_path}/vmlinuz"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}${nfs_path}/initramfs"
+		cp "${S}/boot/vmlinuz-x86_64-${PV}-gentoo${mPR}-nfsboot" "${D}${http_path}/vmlinuz-gentoo-nfsboot"
+		cp "${S}/boot/initramfs-x86_64-${PV}-gentoo${mPR}-nfsboot.img" "${D}${http_path}/initramfs-gentoo-nfsboot.img"
 		rm -rf "${D}/boot"
 	fi
 }
