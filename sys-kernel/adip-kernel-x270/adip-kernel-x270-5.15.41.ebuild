@@ -14,7 +14,7 @@ SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="${PV}"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="grub-update uefi uefi-test"
 
 REQUIRED_USE="
@@ -38,11 +38,11 @@ src_install() {
 	cp -r "${S}/boot/" "${D}/boot/"
 	dodir /lib/
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
-	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/build"
-	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-x270/source"
+	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/build"
+	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/source"
 	if use uefi || use uefi-test ; then
 		mkdir "${D}/boot/kag"
-		touch "${D}/boot/kag/${PV}-gentoo${mPR}-x270"
+		touch "${D}/boot/kag/${PV}-gentoo${mPR}-${K_TYPE}"
 	fi
 #	dobin "${D}/efigen2"
 }
