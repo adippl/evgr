@@ -55,8 +55,8 @@ src_install() {
 		cp "${S}/boot/initramfs-${PV}-gentoo${mPR}-${K_TYPE}.img" "${D}${nfs_path}/${initfile}"
 		cp "${S}/boot/vmlinuz-${PV}-gentoo${mPR}-${K_TYPE}" "${D}${http_path}/${kfile}"
 		cp "${S}/boot/initramfs-${PV}-gentoo${mPR}-${K_TYPE}.img" "${D}${http_path}/${initfile}"
-		cp "${S}/boot/${sysmap_file}" "${D}${http_path}/${sysmap_file}"
-		cp "${S}/boot/${config_file}" "${D}${http_path}/${config_file}"
+		cp "${S}/boot/${sysmap_file}" "${D}${nfs_path}/${sysmap_file}"
+		cp "${S}/boot/${config_file}" "${D}${nfs_path}/${config_file}"
 		rm -rf "${D}/boot"
 	fi
 }
