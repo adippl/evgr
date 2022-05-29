@@ -31,7 +31,6 @@ src_install() {
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/build"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/source"
-
 }
 
 pkg_preinst(){
