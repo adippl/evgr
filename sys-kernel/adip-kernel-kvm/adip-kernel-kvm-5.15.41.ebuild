@@ -14,7 +14,7 @@ SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="${PVR}"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="grub-update"
 
 DEPEND="
@@ -34,9 +34,9 @@ src_install() {
 
 }
 
-#pkg_preinst(){
-#	mount /boot
-#	}
+pkg_preinst(){
+	mount /boot ||ewarn "couldn't mount boot"
+	}
 pkg_postinst(){
 	if use grub-update ;then
 		mount /boot ||ewarn "couldn't mount boot"
