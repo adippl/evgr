@@ -29,13 +29,13 @@ src_install() {
 	cp -r "${S}/boot/" "${D}/boot/"
 	dodir /lib/
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
-	unlink "${D}/lib/modules/${PVR}-gentoo-srv/build"
-	unlink "${D}/lib/modules/${PVR}-gentoo-srv/source"
+	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/build"
+	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/source"
 }
 
-#pkg_preinst(){
-#	mount /boot
-#	}
+pkg_preinst(){
+	mount /boot ||ewarn "couldn't mount boot"
+	}
 pkg_postinst(){
 	if use grub-update ;then
 		mount /boot ||ewarn "couldn't mount boot"
