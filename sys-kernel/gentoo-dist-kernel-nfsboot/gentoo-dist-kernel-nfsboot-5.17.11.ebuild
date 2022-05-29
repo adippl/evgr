@@ -43,6 +43,9 @@ src_install() {
 		http_path="/var/www/files"
 		kfile="vmlinuz-gentoo-${K_TYPE}-nfs"
 		initfile="initramfs-gentoo-${K_TYPE}-nfs.img"
+		kfile="vmlinuz-gentoo-${K_TYPE}-nfs"
+		sysmap_file="System.map-${PV}-gentoo${mPR}-${K_TYPE}"
+		config_file="config-${PV}-gentoo${mPR}-${K_TYPE}"
 		dodir "${tftp_path}"
 		dodir "${nfs_path}"
 		dodir "${http_path}"
@@ -52,6 +55,8 @@ src_install() {
 		cp "${S}/boot/initramfs-${PV}-gentoo${mPR}-${K_TYPE}.img" "${D}${nfs_path}/${initfile}"
 		cp "${S}/boot/vmlinuz-${PV}-gentoo${mPR}-${K_TYPE}" "${D}${http_path}/${kfile}"
 		cp "${S}/boot/initramfs-${PV}-gentoo${mPR}-${K_TYPE}.img" "${D}${http_path}/${initfile}"
+		cp "${S}/boot/${sysmap_file}" "${D}${nfs_path}/${sysmap_file}"
+		cp "${S}/boot/${config_file}" "${D}${nfs_path}/${config_file}"
 		rm -rf "${D}/boot"
 	fi
 }
