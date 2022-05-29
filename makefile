@@ -8,4 +8,5 @@ find:
 	find -name '*ebuild'
 
 p:
-	git push github master
+	git push origin master
+	-git push github master
