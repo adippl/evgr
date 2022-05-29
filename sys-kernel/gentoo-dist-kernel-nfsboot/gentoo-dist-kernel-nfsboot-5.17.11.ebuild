@@ -34,9 +34,9 @@ S="${WORKDIR}"
 src_install() {
 	cp -r "${S}/boot/" "${D}/boot/"
 	dodir "/lib/modules"
-	cp -r "${S}/lib/modules/${PV}-gentoo${mPR}-${k_TYPE}" "${D}/lib/modules/"
-	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${k_TYPE}/build"
-	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${k_TYPE}/source"
+	cp -r "${S}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}" "${D}/lib/modules/"
+	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/build"
+	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/source"
 	if use nfsboot-server ; then
 		tftp_path="/var/tftp"
 		nfs_path="/lib/net_boot"
