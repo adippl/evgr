@@ -1,7 +1,5 @@
 sys-fs/btrfs-progs
 
-sys-apps/bss **
-
 net-p2p/openrc-tmux-rtorrent **
 =dev-python/cgroup-utils-0.8 ~amd64
 

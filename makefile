@@ -9,4 +9,4 @@ find:
 
 p:
 	git push origin master
-	-git push github master
+	-git push git.acmelab.top master
