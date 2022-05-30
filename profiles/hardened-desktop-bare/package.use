@@ -136,6 +136,7 @@ x11-libs/pixman abi_x86_32
 
 #FFMPEG
 media-libs/libvpx abi_x86_32
+dev-libs/libudfread abi_x86_32
 
 
 #### STEAM
