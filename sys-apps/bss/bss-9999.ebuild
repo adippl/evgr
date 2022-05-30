@@ -1,4 +1,4 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -8,7 +8,7 @@ HOMEPAGE="https://github.com/adippl/bss"
 #SRC_URI=""
 
 if [[ ${PVR} != "9999" ]] ; then
-	EGIT_COMMIT="${PVR}"
+	EGIT_COMMIT="v${PVR}"
 	KEYWORDS="amd64"
 fi
 
