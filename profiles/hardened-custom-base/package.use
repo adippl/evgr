@@ -50,6 +50,7 @@ dev-python/numpy	lapack
 net-libs/nodejs		-snapshot -npm inspector
 dev-lang/mono		minimal
 dev-lang/rust-bin	abi_x86_32
+sys-cluster/minikube	libvirt
 
 
 

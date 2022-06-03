@@ -1,1 +1,2 @@
 gui-apps/swayidle -elogind
+sys-auth/seatd -elogind
