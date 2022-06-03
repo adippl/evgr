@@ -51,13 +51,14 @@
 *sys-fs/inotify-tools
 
 # work
-*www-client/chromium
-*net-vpn/openvpn
-*dev-python/python-ironicclient
 #*dev-python/openstacksdk
-*dev-python/python-openstackclient
-*sys-fs/squashfs-tools
 *app-emulation/diskimage-builder
+*dev-python/python-ironicclient
+*dev-python/python-openstackclient
+*net-vpn/openvpn
+*sys-boot/woeusb
+*sys-fs/squashfs-tools
+*www-client/chromium
 
 
 # X and friends
