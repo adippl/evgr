@@ -13,41 +13,49 @@
 *app-admin/pass
 *app-admin/pass-otp
 *app-misc/fdupes
+*app-misc/neofetch
 *mail-client/mutt
 *media-sound/cmus
+*media-sound/mpd
+*media-sound/ncmpcpp
 *net-analyzer/nethogs
 *net-analyzer/traceroute
 *net-irc/irssi
-*sys-apps/firejail
 *net-mail/isync
+*sys-apps/firejail
 
 # dev
 *app-admin/ansible
 *app-emulation/libvirt
 *app-emulation/qemu
 *app-emulation/virt-manager
+*app-emulation/virt-viewer
 *app-misc/jq
 *app-portage/repoman
+*btrfs-compsize
 *dev-lang/go
 *dev-util/ctags
 *dev-util/strace
 *dev-util/valgrind
 *net-analyzer/ettercap
+*net-analyzer/mtr
 *net-analyzer/nmap
 *net-analyzer/wireshark
 *net-dialup/picocom
+*net-dns/bind-tools
 *net-misc/iperf
 *sys-apps/ipmitool
+*sys-cluster/kubectl
+*sys-cluster/minikube
 *sys-devel/crossdev
 *sys-fs/inotify-tools
-*sys-cluster/minikube
-*sys-cluster/kubectl
 
 # work
 *www-client/chromium
 *net-vpn/openvpn
 *dev-python/python-ironicclient
-*dev-python/openstacksdk
+#*dev-python/openstacksdk
+*dev-python/python-openstackclient
 *sys-fs/squashfs-tools
 *app-emulation/diskimage-builder
 
@@ -59,5 +67,10 @@
 *media-video/mpv
 *x11-plugins/enigmail
 *app-office/abiword
+*signal-desktop-bin
+*app-misc/moonlight-bin
+*media-video/jellyfin-media-player
+*signal-desktop-bin
+
 #*media-video/libva-utils
 #*x11-libs/libva-intel-driver
