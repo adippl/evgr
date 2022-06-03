@@ -32,7 +32,6 @@
 *app-emulation/virt-viewer
 *app-misc/jq
 *app-portage/repoman
-*btrfs-compsize
 *dev-lang/go
 *dev-util/ctags
 *dev-util/strace
@@ -44,6 +43,7 @@
 *net-dialup/picocom
 *net-dns/bind-tools
 *net-misc/iperf
+*sys-apps/btrfs-compsize
 *sys-apps/ipmitool
 *sys-cluster/kubectl
 *sys-cluster/minikube
@@ -67,10 +67,10 @@
 *media-video/mpv
 *x11-plugins/enigmail
 *app-office/abiword
-*signal-desktop-bin
+*net-im/signal-desktop-bin
+*net-im/telegram-desktop
 *app-misc/moonlight-bin
 *media-video/jellyfin-media-player
-*signal-desktop-bin
 
 #*media-video/libva-utils
 #*x11-libs/libva-intel-driver
