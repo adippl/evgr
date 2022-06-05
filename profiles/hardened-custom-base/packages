@@ -1,3 +1,4 @@
+*acct-user/bss
 *app-admin/doas
 *app-admin/logrotate
 *app-admin/sysstat
@@ -37,5 +38,5 @@
 *virtual/cron
 *virtual/editor
 *virtual/logger
+*virtual/mailx
 *virtual/mta
-*acct-user/bss
