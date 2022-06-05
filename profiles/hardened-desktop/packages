@@ -64,6 +64,7 @@
 # X and friends
 *app-office/gnumeric
 *mail-client/thunderbird-bin
+*media-fonts/noto-emoji
 *media-gfx/gimp
 *media-video/mpv
 *x11-plugins/enigmail
