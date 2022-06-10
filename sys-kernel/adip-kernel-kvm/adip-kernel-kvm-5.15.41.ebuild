@@ -32,6 +32,10 @@ src_install() {
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/build"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/source"
+	sysmap_file="System.map-x86_64-${PV}-gentoo${mPR}-${K_TYPE}"
+	config_file="config-x86_64-${PV}-gentoo${mPR}-${K_TYPE}"
+	cp "${S}/${sysmap_file}" "${D}/boot/${sysmap_file}"
+	cp "${S}/${config_file}" "${D}/boot/${config_file}"
 }
 
 pkg_preinst(){
