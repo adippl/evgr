@@ -8,6 +8,7 @@ inherit acct-user
 DESCRIPTION="user for bss backup system"
 ACCT_USER_ID=456
 ACCT_USER_HOME=/home/bss
+ACCT_USER_SHELL=/bin/bash
 ACCT_USER_HOME_OWNER=bss:root
 ACCT_USER_HOME_PERMS=0550
 ACCT_USER_GROUPS=( nobody )
