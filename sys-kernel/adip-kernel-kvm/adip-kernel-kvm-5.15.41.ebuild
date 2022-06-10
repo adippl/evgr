@@ -36,6 +36,8 @@ src_install() {
 	config_file="config-x86_64-${PV}-gentoo${mPR}-${K_TYPE}"
 	cp "${S}/${sysmap_file}" "${D}/boot/${sysmap_file}"
 	cp "${S}/${config_file}" "${D}/boot/${config_file}"
+	config_file="config-${PV}-gentoo${mPR}-${K_TYPE}"
+	cp "${S}/${config_file}" "${D}/boot/${config_file}"
 }
 
 pkg_preinst(){
