@@ -37,3 +37,5 @@ x11-misc/xidle
 
 media-video/jellyfin-media-player
 media-video/jellyfin-web-jmp-bin
+
+=app-containers/cri-o-1.24.0
