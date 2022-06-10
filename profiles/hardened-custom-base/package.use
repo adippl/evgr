@@ -32,6 +32,10 @@ app-containers/podman			-fuse btrfs -rootless
 sys-block/fio			aio curl
 
 
+#k8s
+app-containers/cri-o btrfs
+
+
 #cli
 net-misc/curl adns -threads -ssh -http2 -nghttp3
 net-dns/c-ares abi_x86_32

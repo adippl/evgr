@@ -88,9 +88,6 @@ dev-ruby/bundler	-doc
 games-arcade/xbill gtk
 
 
-#k8s
-app-containers/cri-o btrfs
-
 #abi
 ## DESKTOP 
 media-gfx/graphite2				abi_x86_32
