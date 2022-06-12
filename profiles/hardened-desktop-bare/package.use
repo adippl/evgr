@@ -9,7 +9,6 @@ dev-libs/libjcat				gpg pkcs7
 media-libs/freetype				harfbuzz
 media-libs/mesa					d3d9 wayland
 media-sound/cmus				-elogind
-media-sound/pulseaudio			bluetooth dbus
 media-video/ffmpeg				bluray libcaca openh264 openal jpeg2k v4l
 media-video/mpv					cli archive libmpv -egl 
 net-analyzer/wireshark			qt5
@@ -26,7 +25,10 @@ x11-themes/gtk-engines-murrine	-themes
 xfce-base/thunar				-pcre -trash-panel-plugin
 xfce-extra/thunar-vcs-plugin	-subversion
 ays-auth/elogind				-policykit
-media-sound/pulseaudio-daemon 	bluetooth
+media-sound/pulseaudio			bluetooth dbus
+media-sound/pulseaudio-daemon 	bluetooth dbus
+media-libs/libpulse dbus
+
 
 
 #desktop-gtk
