@@ -12,6 +12,7 @@
 # CLI
 *app-admin/pass
 *app-admin/pass-otp
+*app-arch/innoextract
 *app-misc/fdupes
 *app-misc/neofetch
 *mail-client/mutt
@@ -23,6 +24,7 @@
 *net-irc/irssi
 *net-mail/isync
 *sys-apps/firejail
+
 
 # dev
 *app-admin/ansible
