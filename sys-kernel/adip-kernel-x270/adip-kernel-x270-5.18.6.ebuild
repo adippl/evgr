@@ -55,6 +55,8 @@ src_install() {
 }
 
 pkg_postinst(){
+	cp "${EROOT}/boot/${vmlinuz_file}" "${EROOT}/boot/kexec-vmlinuz"
+	cp "${EROOT}/boot/${initramfs_file}" "${EROOT}/boot/kexec-initramfs"
 	if use grub-update ;then
 		elog "updating grub config after kernel update"
 		grub-mkconfig -o /boot/grub/grub.cfg
