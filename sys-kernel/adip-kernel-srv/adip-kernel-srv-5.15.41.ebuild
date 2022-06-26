@@ -46,9 +46,9 @@ src_install() {
 	cp "${S}/${config_file}" "${D}/boot/${config_file_n}"
 }
 
-pkg_preinst(){
-	mount /boot ||ewarn "couldn't mount boot"
-	}
+#pkg_preinst(){
+#	mount /boot ||ewarn "couldn't mount boot"
+#	}
 pkg_postinst(){
 	if test -L "${EROOT}/boot/kexec-vmlinuz" ; then
 		unlink "${EROOT}/boot/kexec-vmlinuz"
@@ -59,28 +59,27 @@ pkg_postinst(){
 		ln -s "${initramfs_file}" "${EROOT}/boot/kexec-vmlinuz"
 	fi
 	if use grub-update ;then
-		mount /boot ||ewarn "couldn't mount boot"
+#		mount /boot ||ewarn "couldn't mount boot"
 		elog "updating grub config after kernel update"
 		grub-mkconfig -o /boot/grub/grub.cfg
-		umount /boot
+#		umount /boot
 	fi
-
-	umount /boot
+#	umount /boot
 	}
 
-pkg_prerm(){
-	mount /boot || ewarn "couldn't umount /boot"
-	if test -d /boot/efi ;then
-		mount /boot/efi || ewarn "couldn't umount /boot/efi"
-	fi
-}
+#pkg_prerm(){
+#	mount /boot || ewarn "couldn't umount /boot"
+#	if test -d /boot/efi ;then
+#		mount /boot/efi || ewarn "couldn't umount /boot/efi"
+#	fi
+#}
 pkg_postrm(){
-	if test -d /boot/efi ;then
-		umount /boot/efi || ewarn "couldn't unmount /boot/efi"
-	fi
+#	if test -d /boot/efi ;then
+#		umount /boot/efi || ewarn "couldn't unmount /boot/efi"
+#	fi
 	if use grub-update ;then
 		elog "updating grub config after kernel removal"
 		grub-mkconfig -o /boot/grub/grub.cfg
 	fi
-	umount /boot || ewarn "couldn't unmount /boot"
+#	umount /boot || ewarn "couldn't unmount /boot"
 }
