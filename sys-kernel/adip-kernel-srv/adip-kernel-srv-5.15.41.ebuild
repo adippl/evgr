@@ -52,12 +52,12 @@ src_install() {
 pkg_postinst(){
 	if test -L "${EROOT}/boot/kexec-vmlinuz" ; then
 		unlink "${EROOT}/boot/kexec-vmlinuz"
-		ln -s "${vmlinuz_file}" "${EROOT}/boot/kexec-vmlinuz"
 	fi
+	ln -s "${vmlinuz_file}" "${EROOT}/boot/kexec-vmlinuz"
 	if test -L "${EROOT}/boot/kexec-initramfs" ; then
 		unlink "${EROOT}/boot/kexec-initramfs"
-		ln -s "${initramfs_file}" "${EROOT}/boot/kexec-vmlinuz"
 	fi
+	ln -s "${initramfs_file}" "${EROOT}/boot/kexec-vmlinuz"
 	if use grub-update ;then
 #		mount /boot ||ewarn "couldn't mount boot"
 		elog "updating grub config after kernel update"
