@@ -35,7 +35,6 @@ src_install() {
 	#cp -r "${S}/boot/" "${D}/boot/"
 	dodir /lib/
 	dodir /boot
-	dodir /boot/kexec
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/build"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/source"
@@ -51,13 +50,13 @@ pkg_preinst(){
 	mount /boot ||ewarn "couldn't mount boot"
 	}
 pkg_postinst(){
-	if test -L "${EROOT}/boot/vmlinuz-latest" ; then
-		unlink "${EROOT}/boot/vmlinuz-latest"
-		ln -s "${vmlinuz_file}" "${EROOT}/boot/vmlinuz-latest"
+	if test -L "${EROOT}/boot/kexec-vmlinuz" ; then
+		unlink "${EROOT}/boot/kexec-vmlinuz"
+		ln -s "${vmlinuz_file}" "${EROOT}/boot/kexec-vmlinuz"
 	fi
-	if test -L "${EROOT}/boot/initramfs-latest" ; then
-		unlink "${EROOT}/boot/initramfs-latest"
-		ln -s "${initramfs_file}" "${EROOT}/boot/vmlinuz-latest"
+	if test -L "${EROOT}/boot/kexec-initramfs" ; then
+		unlink "${EROOT}/boot/kexec-initramfs"
+		ln -s "${initramfs_file}" "${EROOT}/boot/kexec-vmlinuz"
 	fi
 	if use grub-update ;then
 		mount /boot ||ewarn "couldn't mount boot"
