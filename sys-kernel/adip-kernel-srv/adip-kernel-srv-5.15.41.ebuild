@@ -35,11 +35,12 @@ src_install() {
 	#cp -r "${S}/boot/" "${D}/boot/"
 	dodir /lib/
 	dodir /boot
+	dodir /boot/kexec
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/build"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/source"
-	cp "${S}/${vmlinuz_file}" "${D}/boot/${vmlinuz_file}"
-	cp "${S}/${initramfs_file}" "${D}/boot/${initramfs_file}"
+	cp "${S}/boot/${vmlinuz_file}" "${D}/boot/${vmlinuz_file}"
+	cp "${S}/boot/${initramfs_file}" "${D}/boot/${initramfs_file}"
 	cp "${S}/${sysmap_file}" "${D}/boot/${sysmap_file}"
 	cp "${S}/${config_file}" "${D}/boot/${config_file}"
 	config_file_n="config-${PV}-gentoo${mPR}-${K_TYPE}"
