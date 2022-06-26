@@ -28,6 +28,7 @@
 *sys-boot/grub
 *sys-fs/btrfs-progs
 *sys-fs/cryptsetup
+*sys-fs/dosfstools
 *sys-fs/lvm2
 *sys-fs/ncdu
 *sys-kernel/linux-firmware
