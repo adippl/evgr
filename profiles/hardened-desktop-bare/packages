@@ -24,7 +24,8 @@
 *media-gfx/feh
 *media-gfx/scrot
 *www-client/firefox-bin
-*x11-apps/xbacklight
+#*x11-apps/xbacklight
+*sys-power/acpilight
 *x11-apps/xinput
 *x11-apps/xkill
 *x11-apps/xmodmap
@@ -51,4 +52,3 @@
 *x11-themes/numix-icon-theme
 *x11-drivers/xf86-input-evdev
 *x11-drivers/xf86-input-synaptics
-#*x11-drivers/xf86-video-intel
