@@ -144,6 +144,8 @@ dev-libs/libudfread abi_x86_32
 
 #MISC
 sys-apps/systemd-utils abi_x86_32
+net-wireless/lorcon python
+
 
 #### STEAM
 #app-arch/bzip2 abi_x86_32
