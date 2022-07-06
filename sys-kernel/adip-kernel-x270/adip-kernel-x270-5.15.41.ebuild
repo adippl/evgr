@@ -16,16 +16,12 @@ SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}.tar.xz"
 LICENSE="GPL-2"
 SLOT="${PV}"
 KEYWORDS="~amd64"
-IUSE="grub-update uefi uefi-test"
+IUSE="grub-update"
 
-REQUIRED_USE="
-	^^ ( uefi uefi-test )
-	"
+REQUIRED_USE=""
 
 DEPEND="
 	grub-update? ( sys-boot/grub )
-	uefi? ( sys-boot/efibootmgr )
-	uefi-test? ( sys-boot/efibootmgr )
 	"
 RDEPEND="${DEPEND}"
 BDEPEND="${DEPEND}"
