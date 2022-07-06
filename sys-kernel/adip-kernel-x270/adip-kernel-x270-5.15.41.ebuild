@@ -15,7 +15,7 @@ SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="${PV}"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE="grub-update uefi uefi-test"
 
 REQUIRED_USE="
@@ -33,54 +33,39 @@ BDEPEND="${DEPEND}"
 function kw_check_stable() { return $([ "$KEYWORDS" = "amd64" ]); }
 function kw_check_testing() { return $([ "$KEYWORDS" = "~amd64" ]); }
 
+vmlinuz_file="vmlinuz-x86_64-${PV}-gentoo${mPR}-${K_TYPE}"
+initramfs_file="initramfs-x86_64-${PV}-gentoo${mPR}-${K_TYPE}.img"
+sysmap_file="System.map-x86_64-${PV}-gentoo${mPR}-${K_TYPE}"
+config_file="config-x86_64-${PV}-gentoo${mPR}-${K_TYPE}"
+config_file_n="config-${PV}-gentoo${mPR}-${K_TYPE}"
+
 S="${WORKDIR}"
 
 src_install() {
-	cp -r "${S}/boot/" "${D}/boot/"
 	dodir /lib/
+	dodir /boot
 	cp -r "${S}/lib/modules/" "${D}/lib/modules/"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/build"
 	unlink "${D}/lib/modules/${PV}-gentoo${mPR}-${K_TYPE}/source"
-	if use uefi || use uefi-test ; then
-		mkdir "${D}/boot/kag"
-		touch "${D}/boot/kag/${PV}-gentoo${mPR}-${K_TYPE}"
-	fi
-#	dobin "${D}/efigen2"
+	cp "${S}/boot/${vmlinuz_file}" "${D}/boot/${vmlinuz_file}"
+	cp "${S}/boot/${initramfs_file}" "${D}/boot/${initramfs_file}"
+	cp "${S}/${sysmap_file}" "${D}/boot/${sysmap_file}"
+	cp "${S}/${config_file}" "${D}/boot/${config_file}"
+	cp "${S}/${config_file}" "${D}/boot/${config_file_n}"
 }
 
-pkg_preinst(){
-	mount /boot 2>/dev/null
-	#ec==32 when already mounted
-	[ "$?" != "32" ] && ewarn "couldn't mount /boot"
-	}
 pkg_postinst(){
+	cp "${EROOT}/boot/${vmlinuz_file}" "${EROOT}/boot/kexec-vmlinuz"
+	cp "${EROOT}/boot/${initramfs_file}" "${EROOT}/boot/kexec-initramfs"
 	if use grub-update ;then
-		mount /boot 2>/dev/null
-		#ec==32 when already mounted
-		[ "$?" != "32" ] && ewarn "couldn't mount /boot"
 		elog "updating grub config after kernel update"
 		grub-mkconfig -o /boot/grub/grub.cfg
 	fi
-	if use uefi || use uefi-test ; then
-		/usr/local/bin/efigen2
-	fi
-	umount /boot
-	[ "$?" != "32" ] && ewarn "couldn't umount /boot"
-	}
-
-pkg_prerm(){
-	mount /boot 2>/dev/null
-	#ec==32 when already mounted
-	["$?" != "32" ] && ewarn "couldn't umount /boot"
 }
+
 pkg_postrm(){
 	if use grub-update ;then
 		elog "updating grub config after kernel removal"
 		grub-mkconfig -o /boot/grub/grub.cfg
 	fi
-	if use uefi || use uefi-test  ;then
-		/usr/local/bin/efigen2
-	fi
-	umount /boot
-	[ "$?" != "32" ] && ewarn "couldn't umount /boot"
 }
