@@ -40,4 +40,6 @@ src_prepare() {
 src_install() {
 	emake DESTDIR="${D}" install
 	python_foreach_impl python_optimize
+	keepdir /var/lib/cache/crm
+	keepdir /var/lib/log/crmsh
 }
