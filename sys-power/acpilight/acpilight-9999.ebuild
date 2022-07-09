@@ -13,6 +13,7 @@ if [[ ${PVR} != "9999" ]] ; then
 fi
 
 inherit git-r3
+inherit udev
 #EGIT_REPO_URI="https://github.com/adippl/acpilight"
 EGIT_REPO_URI="${HOMEPAGE}"
 EGIT_BRANCH="c_rewrite"
@@ -32,6 +33,7 @@ BDEPEND=""
 
 src_install(){
 	dobin xbacklight
+	udev_dorules 90-backlight.rules
 }
 
 pkg_postinst() {
