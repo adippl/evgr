@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
@@ -34,10 +34,9 @@ src_install(){
 	dobin "${FILESDIR}/udev_delayed_unmap.sh"
 	udev_dorules "${FILESDIR}/jmicron-usb-nvme-adapter-discard.rules"
 	}
-
-pkg_postinst() {
+pkg_postinst(){
 	udev_reload
 }
-pkg_postrm() {
+pkg_postrm(){
 	udev_reload
 }
