@@ -8,7 +8,7 @@ HOMEPAGE="https://github.com/adippl/gentoo-kernel-config"
 [ "${PR}" != "" ] && mPR="-${PR}"
 [ "${PR}" = "r0" ] && mPR=""
 K_TYPE="nfsboot"
-RESTRICT="mirror"
+RESTRICT="mirror strip"
 #MIRR="https://github.com/adippl/gentoo-kernel-config/raw/master"
 MIRR="http://files.acmelab.top/kernels"
 SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}.tar.xz"
@@ -23,8 +23,6 @@ DEPEND="
 	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
-
-RESTRICT="strip"
 
 S="${WORKDIR}"
 
