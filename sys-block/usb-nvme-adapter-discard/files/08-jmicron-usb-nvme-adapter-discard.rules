@@ -1,0 +1,1 @@
+ACTION=="add|change", ATTRS{idVendor}=="152d", ATTRS{idProduct}=="0583", SUBSYSTEM=="scsi_disk" , ATTR{provisioning_mode}="unmap", RUN+="udev_delayed_unmap.sh"
