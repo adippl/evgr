@@ -16,11 +16,11 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+S="${WORKDIR}"
 src_unpack(){
 	true
 	}
 src_prepare(){
-	mkdir "${S}"
 	eapply_user
 	true
 	}
