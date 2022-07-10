@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 #SLOT="${PV}"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE="nfsboot-server"
+IUSE="+nfsboot-server"
 
 DEPEND="
 	"
