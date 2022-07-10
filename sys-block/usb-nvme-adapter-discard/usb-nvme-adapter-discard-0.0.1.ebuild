@@ -32,7 +32,7 @@ src_compile(){
 	}
 src_install(){
 	dobin "${FILESDIR}/udev_delayed_unmap.sh"
-	udev_dorules "${FILESDIR}/08-jmicron-usb-nvme-adapter-discard.rules"
+	udev_dorules "${FILESDIR}/jmicron-usb-nvme-adapter-discard.rules"
 	}
 
 pkg_postinst() {
