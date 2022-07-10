@@ -15,8 +15,8 @@ SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="${PVR}"
-KEYWORDS="~amd64"
-IUSE="grub-update"
+KEYWORDS="amd64"
+IUSE="+grub-update"
 
 DEPEND="
 	grub-update? ( sys-boot/grub )
