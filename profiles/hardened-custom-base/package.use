@@ -60,95 +60,95 @@ sys-cluster/minikube	libvirt
 
 
 #ceph on python3.9
-sys-cluster/ceph PYTHON_TARGETS: -* python3_9
-dev-python/tomli  PYTHON_TARGETS: python3_9
-dev-libs/boost  PYTHON_TARGETS: python3_9
-dev-python/installer  PYTHON_TARGETS: python3_9
-dev-python/gpep517  PYTHON_TARGETS: python3_9
-dev-python/flit_core  PYTHON_TARGETS: python3_9
-dev-python/more-itertools  PYTHON_TARGETS: python3_9
-dev-python/jaraco-context  PYTHON_TARGETS: python3_9
-dev-python/appdirs  PYTHON_TARGETS: python3_9
-dev-python/ordered-set  PYTHON_TARGETS: python3_9
-dev-python/zipp  PYTHON_TARGETS: python3_9 python3_10
-dev-python/pyparsing  PYTHON_TARGETS: python3_9
-dev-python/typing-extensions  PYTHON_TARGETS: python3_9
-dev-python/packaging  PYTHON_TARGETS: python3_9
-dev-python/jaraco-functools  PYTHON_TARGETS: python3_9
-dev-python/importlib_metadata  PYTHON_TARGETS: python3_9 python3_10
-dev-python/wheel  PYTHON_TARGETS: python3_9
-dev-python/jaraco-text  PYTHON_TARGETS: python3_9
-dev-python/nspektr  PYTHON_TARGETS: python3_9
-dev-python/setuptools  PYTHON_TARGETS: python3_9
-dev-python/certifi  PYTHON_TARGETS: python3_9
-dev-python/setuptools_scm  PYTHON_TARGETS: python3_9
-dev-python/six  PYTHON_TARGETS: python3_9
-dev-python/cython  PYTHON_TARGETS: python3_9
-dev-python/werkzeug  PYTHON_TARGETS: python3_9
-dev-python/gast  PYTHON_TARGETS: python3_9
-dev-python/ply  PYTHON_TARGETS: python3_9
-dev-python/cloudpickle  PYTHON_TARGETS: python3_9
-dev-python/webob  PYTHON_TARGETS: python3_9
-dev-python/markupsafe  PYTHON_TARGETS: python3_9
-dev-python/pytz  PYTHON_TARGETS: python3_9
-dev-python/pyjwt  PYTHON_TARGETS: python3_9
-dev-python/pybind11  PYTHON_TARGETS: python3_9
-dev-python/olefile  PYTHON_TARGETS: python3_9
-dev-python/psutil  PYTHON_TARGETS: python3_9
-dev-python/repoze-lru  PYTHON_TARGETS: python3_9
-dev-python/jsonpointer  PYTHON_TARGETS: python3_9
-dev-python/charset_normalizer  PYTHON_TARGETS: python3_9
-dev-python/idna  PYTHON_TARGETS: python3_9
-dev-python/PySocks  PYTHON_TARGETS: python3_9
-dev-python/semantic_version  PYTHON_TARGETS: python3_9
-dev-python/wcwidth  PYTHON_TARGETS: python3_9
-dev-python/logutils  PYTHON_TARGETS: python3_9 
-dev-python/pastedeploy  PYTHON_TARGETS: python3_9
-dev-python/waitress  PYTHON_TARGETS: python3_9
-dev-python/webencodings  PYTHON_TARGETS: python3_9
-dev-python/editables  PYTHON_TARGETS: python3_9
-dev-python/pathspec  PYTHON_TARGETS: python3_9
-dev-python/pluggy  PYTHON_TARGETS: python3_9
-dev-python/click  PYTHON_TARGETS: python3_9
-dev-python/blinker  PYTHON_TARGETS: python3_9
-dev-python/itsdangerous  PYTHON_TARGETS: python3_9
-dev-python/zc-lockfile  PYTHON_TARGETS: python3_9
-dev-python/jaraco-classes  PYTHON_TARGETS: python3_9
-dev-python/jinja  PYTHON_TARGETS: python3_9
-dev-python/numpy  PYTHON_TARGETS: python3_9
-dev-python/python-dateutil  PYTHON_TARGETS: python3_9
-dev-python/prettytable  PYTHON_TARGETS: python3_9
-dev-python/pyyaml  PYTHON_TARGETS: python3_9
-dev-python/jsonpatch  PYTHON_TARGETS: python3_9
-dev-python/routes  PYTHON_TARGETS: python3_9
-dev-python/threadpoolctl  PYTHON_TARGETS: python3_9
-dev-python/pillow  PYTHON_TARGETS: python3_9
-dev-python/beniget  PYTHON_TARGETS: python3_9
-dev-python/loky  PYTHON_TARGETS: python3_9
-dev-python/urllib3  PYTHON_TARGETS: python3_9
-dev-python/setuptools-rust  PYTHON_TARGETS: python3_9
-dev-python/pycparser  PYTHON_TARGETS: python3_9
-dev-python/mako  PYTHON_TARGETS: python3_9
-dev-python/paste  PYTHON_TARGETS: python3_9
-dev-python/html5lib  PYTHON_TARGETS: python3_9
-dev-python/lxml  PYTHON_TARGETS: python3_9
-dev-python/hatchling  PYTHON_TARGETS: python3_9
-dev-python/cheroot  PYTHON_TARGETS: python3_9
-dev-python/jaraco-collections  PYTHON_TARGETS: python3_9
-dev-python/tempora  PYTHON_TARGETS: python3_9
-dev-python/requests  PYTHON_TARGETS: python3_9
-dev-python/cffi  PYTHON_TARGETS: python3_9
-dev-python/flask  PYTHON_TARGETS: python3_9
-dev-python/joblib  PYTHON_TARGETS: python3_9
-dev-python/pythran  PYTHON_TARGETS: python3_9
-dev-python/soupsieve  PYTHON_TARGETS: python3_9
-dev-python/portend  PYTHON_TARGETS: python3_9
-dev-python/bcrypt  PYTHON_TARGETS: python3_9
-dev-python/scipy  PYTHON_TARGETS: python3_9
-dev-python/cryptography  PYTHON_TARGETS: python3_9
-dev-python/beautifulsoup4  PYTHON_TARGETS: python3_9
-dev-python/pyopenssl  PYTHON_TARGETS: python3_9
-sci-libs/scikit-learn  PYTHON_TARGETS: python3_9
-dev-python/webtest  PYTHON_TARGETS: python3_9
-dev-python/cherrypy  PYTHON_TARGETS: python3_9
-dev-python/pecan  PYTHON_TARGETS: python3_9
+sys-cluster/ceph python_targets_python3_9
+dev-python/tomli  python_targets_python3_9
+dev-libs/boost  python_targets_python3_9
+dev-python/installer  python_targets_python3_9
+dev-python/gpep517  python_targets_python3_9
+dev-python/flit_core  python_targets_python3_9
+dev-python/more-itertools  python_targets_python3_9
+dev-python/jaraco-context  python_targets_python3_9
+dev-python/appdirs  python_targets_python3_9
+dev-python/ordered-set  python_targets_python3_9
+dev-python/zipp  python_targets_python3_9 python3_10
+dev-python/pyparsing  python_targets_python3_9
+dev-python/typing-extensions  python_targets_python3_9
+dev-python/packaging  python_targets_python3_9
+dev-python/jaraco-functools  python_targets_python3_9
+dev-python/importlib_metadata  python_targets_python3_9 python_targets_python3_10
+dev-python/wheel  python_targets_python3_9
+dev-python/jaraco-text  python_targets_python3_9
+dev-python/nspektr  python_targets_python3_9
+dev-python/setuptools  python_targets_python3_9
+dev-python/certifi  python_targets_python3_9
+dev-python/setuptools_scm  python_targets_python3_9
+dev-python/six  python_targets_python3_9
+dev-python/cython  python_targets_python3_9
+dev-python/werkzeug  python_targets_python3_9
+dev-python/gast  python_targets_python3_9
+dev-python/ply  python_targets_python3_9
+dev-python/cloudpickle  python_targets_python3_9
+dev-python/webob  python_targets_python3_9
+dev-python/markupsafe  python_targets_python3_9
+dev-python/pytz  python_targets_python3_9
+dev-python/pyjwt  python_targets_python3_9
+dev-python/pybind11  python_targets_python3_9
+dev-python/olefile  python_targets_python3_9
+dev-python/psutil  python_targets_python3_9
+dev-python/repoze-lru  python_targets_python3_9
+dev-python/jsonpointer  python_targets_python3_9
+dev-python/charset_normalizer  python_targets_python3_9
+dev-python/idna  python_targets_python3_9
+dev-python/PySocks  python_targets_python3_9
+dev-python/semantic_version  python_targets_python3_9
+dev-python/wcwidth  python_targets_python3_9
+dev-python/logutils  python_targets_python3_9
+dev-python/pastedeploy  python_targets_python3_9
+dev-python/waitress  python_targets_python3_9
+dev-python/webencodings  python_targets_python3_9
+dev-python/editables  python_targets_python3_9
+dev-python/pathspec  python_targets_python3_9
+dev-python/pluggy  python_targets_python3_9
+dev-python/click  python_targets_python3_9
+dev-python/blinker  python_targets_python3_9
+dev-python/itsdangerous  python_targets_python3_9
+dev-python/zc-lockfile  python_targets_python3_9
+dev-python/jaraco-classes  python_targets_python3_9
+dev-python/jinja  python_targets_python3_9
+dev-python/numpy  python_targets_python3_9
+dev-python/python-dateutil  python_targets_python3_9
+dev-python/prettytable  python_targets_python3_9
+dev-python/pyyaml  python_targets_python3_9
+dev-python/jsonpatch  python_targets_python3_9
+dev-python/routes  python_targets_python3_9
+dev-python/threadpoolctl  python_targets_python3_9
+dev-python/pillow  python_targets_python3_9
+dev-python/beniget  python_targets_python3_9
+dev-python/loky  python_targets_python3_9
+dev-python/urllib3  python_targets_python3_9
+dev-python/setuptools-rust  python_targets_python3_9
+dev-python/pycparser  python_targets_python3_9
+dev-python/mako  python_targets_python3_9
+dev-python/paste  python_targets_python3_9
+dev-python/html5lib  python_targets_python3_9
+dev-python/lxml  python_targets_python3_9
+dev-python/hatchling  python_targets_python3_9
+dev-python/cheroot  python_targets_python3_9
+dev-python/jaraco-collections  python_targets_python3_9
+dev-python/tempora  python_targets_python3_9
+dev-python/requests  python_targets_python3_9
+dev-python/cffi  python_targets_python3_9
+dev-python/flask  python_targets_python3_9
+dev-python/joblib  python_targets_python3_9
+dev-python/pythran  python_targets_python3_9
+dev-python/soupsieve  python_targets_python3_9
+dev-python/portend  python_targets_python3_9
+dev-python/bcrypt  python_targets_python3_9
+dev-python/scipy  python_targets_python3_9
+dev-python/cryptography  python_targets_python3_9
+dev-python/beautifulsoup4  python_targets_python3_9
+dev-python/pyopenssl  python_targets_python3_9
+sci-libs/scikit-learn  python_targets_python3_9
+dev-python/webtest  python_targets_python3_9
+dev-python/cherrypy  python_targets_python3_9
+dev-python/pecan  python_targets_python3_9
