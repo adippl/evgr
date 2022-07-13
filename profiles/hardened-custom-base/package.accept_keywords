@@ -7,5 +7,5 @@ sys-cluster/minikube ~amd64
 =app-containers/cri-o-1.24.1 ~amd64
 =app-containers/flannel-0.17.0 ~amd64
 
-=sys-cluster/ceph-17.2.1
+=sys-cluster/ceph-17.2.1-r1
 =dev-libs/thrift-0.16.0-r1
