@@ -1,5 +1,5 @@
-app-emulation/libvirt		rbd iscsi iscsi-direct
-app-emulation/qemu			rbd iscsi
+app-emulation/libvirt		rbd
+app-emulation/qemu			rbd
 
 sys-block/open-iscsi		rdma
 sys-fs/multipath-tools		rbd

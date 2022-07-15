@@ -17,7 +17,7 @@ sys-process/procps				-elogind
 net-mail/isync					sasl
 
 #libvirt
-app-emulation/libvirt			vepa virt-network lvm nfs bash-completion
+app-emulation/libvirt			vepa virt-network nfs bash-completion
 app-emulation/qemu				usb usbredir virtfs nfs spice
 sys-boot/grub					device-mapper
 net-dns/dnsmasq					script
