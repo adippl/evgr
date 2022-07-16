@@ -18,7 +18,7 @@ net-mail/isync					sasl
 
 #libvirt
 app-emulation/libvirt			vepa virt-network nfs bash-completion
-app-emulation/qemu				usb usbredir virtfs nfs spice
+app-emulation/qemu				usb usbredir virtfs nfs spice -multipath
 sys-boot/grub					device-mapper
 net-dns/dnsmasq					script
 net-misc/spice-gtk				usbredir
