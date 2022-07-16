@@ -51,10 +51,12 @@ src_install() {
 }
 
 pkg_postinst(){
-	test -L "${EROOT}/boot/${vmlinuz_file}" && unlink "${EROOT}/boot/${vmlinuz_file}"
-	ln -s "${EROOT}/boot/${vmlinuz_file}" "${EROOT}/boot/kexec-vmlinuz"
-	test -L "${EROOT}/boot/${initramfs_file}" && unlink "${EROOT}/boot/${initramfs_file}"
-	ln -s "${EROOT}/boot/${initramfs_file}" "${EROOT}/boot/kexec-initramfs"
+	#test -L "${EROOT}/boot/${vmlinuz_file}" && unlink "${EROOT}/boot/${vmlinuz_file}"
+	#ln -s "${EROOT}/boot/${vmlinuz_file}" "${EROOT}/boot/kexec-vmlinuz"
+	#test -L "${EROOT}/boot/${initramfs_file}" && unlink "${EROOT}/boot/${initramfs_file}"
+	#ln -s "${EROOT}/boot/${initramfs_file}" "${EROOT}/boot/kexec-initramfs"
+	cp "${EROOT}/boot/${vmlinuz_file}" "${EROOT}/boot/kexec-vmlinuz"
+	cp "${EROOT}/boot/${initramfs_file}" "${EROOT}/boot/kexec-initramfs"
 	if use grub-update ;then
 		elog "updating grub config after kernel update"
 		grub-mkconfig -o /boot/grub/grub.cfg
