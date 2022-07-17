@@ -1,5 +1,6 @@
 #system
 *net-vpn/wireguard-tools
+*net-dns/openresolv
 *sys-apps/hdparm
 *sys-boot/efibootmgr
 *sys-boot/grub
