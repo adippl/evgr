@@ -5,7 +5,7 @@ EAPI=8
 
 inherit autotools git-r3 toolchain-funcs libtool
 
-DESCRIPTION="A window switcher, run dialog and dmenu replacement"
+DESCRIPTION="emoji selection plugin for x11-misc/rofi"
 HOMEPAGE="https://github.com/Mange/rofi-emoji"
 EGIT_REPO_URI="$HOMEPAGE"
 
