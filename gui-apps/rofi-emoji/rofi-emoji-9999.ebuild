@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit autotools git-r3 toolchain-funcs libtool
+inherit autotools git-r3
 
 DESCRIPTION="emoji selection plugin for x11-misc/rofi"
 HOMEPAGE="https://github.com/Mange/rofi-emoji"
@@ -16,9 +16,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
-IUSE="X wayland test"
-RESTRICT="!test? ( test )"
+IUSE="X wayland"
 DOC="LICENSE README.md"
 
 BDEPEND="
@@ -39,8 +37,6 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	x11-base/xorg-proto
-	test? ( >=dev-libs/check-0.11 )
 "
 
 src_prepare() {
@@ -49,6 +45,5 @@ src_prepare() {
 }
 
 src_configure() {
-	tc-export CC
 	econf
 }
