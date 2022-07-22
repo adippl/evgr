@@ -29,9 +29,7 @@ BDEPEND="
 RDEPEND="
 	x11-misc/rofi
 	X? (
-		x11-misc/xsel
 		x11-misc/xclip
-		x11-misc/copyq
 		x11-misc/xdotool
 		)
 	wayland? (
