@@ -40,3 +40,6 @@ media-video/jellyfin-web-jmp-bin
 sys-power/acpilight **
 
 gui-apps/foot ~amd64
+	=media-libs/fcft-3.1.2-r1 ~amd64
+	=dev-libs/tllist-1.0.5 ~amd64
+
