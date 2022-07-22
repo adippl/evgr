@@ -9,6 +9,11 @@ DESCRIPTION="A window switcher, run dialog and dmenu replacement"
 HOMEPAGE="https://github.com/Mange/rofi-emoji"
 EGIT_REPO_URI="$HOMEPAGE"
 
+if [[ ${PVR} != "9999" ]] ; then
+	EGIT_COMMIT="v${PVR}"
+	KEYWORDS="~amd64"
+fi
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
@@ -17,9 +22,9 @@ RESTRICT="!test? ( test )"
 DOC="LICENSE README.md"
 
 BDEPEND="
-	sys-devel/bison
-	sys-devel/flex
-	virtual/pkgconfig
+	sys-devel/autoconf
+	sys-devel/automake
+	sys-devel/libtool
 "
 RDEPEND="
 	x11-misc/rofi
@@ -46,11 +51,5 @@ src_prepare() {
 
 src_configure() {
 	tc-export CC
-	#local myeconfargs=(
-	#	$(use_enable drun)
-	#	$(use_enable test check)
-	#	$(use_enable windowmode)
-	#)
-	#econf "${myeconfargs[@]}"
 	econf
 }
