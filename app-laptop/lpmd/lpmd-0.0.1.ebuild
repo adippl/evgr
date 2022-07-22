@@ -16,6 +16,7 @@ EGIT_REPO_URI="https://github.com/adippl/lpmd"
 
 LICENSE="GPL-2"
 SLOT="0"
+#KEYWORDS=""
 IUSE=""
 
 DEPEND=""
