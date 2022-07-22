@@ -46,18 +46,11 @@ src_prepare() {
 
 src_configure() {
 	tc-export CC
-
 	#local myeconfargs=(
 	#	$(use_enable drun)
 	#	$(use_enable test check)
 	#	$(use_enable windowmode)
 	#)
 	#econf "${myeconfargs[@]}"
+	econf
 }
-
-src_install(){
-	dodir /usr/share/rofi-emoji
-	dodoc README.md
-	dodoc clipboard-adapter.sh
-	elibtoolize
-	}
