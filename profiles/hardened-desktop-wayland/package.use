@@ -1,2 +1,5 @@
 gui-apps/swayidle -elogind
-sys-auth/seatd -elogind
+#sys-auth/seatd -elogind # to be removed in future
+media-video/mpv egl
+media-libs/libsdl2 gles2
+dev-qt/qtgui egl
