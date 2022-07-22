@@ -7,7 +7,7 @@ inherit git-r3
 
 DESCRIPTION="xdotool type for wayland"
 HOMEPAGE="https://github.com/atx/wtype"
-EGIT_REPO_URL="$HOMEPAGE"
+EGIT_REPO_URI="$HOMEPAGE"
 
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="v${PVR}"
