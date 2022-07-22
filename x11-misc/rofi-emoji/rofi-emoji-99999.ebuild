@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit autotools git-r3 toolchain-funcs
+inherit autotools git-r3 toolchain-funcs libtool
 
 DESCRIPTION="A window switcher, run dialog and dmenu replacement"
 HOMEPAGE="https://github.com/Mange/rofi-emoji"
@@ -14,6 +14,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="X wayland test"
 RESTRICT="!test? ( test )"
+DOC="LICENSE README.md"
 
 BDEPEND="
 	sys-devel/bison
@@ -53,3 +54,10 @@ src_configure() {
 	#)
 	#econf "${myeconfargs[@]}"
 }
+
+src_install(){
+	dodir /usr/share/rofi-emoji
+	dodoc README.md
+	dodoc clipboard-adapter.sh
+	elibtoolize
+	}
