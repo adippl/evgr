@@ -16,7 +16,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+#KEYWORDS=""
 IUSE="X wayland test"
 RESTRICT="!test? ( test )"
 DOC="LICENSE README.md"
