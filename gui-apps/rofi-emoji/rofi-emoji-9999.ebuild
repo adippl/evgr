@@ -34,6 +34,7 @@ RDEPEND="
 		)
 	wayland? (
 		gui-apps/wl-clipboard
+		gui-apps/wtype
 		)
 "
 DEPEND="
