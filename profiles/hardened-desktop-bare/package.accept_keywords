@@ -28,7 +28,6 @@ net-misc/seafile
 net-libs/libsearpc
 
 sys-kernel/adip-kernel-x270
-app-laptop/lpmd
 
 # TODO maybe move to hardened-custom-base
 app-benchmarks/bootchart2
