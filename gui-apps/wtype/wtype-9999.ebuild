@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit git-r3
+inherit git-r3 meson
 
 DESCRIPTION="xdotool type for wayland"
 HOMEPAGE="https://github.com/atx/wtype"
@@ -22,10 +22,3 @@ DEPEND="
 	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
-
-src_configure(){
-	meson_src_configure
-	}
-src_install(){
-	meson_src_install
-	}
