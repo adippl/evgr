@@ -93,6 +93,7 @@ games-arcade/xbill gtk
 
 #abi
 ## DESKTOP 
+x11-libs/libxkbcommon			abi_x86_32
 media-gfx/graphite2				abi_x86_32
 media-libs/dav1d				abi_x86_32
 media-libs/harfbuzz				abi_x86_32
