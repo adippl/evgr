@@ -1,6 +1,7 @@
 *acct-user/bss
 *app-admin/doas
 *app-admin/logrotate
+*app-admin/spectre-meltdown-checker
 *app-admin/sysstat
 *app-arch/zstd
 *app-editors/vim
