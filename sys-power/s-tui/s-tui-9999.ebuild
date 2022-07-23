@@ -9,7 +9,7 @@ inherit git-r3
 DESCRIPTION=""
 HOMEPAGE="https://github.com/amanusk/s-tui"
 DESCRIPTION="CPU temperature, frequency, utilization and power monitoring"
-GIT_REPO_URI="$HOMEPAGE"
+EGIT_REPO_URI="$HOMEPAGE"
 
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="${PVR}"
