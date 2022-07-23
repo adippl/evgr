@@ -64,6 +64,7 @@
 *sys-boot/woeusb
 *sys-fs/squashfs-tools
 *www-client/chromium
+*net-misc/s3cmd
 
 
 # X and friends
