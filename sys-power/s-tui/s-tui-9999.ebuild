@@ -17,12 +17,11 @@ inherit distutils-r1
 
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="v${PVR}"
-	KEYWORDS="amd64"
+	KEYWORDS="~amd64"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="stress"
 
 DEPEND="
