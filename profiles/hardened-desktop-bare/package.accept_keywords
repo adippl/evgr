@@ -27,8 +27,6 @@ net-misc/seafile-client
 net-misc/seafile
 net-libs/libsearpc
 
-sys-kernel/adip-kernel-x270
-
 # TODO maybe move to hardened-custom-base
 app-benchmarks/bootchart2
 
