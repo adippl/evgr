@@ -17,7 +17,7 @@ EGIT_REPO_URI="https://github.com/adippl/bss"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+#KEYWORDS=""
 
 DOCS=(
 	bsstab
