@@ -48,6 +48,7 @@ net-p2p/transmission	cli
 
 #server
 sys-cluster/ceph		fuse
+net-proxy/haproxy		-slz
 
 
 #dev
