@@ -1,2 +1,3 @@
 evgr:amd64-hardened/base
+evgr:features/headless
 gentoo:arch/amd64/no-multilib
