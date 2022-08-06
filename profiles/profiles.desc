@@ -9,3 +9,4 @@ amd64 amd64-hardened/base stable
 amd64 amd64-hardened/desktop-bare stable
 amd64 amd64-hardened/desktop stable
 amd64 amd64-hardened/desktop-wayland stable
+amd64 amd64-hardened/headless stable

@@ -1,2 +1,1 @@
-evgr:hardened-custom-base
-gentoo:arch/amd64/no-multilib
+evgr:amd64-hardened/headless
