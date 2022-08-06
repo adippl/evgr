@@ -1,1 +1,1 @@
-evgr:hardened-headless
+evgr:amd64-hardened/headless-kvm
