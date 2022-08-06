@@ -1,2 +1,1 @@
-gentoo:default/linux/amd64/17.1/hardened
-evgr:features/base
+evgr:amd64-hardened/base

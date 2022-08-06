@@ -1,3 +1,1 @@
-evgr:hardened-custom-base
-evgr:features/wine-steam
-evgr:features/desktop-bare
+evgr:amd64-hardened/desktop-bare

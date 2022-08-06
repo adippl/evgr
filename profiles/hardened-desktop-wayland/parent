@@ -1,2 +1,1 @@
-evgr:hardened-desktop
-evgr:features/desktop-wayland
+evgr:amd64-hardened/desktop-wayland

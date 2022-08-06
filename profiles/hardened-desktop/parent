@@ -1,2 +1,1 @@
-evgr:hardened-desktop-bare
-evgr:features/desktop-main
+evgr:amd64-hardened/desktop-main
