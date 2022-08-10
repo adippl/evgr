@@ -11,4 +11,4 @@ sys-cluster/minikube ~amd64
 =dev-libs/thrift-0.16.0-r1
 
 
-=app-misc/resolve-march-native=1.0.0-r1 ~arm64
+=app-misc/resolve-march-native-1.0.0-r1 ~arm64
