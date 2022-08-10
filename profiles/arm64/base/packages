@@ -1,0 +1,3 @@
+-*sys-fs/cryptsetup
+-*sys-boot/grub
+-*sys-fs/lvm2
