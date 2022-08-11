@@ -8,7 +8,8 @@
 *sys-fs/fuse
 *sys-fs/fuse:0
 *sys-fs/ntfs3g
-*sys-block/usb-nvme-adapter-discard
+#*sys-block/usb-nvme-adapter-discard
+*sys-block/usb-nvme-JMicron583-discard
 
 # CLI
 *app-misc/ranger
