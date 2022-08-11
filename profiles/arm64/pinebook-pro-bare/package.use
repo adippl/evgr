@@ -1,0 +1,2 @@
+sys-devel/gcc -zstd -lto -go
+media-fonts/terminus-font X

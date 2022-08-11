@@ -1,0 +1,5 @@
+*net-misc/dhcpcd
+*net-wireless/wpa_supplicant
+
+*sys-apps/dtc # u-boot
+*sys-devel/crossdev # arm-trusted-firmware need arm-none-eabi toolchain

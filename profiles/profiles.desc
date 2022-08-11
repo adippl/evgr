@@ -14,4 +14,5 @@ amd64 amd64-hardened/headless stable
 amd64 amd64-hardened/headless-kvm stable
 
 arm64 arm64/base stable
+arm64 arm64/pinebook-pro-bare stable
 arm64 arm64/pinebook-pro stable
