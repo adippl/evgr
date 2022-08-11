@@ -2,6 +2,8 @@
 -*app-admin/pass-otp		# missing arm64 keyword
 -*app-emulation/virt-viewer	# missing arm64 keyword
 -*app-misc/moonlight-bin	# missing arm64 keyword
+-*mail-client/thunderbird-bin	# missing arm64 keyword
+-*www-client/firefox-bin	# missing arm64 keyword
 -*app-misc/ranger		# missing arm64 keyword
 -*app-office/gnumeric		# missing arm64 keyword
 -*app-office/abiword		# probably not needed

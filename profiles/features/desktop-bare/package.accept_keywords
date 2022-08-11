@@ -30,7 +30,6 @@ net-libs/libsearpc
 # TODO maybe move to hardened-custom-base
 app-benchmarks/bootchart2
 
-x11-misc/xidle
 
 media-video/jellyfin-media-player
 media-video/jellyfin-web-jmp-bin
