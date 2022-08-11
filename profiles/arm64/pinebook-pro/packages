@@ -1,0 +1,30 @@
+-*app-arch/innoextract		# gog games are x86 only
+-*app-admin/pass-otp		# missing arm64 keyword
+-*app-emulation/virt-viewer	# missing arm64 keyword
+-*app-misc/moonlight-bin	# missing arm64 keyword
+-*app-misc/ranger		# missing arm64 keyword
+-*app-office/gnumeric		# missing arm64 keyword
+-*app-office/abiword		# probably not needed
+-*media-sound/mpd		# missing arm64 keyword
+-*media-sound/ncmpcpp		# missing arm64 keyword
+-*net-analyzer/ettercap		# missing arm64 keyword
+-*net-analyzer/nethogs		# missing arm64 keyword
+-*net-im/signal-desktop-bin	# missing arm64 keyword
+-*net-misc/s3cmd		# missing arm64 keyword
+-*sys-apps/btrfs-compsize	# missing arm64 keyword
+-*sys-boot/woeusb		# missing arm64 keyword
+-*sys-fs/fuseiso		# missing arm64 keyword
+-*virtual/wine			# missing arm64 keyword
+-*app-emulation/winetricks	# missing arm64 keyword
+-*x11-misc/urxvt-font-size	# missing arm64 keyword
+-*x11-plugins/enigmail		# missing arm64 keyword
+-*media-video/jellyfin-media-player	# missing arm64 keyword
+
+
+
+
+
+
+
+
+

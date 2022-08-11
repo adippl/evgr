@@ -1,2 +1,3 @@
 sys-devel/gcc -zstd -lto -go
 media-fonts/terminus-font X
+app-text/xmlto text
