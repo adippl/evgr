@@ -8,7 +8,7 @@ HOMEPAGE="https://github.com/kilobyte/compsize"
 
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="v${PVR}"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 arm64"
 fi
 
 inherit git-r3
