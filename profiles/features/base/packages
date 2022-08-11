@@ -6,6 +6,7 @@
 *app-arch/zstd
 *app-editors/vim
 *app-eselect/eselect-repository
+*app-misc/neofetch
 *app-misc/resolve-march-native
 *app-misc/tmux
 *app-portage/cpuid2cpuflags
@@ -14,6 +15,7 @@
 *app-portage/portage-utils
 *app-shells/bash-completion
 *dev-vcs/git
+*net-analyzer/mtr
 *net-firewall/nftables
 *net-misc/ntp
 *sys-apps/bss
