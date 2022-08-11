@@ -2,6 +2,9 @@ app-emulation/diskimage-builder ~arm64
 app-office/abiword ~arm64
 dev-python/python-ironicclient ~arm64
 dev-python/python-openstachclient ~arm64
+	dev-python/osc-lib ~arm64
+	dev-python/python-keystoneclient ~amd64
+	dev-python/python-novaclient ~amd64
 gui-apps/grim ~arm64
 mail-client/mutt ~arm64
 media-gfx/feh ~arm64
@@ -23,3 +26,6 @@ xfce-extra/thunar-archive-plugin ~arm64
 xfce-extra/thunar-media-tags-plugin **
 xfce-extra/thunar-vcs-plugin **
 x11-themes/gtk-engines-murrine ~arm64
+dev-go/go-bindata ~arm64
+dev-libs/libdispatch ~arm64
+x11-misc/xss-lock ~arm64

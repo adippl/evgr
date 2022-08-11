@@ -5,7 +5,6 @@ amd64 hardened-headless dev
 amd64 hardened-headless-kvm dev
 amd64 hardened-desktop-wayland dev
 
-amd64 amd64-hardened/ stable
 amd64 amd64-hardened/base stable
 amd64 amd64-hardened/desktop-bare stable
 amd64 amd64-hardened/desktop stable

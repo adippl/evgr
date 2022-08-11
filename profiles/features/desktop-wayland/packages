@@ -1,8 +1,8 @@
-*gui-wm/sway
 *gui-apps/foot
 *gui-apps/grim
+*gui-wm/sway
 -*media-gfx/scrot
 -*x11-misc/i3lock
--*x11-wm/i3
 -*x11-misc/xautolock
 -*x11-terms/rxvt-unicode
+-*x11-wm/i3
