@@ -6,6 +6,7 @@ dev-python/python-openstachclient ~arm64
 	dev-python/python-keystoneclient ~arm64
 	dev-python/python-novaclient ~arm64
 	dev-python/python-cinderclient ~arm64
+	dev-python/regex ~arm64
 gui-apps/grim ~arm64
 mail-client/mutt ~arm64
 media-gfx/feh ~arm64
@@ -37,3 +38,10 @@ x11-misc/xss-lock ~arm64
 	media-libs/tg_owt ~arm64
 	dev-cpp/range-v3 ~arm64
 	dev-cpp/ms-gsl ~arm64
+
+app-emulation/libvirt ~arm64
+
+# virt-manager
+	app-emulation/libvirt-glib ~arm64
+	dev-python/libvirt-python ~arm64
+dev-python/setuptools-rust ~arm64
