@@ -133,6 +133,9 @@ src_configure() {
 	else
 		myconf+=( --without-ssl )
 	fi
+	if [ $CHOST != $CBUILD ] ;then
+		myconf+=( --cross-compiling )
+	fi
 
 	local myarch=""
 	case ${ABI} in
