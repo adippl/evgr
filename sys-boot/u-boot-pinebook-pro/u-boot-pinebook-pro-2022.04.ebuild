@@ -24,7 +24,7 @@ S="${WORKDIR}/${MY_P}"
 PATCHES=(
 	#"${FILESDIR}/0001-Add-regulator-needed-for-usage-of-USB.patch"
 	#"${FILESDIR}/0002-Correct-boot-order-to-be-USB-SD-eMMC.patch"
-	"${FILESDIR}/0003-Enable-the-power-LED-during-early-startup.patch"
+	#"${FILESDIR}/0003-Enable-the-power-LED-during-early-startup.patch"
 )
 
 src_configure() {
