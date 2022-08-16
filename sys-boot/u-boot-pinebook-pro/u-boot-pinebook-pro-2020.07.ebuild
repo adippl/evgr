@@ -4,10 +4,11 @@
 EAPI=7
 MY_PV=$(ver_rs 2 -)
 MY_P="${PN}-v${MY_PV}"
+MY_PN="u-boot"
 
 DESCRIPTION="U-boot"
 HOMEPAGE="https://www.denx.de/wiki/U-Boot"
-SRC_URI="https://gitlab.denx.de/${PN}/${PN}/-/archive/v${MY_PV}/${PN}-v${MY_PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://gitlab.denx.de/${MY_PN}/${MY_PN}/-/archive/v${MY_PV}/${MY_PN}-v${MY_PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
