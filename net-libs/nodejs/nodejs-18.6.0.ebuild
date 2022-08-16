@@ -134,7 +134,7 @@ src_configure() {
 		myconf+=( --without-ssl )
 	fi
 	if [ $CHOST != $CBUILD ] ;then
-		myconf+=( --cross-compile )
+		myconf+=( --cross-compiling )
 	fi
 
 	local myarch=""
