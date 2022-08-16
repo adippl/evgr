@@ -3,8 +3,8 @@
 
 EAPI=7
 MY_PV=$(ver_rs 2 -)
-MY_P="${PN}-v${MY_PV}"
 MY_PN="u-boot"
+MY_P="${MY_PN}-v${MY_PV}"
 
 DESCRIPTION="U-boot"
 HOMEPAGE="https://www.denx.de/wiki/U-Boot"
