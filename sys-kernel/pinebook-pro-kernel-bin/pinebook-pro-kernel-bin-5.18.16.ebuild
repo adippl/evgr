@@ -17,7 +17,7 @@ SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="${PV}"
-KEYWORDS="~arm64"
+KEYWORDS="arm64"
 IUSE="test-only"
 
 REQUIRED_USE=""
@@ -49,8 +49,8 @@ src_install() {
 		cp "${S}/boot/${vmlinuz_file}" "${D}/boot/kexec-vmlinuz"
 		cp "${S}/boot/${initramfs_file}" "${D}/boot/kexec-initramfs"
 	else
-		cp "${S}/boot/${vmlinuz_file}" "${D}/boot/${vmlinuz_file}"
-		cp "${S}/boot/${initramfs_file}" "${D}/boot/${initramfs_file}"
+		cp "${S}/boot/${vmlinuz_file}" "${D}/boot/vmlinuz"
+		cp "${S}/boot/${initramfs_file}" "${D}/boot/initramfs"
 	fi
 	cp "${S}/${sysmap_file}" "${D}/boot/${sysmap_file}"
 	cp "${S}/${config_file}" "${D}/boot/${config_file}"
