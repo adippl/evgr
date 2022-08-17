@@ -54,6 +54,7 @@
 *sys-cluster/minikube
 *sys-devel/crossdev
 *sys-fs/inotify-tools
+*sys-devel/gdb
 
 # work
 #*dev-python/openstacksdk
