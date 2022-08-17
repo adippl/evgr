@@ -1,7 +1,9 @@
 *net-misc/dhcpcd
 *net-wireless/wpa_supplicant
 
-*sys-apps/dtc		# u-boot
+*sys-boot/u-boot-pinebook-pro
+*sys-fs/mtd-utils	# spi flash 
 *sys-devel/crossdev	# arm-trusted-firmware need arm-none-eabi toolchain
  
 -*sys-boot/grub		# not needed on u-boot
+

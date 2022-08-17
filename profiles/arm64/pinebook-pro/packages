@@ -24,3 +24,5 @@
 
 
 -*sys-boot/grub		# not needed on u-boot
+
+*www-client/firefox
