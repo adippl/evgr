@@ -12,7 +12,7 @@ EGIT_COMMIT="056d5f6776e515f90bbbbead1be06857aaef17d0"
 
 LICENSE="Broadcom"
 SLOT="0"
-KEYWORDS="~arm64"
+KEYWORDS="arm64"
 
 src_prepare() {
 	rm PKGBUILD || die
