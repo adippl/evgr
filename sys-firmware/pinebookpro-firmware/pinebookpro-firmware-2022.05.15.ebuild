@@ -14,14 +14,11 @@ LICENSE="Broadcom"
 SLOT="0"
 KEYWORDS="arm64"
 
+DEPEND=" sys-kernel/linux-firmware "
+
 src_prepare() {
 	rm PKGBUILD || die
 	mkdir brcm || die
-	#cp BCM4345C5.hcd brcm/BCM.hcd || die
-	#cp BCM4345C5.hcd brcm/BCM4345C5.hcd || die
-	#cp nvram_ap6256.txt brcm/brcmfmac43456-sdio.pine64,pinebook-pro.txt || die
-	#mv fw_bcm43456c5_ag.bin brcm/brcmfmac43456-sdio.bin || die
-	#mv brcmfmac43456-sdio.clm_blob brcm/brcmfmac43456-sdio.clm_blob || die
 	mv BCM4345C5.hcd brcm/ || die
 	mv fw_bcm43456c5_ag.bin brcm/ || die
 	mv brcmfmac43456-sdio.clm_blob brcm/ || die
