@@ -45,3 +45,5 @@ app-emulation/libvirt ~arm64
 	app-emulation/libvirt-glib ~arm64
 	dev-python/libvirt-python ~arm64
 dev-python/setuptools-rust ~arm64
+
+www-client/chromium-bin ~arm64

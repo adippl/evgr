@@ -26,3 +26,6 @@
 -*sys-boot/grub		# not needed on u-boot
 
 *www-client/firefox
+
+-*www-client/chromium
+*www-client/chromium-bin
