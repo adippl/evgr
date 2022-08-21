@@ -12,7 +12,7 @@
 *sys-kernel/genkernel
 *sys-power/powertop
 *sys-apps/bss-client
-*sys-block/usb-nvme-adapter-discard
+*sys-block/usb-nvme-JMicron583-discard
 
 # CLI
 *app-admin/pass
