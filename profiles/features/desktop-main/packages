@@ -29,6 +29,7 @@
 *net-irc/irssi
 *net-mail/isync
 *sys-apps/firejail
+*net-analyzer/speedtest-cli
 
 
 # dev
