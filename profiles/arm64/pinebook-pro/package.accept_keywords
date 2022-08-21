@@ -41,7 +41,7 @@ x11-misc/xss-lock ~arm64
 
 app-emulation/libvirt ~arm64
 
-# virt-manager
+app-emulation/virt-manager ~arm64
 	app-emulation/libvirt-glib ~arm64
 	dev-python/libvirt-python ~arm64
 dev-python/setuptools-rust ~arm64
