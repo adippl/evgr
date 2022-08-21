@@ -1,0 +1,17 @@
+-*app-emulation/qemu-guest-agent
+-*sys-kernel/adip-kernel-kvm
+-*sys-fs/fuse
+-*sys-libs/liburing
+-*sys-boot/grub
+-*sys-fs/btrfs-progs
+-*sys-fs/dosfstools
+-*sys-apps/inxi
+-*sys-apps/kexec-tools
+-*sys-apps/bss
+-*sys-apps/busybox
+-*net-firewall/nftables
+-*app-misc/resolve-march-native
+-*app-misc/tmux
+-*app-portage/cpuid2cpuflags
+-*app-admin/spectre-meltdown-checker
+-*app-admin/sysstat
