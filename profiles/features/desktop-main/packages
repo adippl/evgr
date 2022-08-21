@@ -11,6 +11,8 @@
 *sys-apps/nvme-cli
 *sys-kernel/genkernel
 *sys-power/powertop
+*sys-apps/bss-client
+*sys-block/usb-nvme-adapter-discard
 
 # CLI
 *app-admin/pass
@@ -55,9 +57,10 @@
 *sys-devel/crossdev
 *sys-fs/inotify-tools
 *sys-devel/gdb
+*dev-libs/criterion
+*app-containers/podman
 
 # work
-#*dev-python/openstacksdk
 *app-emulation/diskimage-builder
 *dev-python/python-ironicclient
 *dev-python/python-openstackclient
@@ -80,6 +83,7 @@
 *net-im/telegram-desktop
 *app-misc/moonlight-bin
 *media-video/jellyfin-media-player
+*gui-apps/rofi-emoji
 
 #*media-video/libva-utils
 #*x11-libs/libva-intel-driver
