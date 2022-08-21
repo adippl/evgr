@@ -11,6 +11,7 @@ amd64 amd64-hardened/desktop stable
 amd64 amd64-hardened/desktop-wayland stable
 amd64 amd64-hardened/headless stable
 amd64 amd64-hardened/headless-kvm stable
+amd64 amd64-hardened/headless-docker stable
 
 arm64 arm64/base stable
 arm64 arm64/pinebook-pro-bare stable
