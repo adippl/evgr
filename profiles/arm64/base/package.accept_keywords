@@ -1,0 +1,6 @@
+sys-apps/inxi ~arm64
+dev-libs/criterion ~arm64
+        dev-libs/nanomsg ~arm64
+        dev-libs/boxfort ~arm64
+net-analyzer/speedtest-cli ~arm64
+
