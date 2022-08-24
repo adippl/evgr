@@ -11,7 +11,7 @@ EGIT_REPO_URI="$HOMEPAGE"
 
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="v${PVR}"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm64"
 fi
 
 LICENSE="MIT"
