@@ -4,3 +4,53 @@ dev-libs/criterion ~arm64
         dev-libs/boxfort ~arm64
 net-analyzer/speedtest-cli ~arm64
 
+
+app-emulation/diskimage-builder ~arm64
+app-office/abiword ~arm64
+dev-python/python-ironicclient ~arm64
+dev-python/python-openstachclient ~arm64
+	dev-python/osc-lib ~arm64
+	dev-python/python-keystoneclient ~arm64
+	dev-python/python-novaclient ~arm64
+	dev-python/python-cinderclient ~arm64
+	dev-python/regex ~arm64
+gui-apps/grim ~arm64
+mail-client/mutt ~arm64
+media-gfx/feh ~arm64
+media-gfx/scrot ~arm64
+media-sound/cmus ~arm64
+media-sound/pavucontrol ~arm64
+media-sound/pulsemixer ~arm64
+media-video/mpv ~arm64
+net-dialup/picocom ~arm64
+net-im/signal-desktop-bin ~arm64
+sys-apps/firejail ~arm64
+=sys-cluster/kubectl-1.24.4 ~arm64
+sys-power/powertop ~arm64
+x11-misc/i3status ~arm64
+x11-terms/rxvt-unicode ~arm64
+x11-themes/numix-icon-theme **
+x11-themes/numix-gtk-theme **
+xfce-extra/thunar-archive-plugin ~arm64
+xfce-extra/thunar-media-tags-plugin **
+xfce-extra/thunar-vcs-plugin **
+x11-themes/gtk-engines-murrine ~arm64
+dev-go/go-bindata ~arm64
+dev-libs/libdispatch ~arm64
+x11-misc/xss-lock ~arm64
+# telegram-desktop
+	media-fonts/open-sans ~arm64
+	media-libs/libtgvoip ~arm64
+	media-libs/rnnoise ~arm64
+	media-libs/tg_owt ~arm64
+	dev-cpp/range-v3 ~arm64
+	dev-cpp/ms-gsl ~arm64
+
+app-emulation/libvirt ~arm64
+
+app-emulation/virt-manager ~arm64
+	app-emulation/libvirt-glib ~arm64
+	dev-python/libvirt-python ~arm64
+dev-python/setuptools-rust ~arm64
+
+www-client/chromium-bin ~arm64

@@ -40,3 +40,9 @@ gui-apps/foot
 	=media-libs/fcft-3.1.2-r1
 	=dev-libs/tllist-1.0.5
 
+www-client/chromium-bin
+
+
+www-client/firefox:rapid        ~amd64 ~arm64
+        =dev-libs/nss-3.82      ~amd64 ~arm64
+        =dev-libs/nspr-4.34.1   ~amd64 ~arm64

@@ -1,10 +1,7 @@
 #desktop
 app-admin/pass					dmenu -git
 app-admin/pass-otp				-qrcode
-app-crypt/gcr					gtk
 app-crypt/pinentry				-gnome-keyring
-app-crypt/pinentry				gtk
-dev-libs/libjcat				gpg pkcs7
 media-libs/freetype				harfbuzz
 media-libs/mesa					d3d9 wayland
 media-sound/cmus				-elogind
@@ -25,26 +22,24 @@ xfce-base/thunar				-pcre -trash-panel-plugin
 xfce-extra/thunar-vcs-plugin	-subversion
 ays-auth/elogind				-policykit
 media-sound/pulseaudio			bluetooth dbus
-media-sound/pulseaudio-daemon 	bluetooth dbus
-media-libs/libpulse dbus
+media-sound/pulseaudio-daemon	bluetooth dbus
+www-client/firefox-bin			-clang
 
 
 
 #desktop-gtk
-sys-devel/distcc gtk
-net-analyzer/ettercap gtk
-app-emulation/winetricks gtk
-app-emulation/virt-manager gtk
-app-emulation/qemu gtk 
-media-sound/pulseaudio gtk
+app-crypt/gcr				gtk
+sys-devel/distcc			gtk
+net-analyzer/ettercap		gtk
+app-emulation/winetricks	gtk
+app-emulation/virt-manager	gtk gui
+app-emulation/qemu			gtk 
+media-sound/pulseaudio		gtk
+app-crypt/pinentry			gtk
 
 
 
 #desktop-tools
-#app-crypt/gcr					 gtk
-#app-text/poppler				cairo
-#libreoffice
-app-crypt/pinentry				gtk
 app-emulation/qemu				virgl ssh
 app-emulation/wine-vanilla		-ldap -udisks -realtime 
 app-office/abiword				spell latex math -goffice -readline -introspection
@@ -52,15 +47,19 @@ app-office/libreoffice			-gtk
 app-text/evince					postscript
 app-text/ghostscript-gpl		cups
 app-text/mupdf					-opengl -javascript
+dev-libs/libjcat				gpg pkcs7
 dev-libs/libpcre2				pcre32
 dev-libs/xmlsec					nss
 dev-python/PyQt5				widgets gui multimedia declarative network printsupport sql webchannel dbus
-dev-qt/qtwebengine				widgets
 dev-qt/qtmultimedia				widgets
 dev-qt/qtwebchannel				qml
+dev-qt/qtwebengine				widgets
 media-gfx/imagemagick			cxx xml
-media-libs/libvpx				svc
+media-libs/libpulse				dbus
+media-libs/libvpx				svc postproc
 media-sound/audacity			id3tag
+media-sound/mpd					-alsa -network -ipv6
+media-sound/ncmpcpp				lto taglib visualizer outputs
 media-tv/v4l-utils				-bpf
 media-video/mkvtoolnix			qt5 gui
 media-video/obs-studio			imagemagick v4l
@@ -73,8 +72,6 @@ net-print/hplip					hpijs minimal -X -snmp
 sci-mathematics/octave			gnuplot
 sys-apps/hwloc					cairo
 sys-libs/zlib					minizip
-media-sound/mpd					-alsa -network -ipv6
-media-sound/ncmpcpp				lto taglib visualizer outputs
 
 
 #gms
