@@ -1,0 +1,13 @@
+diff --git a/pkg/minikube/registry/drvs/qemu2/qemu2.go b/pkg/minikube/registry/drvs/qemu2/qemu2.go
+index d2cfae316..5b71e1a22 100644
+--- a/pkg/minikube/registry/drvs/qemu2/qemu2.go
++++ b/pkg/minikube/registry/drvs/qemu2/qemu2.go
+@@ -102,7 +102,7 @@ func qemuFirmwarePath(customPath string) (string, error) {
+ 	case "amd64":
+ 		return "/usr/share/OVMF/OVMF_CODE.fd", nil
+ 	case "arm64":
+-		return "/usr/share/AAVMF/AAVMF_CODE.fd", nil
++		return "/usr/share/qemu/edk2-aarch64-code.fd", nil
+ 	default:
+ 		return "", fmt.Errorf("unknown arch: %s", arch)
+ 	}
