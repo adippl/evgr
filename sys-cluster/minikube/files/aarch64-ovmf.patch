@@ -1,3 +1,18 @@
+diff --git a/pkg/drivers/kvm/domain_definition_arm64.go b/pkg/drivers/kvm/domain_definition_arm64.go
+index 85082457f..40f1e1872 100644
+--- a/pkg/drivers/kvm/domain_definition_arm64.go
++++ b/pkg/drivers/kvm/domain_definition_arm64.go
+@@ -40,8 +40,8 @@ const domainTmpl = `
+   </cpu>
+   <os>
+     <type machine='virt-4.2' arch='aarch64'>hvm</type>
+-    <loader readonly='yes' type='pflash'>/usr/share/AAVMF/AAVMF_CODE.fd</loader>
+-    <nvram>/usr/share/AAVMF/AAVMF_VARS.fd</nvram>
++    <loader readonly='yes' type='pflash'>/usr/share/qemu/edk2-aarch64-code.fd</loader>
++    <nvram>/usr/share/qemu/edk2-arm-vars.fd</nvram>
+     <boot dev='cdrom'/>
+     <boot dev='hd'/>
+     <bootmenu enable='no'/>
 diff --git a/pkg/minikube/registry/drvs/qemu2/qemu2.go b/pkg/minikube/registry/drvs/qemu2/qemu2.go
 index d2cfae316..5b71e1a22 100644
 --- a/pkg/minikube/registry/drvs/qemu2/qemu2.go
