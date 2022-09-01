@@ -1,0 +1,13 @@
+set autoindent
+set background=dark
+set foldmethod=indent
+set guifont=dark
+set hlsearch
+set incsearch
+set list
+set listchars=tab:\|\ 
+"set modeline
+set mouse=a
+set number
+set title
+syntax on
