@@ -8,19 +8,23 @@ HOMEPAGE="https://github.com/adippl"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=" ~amd64 ~arm64"
+KEYWORDS=" amd64 arm64"
 
 DEPEND=""
 
-src_prepare() {
-	default
-}
+S="$WORKDIR"
 
+#src_prepare() {
+#	default
+#}
+#
 src_install() {
-	cp "$FILES/bash-aliases.sh"		"${D}/etc/bash/bashrc.d/bash-aliases.sh"
-	cp "$FILES/vimrc.local"			"${D}/etc/vim/vimrc.local"
-	insinto /lib/firmware
-	doins "$FILES/registries.conf"
-	doins "$FILES/policy.json"
-	doins "$FILES/storage.conf"
+	insinto /etc/bash/bashrc.d
+	doins "$FILESDIR/bash-aliases.sh"
+	insinto "/etc/vim/vimrc.local"
+	doins "$FILESDIR/vimrc.local"
+	insinto /etc/containers
+	doins "$FILESDIR/registries.conf"
+	doins "$FILESDIR/policy.json"
+	doins "$FILESDIR/storage.conf"
 }
