@@ -35,3 +35,5 @@ net-analyzer/suricata logrotate
 
 
 dev-libs/boost python context
+
+media-video/ffmpeg vpx vaapi
