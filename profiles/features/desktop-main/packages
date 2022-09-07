@@ -75,9 +75,9 @@
 # X and friends
 *app-office/gnumeric
 *mail-client/thunderbird-bin
+*www-client/firefox
 *media-fonts/noto-emoji
 *media-gfx/gimp
-*media-video/mpv
 *x11-plugins/enigmail
 *app-office/abiword
 *net-im/signal-desktop-bin
@@ -85,6 +85,14 @@
 *app-misc/moonlight-bin
 *media-video/jellyfin-media-player
 *gui-apps/rofi-emoji
+*xfce-extra/thunar-archive-plugin
+*xfce-extra/thunar-media-tags-plugin
+*xfce-extra/thunar-vcs-plugin
+*x11-misc/redshift
 
 #*media-video/libva-utils
 #*x11-libs/libva-intel-driver
+
+#wine
+*virtual/wine
+

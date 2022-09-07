@@ -17,9 +17,6 @@
 *sys-fs/dosfstools
 *sys-fs/fuseiso
 
-#wine
-*virtual/wine
-
 # X and friends
 *media-fonts/terminus-font
 *media-gfx/feh
@@ -28,8 +25,8 @@
 *media-sound/pulsemixer
 *sys-power/acpilight
 *www-client/firefox-bin
-*www-client/firefox
 *x11-apps/xinput
+*media-video/mpv
 *x11-apps/xkill
 *x11-apps/xmodmap
 *x11-apps/xrandr
@@ -41,7 +38,6 @@
 *x11-misc/dmenu
 *x11-misc/i3lock
 *x11-misc/i3status
-*x11-misc/redshift
 *x11-misc/rofi
 *x11-misc/urxvt-font-size
 *x11-misc/xautolock
@@ -51,6 +47,3 @@
 *x11-themes/numix-icon-theme
 *x11-wm/i3
 *xfce-base/thunar
-*xfce-extra/thunar-archive-plugin
-*xfce-extra/thunar-media-tags-plugin
-*xfce-extra/thunar-vcs-plugin
