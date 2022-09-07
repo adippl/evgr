@@ -47,3 +47,5 @@ www-client/chromium-bin
 www-client/firefox:rapid		~amd64 ~arm64
         =dev-libs/nss-3.82		~amd64 ~arm64
         =dev-libs/nspr-4.34.1   ~amd64 ~arm64
+
+games-action/polymc
