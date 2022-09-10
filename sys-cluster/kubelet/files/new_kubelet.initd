@@ -1,0 +1,24 @@
+#!/sbin/openrc-run
+# Copyright 2016-2017 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+description="Kubelet, a Kubernetes node agent"
+pidfile=${pidfile:-"/run/${RC_SVCNAME}.pid"}
+user=${user:-root}
+group=${group:-root}
+
+test -f /var/lib/kubelet/kubeadm-flags.env && source /var/lib/kubelet/kubeadm-flags.env
+#: ${container_runtime_endpoint:=--container-runtime-endpoint=unix:///var/run/crio/crio.sock}
+: ${default_config_files:=--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --cgroup-driver=cgroupfs }
+
+
+command="/usr/bin/kubelet"
+command_args="${command_args} ${default_config_files} ${container_runtime_endpoint}"
+command_background="true"
+start_stop_daemon_args="--user ${user} --group ${group} \
+	--stdout /var/log/kubelet/${RC_SVCNAME}.log \
+	--stderr /var/log/kubelet/${RC_SVCNAME}.log"
+
+depend() {
+	after net
+}
