@@ -8,7 +8,7 @@ user=${user:-root}
 group=${group:-root}
 
 test -f /var/lib/kubelet/kubeadm-flags.env && source /var/lib/kubelet/kubeadm-flags.env
-#: ${container_runtime_endpoint:=--container-runtime-endpoint=unix:///var/run/crio/crio.sock}
+: ${container_runtime_endpoint:=--container-runtime-endpoint=unix:///var/run/crio/crio.sock}
 : ${default_config_files:=--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --cgroup-driver=cgroupfs }
 
 

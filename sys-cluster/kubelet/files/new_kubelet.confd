@@ -1,4 +1,5 @@
 ###
 # Kubernetes Kubelet (worker) config
 
+container_runtime_endpoint="--container-runtime-endpoint=unix:///var/run/crio/crio.sock"
 command_args=""
