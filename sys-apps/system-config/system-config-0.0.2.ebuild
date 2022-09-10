@@ -21,7 +21,7 @@ S="$WORKDIR"
 src_install() {
 	insinto /etc/bash/bashrc.d
 	doins "$FILESDIR/bash-aliases.sh"
-	insinto "/etc/vim/vimrc.local"
+	insinto "/etc/vim/"
 	doins "$FILESDIR/vimrc.local"
 	insinto /etc/containers
 	doins "$FILESDIR/registries.conf"

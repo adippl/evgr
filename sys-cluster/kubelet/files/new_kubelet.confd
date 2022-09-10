@@ -1,5 +1,9 @@
 ###
 # Kubernetes Kubelet (worker) config
 
-container_runtime_endpoint="--container-runtime-endpoint=unix:///var/run/crio/crio.sock"
+# this is the default socket path
+# you can uncomment and change it to pick different runtime
+#container_runtime_endpoint="--container-runtime-endpoint=unix:///var/run/crio/crio.sock"
+
+# you can add custom arguments here
 command_args=""
