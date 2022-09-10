@@ -68,7 +68,7 @@
 *net-vpn/openvpn
 *sys-boot/woeusb
 *sys-fs/squashfs-tools
-*www-client/chromium
+*www-client/chromium-bin
 *net-misc/s3cmd
 
 
