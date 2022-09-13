@@ -5,4 +5,7 @@
 		<email>gentoo.maintainer@acmelab.top</email>
 		<name>adip</name>
 	</maintainer>
+	<use>
+		<flag name="podman">install storage.conf for podman</flag>
+	</use>
 </pkgmetadata>
