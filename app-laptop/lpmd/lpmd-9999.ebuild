@@ -1,7 +1,7 @@
 # Copyright 2011-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 DESCRIPTION="lpmd small power management daemon for linux laptops"
 HOMEPAGE="https://github.com/adippl/lpmd"
@@ -9,6 +9,8 @@ HOMEPAGE="https://github.com/adippl/lpmd"
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="${PVR}"
 	KEYWORDS="amd64"
+else
+	EGIT_BRANCH="devel"
 fi
 
 inherit git-r3
