@@ -1,0 +1,14 @@
+BDEPEND=sys-boot/u-boot-pinebook-pro
+DEFINED_PHASES=install postinst
+DEPEND=sys-boot/u-boot-pinebook-pro
+DESCRIPTION=installer for precomiled linux kernel configured for laptops
+EAPI=7
+HOMEPAGE=https://github.com/adippl/gentoo-kernel-config
+IUSE=test-only
+KEYWORDS=arm64
+LICENSE=GPL-2
+RDEPEND=sys-boot/u-boot-pinebook-pro
+RESTRICT=mirror strip
+SLOT=5.18.16
+SRC_URI=http://files.acmelab.top/kernels/linux-5.18.16-gentoo-pinebook-pro.tar.xz
+_md5_=5fbe5c43f7537d4b9cf303f27971bfbc
