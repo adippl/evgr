@@ -20,7 +20,7 @@ BDEPEND=""
 
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="${PVR}"
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 fi
 
 S="${WORKDIR}"
