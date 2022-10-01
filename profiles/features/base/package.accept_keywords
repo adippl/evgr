@@ -4,7 +4,7 @@ net-p2p/openrc-tmux-rtorrent **
 =dev-python/cgroup-utils-0.8 ~amd64
 
 sys-cluster/minikube ~amd64
-=app-containers/cri-o-1.24.1
+app-containers/cri-o
 =app-containers/flannel-0.17.0
 
 =sys-cluster/ceph-17.2.3-r3
