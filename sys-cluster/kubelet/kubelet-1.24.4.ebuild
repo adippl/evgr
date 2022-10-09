@@ -10,7 +10,7 @@ SRC_URI="https://github.com/kubernetes/kubernetes/archive/v${PV}.tar.gz -> kuber
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64 ~arm64"
 IUSE="hardened"
 
 BDEPEND=">=dev-lang/go-1.18.1"
@@ -26,8 +26,8 @@ src_compile() {
 src_install() {
 	dobin _output/bin/${PN}
 	keepdir /etc/kubernetes/manifests /var/log/kubelet /var/lib/kubelet
-	newinitd "${FILESDIR}"/${PN}.initd ${PN}
-	newconfd "${FILESDIR}"/${PN}.confd ${PN}
+	newinitd "${FILESDIR}"/new_${PN}.initd ${PN}
+	newconfd "${FILESDIR}"/new_${PN}.confd ${PN}
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/${PN}.logrotated ${PN}
 	systemd_dounit "${FILESDIR}"/${PN}.service
