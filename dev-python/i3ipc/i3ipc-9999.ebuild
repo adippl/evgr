@@ -26,7 +26,7 @@ DOCS=(
 DEPEND="
 	dev-python/pygobject
 	x11-libs/gtk+:3
-	gui-libs/gtk-layer-shell
+	<gui-libs/gtk-layer-shell-0.7.0
 	"
 #RDEPEND="${DEPEND}"
 #BDEPEND=""

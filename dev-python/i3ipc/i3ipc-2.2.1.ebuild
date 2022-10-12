@@ -16,7 +16,7 @@ SLOT="0"
 
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="v${PVR}"
-	KEYWORDS="~amd64 ~arm64"
+	KEYWORDS="amd64 ~arm64"
 fi
 
 DOCS=(
@@ -26,7 +26,7 @@ DOCS=(
 DEPEND="
 	dev-python/pygobject
 	x11-libs/gtk+:3
-	gui-libs/gtk-layer-shell
+	<gui-libs/gtk-layer-shell-0.7.0
 	"
 #RDEPEND="${DEPEND}"
 #BDEPEND=""
