@@ -72,6 +72,7 @@ net-print/hplip					hpijs minimal -X -snmp
 sci-mathematics/octave			gnuplot
 sys-apps/hwloc					cairo
 sys-libs/zlib					minizip
+media-libs/libsdl2				haptic
 
 
 #gms
