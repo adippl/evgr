@@ -23,7 +23,7 @@ IUSE="+wg"
 DEPEND="
 	sys-apps/openrc
 	app-misc/tmux
-	net-p2p/rtorrent[-daemon]
+	net-p2p/rtorrent
 	net-misc/curl[adns]
 	sys-apps/firejail
 	wg? (
