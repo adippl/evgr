@@ -5,7 +5,4 @@
 		<email>gentoo.maintainer@acmelab.top</email>
 		<name>adip</name>
 	</maintainer>
-	<use>
-		<flag name="nfsboot-server">install kernel on nfsboot server</flag>
-	</use>
 </pkgmetadata>
