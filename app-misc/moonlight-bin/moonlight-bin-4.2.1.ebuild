@@ -13,15 +13,10 @@ KEYWORDS="amd64"
 
 DEPEND="
 	sys-fs/fuse:0
-	x11-libs/libva
+	media-libs/libva
 	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
-
-if [[ ${PVR} != "9999" ]] ; then
-	EGIT_COMMIT="${PVR}"
-	KEYWORDS="amd64"
-fi
 
 S="${WORKDIR}"
 src_unpack(){
