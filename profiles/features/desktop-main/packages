@@ -91,7 +91,7 @@
 *x11-misc/redshift
 
 #*media-video/libva-utils
-#*x11-libs/libva-intel-driver
+#*media-libs/libva-intel-driver
 
 #wine
 *virtual/wine
