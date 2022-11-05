@@ -23,7 +23,7 @@ xfce-extra/thunar-vcs-plugin	-subversion
 ays-auth/elogind				-policykit
 media-sound/pulseaudio			bluetooth dbus
 media-sound/pulseaudio-daemon	bluetooth dbus
-www-client/firefox				eme-free -clang	
+www-client/firefox				eme-free -clang dbus
 
 
 
