@@ -10,4 +10,4 @@ RDEPEND=
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=http://files.acmelab.top/kernels/linux-5.15.59-gentoo-dist-nfsboot.tar.xz
-_md5_=6c3c23e0889e761c0d86f94eea591c8d
+_md5_=e9201f0fe2713ab11b2df62a74257129

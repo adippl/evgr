@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm
+DEPEND=grub-update? ( sys-boot/grub )
+DESCRIPTION=precompiled gentoo-sources kernel and initramfs built with genkernel
+EAPI=8
+HOMEPAGE=https://github.com/adippl/gentoo-kernel-config
+IUSE=+grub-update
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=grub-update? ( sys-boot/grub )
+RESTRICT=mirror strip
+SLOT=5.15.75
+SRC_URI=http://files.acmelab.top/kernels/linux-5.15.75-gentoo-genkernel.tar.xz
+_md5_=c13803fa4e62f772d45386ddb9c2a88e

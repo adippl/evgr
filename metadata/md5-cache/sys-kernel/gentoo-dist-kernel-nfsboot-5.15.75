@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=
 RESTRICT=mirror strip
 SLOT=0
-SRC_URI=http://files.acmelab.top/kernels/linux-5.15.63-gentoo-dist-nfsboot.tar.xz
+SRC_URI=http://files.acmelab.top/kernels/linux-5.15.75-gentoo-dist-nfsboot.tar.xz
 _md5_=e9201f0fe2713ab11b2df62a74257129

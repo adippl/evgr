@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm
+DEPEND=grub-update? ( sys-boot/grub )
+DESCRIPTION=installer for precompiled linux kernel configured hardware servers
+EAPI=7
+HOMEPAGE=https://github.com/adippl/gentoo-kernel-config
+IUSE=+grub-update
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=grub-update? ( sys-boot/grub )
+RESTRICT=mirror
+SLOT=5.15.75
+SRC_URI=http://files.acmelab.top/kernels/linux-5.15.75-gentoo-srv.tar.xz
+_md5_=e61642565a45b68307f231086db1281a

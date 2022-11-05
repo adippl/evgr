@@ -28,7 +28,7 @@ BDEPEND=""
 S="${WORKDIR}"
 
 #LINUX vmlinuz-dist-nfs
-#APPEND initramfs-nfs-only.img 
+#APPEND initramfs-nfs-only.img
 
 src_install() {
 	cp -r "${S}/boot/" "${D}/boot/"
