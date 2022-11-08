@@ -60,5 +60,5 @@ dev-lang/rust-bin	abi_x86_32
 sys-cluster/minikube	libvirt
 
 
-
-
+#issues emerging vm template
+app-text/ghostscript-gpl cups
