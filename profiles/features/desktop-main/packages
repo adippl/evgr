@@ -39,7 +39,8 @@
 *app-emulation/virt-manager
 *app-emulation/virt-viewer
 *app-misc/jq
-*app-portage/repoman
+*dev-util/pkgdev
+*dev-util/pkgcheck
 *dev-lang/go
 *dev-util/ctags
 *dev-util/strace
