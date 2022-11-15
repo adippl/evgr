@@ -271,3 +271,9 @@ media-plugins/gst-plugins-x264 abi_x86_32
 media-plugins/gst-plugins-x265 abi_x86_32
 media-plugins/gst-plugins-ximagesrc abi_x86_32
 media-plugins/gst-plugins-zbar abi_x86_32
+
+
+dev-libs/libpcre2 abi_x86_32
+media-libs/libva abi_x86_32
+app-accessibility/at-spi2-core abi_x86_32
+
