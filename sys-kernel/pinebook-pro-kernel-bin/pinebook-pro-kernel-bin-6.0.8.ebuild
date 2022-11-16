@@ -17,7 +17,7 @@ SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="${PV}"
-KEYWORDS="~arm64"
+KEYWORDS="arm64"
 IUSE="test-only"
 
 REQUIRED_USE=""
