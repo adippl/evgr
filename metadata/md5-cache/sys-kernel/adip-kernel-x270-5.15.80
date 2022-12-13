@@ -1,0 +1,14 @@
+BDEPEND=grub-update? ( sys-boot/grub )
+DEFINED_PHASES=install postinst postrm
+DEPEND=grub-update? ( sys-boot/grub )
+DESCRIPTION=installer for precomiled linux kernel configured for laptops
+EAPI=7
+HOMEPAGE=https://github.com/adippl/gentoo-kernel-config
+IUSE=grub-update
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=grub-update? ( sys-boot/grub )
+RESTRICT=mirror strip
+SLOT=5.15.80
+SRC_URI=http://files.acmelab.top/kernels/linux-5.15.80-gentoo-x270.tar.xz
+_md5_=bbc774480ea357d2d8477a58e3dea532
