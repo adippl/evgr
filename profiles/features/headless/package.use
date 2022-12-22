@@ -4,7 +4,7 @@ app-emulation/qemu			rbd
 sys-block/open-iscsi		rdma
 sys-fs/multipath-tools		rbd
 
-media-video/ffmpeg			bluray libcaca openh264 opus twolame x264 x265 wavpack vorbis openal jpeg2k mp3 webp nvidia -opengl -opencl -svg
+media-video/ffmpeg			bluray libcaca openh264 opus twolame x264 x265 wavpack vorbis openal jpeg2k mp3 webp vpx vaapi -opengl -opencl -svg
 
 sys-apps/fwupd				minimal
 dev-libs/libjcat			pkcs7 gpg
@@ -31,9 +31,7 @@ net-dns/getdns  stubby -unbound
 sys-fs/lvm2 -thin
 
 dev-db/mysql-connector-c -ldap
-net-analyzer/suricata logrotate
 
 
 dev-libs/boost python context
 
-media-video/ffmpeg vpx vaapi

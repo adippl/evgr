@@ -10,13 +10,12 @@ media-libs/harfbuzz				abi_x86_32
 media-libs/speexdsp				abi_x86_32
 sys-libs/pam					abi_x86_32
 virtual/libcrypt				abi_x86_32
-x11-base/xcb-proto				abi_x86_32
 x11-libs/gdk-pixbuf				abi_x86_32
 x11-libs/libX11					abi_x86_32
 x11-libs/libXau					abi_x86_32
 x11-libs/libXdmcp				abi_x86_32
 x11-libs/libXt					abi_x86_32
-x11-libs/libva					abi_x86_32
+media-libs/libva					abi_x86_32
 media-libs/libva-intel-driver	abi_x86_32
 x11-libs/libxcb					abi_x86_32
 dev-libs/libbsd					abi_x86_32
@@ -27,7 +26,6 @@ media-libs/libpulse				abi_x86_32
 ###MISC
 app-arch/zstd				abi_x86_32
 dev-libs/lzo				abi_x86_32
-dev-util/wayland-scanner	abi_x86_32
 media-libs/libglvnd			abi_x86_32
 net-libs/nghttp2			abi_x86_32
 sys-libs/libxcrypt			abi_x86_32

@@ -19,7 +19,7 @@ sys-power/s-tui					stress
 
 
 #libvirt
-app-emulation/libvirt			vepa virt-network nfs bash-completion
+app-emulation/libvirt			virt-network nfs bash-completion
 app-emulation/qemu				usb usbredir virtfs nfs spice -multipath
 sys-boot/grub					device-mapper
 net-dns/dnsmasq					script
@@ -27,9 +27,9 @@ net-misc/spice-gtk				usbredir
 dev-vcs/git						-pcre -perl
 sys-kernel/gentoo-kernel-bin	-initramfs
 sys-devel/gcc					lto go fortran
-app-containers/containerd		btrfs -device-mapper -overlay
+app-containers/containerd		btrfs -device-mapper
 app-containers/docker			btrfs -device-mapper -overlay
-app-containers/libguestfs		-ocaml 
+app-emulation/libguestfs		-ocaml 
 app-containers/podman			-fuse btrfs -rootless
 sys-block/fio			aio curl
 
@@ -39,7 +39,7 @@ app-containers/cri-o btrfs
 
 
 #cli
-net-misc/curl adns -threads -ssh -http2 -nghttp3
+net-misc/curl adns -ssh -http2 -nghttp3
 net-dns/c-ares abi_x86_32
 mail-client/mutt mbox berkdb gpgme -lmdb 
 

@@ -21,7 +21,6 @@ dev-libs/nspr abi_x86_32
 dev-libs/nss abi_x86_32
 dev-libs/openssl abi_x86_32
 dev-libs/wayland abi_x86_32
-dev-util/pkgconfig abi_x86_32
 gnome-base/librsvg abi_x86_32
 media-gfx/graphite2 abi_x86_32
 media-libs/fontconfig abi_x86_32
@@ -48,11 +47,8 @@ sys-libs/gpm abi_x86_32
 sys-libs/ncurses abi_x86_32
 sys-libs/readline abi_x86_32
 sys-libs/zlib abi_x86_32
-virtual/libffi abi_x86_32
 virtual/libiconv abi_x86_32
 virtual/libudev abi_x86_32
-virtual/pkgconfig abi_x86_32
-x11-base/xcb-proto abi_x86_32
 x11-libs/cairo abi_x86_32
 x11-libs/gdk-pixbuf abi_x86_32
 x11-libs/gtk+:2 abi_x86_32
@@ -77,20 +73,6 @@ x11-libs/libxcb abi_x86_32
 x11-libs/libxshmfence abi_x86_32
 x11-libs/pango abi_x86_32
 x11-libs/pixman abi_x86_32
-x11-proto/damageproto abi_x86_32
-x11-proto/dri2proto abi_x86_32
-x11-proto/dri3proto abi_x86_32
-x11-proto/fixesproto abi_x86_32
-x11-proto/glproto abi_x86_32
-x11-proto/inputproto abi_x86_32
-x11-proto/kbproto abi_x86_32
-x11-proto/presentproto abi_x86_32
-x11-proto/xextproto abi_x86_32
-x11-proto/xf86bigfontproto abi_x86_32
-x11-proto/xf86driproto abi_x86_32
-x11-proto/xf86vidmodeproto abi_x86_32
-x11-proto/xproto abi_x86_32
-x11-x11-libs/gtk+:2 abi_x86_32
 
 
 ### WINE
@@ -113,7 +95,6 @@ dev-libs/libxml2 abi_x86_32
 dev-libs/libxslt abi_x86_32
 dev-libs/nettle abi_x86_32
 dev-libs/openssl abi_x86_32
-dev-util/pkgconfig abi_x86_32
 gnome-base/librsvg abi_x86_32
 media-libs/alsa-lib abi_x86_32
 media-libs/flac abi_x86_32
@@ -164,12 +145,10 @@ sys-libs/ncurses abi_x86_32
 sys-libs/zlib abi_x86_32
 virtual/glu abi_x86_32
 virtual/jpeg abi_x86_32
-virtual/libffi abi_x86_32
 virtual/libiconv abi_x86_32
 virtual/libintl abi_x86_32
 virtual/libudev abi_x86_32
 virtual/opengl abi_x86_32
-virtual/pkgconfig abi_x86_32
 x11-libs/libICE abi_x86_32
 x11-libs/libSM abi_x86_32
 x11-libs/libXcomposite abi_x86_32
@@ -251,7 +230,6 @@ media-plugins/gst-plugins-sctp abi_x86_32
 media-plugins/gst-plugins-shout2 abi_x86_32
 media-plugins/gst-plugins-sidplay abi_x86_32
 media-plugins/gst-plugins-smoothstreaming abi_x86_32
-media-plugins/gst-plugins-sndio abi_x86_32
 media-plugins/gst-plugins-soundtouch abi_x86_32
 media-plugins/gst-plugins-soup abi_x86_32
 media-plugins/gst-plugins-speex abi_x86_32

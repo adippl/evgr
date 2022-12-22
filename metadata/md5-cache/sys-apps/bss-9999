@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=unpack
+DEPEND=app-shells/bash:* virtual/ssh sys-fs/btrfs-progs
+DESCRIPTION=btrfs incremental backup utility
+EAPI=8
+HOMEPAGE=https://github.com/adippl/bss
+INHERIT=git-r3
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=app-shells/bash:* virtual/ssh sys-fs/btrfs-progs
+SLOT=0
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f
+_md5_=32d2d80a867087be18e99ea1d9a4d6c5

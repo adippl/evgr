@@ -8,11 +8,10 @@ media-sound/cmus				-elogind
 media-video/ffmpeg				bluray libcaca openh264 openal jpeg2k v4l
 media-video/mpv					cli archive libmpv -egl 
 net-analyzer/wireshark			qt5
-net-im/telegram-desktop			-gtk
 net-wireless/wpa_supplicant		qt5
 www-client/chromium				hangouts proprietary-codecs -js-type-check -suid 
 www-client/w3m					imlib
-x11-base/xorg-server			xephyr kdrive  -suid -minimal
+x11-base/xorg-server			xephyr  -suid -minimal
 x11-drivers/xf86-video-intel	dri
 x11-libs/gtk+					cups wayland
 x11-misc/redshift				-gtk
@@ -20,8 +19,8 @@ x11-terms/rxvt-unicode			perl fading-colors
 x11-themes/gtk-engines-murrine	-themes
 xfce-base/thunar				-pcre -trash-panel-plugin
 xfce-extra/thunar-vcs-plugin	-subversion
-ays-auth/elogind				-policykit
-media-sound/pulseaudio			bluetooth dbus
+sys-auth/elogind				-policykit
+media-sound/pulseaudio			bluetooth
 media-sound/pulseaudio-daemon	bluetooth dbus
 www-client/firefox				eme-free -clang dbus
 
@@ -34,14 +33,13 @@ net-analyzer/ettercap		gtk
 app-emulation/winetricks	gtk
 app-emulation/virt-manager	gtk gui
 app-emulation/qemu			gtk 
-media-sound/pulseaudio		gtk
 app-crypt/pinentry			gtk
 
 
 
 #desktop-tools
 app-emulation/qemu				virgl ssh
-app-emulation/wine-vanilla		-ldap -udisks -realtime 
+app-emulation/wine-vanilla		-ldap -udisks 
 app-office/abiword				spell latex math -goffice -readline -introspection
 app-office/libreoffice			-gtk
 app-text/evince					postscript
@@ -56,13 +54,13 @@ dev-qt/qtwebchannel				qml
 dev-qt/qtwebengine				widgets
 media-gfx/imagemagick			cxx xml
 media-libs/libpulse				dbus
-media-libs/libvpx				svc postproc
+media-libs/libvpx				postproc
 media-sound/audacity			id3tag
-media-sound/mpd					-alsa -network -ipv6
+media-sound/mpd					-alsa -network
 media-sound/ncmpcpp				lto taglib visualizer outputs
 media-tv/v4l-utils				-bpf
-media-video/mkvtoolnix			qt5 gui
-media-video/obs-studio			imagemagick v4l
+media-video/mkvtoolnix			gui
+media-video/obs-studio			v4l
 net-analyzer/hydra				libssh -gtk
 net-im/pidgin					-xscreensaver -dbus -gstreamer
 net-print/cups					usb
@@ -76,7 +74,7 @@ media-libs/libsdl2				haptic
 
 
 #gms
-media-libs/sdl2-mixer smpeg mad
+media-libs/sdl2-mixer mad
 games-simulation/openttd -icu -timidity -fluidsynth
 games-roguelike/cataclysm-dda xdg sdl sound -nls
 games-fps/gzdoom -non-free
@@ -84,4 +82,3 @@ games-fps/gzdoom -non-free
 
 #trash
 dev-ruby/bundler	-doc
-games-arcade/xbill gtk
