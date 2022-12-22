@@ -77,7 +77,7 @@ media-libs/libsdl2				haptic
 
 #gms
 media-libs/sdl2-mixer smpeg mad
-games-simulation/openttd -timidity -fluidsynth
+games-simulation/openttd -icu -timidity -fluidsynth
 games-roguelike/cataclysm-dda xdg sdl sound -nls
 games-fps/gzdoom -non-free
 

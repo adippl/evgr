@@ -49,3 +49,10 @@ www-client/chromium-bin
 #        =dev-libs/nspr-4.34.1   ~amd64 ~arm64
 
 games-action/polymc
+
+games-simulation/openttd
+	games-misc/openmsx
+	games-misc/opensfx
+	games-misc/opengfx
+	games-util/grfcodec
+

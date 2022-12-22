@@ -97,3 +97,5 @@
 #wine
 *virtual/wine
 
+#gms
+*games-simulation/openttd
