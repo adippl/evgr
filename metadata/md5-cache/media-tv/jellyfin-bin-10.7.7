@@ -1,0 +1,15 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DEPEND=media-video/ffmpeg[encode,openh264,twolame,vaapi,x264,x265,jpeg2k,bluray,vpx]
+DESCRIPTION=jellyfin binary package
+EAPI=8
+HOMEPAGE=https://jellyfin.org/
+INHERIT=git-r3
+KEYWORDS=amd64
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=media-video/ffmpeg[encode,openh264,twolame,vaapi,x264,x265,jpeg2k,bluray,vpx]
+SLOT=0
+SRC_URI=amd64? ( https://repo.jellyfin.org/releases/server/linux/stable/combined/jellyfin_10.7.7_amd64.tar.gz ) arm64? ( https://repo.jellyfin.org/releases/server/linux/stable/combined/jellyfin_10.7.7_arm64.tar.gz ) arm? ( https://repo.jellyfin.org/releases/server/linux/stable/combined/jellyfin_10.7.7_armhf.tar.gz )
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f
+_md5_=19e971f909deb455d8179b3a78cebc43

@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install prepare unpack
+DEPEND=sys-kernel/linux-firmware
+DESCRIPTION=Firmware files for the Pinebook Pro that are not included in linux-firmware
+EAPI=7
+HOMEPAGE=https://gitlab.manjaro.org/manjaro-arm/packages/community/ap6256-firmware
+INHERIT=git-r3
+KEYWORDS=arm64
+LICENSE=Broadcom
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f
+_md5_=71e5d907e3758f284ae33d4763d892a9

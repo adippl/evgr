@@ -1,0 +1,14 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install test unpack
+DEPEND=>=dev-db/sqlite-3.5:3 >=dev-libs/stfl-0.21 >=net-misc/curl-7.18.0 >=dev-libs/json-c-0.11:= dev-libs/libxml2 sys-libs/ncurses app-text/asciidoc virtual/pkgconfig sys-devel/gettext
+DESCRIPTION=Last version of newsboat witout
+EAPI=8
+HOMEPAGE=https://newsboat.org/ https://github.com/adippl/newsboat
+INHERIT=git-r3 toolchain-funcs
+KEYWORDS=amd64 x86
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=>=dev-db/sqlite-3.5:3 >=dev-libs/stfl-0.21 >=net-misc/curl-7.18.0 >=dev-libs/json-c-0.11:= dev-libs/libxml2 sys-libs/ncurses
+SLOT=0
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157
+_md5_=9cf9ca4e84d1ee5ca5f2c81eff0b8a61
