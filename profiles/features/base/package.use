@@ -47,7 +47,7 @@ mail-client/mutt mbox berkdb gpgme -lmdb
 net-p2p/transmission	cli
 
 #server
-sys-cluster/ceph		fuse
+sys-cluster/ceph		fuse -system-boost
 net-proxy/haproxy		-slz
 
 
