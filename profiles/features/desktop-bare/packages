@@ -3,12 +3,13 @@
 *net-misc/dhcpcd
 *net-wireless/wpa_supplicant
 *sys-apps/lm-sensors
+*sys-block/usb-nvme-JMicron583-discard
 *sys-boot/efibootmgr
 *sys-boot/grub
+*sys-fs/cryptsetup
 *sys-fs/fuse
 *sys-fs/fuse:0
 *sys-fs/ntfs3g
-*sys-block/usb-nvme-JMicron583-discard
 
 # CLI
 *app-misc/ranger
