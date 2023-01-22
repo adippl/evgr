@@ -2,7 +2,6 @@ app-emulation/libvirt		rbd
 app-emulation/qemu			rbd
 
 sys-block/open-iscsi		rdma
-sys-fs/multipath-tools		rbd
 
 media-video/ffmpeg			bluray libcaca openh264 opus twolame x264 x265 wavpack vorbis openal jpeg2k mp3 webp vpx vaapi -opengl -opencl -svg
 
@@ -28,7 +27,6 @@ net-fs/samba -ldap -system-mitkrb5 -regedit quota
 net-dns/avahi -dbus -introspection
 net-dns/getdns  stubby -unbound 
 #sys-libs/zlib static-libs
-sys-fs/lvm2 -thin
 
 dev-db/mysql-connector-c -ldap
 
