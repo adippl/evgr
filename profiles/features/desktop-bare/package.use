@@ -82,3 +82,6 @@ games-fps/gzdoom -non-free
 
 #trash
 dev-ruby/bundler	-doc
+
+dev-libs/boost		context python
+sys-cluster/ceph	-cephfs -radosgw -sqlite -mgr -parquet
