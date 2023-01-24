@@ -33,3 +33,5 @@ dev-db/mysql-connector-c -ldap
 
 dev-libs/boost python context
 
+#for www-apps/cgit
+app-misc/mime-types nginx
