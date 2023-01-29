@@ -19,6 +19,7 @@
 *sys-fs/fuseiso
 
 # X and friends
+*lxde-base/lxappearance
 *media-fonts/terminus-font
 *media-gfx/feh
 *media-gfx/scrot
