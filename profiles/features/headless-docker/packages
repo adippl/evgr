@@ -8,6 +8,7 @@
 -*app-misc/tmux
 -*app-portage/cpuid2cpuflags
 -*app-portage/eix
+-*app-portage/genlop
 -*app-portage/gentoolkit
 -*app-portage/portage-utils
 -*net-firewall/nftables
@@ -32,4 +33,3 @@
 -*sys-power/acpid
 -*sys-process/htop
 -*sys-process/lsof
-
