@@ -57,3 +57,5 @@ games-simulation/openttd
 	games-util/grfcodec
 
 games-action/multimc-bin
+
+dev-util/scanmem
