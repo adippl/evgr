@@ -4,15 +4,10 @@
 *net-vpn/wireguard-tools
 *sys-apps/bss-client
 *sys-apps/hdparm
-*sys-apps/hdparm
 *sys-apps/nvme-cli
-*sys-block/usb-nvme-JMicron583-discard
-*sys-boot/efibootmgr
-*sys-boot/grub
 *sys-fs/ntfs3g
+*sys-fs/simple-mtpfs
 *sys-kernel/genkernel
-*sys-kernel/genkernel
-*sys-power/powertop
 *sys-power/powertop
 
 # CLI
@@ -23,14 +18,12 @@
 *app-arch/pxz
 *app-misc/fdupes
 *app-misc/figlet
-*app-misc/neofetch
 *app-misc/srm
 *app-shells/rc
 *app-text/dos2unix
 *dev-util/scanmem
 *mail-client/mutt
 *media-libs/exiftool
-*media-sound/cmus
 *media-sound/mpd
 *media-sound/ncmpcpp
 *net-analyzer/bmon
@@ -65,7 +58,6 @@
 *dev-util/strace
 *dev-util/valgrind
 *net-analyzer/ettercap
-*net-analyzer/mtr
 *net-analyzer/nmap
 *net-analyzer/wireshark
 *net-dialup/picocom

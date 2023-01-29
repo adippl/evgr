@@ -2,20 +2,15 @@
 *net-fs/nfs-utils
 *net-misc/dhcpcd
 *net-wireless/wpa_supplicant
-*sys-apps/lm-sensors
 *sys-block/usb-nvme-JMicron583-discard
-*sys-boot/efibootmgr
-*sys-boot/grub
 *sys-fs/cryptsetup
 *sys-fs/fuse
 *sys-fs/fuse:0
-*sys-fs/ntfs3g
 
 # CLI
 *app-misc/ranger
 *media-sound/cmus
 *net-fs/sshfs
-*sys-fs/dosfstools
 *sys-fs/fuseiso
 
 # X and friends
