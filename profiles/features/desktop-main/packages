@@ -58,7 +58,7 @@
 *dev-lang/mono
 *dev-lang/tcc
 *dev-libs/criterion
-*dev-lips/sbcl
+*dev-lisp/sbcl
 *dev-util/ctags
 *dev-util/pkgcheck
 *dev-util/pkgdev
