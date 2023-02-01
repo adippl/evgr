@@ -1,0 +1,2 @@
+# for mesa on amd radeon systems
+virtual/libelf abi_x86_32
