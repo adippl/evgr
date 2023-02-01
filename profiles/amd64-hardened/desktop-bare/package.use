@@ -241,3 +241,6 @@ net-wireless/lorcon python
 #x11-libs/libdrm abi_x86_32
 #x11-libs/libpciaccess abi_x86_32
 #x11-libs/libxshmfence abi_x86_32
+
+# for mesa on amd radeon systems
+virtual/libelf abi_x86_32
