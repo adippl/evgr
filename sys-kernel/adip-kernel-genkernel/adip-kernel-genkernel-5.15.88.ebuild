@@ -46,14 +46,16 @@ src_install() {
 }
 
 pkg_postinst(){
-	if use grub-update && [ "$EROOT" = "/" ] ;then
+	#if use grub-update && [ "$EROOT" = "/" ] ;then
+	if use grub-update ;then
 		elog "updating grub config after kernel update"
 		grub-mkconfig -o /boot/grub/grub.cfg
 	fi
 	}
 
 pkg_postrm(){
-	if use grub-update && [ "$EROOT" = "/" ] ;then
+	#if use grub-update && [ "$EROOT" = "/" ] ;then
+	if use grub-update ;then
 		elog "updating grub config after kernel removal"
 		grub-mkconfig -o /boot/grub/grub.cfg
 	fi
