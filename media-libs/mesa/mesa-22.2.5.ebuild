@@ -453,7 +453,7 @@ multilib_src_configure() {
 		-Db_ndebug=$(usex debug false true)
 	)
 	emesonargs+=(
-		--dri-drivers-path "${SYSROOT}/usr/lib64"
+		--dri-drivers-path "${EROOT}/usr/lib64"
 		)
 	meson_src_configure
 }
