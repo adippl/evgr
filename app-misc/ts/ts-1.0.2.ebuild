@@ -10,16 +10,12 @@ LICENSE="GPL-2"
 SRC_URI="https://vicerveza.homeunix.net/~viric/soft/ts/ts-${PV}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 RESTRICT=""
 DEPEND="
 		sys-libs/glibc
 "
 RDEPEND=${DEPEND}
-
-#src_install() {
-#	emake install PREFIX=/usr/
-#}
 
 src_install() {
 	exeinto /usr/bin
