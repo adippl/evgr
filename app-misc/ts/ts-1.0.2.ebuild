@@ -7,7 +7,7 @@ DESCRIPTION="task spooler"
 HOMEPAGE="https://vicerveza.homeunix.net/~viric/soft/ts/"
 LICENSE="GPL-2"
 
-SRC_URI="https://vicerveza.homeunix.net/~viric/soft/ts/ts-1.0.tar.gz"
+SRC_URI="https://vicerveza.homeunix.net/~viric/soft/ts/ts-${PV}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64"
@@ -17,16 +17,13 @@ DEPEND="
 "
 RDEPEND=${DEPEND}
 
-#src_configure() {
+#src_install() {
+#	emake install PREFIX=/usr/
 #}
 
-#src_compile() {
-#	#echo ${WORKDIR}
-#	#cd ${WORKDIR}/ts-1.0
-#	#ls
-#	emake
-#}
-#
 src_install() {
-	emake install PREFIX=/usr/
+	exeinto /usr/bin
+	doexe ts
+	doman ts.1
+	dodoc Changelog OBJECTIVES PORTABILITY PROTOCOL README TRICKS
 }
