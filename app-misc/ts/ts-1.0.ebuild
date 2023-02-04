@@ -17,17 +17,6 @@ DEPEND="
 "
 RDEPEND=${DEPEND}
 
-#src_configure() {
+#src_install() {
+#	emake install PREFIX=/usr/
 #}
-
-src_compile() {
-	#echo ${WORKDIR}
-	#cd ${WORKDIR}/ts-1.0
-	#ls
-	emake
-}
-
-src_install() {
-	#cd ${WORKDIR}/ts-1.0
-	emake install PREFIX=/usr/local/
-}
