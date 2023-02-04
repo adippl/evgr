@@ -27,6 +27,6 @@ RDEPEND=${DEPEND}
 #	emake
 #}
 #
-#src_install() {
-#	emake install PREFIX=/usr/local/
-#}
+src_install() {
+	emake install PREFIX=/usr/
+}
