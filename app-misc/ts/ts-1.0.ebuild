@@ -17,6 +17,9 @@ DEPEND="
 "
 RDEPEND=${DEPEND}
 
-#src_install() {
-#	emake install PREFIX=/usr/
-#}
+src_install() {
+	exeinto /usr/bin
+	doexe ts
+	doman ts.1
+	dodoc Changelog OBJECTIVES PORTABILITY PROTOCOL README TRICKS
+}
