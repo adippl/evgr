@@ -453,7 +453,7 @@ multilib_src_configure() {
 		--buildtype $(usex debug debug plain)
 		-Db_ndebug=$(usex debug false true)
 	)
-	#export PKG_CONFIG_PATH="$EROOT/usr/lib/pkgconfig/"
+	export PKG_CONFIG_PATH="$EROOT/usr/lib/pkgconfig/"
 	meson_src_configure
 }
 
@@ -475,4 +475,9 @@ vulkan_enable() {
 		shift
 		VULKAN_DRIVERS+=("$@")
 	fi
+}
+
+src_compile() {
+	export PKG_CONFIG_PATH="$EROOT/usr/lib/pkgconfig/"
+	meson_src_compile
 }
