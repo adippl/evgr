@@ -30,6 +30,8 @@ for card in ${VIDEO_CARDS}; do
 	IUSE_VIDEO_CARDS+=" video_cards_${card}"
 done
 
+export PKG_CONFIG_PATH="$EROOT/usr/lib/pkgconfig/"
+
 IUSE="${IUSE_VIDEO_CARDS}
 	cpu_flags_x86_sse2 d3d9 debug gles1 +gles2 +llvm
 	lm-sensors opencl osmesa +proprietary-codecs selinux
@@ -452,7 +454,6 @@ multilib_src_configure() {
 		--buildtype $(usex debug debug plain)
 		-Db_ndebug=$(usex debug false true)
 	)
-	export PKG_CONFIG_PATH="$EROOT/usr/lib/pkgconfig/"
 	meson_src_configure
 }
 
