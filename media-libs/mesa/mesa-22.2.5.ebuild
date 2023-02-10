@@ -479,5 +479,5 @@ vulkan_enable() {
 
 src_compile() {
 	export PKG_CONFIG_PATH="$EROOT/usr/lib/pkgconfig/"
-	meson_src_compile
+	multilib-minimal_src_compile
 }
