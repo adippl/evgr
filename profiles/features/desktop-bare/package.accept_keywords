@@ -12,6 +12,8 @@ games-fps/openxrayx16 **
 games-emulation/ppsspp
 games-util/game-device-udev-rules
 
+app-misc/radeontop
+
 net-misc/gallery-dl
 
 games-misc/lolcat
