@@ -19,60 +19,31 @@ if [[ ${PVR} != "9999" ]] ; then
 fi
 
 SLOT="0"
-IUSE="clang debug"
+IUSE="clang debug gold"
 RESTRICT=""
 # contains all the shared libraries required by game executable
 DEPEND="
-		media-libs/libsdl2
-		!clang? (
-			>sys-devel/gcc-7.5.0:=
-		)
-
-		clang? (
-				sys-devel/clang:=
-		)
-		debug? (
-			media-libs/libglvnd
-			)
-		app-crypt/libmd
-		dev-libs/libbsd
-		dev-libs/libpcre
-		dev-libs/lzo
-		media-libs/alsa-lib
-		media-libs/flac
-		media-libs/freeimage
-		media-libs/libjpeg-turbo
-		media-libs/libogg
-		media-libs/libpng
-		media-libs/libsndfile
-		media-libs/libtheora
-		media-libs/libvorbis
-		media-libs/libwebp
-		media-libs/openal
-		media-libs/opus
-		media-sound/pulseaudio
-		net-libs/libasyncns
-		net-libs/liblockfile
-		sys-apps/dbus
-		sys-libs/zlib
-		x11-libs/libICE
-		x11-libs/libSM
-		x11-libs/libX11
-		x11-libs/libXau
-		x11-libs/libXcursor
-		x11-libs/libXdmcp
-		x11-libs/libXext
-		x11-libs/libXfixes
-		x11-libs/libXrandr
-		x11-libs/libXrender
-		x11-libs/libXtst
-		x11-libs/libXxf86vm
-		x11-libs/libxcb
+	media-libs/glew
+	media-libs/freeimage
+	net-libs/liblockfile
+	media-libs/openal
+	dev-cpp/tbb
+	dev-libs/crypto++
+	media-libs/libtheora
+	media-libs/libogg
+	media-libs/libvorbis
+	media-libs/libsdl2
+	dev-libs/lzo
+	media-libs/libjpeg-turbo
+	sys-libs/readline
+	dev-libs/libpcre2
+	dev-libs/libpcre
+	app-arch/lzop
+	media-libs/libglvnd
 "
-# ^^^ DEPEND contains all the libraries I've found via ldd
 
 #RDEPEND=${DEPEND}
-# 	
+#
 #	dev-libs/libpcre2
 #	app-arch/lzop
 #	sys-libs/readline
@@ -81,10 +52,17 @@ BDEPEND="
 		${RDEPEND}
 		dev-util/cmake
 		dev-vcs/git
-
-		media-libs/glew:*
 		dev-cpp/tbb
 		dev-libs/crypto++
+		!clang? (
+			>sys-devel/gcc-7.5.0
+		)
+		clang? (
+				sys-devel/clang
+		)
+		gold? (
+				sys-devel/binutils[gold]
+		)
 		"
 
 S="${WORKDIR}"/"${PN}"-"${PV}"
@@ -92,14 +70,18 @@ S="${WORKDIR}"/"${PN}"-"${PV}"
 src_configure() {
 	mkdir "${S}"/bin
 	cd "${S}"/bin
+	CMARGS=" -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=/usr/bin "
+	if ! use gold ; then
+		CMARGS="$CMARGS -DXRAY_USE_DEFAULT_LINKER=true "
+	fi
 	if use debug && use clang; then
-		CC=clang CXX=clang++ cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=/usr/bin
+		CC=clang CXX=clang++ cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo $CMARGS
 	elif use clang; then
-		CC=clang CXX=clang++ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=/usr/bin
+		CC=clang CXX=clang++ cmake .. -DCMAKE_BUILD_TYPE=Release $CMARGS
 	elif use debug; then
-		cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=/usr/bin
+		cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo $CMARGS
 	else
-		cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=/usr/bin
+		cmake .. $CMARGS
 	fi
 }
 
