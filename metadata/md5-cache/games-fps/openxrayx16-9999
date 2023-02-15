@@ -1,13 +1,13 @@
-BDEPEND=dev-util/cmake dev-vcs/git media-libs/glew:* dev-cpp/tbb dev-libs/crypto++ >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=dev-util/cmake dev-vcs/git dev-cpp/tbb dev-libs/crypto++ !clang? ( >sys-devel/gcc-7.5.0 ) clang? ( sys-devel/clang ) gold? ( sys-devel/binutils[gold] ) >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm unpack
-DEPEND=media-libs/libsdl2 !clang? ( >sys-devel/gcc-7.5.0:= ) clang? ( sys-devel/clang:= ) debug? ( media-libs/libglvnd ) app-crypt/libmd dev-libs/libbsd dev-libs/libpcre dev-libs/lzo media-libs/alsa-lib media-libs/flac media-libs/freeimage media-libs/libjpeg-turbo media-libs/libogg media-libs/libpng media-libs/libsndfile media-libs/libtheora media-libs/libvorbis media-libs/libwebp media-libs/openal media-libs/opus media-sound/pulseaudio net-libs/libasyncns net-libs/liblockfile sys-apps/dbus sys-libs/zlib x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXau x11-libs/libXcursor x11-libs/libXdmcp x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender x11-libs/libXtst x11-libs/libXxf86vm x11-libs/libxcb
+DEPEND=media-libs/glew media-libs/freeimage net-libs/liblockfile media-libs/openal dev-cpp/tbb dev-libs/crypto++ media-libs/libtheora media-libs/libogg media-libs/libvorbis media-libs/libsdl2 dev-libs/lzo media-libs/libjpeg-turbo sys-libs/readline dev-libs/libpcre2 dev-libs/libpcre app-arch/lzop media-libs/libglvnd
 DESCRIPTION=Open-source xray engine
 EAPI=7
 HOMEPAGE=https://github.com/OpenXRay
 INHERIT=git-r3 xdg-utils
-IUSE=clang debug
+IUSE=clang debug gold
 LICENSE=BSD
 PROPERTIES=live
 SLOT=0
 _eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	xdg-utils	ac0e315a3688929e34ac75b139e7349a
-_md5_=3b03f0164823640afb1f8ff399c120c0
+_md5_=b95407fb7630df4f5002f3558a0fef7d
