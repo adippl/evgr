@@ -21,7 +21,7 @@ BDEPEND=""
 
 S="${WORKDIR}"
 src_unpack(){
-	cp "${DISTDIR}"/${A} "${S}"/moonlight
+	cp "${DISTDIR}"/${A} "${S}"/moonlight-bin
 	}
 src_prepare(){
 	eapply_user
@@ -34,5 +34,5 @@ src_compile(){
 	true
 	}
 src_install(){
-	dobin moonlight
+	dobin moonlight-bin
 	}
