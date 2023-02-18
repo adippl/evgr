@@ -1,4 +1,3 @@
-
 # 0ad
 net-libs/gloox
 dev-util/premake:5
@@ -25,32 +24,13 @@ net-p2p/go-ethereum
 
 #work
 net-im/zoom
-net-misc/seafile-client
-net-misc/seafile
-net-libs/libsearpc
-
-# TODO maybe move to hardened-custom-base
-app-benchmarks/bootchart2
-
 
 media-video/jellyfin-media-player
 media-video/jellyfin-web-jmp-bin
 
 sys-power/acpilight **
 
-gui-apps/foot
-	=media-libs/fcft-3.1.2-r1
-	=dev-libs/tllist-1.0.5
-
 www-client/chromium-bin
-
-# firefox:esr
-=www-client/firefox-102.2.0		~amd64
-#www-client/firefox:rapid		~amd64 ~arm64
-#        =dev-libs/nss-3.82		~amd64 ~arm64
-#        =dev-libs/nspr-4.34.1   ~amd64 ~arm64
-
-games-action/polymc
 
 games-simulation/openttd
 	games-misc/openmsx
