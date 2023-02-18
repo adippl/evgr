@@ -30,8 +30,6 @@ media-video/jellyfin-web-jmp-bin
 
 sys-power/acpilight **
 
-www-client/chromium-bin
-
 games-simulation/openttd
 	games-misc/openmsx
 	games-misc/opensfx
