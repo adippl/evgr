@@ -56,10 +56,10 @@ dev-python/setuptools-rust ~arm64
 www-client/chromium-bin ~arm64
 app-arch/pxz ~arm64
 app-misc/srm ~arm64
-app-shells/rc ~arm64
+app-shells/rc **
+net-analyzer/speedtest-cli ~arm64
 dev-lang/mono ~arm64
 dev-lang/tcc ~arm64
-lxde-base/lxappearance ~arm64
 media-gfx/mcomix ~arm64
 media-gfx/ristretto ~arm64
 media-sound/audacity ~arm64
