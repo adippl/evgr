@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DEPEND=
+DESCRIPTION=precomiled linux kernel configured for servers running with root on NFS
+EAPI=7
+HOMEPAGE=https://github.com/adippl/gentoo-kernel-config
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=http://files.acmelab.top/kernels/linux-6.1.12-gentoo-dist-dist.tar.xz
+_md5_=13878a097d72e4eec7edf1fb6767af3a
