@@ -62,3 +62,7 @@ sys-cluster/minikube	libvirt
 
 #issues emerging vm template
 app-text/ghostscript-gpl cups
+
+
+media-video/ffmpeg	openssl
+
