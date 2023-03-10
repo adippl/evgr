@@ -4,7 +4,7 @@ USE="${USE} "
 USE="${USE} icu vim-syntax zstd lzma threads bindist"
 
 #security
-USE="${USE} -ldap -smartcard -upnp openssl"
+USE="${USE} -ldap -smartcard -upnp"
 
 #bloat
 USE="${USE} -systemd -vala -pcre -perl"

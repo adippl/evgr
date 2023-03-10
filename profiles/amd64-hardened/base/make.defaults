@@ -1,1 +1,6 @@
+
+#PORTDIR="/var/db/repos/gentoo"
+#DISTDIR="/var/cache/distfiles"
+#PKGDIR="/var/cache/binpkgs"
+
 ACCEPT_LICENSE="-* @FREE linux-fw-redistributable"
