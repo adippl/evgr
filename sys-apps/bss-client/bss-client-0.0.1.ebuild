@@ -9,15 +9,14 @@ HOMEPAGE="https://github.com/adippl/bss"
 
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="${PVR}"
-	KEYWORDS="amd64 arm64"
 fi
+KEYWORDS=""
 
 #inherit git-r3
 #EGIT_REPO_URI="https://github.com/adippl/bss"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
 
 DEPEND="
 	app-shells/bash:*
