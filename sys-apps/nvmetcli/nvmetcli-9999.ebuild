@@ -13,7 +13,7 @@ if [[ ${PVR} = "9999" ]] ; then
 else
 	SRC_URI="https://github.com/JunxiongGuan/nvmetcli/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
-KEYWORDS="amd64"
+KEYWORDS=""
 
 PYTHON_COMPAT=( python3_{9..11} )
 
