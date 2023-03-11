@@ -14,11 +14,13 @@ PYTHON_COMPAT=( python3_{9..11} )
 inherit distutils-r1
 #DISTUTILS_USE_PEP517="true"
 
-if [[ ${PVR} != "9999" ]] ; then
+if [[ ${PVR} = "9999" ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="$HOMEPAGE"
 	EGIT_SUBMODULES=()
 	EGIT_COMMIT="v${PVR}"
+	KEYWORDS="~amd64"
+else
 	KEYWORDS="amd64"
 fi
 
