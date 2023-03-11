@@ -10,4 +10,7 @@
 		<flag name="debug">build debug version</flag>
 		<flag name="gold">link with ld.gold</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">OpenXRay/xray-16</remote-id>
+	</upstream>
 </pkgmetadata>

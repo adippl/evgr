@@ -6,7 +6,7 @@ inherit git-r3
 inherit xdg-utils
 
 DESCRIPTION="Open-source xray engine"
-HOMEPAGE="https://github.com/OpenXRay"
+HOMEPAGE="https://github.com/OpenXRay/xray-16"
 LICENSE="BSD"
 
 EGIT_REPO_URI="https://github.com/OpenXRay/xray-16.git"
