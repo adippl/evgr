@@ -8,4 +8,7 @@
 	<use>
 		<flag name="stress">enable app-benchmarks/stress as optional dependency</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">amanusk/s-tui</remote-id>
+	</upstream>
 </pkgmetadata>
