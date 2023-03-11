@@ -6,17 +6,20 @@ EAPI=7
 DESCRIPTION="ranger inspired file manager written in C"
 HOMEPAGE="https://github.com/mananapr/cfiles"
 
-inherit git-r3
-EGIT_REPO_URI="${HOMEPAGE}"
 
-if [[ ${PVR} != "9999" ]] ; then
+if [[ ${PVR} = "9999" ]] ; then
+	inherit git-r3
+	EGIT_REPO_URI="${HOMEPAGE}"
 	EGIT_COMMIT="v${PVR}"
-	KEYWORDS="~amd64"
+else
+	SRC_URI="https://github.com/mananapr/cfiles/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
+KEYWORDS="~amd64"
 
 LICENSE="MIT"
 SLOT="0"
 IUSE="fzf img-view mediainfo atool pdf"
+RESTRICT="mirror"
 
 DEPEND="
 	www-client/w3m
