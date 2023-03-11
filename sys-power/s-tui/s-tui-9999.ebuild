@@ -14,7 +14,7 @@ EGIT_SUBMODULES=()
 PYTHON_COMPAT=( python3_{9..11} )
 
 inherit distutils-r1
-DISTUTILS_USE_PEP517="true"
+#DISTUTILS_USE_PEP517="true"
 
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="v${PVR}"
