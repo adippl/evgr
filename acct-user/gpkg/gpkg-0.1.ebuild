@@ -12,4 +12,6 @@ ACCT_USER_HOME_OWNER=gpkg:root
 ACCT_USER_HOME_PERMS=0500
 ACCT_USER_GROUPS=( nobody )
 
+KEYWORDS="*"
+
 acct-user_add_deps
