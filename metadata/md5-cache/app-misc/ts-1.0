@@ -1,11 +1,10 @@
 DEFINED_PHASES=install
-DEPEND=sys-libs/glibc
+DEPEND=
 DESCRIPTION=task spooler
 EAPI=7
 HOMEPAGE=https://vicerveza.homeunix.net/~viric/soft/ts/
-KEYWORDS=amd64
 LICENSE=GPL-2
-RDEPEND=sys-libs/glibc
+RDEPEND=
 SLOT=0
 SRC_URI=https://vicerveza.homeunix.net/~viric/soft/ts/ts-1.0.tar.gz
-_md5_=4d060d71baa091cb9cc5f9557a1035c9
+_md5_=f88ce8ad8c5c3b249279cd9dd014e954

@@ -1,15 +1,13 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=unpack
+DEFINED_PHASES=-
 DEPEND=www-client/w3m sys-libs/ncurses fzf? ( app-shells/fzf ) img-view? ( www-client/w3m[imlib] ) mediainfo? ( media-video/mediainfo ) atool? ( app-arch/atool ) pdf? ( app-text/poppler )
 DESCRIPTION=ranger inspired file manager written in C
 EAPI=7
 HOMEPAGE=https://github.com/mananapr/cfiles
-INHERIT=git-r3
 IUSE=fzf img-view mediainfo atool pdf
+KEYWORDS=~amd64
 LICENSE=MIT
-PROPERTIES=live
 RDEPEND=www-client/w3m sys-libs/ncurses fzf? ( app-shells/fzf ) img-view? ( www-client/w3m[imlib] ) mediainfo? ( media-video/mediainfo ) atool? ( app-arch/atool ) pdf? ( app-text/poppler )
 RESTRICT=mirror
 SLOT=0
-_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f
-_md5_=a915c56983ff745548048da967bd4b40
+SRC_URI=https://github.com/mananapr/cfiles/archive/refs/tags/v1.8.2.tar.gz -> cfiles-1.8.2.tar.gz
+_md5_=7ef499c94ed510ccd565804b1f596e33
