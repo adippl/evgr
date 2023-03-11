@@ -5,17 +5,21 @@ EAPI=8
 
 DESCRIPTION="btrfs incremental backup utility"
 HOMEPAGE="https://github.com/JunxiongGuan/nvmetcli"
-#SRC_URI=""
 
-if [[ ${PVR} != "9999" ]] ; then
+if [[ ${PVR} = "9999" ]] ; then
+	inherit git-r3
+	EGIT_REPO_URI="$HOMEPAGE"
 	EGIT_COMMIT="v${PVR}"
-	KEYWORDS="amd64"
+else
+	SRC_URI="https://github.com/JunxiongGuan/nvmetcli/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
+KEYWORDS="amd64"
 
-PYTHON_COMPAT=( python3_{9..10} )
+PYTHON_COMPAT=( python3_{9..11} )
 
-inherit git-r3 distutils-r1
-EGIT_REPO_URI="https://github.com/JunxiongGuan/nvmetcli"
+inherit distutils-r1
+
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
