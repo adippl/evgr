@@ -8,4 +8,7 @@
 	<use>
 		<flag name="grub-update">update grub config after new kernel is installed</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">adippl/gentoo-kernel-config</remote-id>
+	</upstream>
 </pkgmetadata>

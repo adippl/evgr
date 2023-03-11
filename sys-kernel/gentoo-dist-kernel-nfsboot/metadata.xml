@@ -8,4 +8,7 @@
 	<use>
 		<flag name="nfsboot-server">install kernel on nfsboot server</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">adippl/gentoo-kernel-config</remote-id>
+	</upstream>
 </pkgmetadata>
