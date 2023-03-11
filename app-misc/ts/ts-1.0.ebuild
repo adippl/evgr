@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SRC_URI="https://vicerveza.homeunix.net/~viric/soft/ts/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS=""
 RESTRICT=""
 DEPEND="
 "
