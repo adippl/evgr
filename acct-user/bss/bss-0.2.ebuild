@@ -13,4 +13,6 @@ ACCT_USER_HOME_OWNER=bss:root
 ACCT_USER_HOME_PERMS=0550
 ACCT_USER_GROUPS=( nobody )
 
+KEYWORDS="*"
+
 acct-user_add_deps
