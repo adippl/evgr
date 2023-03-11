@@ -8,4 +8,7 @@
 	<use>
 		<flag name="wg">enable wireguard as dependency</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">adippl/openrc-tmux-rtorrent</remote-id>
+	<upstream>
 </pkgmetadata>
