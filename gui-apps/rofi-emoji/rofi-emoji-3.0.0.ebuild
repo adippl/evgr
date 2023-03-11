@@ -3,16 +3,14 @@
 
 EAPI=8
 
-inherit autotools git-r3
+inherit autotools
 
 DESCRIPTION="emoji selection plugin for x11-misc/rofi"
 HOMEPAGE="https://github.com/Mange/rofi-emoji"
-EGIT_REPO_URI="$HOMEPAGE"
 
-if [[ ${PVR} != "9999" ]] ; then
-	EGIT_COMMIT="v${PVR}"
-	KEYWORDS="amd64 arm64"
-fi
+SRC_URI="https://github.com/Mange/rofi-emoji/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+KEYWORDS="~amd64 ~arm64"
+RESTRICT="mirror"
 
 LICENSE="MIT"
 SLOT="0"
