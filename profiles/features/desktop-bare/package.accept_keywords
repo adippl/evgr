@@ -6,8 +6,6 @@ dev-util/premake:5
 
 app-shells/rc
 
-games-fps/openxrayx16 **
-
 games-emulation/ppsspp
 games-util/game-device-udev-rules
 
