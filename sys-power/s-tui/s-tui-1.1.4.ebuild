@@ -22,6 +22,8 @@ if [[ ${PVR} != "9999" ]] ; then
 	KEYWORDS="amd64"
 fi
 
+RESTRICT="mirror"
+
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="stress"
