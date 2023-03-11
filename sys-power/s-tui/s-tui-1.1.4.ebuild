@@ -18,10 +18,8 @@ if [[ ${PVR} = "9999" ]] ; then
 	EGIT_REPO_URI="$HOMEPAGE"
 	EGIT_SUBMODULES=()
 	EGIT_COMMIT="v${PVR}"
-	KEYWORDS="~amd64"
-else
-	KEYWORDS="amd64"
 fi
+KEYWORDS="amd64"
 
 RESTRICT="mirror"
 
