@@ -35,3 +35,9 @@ dev-libs/boost python context
 
 #for www-apps/cgit
 app-misc/mime-types nginx
+
+#numa
+sys-cluster/ceph numa
+sys-apps/hwloc numa
+app-emulation/qemu numa
+app-emulation/libvirt numa

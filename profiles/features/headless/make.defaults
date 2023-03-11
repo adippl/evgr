@@ -1,6 +1,6 @@
 USE="${USE} "
 #server
-USE="${USE} numa udev"
+USE="${USE} udev"
 
 USE="${USE} -X -gui -wayland -introspection"
  
