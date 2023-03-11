@@ -27,6 +27,8 @@ RDEPEND="	virtual/udev
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+S="${WORKDIR}/acpilight"
+
 src_install(){
 	dobin xbacklight
 	udev_dorules 90-backlight.rules
