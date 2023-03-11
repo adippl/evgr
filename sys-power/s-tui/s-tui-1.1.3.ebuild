@@ -21,7 +21,7 @@ if [[ ${PVR} = "9999" ]] ; then
 	EGIT_COMMIT="v${PVR}"
 	KEYWORDS="~amd64"
 else
-	KEYWORDS="amd64"
+	KEYWORDS=""
 fi
 
 RESTRICT="mirror"
