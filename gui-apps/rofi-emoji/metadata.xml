@@ -9,4 +9,7 @@
 		<flag name="X">xorg clipboard support</flag>
 		<flag name="wayland">wayland clipboard support</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">Mange/rofi-emoji</remote-id>
+	</upstream>
 </pkgmetadata>
