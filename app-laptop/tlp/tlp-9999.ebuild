@@ -53,6 +53,7 @@ RDEPEND="
 	dev-lang/perl sys-apps/usbutils sys-apps/pciutils
 	|| ( >=sys-apps/util-linux-2.31_rc1 )
 	|| ( net-wireless/iw net-wireless/wireless-tools )
+
 	rdw?                ( net-misc/networkmanager )
 	tlp-suggests?       ( ${_OPTIONAL_RDEPEND} )
 	bluetooth?          ( sys-apps/dbus net-wireless/bluez )

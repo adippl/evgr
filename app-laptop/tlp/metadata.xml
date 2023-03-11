@@ -11,4 +11,7 @@
 		<flag name="rdw">enable support for rdw (Radio Device Wizard)</flag>
 		<flag name="bluetooth">Enable bluetooth support</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">linrunner/TLP</remote-id>
+	</upstream>
 </pkgmetadata>
