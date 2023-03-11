@@ -12,4 +12,7 @@
 		<flag name="atool">archive contents preview</flag>
 		<flag name="pdf">enable pdf file preview via poppler (pdftpppm)</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">mananapr/cfiles</remote-id>
+	</upstream>
 </pkgmetadata>
