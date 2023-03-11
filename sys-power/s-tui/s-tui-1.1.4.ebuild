@@ -3,7 +3,6 @@
 
 EAPI=8
 
-
 DESCRIPTION=""
 HOMEPAGE="https://github.com/amanusk/s-tui"
 DESCRIPTION="CPU temperature, frequency, utilization and power monitoring"
