@@ -7,13 +7,12 @@ DESCRIPTION="task spooler"
 HOMEPAGE="https://vicerveza.homeunix.net/~viric/soft/ts/"
 LICENSE="GPL-2"
 
-SRC_URI="https://vicerveza.homeunix.net/~viric/soft/ts/ts-1.0.tar.gz"
+SRC_URI="https://vicerveza.homeunix.net/~viric/soft/ts/${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="amd64"
 RESTRICT=""
 DEPEND="
-		sys-libs/glibc
 "
 RDEPEND=${DEPEND}
 

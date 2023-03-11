@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="amd64"
 RESTRICT=""
 DEPEND="
-		sys-libs/glibc
 "
 RDEPEND=${DEPEND}
 
