@@ -10,4 +10,6 @@ ACCT_USER_ID=456
 ACCT_USER_HOME=/dev/null
 ACCT_USER_GROUPS=( nobody )
 
+KEYWORDS=""
+
 acct-user_add_deps
