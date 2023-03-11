@@ -9,7 +9,6 @@ HOMEPAGE="https://github.com/adippl/acpilight"
 
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="${PVR}"
-	KEYWORDS="amd64 arm64"
 fi
 
 inherit git-r3
@@ -20,7 +19,7 @@ EGIT_BRANCH="c_rewrite"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS=""
+	KEYWORDS="amd64 arm64"
 IUSE=""
 
 DEPEND=""
