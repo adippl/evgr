@@ -26,8 +26,6 @@ net-im/zoom
 media-video/jellyfin-media-player
 media-video/jellyfin-web-jmp-bin
 
-sys-power/acpilight **
-
 games-simulation/openttd
 	games-misc/openmsx
 	games-misc/opensfx

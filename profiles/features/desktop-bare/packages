@@ -20,7 +20,7 @@
 *media-gfx/scrot
 *media-sound/pavucontrol
 *media-sound/pulsemixer
-*sys-power/acpilight
+*sys-power/acpilight-c
 *www-client/firefox-bin
 *x11-apps/xinput
 *media-video/mpv
