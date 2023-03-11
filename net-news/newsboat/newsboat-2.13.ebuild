@@ -3,13 +3,13 @@
 
 EAPI=8
 
-if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
+
+if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/adippl/newsboat"
 else
 	KEYWORDS="amd64 x86"
 	#SRC_URI="https://newsboat.org/releases/${PV}/${P}.tar.xz"
-	inherit git-r3
 	EGIT_REPO_URI="https://github.com/adippl/newsboat"
 	EGIT_BRANCH="2.13-master"
 	EGIT_COMMIT="a1402ec009e8fb2644efd9c105c0abd5d44651e1"
