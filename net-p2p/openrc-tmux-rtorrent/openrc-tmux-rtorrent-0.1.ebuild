@@ -11,8 +11,8 @@ if [[ ${PVR} = "9999" ]] ; then
 	EGIT_REPO_URI="$HOMEPAGE"
 	#EGIT_COMMIT="${PVR}"
 else
-	SRC_URI="${HOMEPAGE}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="amd64 arm64"
+	SRC_URI="https://github.com/adippl/openrc-tmux-rtorrent/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="amd64 ~arm64"
 fi
 
 LICENSE="GPL-2"
