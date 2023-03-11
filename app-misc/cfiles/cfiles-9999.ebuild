@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/mananapr/cfiles"
 if [[ ${PVR} = "9999" ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="${HOMEPAGE}"
-	EGIT_COMMIT="v${PVR}"
+	#EGIT_COMMIT="v${PVR}"
 else
 	SRC_URI="https://github.com/mananapr/cfiles/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
