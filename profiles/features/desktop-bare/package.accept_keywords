@@ -35,3 +35,11 @@ games-simulation/openttd
 games-action/multimc-bin
 
 dev-util/scanmem
+
+
+# =gui-apps/grim-1.4.0-r1 is bugged
+=gui-apps/grim-1.4.0-r3
+#openttd
+=games-util/catcodec-1.0.5
+=games-util/nml-0.7.1
+
