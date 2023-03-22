@@ -25,6 +25,7 @@ net-im/zoom
 
 media-video/jellyfin-media-player
 media-video/jellyfin-web-jmp-bin
+media-video/jellyfin-web-bin
 
 games-simulation/openttd
 	games-misc/openmsx
@@ -42,4 +43,6 @@ dev-util/scanmem
 #openttd
 =games-util/catcodec-1.0.5
 =games-util/nml-0.7.1
+
+
 
