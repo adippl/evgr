@@ -70,4 +70,5 @@ sys-block/fio ~arm64
 x11-misc/i3lock ~arm64
 x11-misc/xautolock ~arm64
 x11-wm/i3 ~arm64
-dev-libs/libptytty ~arm64
+	dev-perl/AnyEvent-I3 ~arm64
+	dev-libs/libptytty ~arm64
