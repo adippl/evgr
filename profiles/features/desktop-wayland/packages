@@ -1,6 +1,8 @@
 *gui-apps/foot
 *gui-apps/grim
 *gui-wm/sway
+*gui-apps/swaybg
+*gui-apps/swayidle
 *gui-apps/swaylock
 
 # keep xorg packages for backwards compatibility
