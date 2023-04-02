@@ -27,8 +27,8 @@ src_compile() {
 src_install() {
 	dobin _output/bin/${PN}
 	keepdir /etc/kubernetes/manifests /var/log/kubelet /var/lib/kubelet
-	newinitd "${FILESDIR}"/new_${PN}.initd ${PN}
-	newconfd "${FILESDIR}"/new_${PN}.confd ${PN}
+	newinitd "${FILESDIR}"/test_${PN}.initd ${PN}
+	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/${PN}.logrotated ${PN}
 	systemd_dounit "${FILESDIR}"/${PN}.service
