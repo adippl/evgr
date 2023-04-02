@@ -3,7 +3,6 @@ sys-fs/btrfs-progs
 =dev-python/cgroup-utils-0.8 ~amd64
 
 sys-cluster/minikube ~amd64
-app-containers/cri-o
 =app-containers/flannel-0.17.0
 
 ~sys-cluster/ceph-17.2.5
@@ -14,7 +13,7 @@ app-containers/cri-o
 sys-apps/kexec-tools ~arm64
 www-apps/jellyfin
 
-~app-containers/cri-tools-1.25.0 ~amd64
+~app-containers/cri-tools-1.26.0 ~amd64
 
 # =sys-cluster/kronosnet-1.19 fails to compile
 =sys-cluster/kronosnet-1.19-r1 ~amd64
