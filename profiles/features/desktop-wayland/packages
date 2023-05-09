@@ -17,3 +17,7 @@
 #-*x11-misc/xautolock
 #-*x11-terms/rxvt-unicode
 #-*x11-wm/i3
+
+
+#temporatay devs didn't update for python11
+-*app-emulation/diskimage-builder
