@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=
 RESTRICT=mirror strip
 SLOT=0
-SRC_URI=http://files.acmelab.top/kernels/linux-6.1.12-gentoo-nfsboot.tar.xz
-_md5_=3657fab6d0a380b58bf94220517c9895
+SRC_URI=http://files.acmelab.top/kernels/linux-6.1.19-gentoo-gnk-nfs.tar.xz
+_md5_=df99085235e9b55ea2234cb219d4dec5
