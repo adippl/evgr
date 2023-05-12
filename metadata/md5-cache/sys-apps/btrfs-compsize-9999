@@ -7,5 +7,5 @@ INHERIT=git-r3
 LICENSE=GPL-2
 PROPERTIES=live
 SLOT=0
-_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f
+_eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676
 _md5_=f2cb8ec73e1ea4b73ac597e58ac3c9be

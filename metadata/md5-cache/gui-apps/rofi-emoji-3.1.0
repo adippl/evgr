@@ -12,5 +12,5 @@ RDEPEND=x11-misc/rofi X? ( x11-misc/xclip x11-misc/xdotool ) wayland? ( gui-apps
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/Mange/rofi-emoji/archive/refs/tags/v3.1.0.tar.gz -> rofi-emoji-3.1.0.tar.gz
-_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	libtool	241a8f577b9781a42a7421e53448a44e	autotools	6dcd6b6a486e79928e1243ff9ba41fcc
+_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	f0d3196128225dee3220e65f3371bc7a
 _md5_=9e66cfc6c2b71e6fc859ecb5cd790e60

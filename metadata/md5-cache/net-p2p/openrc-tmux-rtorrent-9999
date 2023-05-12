@@ -10,5 +10,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=sys-apps/openrc app-misc/tmux net-p2p/rtorrent net-misc/curl[adns] sys-apps/firejail wg? ( sys-apps/iproute2 net-vpn/wireguard-tools )
 SLOT=0
-_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f
+_eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676
 _md5_=c7442f2c30d02a02d833066701c8df5b
