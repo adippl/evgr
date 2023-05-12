@@ -82,7 +82,7 @@
 *net-vpn/openvpn
 *sys-boot/woeusb
 *sys-fs/squashfs-tools
-*www-client/chromium-bin
+*www-client/chromium
 
 
 # X and friends

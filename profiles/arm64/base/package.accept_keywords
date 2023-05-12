@@ -53,7 +53,7 @@ app-emulation/virt-manager ~arm64
 	dev-python/libvirt-python ~arm64
 dev-python/setuptools-rust ~arm64
 
-www-client/chromium-bin ~arm64
+www-client/chromium ~arm64
 app-arch/pxz ~arm64
 app-misc/srm ~arm64
 app-shells/rc **
