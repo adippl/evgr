@@ -5,14 +5,18 @@ EAPI=8
 
 inherit bash-completion-r1
 
+commit="8e15ae348f400c86a8314933a15d8f851f045281"
+
 DESCRIPTION="Gentoo-specific bash command-line completions (emerge, ebuild, equery, etc)"
 HOMEPAGE="https://gitweb.gentoo.org/proj/gentoo-bashcomp.git/"
 #SRC_URI="https://gitweb.gentoo.org/proj/${PN}.git/snapshot/${P}.tar.bz2"
-SRC_URI="https://gitweb.gentoo.org/proj/${PN}.git/snapshot/${PN}-8e15ae348f400c86a8314933a15d8f851f045281.tar.bz2"
+SRC_URI="https://gitweb.gentoo.org/proj/${PN}.git/snapshot/${PN}-${commit}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris"
+
+S="${WORKDIR}/${PN}-${commit}"
 
 src_install() {
 	emake DESTDIR="${D}" install \
