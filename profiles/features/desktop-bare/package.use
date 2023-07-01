@@ -1,3 +1,11 @@
+#temporary flags
+# required by net-misc/nextcloud-client-3.8.2-r1::gentoo
+# required by @system
+# required by @world (argument)
+>=dev-libs/qtkeychain-0.14.1-r1 qt5
+
+
+
 #desktop
 app-admin/pass					dmenu -git
 app-admin/pass-otp				-qrcode
