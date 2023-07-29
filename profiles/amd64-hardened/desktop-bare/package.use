@@ -244,3 +244,8 @@ net-wireless/lorcon python
 
 # for mesa on amd radeon systems
 virtual/libelf abi_x86_32
+
+
+# for virt manager
+net-libs/gnutls pkcs11 tools
+app-crypt/p11-kit abi_x86_32
