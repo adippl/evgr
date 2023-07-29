@@ -40,7 +40,6 @@ app-containers/cri-o btrfs
 
 #cli
 net-misc/curl adns -ssh -http2 -nghttp3
-net-dns/c-ares abi_x86_32
 mail-client/mutt mbox berkdb gpgme -lmdb 
 
 
@@ -56,7 +55,7 @@ app-misc/jq			-oniguruma
 dev-python/numpy	lapack
 net-libs/nodejs		-snapshot -npm inspector
 dev-lang/mono		minimal
-dev-lang/rust-bin	abi_x86_32
+
 sys-cluster/minikube	libvirt
 
 

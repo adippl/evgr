@@ -53,7 +53,8 @@ dev-libs/libudfread abi_x86_32
 
 #MISC
 sys-apps/systemd-utils abi_x86_32
-net-wireless/lorcon python
+net-dns/c-ares abi_x86_32
+dev-lang/rust-bin	abi_x86_32
 
 
 #### STEAM
