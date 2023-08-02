@@ -31,7 +31,8 @@ app-containers/containerd		btrfs -device-mapper
 app-containers/docker			btrfs -device-mapper -overlay
 app-emulation/libguestfs		-ocaml 
 app-containers/podman			-fuse btrfs -rootless
-sys-block/fio			aio curl
+sys-block/fio					aio curl
+net-libs/gnutls					pkcs11 tools
 
 
 #k8s
@@ -65,3 +66,4 @@ app-text/ghostscript-gpl cups
 
 media-video/ffmpeg	openssl
 
+f
