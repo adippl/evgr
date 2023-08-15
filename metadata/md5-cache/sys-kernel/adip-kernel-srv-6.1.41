@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm
+DEPEND=grub-update? ( sys-boot/grub )
+DESCRIPTION=installer for precompiled linux kernel configured hardware servers
+EAPI=7
+HOMEPAGE=https://github.com/adippl/gentoo-kernel-config
+IUSE=+grub-update
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=grub-update? ( sys-boot/grub )
+RESTRICT=mirror
+SLOT=6.1.41
+SRC_URI=http://files.acmelab.top/kernels/linux-6.1.41-gentoo-srv.tar.xz
+_md5_=72f0afa573a8c78be8b9a752d96e68e2
