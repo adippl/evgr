@@ -96,4 +96,4 @@ games-fps/gzdoom -non-free
 dev-ruby/bundler	-doc
 
 dev-libs/boost		context python
-sys-cluster/ceph	-cephfs -radosgw -sqlite -mgr -parquet
+#sys-cluster/ceph	-cephfs -radosgw -sqlite -mgr -parquet
