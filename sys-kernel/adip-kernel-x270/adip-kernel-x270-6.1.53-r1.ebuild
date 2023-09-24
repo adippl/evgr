@@ -15,7 +15,7 @@ SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="${PV}"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE="+grub-update"
 
 REQUIRED_USE=""
