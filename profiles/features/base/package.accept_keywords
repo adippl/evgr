@@ -18,3 +18,11 @@ www-apps/jellyfin
 
 # =sys-cluster/kronosnet-1.19 fails to compile
 =sys-cluster/kronosnet-1.19-r1 ~amd64
+
+
+# required by games-util/lgogdownloader-3.11::gentoo
+# required by lgogdownloader (argument)
+=dev-cpp/htmlcxx-0.87 ~amd64
+# required by lgogdownloader (argument)
+=games-util/lgogdownloader-3.11 ~amd64
+
