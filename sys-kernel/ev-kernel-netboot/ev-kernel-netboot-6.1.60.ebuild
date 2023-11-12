@@ -7,10 +7,10 @@ DESCRIPTION="precomiled linux kernel configured for servers running with root on
 HOMEPAGE="https://github.com/adippl/"
 [ "${PR}" != "" ] && mPR="-${PR}"
 [ "${PR}" = "r0" ] && mPR=""
-K_TYPE="netboot"
+K_TYPE="dist"
 RESTRICT="mirror strip"
 MIRR="http://files.acmelab.top/gentoo-kernels"
-SRC_URI="${MIRR}/linux-${PV}-gentoo-dist${mPR}-${K_TYPE}.tar.xz"
+SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}-netboot.tar.xz"
 
 #http://home.s3.k8s.acmelab.cc/gentoo-kernels/linux-6.1.60-gentoo-dist-netboot.tar.xz
 
