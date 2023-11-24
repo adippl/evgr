@@ -12,8 +12,6 @@ RESTRICT="mirror strip"
 MIRR="http://files.acmelab.top/gentoo-kernels"
 SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}-netboot.tar.xz"
 
-#http://home.s3.k8s.acmelab.cc/gentoo-kernels/linux-6.1.60-gentoo-dist-netboot.tar.xz
-
 LICENSE="GPL-2"
 #SLOT="${PV}"
 SLOT="0"
