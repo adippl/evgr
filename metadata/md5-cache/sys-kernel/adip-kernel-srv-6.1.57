@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm
+DEPEND=grub-update? ( sys-boot/grub )
+DESCRIPTION=installer for precompiled linux kernel configured hardware servers
+EAPI=7
+HOMEPAGE=https://github.com/adippl
+IUSE=+grub-update
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=grub-update? ( sys-boot/grub )
+RESTRICT=mirror strip
+SLOT=6.1.57
+SRC_URI=http://files.acmelab.top/gentoo-kernels/linux-6.1.57-gentoo-srv.tar.xz
+_md5_=a06418ee5cb4f8f5963ee3ed83e4159f

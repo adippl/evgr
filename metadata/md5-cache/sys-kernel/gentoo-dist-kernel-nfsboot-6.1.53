@@ -1,0 +1,13 @@
+DEFINED_PHASES=install
+DEPEND=
+DESCRIPTION=precomiled linux kernel configured for servers running with root on NFS
+EAPI=7
+HOMEPAGE=https://github.com/adippl/gentoo-kernel-config
+IUSE=+nfsboot-server
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=http://files.acmelab.top/kernels/linux-6.1.53-gentoo-dist-nfsboot.tar.xz
+_md5_=6e4dfa8bbff1f37dfbfbb883764f985b

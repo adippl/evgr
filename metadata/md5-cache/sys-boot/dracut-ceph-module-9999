@@ -1,0 +1,15 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DEPEND=sys-kernel/dracut
+DESCRIPTION=boot
+EAPI=8
+HOMEPAGE=https://github.com/jurashka/dracut-ceph-module
+INHERIT=git-r3
+KEYWORDS=amd64
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=sys-kernel/dracut
+RESTRICT=mirror
+SLOT=0
+_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991
+_md5_=70f231b5834b855ab8e38cb69bd73443
