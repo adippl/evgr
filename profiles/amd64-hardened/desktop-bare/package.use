@@ -249,3 +249,11 @@ virtual/libelf abi_x86_32
 
 # for virt manager
 app-crypt/p11-kit abi_x86_32
+
+# required by media-libs/mesa-23.1.9::gentoo[-opencl,vulkan,llvm,video_cards_intel]
+# required by www-client/firefox-115.5.0::gentoo
+# required by @system
+# required by @world (argument)
+>=sys-devel/clang-16.0.6 abi_x86_32
+
+
