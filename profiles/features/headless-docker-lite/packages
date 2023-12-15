@@ -34,7 +34,7 @@
 -*sys-fs/fuse
 -*sys-fs/lvm2
 -*sys-fs/ncdu
--*sys-kernel/adip-kernel-kvm
+-*sys-kernel/gentoo-kernel-bin
 -*sys-kernel/linux-firmware
 -*sys-libs/liburing
 -*sys-power/acpid
