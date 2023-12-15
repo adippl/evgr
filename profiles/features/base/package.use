@@ -16,6 +16,7 @@ sys-apps/util-linux				udev
 sys-process/procps				-elogind
 net-mail/isync					sasl
 sys-power/s-tui					stress
+sys-kernel/gentoo-kernel-bin	initramfs
 
 
 #libvirt
