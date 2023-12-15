@@ -26,7 +26,6 @@ sys-boot/grub					device-mapper
 net-dns/dnsmasq					script
 net-misc/spice-gtk				usbredir
 dev-vcs/git						-pcre -perl
-sys-kernel/gentoo-kernel-bin	-initramfs
 sys-devel/gcc					lto go fortran
 app-containers/containerd		btrfs -device-mapper
 app-containers/docker			btrfs -device-mapper -overlay
