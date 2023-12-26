@@ -26,3 +26,4 @@ www-apps/jellyfin
 # required by lgogdownloader (argument)
 =games-util/lgogdownloader-3.11 ~amd64
 
+=net-im/telegram-desktop-4.12.2 ~amd64
