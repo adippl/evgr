@@ -27,3 +27,26 @@ www-apps/jellyfin
 =games-util/lgogdownloader-3.11 ~amd64
 
 =net-im/telegram-desktop-4.12.2 ~amd64
+# required by net-im/telegram-desktop-4.12.2::gentoo
+# required by @system
+# required by @world (argument)
+=dev-cpp/glibmm-2.78.0 ~amd64
+# required by net-im/telegram-desktop-4.12.2::gentoo
+# required by @system
+# required by @world (argument)
+=dev-cpp/cppgir-0_p20230926 ~amd64
+# required by app-text/poppler-23.08.0::gentoo
+# required by media-libs/gegl-0.4.46::gentoo[pdf]
+# required by media-gfx/gimp-2.10.34-r2::gentoo
+# required by @system
+# required by @world (argument)
+=dev-libs/glib-2.78.3 ~amd64
+# required by dev-cpp/cppgir-0_p20230926::gentoo
+# required by net-im/telegram-desktop-4.12.2::gentoo
+# required by @system
+# required by @world (argument)
+=dev-cpp/expected-lite-0.6.3 ~amd64
+# required by net-im/telegram-desktop-4.12.2::gentoo
+# required by @system
+# required by @world (argument)
+=media-libs/tg_owt-0_pre20230921 ~amd64
