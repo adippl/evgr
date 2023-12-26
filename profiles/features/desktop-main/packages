@@ -100,7 +100,7 @@
 *media-video/jellyfin-media-player
 *media-video/mkvtoolnix
 *net-im/signal-desktop-bin
-*net-im/telegram-desktop
+#*net-im/telegram-desktop
 *net-misc/nextcloud-client
 *www-client/firefox
 *x11-apps/xev
