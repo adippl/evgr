@@ -11,6 +11,7 @@ app-admin/pass					dmenu -git
 app-admin/pass-otp				-qrcode
 app-crypt/pinentry				-gnome-keyring
 media-libs/freetype				-harfbuzz
+media-libs/sdl2-ttf				-harfbuzz
 media-libs/mesa					d3d9 wayland
 media-sound/cmus				-elogind
 media-video/ffmpeg				bluray libcaca openh264 openal jpeg2k v4l
