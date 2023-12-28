@@ -4,13 +4,12 @@
 EAPI=7
 
 DESCRIPTION="installer for precomiled linux kernel configured for laptops"
-HOMEPAGE="https://github.com/adippl/gentoo-kernel-config"
+HOMEPAGE="https://github.com/adippl"
 [ "${PR}" != "" ] && mPR="-${PR}"
 [ "${PR}" = "r0" ] && mPR=""
 K_TYPE="x270"
 RESTRICT="mirror strip"
-#MIRR="https://github.com/adippl/gentoo-kernel-config/raw/master"
-MIRR="http://files.acmelab.top/kernels"
+MIRR="http://files.acmelab.top/gentoo-kernels"
 SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}.tar.xz"
 
 LICENSE="GPL-2"
