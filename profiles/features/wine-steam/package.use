@@ -249,6 +249,7 @@ media-plugins/gst-plugins-x264 abi_x86_32
 media-plugins/gst-plugins-x265 abi_x86_32
 media-plugins/gst-plugins-ximagesrc abi_x86_32
 media-plugins/gst-plugins-zbar abi_x86_32
+media-sound/mpg123-base abi_x86_32
 
 
 dev-libs/libpcre2 abi_x86_32
