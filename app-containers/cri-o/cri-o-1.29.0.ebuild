@@ -37,7 +37,6 @@ DEPEND="
 	${COMMON_DEPEND}
 	dev-go/go-md2man"
 RDEPEND="${COMMON_DEPEND}
-	!<app-containers/podman-1.3.2-r1
 	selinux? ( sec-policy/selinux-crio )"
 
 src_prepare() {
