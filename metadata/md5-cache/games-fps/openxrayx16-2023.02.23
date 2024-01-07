@@ -10,5 +10,5 @@ KEYWORDS=~amd64
 LICENSE=BSD
 PROPERTIES=live
 SLOT=0
-_eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676	xdg-utils	baea6080dd821f5562d715887954c9d3
+_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	xdg-utils	baea6080dd821f5562d715887954c9d3
 _md5_=aa59543c59f3be7ad35638501294e85a

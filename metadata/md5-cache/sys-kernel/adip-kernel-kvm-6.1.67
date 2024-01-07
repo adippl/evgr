@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm
+DEPEND=grub-update? ( sys-boot/grub )
+DESCRIPTION=installer for precompiled linux kernel configured for KVM virtual machines
+EAPI=8
+HOMEPAGE=https://github.com/adippl
+IUSE=+grub-update
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=grub-update? ( sys-boot/grub )
+RESTRICT=mirror strip
+SLOT=6.1.67
+SRC_URI=http://files.acmelab.top/gentoo-kernels/linux-6.1.67-gentoo-kvm.tar.xz
+_md5_=bcc12e38c0fd02006e603eeb791119f9
