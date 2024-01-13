@@ -1,5 +1,4 @@
 *app-emulation/qemu-guest-agent
-*sys-kernel/gentoo-kernel-bin
 *sys-fs/fuse
 *sys-libs/liburing
 -*sys-apps/lm-sensors
