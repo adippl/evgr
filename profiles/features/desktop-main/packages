@@ -46,6 +46,7 @@
 *app-emulation/qemu
 *app-emulation/virt-manager
 *app-misc/jq
+*dev-debug/gdb
 *dev-debug/valgrind
 *dev-embedded/u-boot-tools
 *dev-lang/go
@@ -69,7 +70,6 @@
 *sys-block/fio
 *sys-cluster/kubectl
 *sys-cluster/minikube
-*sys-debug/gdb
 *sys-devel/crossdev
 *sys-devel/distcc
 *sys-fs/inotify-tools
