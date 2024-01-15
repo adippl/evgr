@@ -46,6 +46,7 @@
 *app-emulation/qemu
 *app-emulation/virt-manager
 *app-misc/jq
+*dev-debug/valgrind
 *dev-embedded/u-boot-tools
 *dev-lang/go
 *dev-lang/mono
@@ -56,7 +57,6 @@
 *dev-util/pkgcheck
 *dev-util/pkgdev
 *dev-util/strace
-*dev-debug/valgrind
 *net-analyzer/ettercap
 *net-analyzer/nmap
 *net-analyzer/wireshark
@@ -69,9 +69,9 @@
 *sys-block/fio
 *sys-cluster/kubectl
 *sys-cluster/minikube
+*sys-debug/gdb
 *sys-devel/crossdev
 *sys-devel/distcc
-*sys-devel/gdb
 *sys-fs/inotify-tools
 
 # work
