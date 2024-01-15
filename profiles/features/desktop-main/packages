@@ -56,7 +56,7 @@
 *dev-util/pkgcheck
 *dev-util/pkgdev
 *dev-util/strace
-*dev-util/valgrind
+*dev-debug/valgrind
 *net-analyzer/ettercap
 *net-analyzer/nmap
 *net-analyzer/wireshark
