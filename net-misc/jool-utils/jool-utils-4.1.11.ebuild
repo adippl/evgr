@@ -10,7 +10,7 @@ SRC_URI="https://github.com/NICMx/Jool/releases/download/v${PV}/jool-${PV}.tar.g
 RESTRICT="mirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 S="${WORKDIR}/jool-${PV}"
