@@ -257,3 +257,10 @@ app-crypt/p11-kit abi_x86_32
 >=sys-devel/clang-16.0.6 abi_x86_32
 
 
+# required by media-libs/mesa-23.3.1::gentoo[X]
+# required by x11-base/xwayland-23.2.4::gentoo
+# required by gui-libs/wlroots-0.16.2-r2::gentoo[X]
+# required by gui-wm/sway-1.8.1::gentoo
+# required by @system
+# required by @world (argument)
+>=x11-libs/xcb-util-keysyms-0.4.1 abi_x86_32
