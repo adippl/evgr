@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=
 RESTRICT=mirror strip
 SLOT=0
-SRC_URI=http://files.acmelab.top/gentoo-kernels/linux-6.1.67-gentoo-dist-netboot.tar.xz
+SRC_URI=http://files.acmelab.top/gentoo-kernels/linux-6.1.69-gentoo-dist-netboot.tar.xz
 _md5_=c4100be708af7f60719cf64af8ef3e6b

@@ -10,3 +10,4 @@ find:
 p:
 	git push origin master
 	-git push git.acmelab.top master
+	git push git-sync master
