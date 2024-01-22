@@ -15,7 +15,7 @@ SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}-nfsboot.tar.xz"
 LICENSE="GPL-2"
 #SLOT="${PV}"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS=""
 IUSE="+nfsboot-server"
 
 DEPEND="
