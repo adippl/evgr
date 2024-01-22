@@ -47,6 +47,7 @@
 *app-emulation/virt-manager
 *app-misc/jq
 *dev-debug/gdb
+*dev-debug/strace
 *dev-debug/valgrind
 *dev-embedded/u-boot-tools
 *dev-lang/go
@@ -57,7 +58,6 @@
 *dev-util/ctags
 *dev-util/pkgcheck
 *dev-util/pkgdev
-*dev-util/strace
 *net-analyzer/ettercap
 *net-analyzer/nmap
 *net-analyzer/wireshark
