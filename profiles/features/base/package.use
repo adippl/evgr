@@ -17,6 +17,7 @@ sys-process/procps				-elogind
 net-mail/isync					sasl
 sys-power/s-tui					stress
 sys-kernel/gentoo-kernel-bin	initramfs
+sys-kernel/installkernel dracut
 
 
 #libvirt
