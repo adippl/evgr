@@ -25,3 +25,5 @@ www-apps/jellyfin
 =dev-cpp/htmlcxx-0.87 ~amd64
 # required by lgogdownloader (argument)
 =games-util/lgogdownloader-3.11 ~amd64
+
+=net-misc/kea-2.4.0 ~amd64
