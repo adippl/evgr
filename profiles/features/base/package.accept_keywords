@@ -26,4 +26,4 @@ www-apps/jellyfin
 # required by lgogdownloader (argument)
 =games-util/lgogdownloader-3.11 ~amd64
 
-=net-misc/kea-2.4.0 ~amd64
+~net-misc/kea-2.4.0 ~amd64
