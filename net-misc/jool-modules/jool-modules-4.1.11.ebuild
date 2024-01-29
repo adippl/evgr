@@ -4,7 +4,7 @@
 EAPI=8
 
 MODULES_OPTIONAL_IUSE="module"
-inherit linux-mod-r1
+inherit linux-mod-r1 linux-info
 
 DESCRIPTION="kernel modules for jool SIIT and NAT64 implementation"
 HOMEPAGE="https://github.com/NICMx/Jool"
@@ -24,6 +24,9 @@ CONFIG_CHECK="NET INET"
 #	"
 
 S="${WORKDIR}/jool-${PV}/src/mod"
+#MODULES_DIR ?= /lib/modules/$(shell uname -r)
+MODULES_DIR="$KV_FULL"
+
 
 pkg_setup() {
 	if use module; then
