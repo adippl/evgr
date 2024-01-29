@@ -21,6 +21,7 @@ CONFIG_CHECK="NET INET"
 
 DEPEND="
 	virtual/linux-sources
+	sys-kernel/gentoo-kernel-bin:=
 	"
 
 S="${WORKDIR}/jool-${PV}/src/mod"
