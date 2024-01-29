@@ -19,10 +19,9 @@ IUSE="+module"
 
 CONFIG_CHECK="NET INET"
 
-DEPEND="
-	sys-kernel/dkms
-	"
-
+#DEPEND="
+#	sys-kernel/dkms
+#	"
 
 S="${WORKDIR}/jool-${PV}/src/mod"
 
