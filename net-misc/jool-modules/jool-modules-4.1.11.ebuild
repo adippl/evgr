@@ -59,6 +59,7 @@ src_compile() {
 	#use debug && modargs+=( CONFIG_WIREGUARD_DEBUG=y )
 	#DEST_MODULE_LOCATION="$S/dkms.conf"
 	MODULES_DIR="/lib/modules/$KV_FULL"
+	echo $MODULES_DIR
 	use module && linux-mod-r1_src_compile
 }
 
