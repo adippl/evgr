@@ -13,18 +13,18 @@ SRC_URI="https://github.com/NICMx/Jool/releases/download/v${PV}/jool-${PV}.tar.g
 RESTRICT="mirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE="+module"
 #IUSE="debug +module module-src"
 
-CONFIG_CHECK="NET INET NET_UDP_TUNNEL CRYPTO_ALGAPI"
+CONFIG_CHECK="NET INET"
 
 DEPEND="
 	sys-kernel/dkms
 	"
 
 
-S="${WORKDIR}/jool-${PV}"
+S="${WORKDIR}/jool-${PV}/src/mod"
 
 pkg_setup() {
 	if use module; then
@@ -45,33 +45,34 @@ pkg_setup() {
 src_compile() {
 	#local modlist=( wireguard=net:src::module )
 	local modlist=( 
-		jool
-		jool_siit
-		jool_common
+		jool_common=extra:common:common
+		jool=extra:nat64:nat64
+		jool_siit=extra:siit:siit
 		)
-	local modargs=(
-		KERNELDIR=${KV_OUT_DIR}
-	)
-	use debug && modargs+=( CONFIG_WIREGUARD_DEBUG=y )
+	#local modargs=(
+	#	KERNELDIR=${KV_OUT_DIR}
+	#)
+	#use debug && modargs+=( CONFIG_WIREGUARD_DEBUG=y )
+	#DEST_MODULE_LOCATION="$S/dkms.conf"
 	use module && linux-mod-r1_src_compile
 }
 
 src_install() {
 	use module && linux-mod-r1_src_install
-	use module-src && emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" -C src dkms-install
+	#use module-src && emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" -C src dkms-install
 }
 
 pkg_postinst() {
-	if use module-src && ! use module; then
-		einfo
-		einfo "You have enabled the module-src USE flag without the module USE"
-		einfo "flag. This means that sources are installed to"
-		einfo "${ROOT}/usr/src/wireguard instead of having the"
-		einfo "kernel module compiled. You will need to compile the module"
-		einfo "yourself. Most likely, you don't want this USE flag, and should"
-		einfo "rather use USE=module"
-		einfo
-	fi
+	#if use module-src && ! use module; then
+	#	einfo
+	#	einfo "You have enabled the module-src USE flag without the module USE"
+	#	einfo "flag. This means that sources are installed to"
+	#	einfo "${ROOT}/usr/src/wireguard instead of having the"
+	#	einfo "kernel module compiled. You will need to compile the module"
+	#	einfo "yourself. Most likely, you don't want this USE flag, and should"
+	#	einfo "rather use USE=module"
+	#	einfo
+	#fi
 
 	if use module; then
 		linux-mod-r1_pkg_postinst
