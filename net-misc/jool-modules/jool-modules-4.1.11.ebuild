@@ -41,7 +41,8 @@ src_compile() {
 		jool=extra:nat64:nat64
 		jool_siit=extra:siit:siit
 		)
-	export MODULES_DIR="/lib/modules/$KV_FULL"
+	#export MODULES_DIR="/lib/modules/$KV_FULL"
+	local modargs=( MODULES_DIR="${KV_OUT_DIR}" )
 	use module && linux-mod-r1_src_compile
 }
 
