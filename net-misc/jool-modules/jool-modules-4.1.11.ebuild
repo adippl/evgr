@@ -27,6 +27,8 @@ S="${WORKDIR}/jool-${PV}/src/mod"
 #MODULES_DIR ?= /lib/modules/$(shell uname -r)
 MODULES_DIR="$KV_FULL"
 
+MODULES_KERNEL_MAX=6.6
+MODULES_KERNEL_MIN=6.1
 
 pkg_setup() {
 	if use module; then
