@@ -25,7 +25,7 @@ CONFIG_CHECK="NET INET"
 
 S="${WORKDIR}/jool-${PV}/src/mod"
 #MODULES_DIR ?= /lib/modules/$(shell uname -r)
-MODULES_DIR="$KV_FULL"
+MODULES_DIR="/lib/modules/$KV_FULL"
 
 MODULES_KERNEL_MAX=6.6
 MODULES_KERNEL_MIN=6.1
@@ -58,6 +58,7 @@ src_compile() {
 	#)
 	#use debug && modargs+=( CONFIG_WIREGUARD_DEBUG=y )
 	#DEST_MODULE_LOCATION="$S/dkms.conf"
+	MODULES_DIR="/lib/modules/$KV_FULL"
 	use module && linux-mod-r1_src_compile
 }
 
