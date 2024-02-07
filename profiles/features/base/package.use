@@ -41,7 +41,7 @@ app-containers/cri-o btrfs
 
 
 #cli
-net-misc/curl adns -ssh -http2 -nghttp3
+net-misc/curl adns -ssh -nghttp3
 mail-client/mutt mbox berkdb gpgme -lmdb 
 
 
@@ -72,3 +72,7 @@ media-video/ffmpeg	openssl
 # required by @system
 # required by @world (argument)
 >=net-firewall/iptables-1.8.9 nftables
+
+
+# required by www-client/chromium-121.0.6167.139::gentoo[system-toolchain]
+>=dev-lang/rust-1.74.1 profiler
