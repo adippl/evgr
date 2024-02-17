@@ -1,0 +1,24 @@
+#!/sbin/openrc-run
+# Copyright 2016-2017 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+description="Kubelet, a Kubernetes node agent"
+#pidfile=${pidfile:-"/run/${RC_SVCNAME}.pid"}
+user=${user:-root}
+group=${group:-root}
+
+: ${default_config_files:="--kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf "}
+
+command="/usr/bin/kubelet"
+command_args="${command_args} ${default_config_files}"
+command_background="true"
+start_stop_daemon_args="--user ${user} --group ${group} \
+	--stdout /var/log/kubelet/${RC_SVCNAME}.log \
+	--stderr /var/log/kubelet/${RC_SVCNAME}.log"
+
+supervisor=supervise-daemon
+respawn_period="${respawn_period:-60}"
+
+depend() {
+	after net
+}
