@@ -38,6 +38,7 @@ net-libs/gnutls					pkcs11 tools
 
 #k8s
 app-containers/cri-o btrfs supervise-daemon
+sys-cluster/kubelet supervise-daemon
 
 
 #cli
