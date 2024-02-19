@@ -46,3 +46,9 @@ dev-util/scanmem
 
 
 
+# required by net-misc/curl-8.5.0-r3::gentoo[psl]
+# required by www-client/chromium-121.0.6167.184::gentoo
+# required by @system
+# required by @world (argument)
+>=net-libs/libpsl-0.21.2 abi_x86_32
+
