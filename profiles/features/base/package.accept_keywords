@@ -27,3 +27,5 @@ www-apps/jellyfin
 =games-util/lgogdownloader-3.11 ~amd64
 
 ~net-misc/kea-2.4.0 ~amd64
+
+=app-portage/getuto-1.10.1 ~amd64
