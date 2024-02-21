@@ -20,5 +20,5 @@ supervisor=supervise-daemon
 respawn_period="${respawn_period:-60}"
 
 depend() {
-	after net
+	after net crio
 }
