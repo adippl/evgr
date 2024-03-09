@@ -1,1 +1,2 @@
-
+# masking to prevent rollback
+<=sys-cluster/ceph-18.2.0
