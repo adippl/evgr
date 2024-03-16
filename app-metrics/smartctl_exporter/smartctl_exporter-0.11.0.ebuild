@@ -46,7 +46,7 @@ src_compile() {
 }
 
 src_install() {
-	doinitd ${FILESDIR}/smartctl_exporter.initd
+	doinitd ${FILESDIR}/smartctl_exporter
 	dodoc *.md
 	dobin ${PN}
 }
