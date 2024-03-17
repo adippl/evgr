@@ -41,7 +41,7 @@ BDEPEND="virtual/pkgconfig"
 PATCHES=(
 	"${FILESDIR}"/${PN}-5.2.1-mysqltool.patch
 	"${FILESDIR}"/${PN}-5.4-ndpi-linking.patch
-	"${FILESDIR}"/${PN}-5.6-const_cast_fix.patch
+	#"${FILESDIR}"/${PN}-5.6-const_cast_fix.patch
 )
 
 src_prepare() {
