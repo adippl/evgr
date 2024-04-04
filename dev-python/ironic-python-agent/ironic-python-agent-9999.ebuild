@@ -13,7 +13,7 @@ if [[ ${PVR} != "9999" ]] ; then
 	KEYWORDS="amd64"
 fi
 
-PYTHON_COMPAT=( python3_{9..10} )
+PYTHON_COMPAT=( python3_{9..11} )
 
 inherit git-r3 distutils-r1
 EGIT_REPO_URI="https://opendev.org/openstack/ironic-python-agent"
