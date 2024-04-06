@@ -21,6 +21,8 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+S="compsize-${PV}"
+
 src_install(){
 	dobin compsize
 	doman compsize.8
