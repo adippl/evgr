@@ -1,6 +1,4 @@
 USE="${USE} "
-#server
-USE="${USE} udev"
 
 USE="${USE} -X -gui -wayland -introspection"
  
