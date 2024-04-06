@@ -21,7 +21,7 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-S="compsize-${PV}"
+S="${WORKDIR}/compsize-${PV}"
 
 src_install(){
 	dobin compsize
