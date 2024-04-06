@@ -20,9 +20,9 @@ IUSE="X wayland"
 DOC="LICENSE README.md"
 
 BDEPEND="
-	sys-devel/autoconf
-	sys-devel/automake
-	sys-devel/libtool
+	dev-build/autoconf
+	dev-build/automake
+	dev-build/libtool
 "
 RDEPEND="
 	x11-misc/rofi
