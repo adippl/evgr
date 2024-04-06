@@ -42,3 +42,4 @@
 *virtual/logger
 *virtual/mailx
 *virtual/mta
+*app-admin/eclean-kernel
