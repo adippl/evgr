@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit git-r3 meson
+SRC_URI="https://github.com/atx/wtype/archive/refs/tags/v${PV}.tar.gz -> wtype-${PV}.tar.gz"
 
 DESCRIPTION="xdotool type for wayland"
 HOMEPAGE="https://github.com/atx/wtype"
