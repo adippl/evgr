@@ -1,5 +1,8 @@
 USE="${USE} "
 
+#server
+USE="${USE} udev"
+
 #misc
 USE="${USE} icu vim-syntax zstd lzma threads bindist"
 
