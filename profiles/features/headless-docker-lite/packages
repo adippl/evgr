@@ -16,13 +16,17 @@
 -*app-shells/bash-completion
 -*net-analyzer/mtr
 -*net-firewall/nftables
+-*net-misc/iputils
 -*net-misc/ntp
 -*sys-apps/bss
 -*sys-apps/busybox
 -*sys-apps/ed
 -*sys-apps/inxi
 -*sys-apps/kexec-tools
+-*sys-apps/kmod
 -*sys-apps/lm-sensors
+-*sys-apps/man-pages
+-*sys-apps/net-tools
 -*sys-apps/pciutils
 -*sys-apps/pv
 -*sys-apps/smartmontools
@@ -31,6 +35,7 @@
 -*sys-fs/btrfs-progs
 -*sys-fs/cryptsetup
 -*sys-fs/dosfstools
+-*sys-fs/e2fsprogs
 -*sys-fs/fuse
 -*sys-fs/lvm2
 -*sys-fs/ncdu
@@ -42,7 +47,10 @@
 -*sys-process/iotop-c
 -*sys-process/lsof
 -*virtual/cron
+-*virtual/dev-manager
 -*virtual/editor
 -*virtual/logger
 -*virtual/mailx
 -*virtual/mta
+-*virtual/os-headers
+-*virtual/service-manager
