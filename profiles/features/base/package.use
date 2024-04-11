@@ -76,7 +76,8 @@ media-video/ffmpeg	openssl
 
 
 # required by www-client/chromium-121.0.6167.139::gentoo[system-toolchain]
->=dev-lang/rust-1.74.1 profiler
+dev-lang/rust profiler
+virtual/rust profiler
 
 # required by app-containers/lxd-5.0.2-r3::gentoo
 # required by lxd (argument)

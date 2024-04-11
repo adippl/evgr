@@ -18,7 +18,8 @@ media-video/ffmpeg				bluray libcaca openh264 openal jpeg2k v4l chromium
 media-video/mpv					cli archive libmpv -egl 
 net-analyzer/wireshark			qt5
 net-wireless/wpa_supplicant		qt5
-www-client/chromium				hangouts proprietary-codecs -js-type-check -suid 
+www-client/chromium				hangouts proprietary-codecs -js-type-check -suid -widevine
+
 www-client/w3m					imlib
 x11-base/xorg-server			xephyr  -suid -minimal
 x11-drivers/xf86-video-intel	dri
