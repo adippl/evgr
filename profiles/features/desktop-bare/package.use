@@ -109,3 +109,4 @@ dev-libs/boost		context python
 # required by @world (argument)
 >=net-libs/libpsl-0.21.2 abi_x86_32
 
+dev-lang/rust abi_x86_32
