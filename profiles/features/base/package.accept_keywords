@@ -1,5 +1,7 @@
 sys-fs/btrfs-progs
 
+games-util/lgogdownloader ~amd64
+
 =dev-python/cgroup-utils-0.8 ~amd64
 
 sys-cluster/minikube ~amd64
