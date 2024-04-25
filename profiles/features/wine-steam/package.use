@@ -167,11 +167,12 @@ x11-libs/libpciaccess abi_x86_32
 x11-libs/libxshmfence abi_x86_32
 
 # wine gstreamer
-media-libs/gstreamer abi_x86_32
+dev-libs/libgudev abi_x86_32
 media-libs/gst-plugins-bad abi_x86_32
 media-libs/gst-plugins-base abi_x86_32
 media-libs/gst-plugins-good abi_x86_32
 media-libs/gst-plugins-ugly abi_x86_32
+media-libs/gstreamer abi_x86_32
 media-plugins/gst-plugins-a52dec abi_x86_32
 media-plugins/gst-plugins-amr abi_x86_32
 media-plugins/gst-plugins-aom abi_x86_32
@@ -250,6 +251,7 @@ media-plugins/gst-plugins-x265 abi_x86_32
 media-plugins/gst-plugins-ximagesrc abi_x86_32
 media-plugins/gst-plugins-zbar abi_x86_32
 media-sound/mpg123-base abi_x86_32
+
 
 
 dev-libs/libpcre2 abi_x86_32
