@@ -11,7 +11,8 @@ HOMEPAGE="https://github.com/nyyManni/dmenu-wayland"
 if [ ${PVR} != "9999" ] ; then
 	#EGIT_COMMIT="v${PVR}"
 	SRC_URI="https://github.com/nyyManni/dmenu-wayland/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~x86"
+	# no keywords it's broken
+	#KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~x86"
 else
 	inherit git-r3
 	EGIT_REPO_URI="$HOMEPAGE"
