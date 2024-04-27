@@ -7,11 +7,21 @@ inherit meson xdg
 
 DESCRIPTION="a generic, highly customizable, and efficient menu for the Wayland desktops"
 HOMEPAGE="https://github.com/nyyManni/dmenu-wayland"
-SRC_URI="https://github.com/nyyManni/dmenu-wayland/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+
+if
+
+if [ ${PVR} != "9999" ] ; then
+	#EGIT_COMMIT="v${PVR}"
+	SRC_URI="https://github.com/nyyManni/dmenu-wayland/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~x86"
+else
+	inherit git-r3
+	EGIT_REPO_URI="$HOMEPAGE"
+fi
+
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~x86"
 
 RDEPEND="
 	dev-libs/wayland
