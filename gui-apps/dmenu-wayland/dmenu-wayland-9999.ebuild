@@ -71,3 +71,8 @@ BDEPEND="virtual/pkgconfig"
 #
 #	save_config config.h
 #}
+
+src_install() {
+	meson_src_install
+	dobin dmenu-wl_run
+}
