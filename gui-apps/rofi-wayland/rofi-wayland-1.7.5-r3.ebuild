@@ -36,8 +36,9 @@ BDEPEND="
 src_configure() {
 	local emesonargs=(
 		-Dcheck=disabled
-		$(meson_use wayland)
-		$(meson_use X xcb)
+		-Dcheck
+		$(meson_feature wayland)
+		$(meson_feature X xcb)
 		$(meson_use drun)
 		$(meson_use windowmode window)
 		$(meson_feature test check)
