@@ -13,11 +13,11 @@ S="${WORKDIR}"/rofi-${PV}+wayland3
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="drun windowmode test"
+IUSE="+drun +windowmode test +X +wayland"
 RESTRICT="!test? ( test )"
 
-#!x11-misc/rofi
 RDEPEND="
+	!x11-misc/rofi
 	>=dev-libs/glib-2.40:2
 	x11-libs/cairo[X]
 	x11-libs/gdk-pixbuf:2
@@ -35,9 +35,9 @@ BDEPEND="
 
 src_configure() {
 	local emesonargs=(
-		-Dwayland=enabled
-		-Dxcb=disabled
 		-Dcheck=disabled
+		$(meson_use wayland)
+		$(meson_use X xcb)
 		$(meson_use drun)
 		$(meson_use windowmode window)
 		$(meson_feature test check)
