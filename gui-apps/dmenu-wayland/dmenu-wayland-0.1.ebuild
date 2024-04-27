@@ -8,8 +8,6 @@ inherit meson xdg
 DESCRIPTION="a generic, highly customizable, and efficient menu for the Wayland desktops"
 HOMEPAGE="https://github.com/nyyManni/dmenu-wayland"
 
-if
-
 if [ ${PVR} != "9999" ] ; then
 	#EGIT_COMMIT="v${PVR}"
 	SRC_URI="https://github.com/nyyManni/dmenu-wayland/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
