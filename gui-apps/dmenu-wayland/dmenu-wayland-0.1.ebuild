@@ -7,7 +7,7 @@ inherit meson xdg
 
 DESCRIPTION="a generic, highly customizable, and efficient menu for the Wayland desktops"
 HOMEPAGE="https://github.com/nyyManni/dmenu-wayland"
-SRC_URI="https://github.com/nyyManni/dmenu-wayland/archive/refs/tags/v${PV}.tar.gz -> ${P}"
+SRC_URI="https://github.com/nyyManni/dmenu-wayland/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
