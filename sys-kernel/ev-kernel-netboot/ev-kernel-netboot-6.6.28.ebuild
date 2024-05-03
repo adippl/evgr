@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/adippl/"
 K_TYPE="dist"
 RESTRICT="mirror strip"
 MIRR="http://files.acmelab.top/gentoo-kernels"
-SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}-netboot.tar.zstd"
+SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}-netboot.tar.xz"
 
 LICENSE="GPL-2"
 #SLOT="${PV}"
