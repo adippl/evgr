@@ -15,7 +15,7 @@ SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}-netboot.tar.xz"
 LICENSE="GPL-2"
 #SLOT="${PV}"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="+netboot-server"
 
 DEPEND="
