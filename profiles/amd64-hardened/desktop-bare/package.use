@@ -264,3 +264,7 @@ app-crypt/p11-kit abi_x86_32
 # required by @system
 # required by @world (argument)
 >=x11-libs/xcb-util-keysyms-0.4.1 abi_x86_32
+
+# required by dev-qt/qttools-6.7.0::gentoo[qdbus]
+# required by dev-qt/qttranslations-6.7.0::gentoo
+>=dev-qt/qtbase-6.7.0-r2 dbus
