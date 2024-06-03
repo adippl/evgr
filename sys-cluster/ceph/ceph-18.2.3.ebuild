@@ -206,7 +206,7 @@ PATCHES=(
 	"${FILESDIR}/ceph-16.2.0-rocksdb-cmake.patch"
 	"${FILESDIR}/ceph-16.2.0-spdk-tinfo.patch"
 	"${FILESDIR}/ceph-16.2.0-jaeger-system-boost.patch"
-	"${FILESDIR}/ceph-16.2.0-liburing.patch"
+	#"${FILESDIR}/ceph-16.2.0-liburing.patch"
 	"${FILESDIR}/ceph-17.2.0-pybind-boost-1.74.patch"
 	"${FILESDIR}/ceph-17.2.0-findre2.patch"
 	"${FILESDIR}/ceph-18.2.0-system-opentelemetry.patch"
