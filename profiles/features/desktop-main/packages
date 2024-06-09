@@ -119,7 +119,7 @@
 *app-emulation/winetricks
 
 #gms
-*games-simulation/openttd
+#*games-simulation/openttd
 
 
 *net-im/discord
