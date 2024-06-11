@@ -9,7 +9,8 @@ games-util/lgogdownloader ~amd64
 sys-cluster/minikube ~amd64
 =app-containers/flannel-0.17.0
 
-~sys-cluster/ceph-18.2.0
+~sys-cluster/ceph-18.2.2
+~sys-cluster/ceph-18.2.1
 ~dev-libs/thrift-0.16.0
 
 
