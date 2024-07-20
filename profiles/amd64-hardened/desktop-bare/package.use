@@ -268,3 +268,22 @@ app-crypt/p11-kit abi_x86_32
 # required by dev-qt/qttools-6.7.0::gentoo[qdbus]
 # required by dev-qt/qttranslations-6.7.0::gentoo
 >=dev-qt/qtbase-6.7.0-r2 dbus
+
+# required by media-libs/libsdl2-2.28.5-r2::gentoo[wayland]
+# required by app-emulation/wine-vanilla-9.0::gentoo[sdl]
+# required by virtual/wine-0-r10::gentoo
+# required by @system
+# required by @world (argument)
+>=gui-libs/libdecor-0.2.2-r1 abi_x86_32
+# required by gui-libs/libdecor-0.2.2-r1::gentoo[gtk]
+# required by media-libs/libsdl2-2.28.5-r2::gentoo[wayland]
+# required by app-emulation/wine-vanilla-9.0::gentoo[sdl]
+# required by virtual/wine-0-r10::gentoo
+# required by @system
+# required by @world (argument)
+>=x11-libs/gtk+-3.24.41 abi_x86_32
+# required by x11-libs/gtk+-3.24.41::gentoo
+# required by www-client/firefox-115.13.0::gentoo
+# required by @system
+# required by @world (argument)
+>=media-libs/libepoxy-1.5.10-r3 abi_x86_32
