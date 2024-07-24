@@ -72,3 +72,5 @@ x11-misc/xautolock ~arm64
 x11-wm/i3 ~arm64
 	dev-perl/AnyEvent-I3 ~arm64
 	dev-libs/libptytty ~arm64
+
+app-admin/eclean-kernel ~arm64
