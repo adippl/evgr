@@ -1,4 +1,4 @@
 sys-devel/gcc -lto -go
 app-text/xmlto text
 net-libs/gnutls	-pkcs11 -tools
-net-misc/curl -http2 -zstd
+net-misc/curl -zstd
