@@ -12,3 +12,8 @@ app-crypt/gnupg smartcard
 sys-fs/btrfs-progs -man
 dev-libs/glib dbus
 dev-libs/xmlsec nss
+dev-python/pillow lcms tiff truetype xcb
+dev-lang/swig pcre
+dev-cpp/eigen opengl
+dev-libs/json-c -threads
+sys-libs/libnvme dbus
