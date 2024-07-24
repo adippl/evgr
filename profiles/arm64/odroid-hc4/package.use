@@ -1,0 +1,3 @@
+sys-devel/gcc -zstd -lto -go
+app-text/xmlto text
+features/base/package.use:net-libs/gnutls	-pkcs11 -tools

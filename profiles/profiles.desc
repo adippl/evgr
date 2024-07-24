@@ -18,3 +18,4 @@ amd64 amd64-hardened/headless-docker-lite stable
 arm64 arm64/base stable
 arm64 arm64/pinebook-pro-bare stable
 arm64 arm64/pinebook-pro stable
+arm64 arm64/odroid-hc4 stable
