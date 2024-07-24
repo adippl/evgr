@@ -50,6 +50,7 @@ net-p2p/transmission	cli
 
 #server
 sys-cluster/ceph		fuse
+	dev-libs/boost		python
 net-proxy/haproxy		-slz
 
 
