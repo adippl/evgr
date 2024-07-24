@@ -75,3 +75,5 @@ x11-wm/i3 ~arm64
 
 app-admin/eclean-kernel ~arm64
 	dev-python/pymountboot ~arm64
+
+dev-lang/rust-bin ~arm64
