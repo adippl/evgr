@@ -5,3 +5,5 @@ net-misc/curl -zstd
 
 dev-lang/rust -profiler
 virtual/rust -profiler
+
+app-crypt/gnupg smartcard
