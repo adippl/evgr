@@ -4,3 +4,4 @@ net-libs/gnutls	-pkcs11 -tools
 net-misc/curl -zstd
 
 dev-lang/rust -profiler
+virtual/rust -profiler
