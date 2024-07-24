@@ -3,10 +3,12 @@ app-text/xmlto text
 net-libs/gnutls	-pkcs11 -tools
 net-misc/curl -zstd
 
+
+
+# random use flags to be more inline with default binpkgs
 dev-lang/rust -profiler
 virtual/rust -profiler
-
 app-crypt/gnupg smartcard
 sys-fs/btrfs-progs -man
-
 dev-libs/glib dbus
+dev-libs/xmlsec nss
