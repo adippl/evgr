@@ -74,3 +74,4 @@ x11-wm/i3 ~arm64
 	dev-libs/libptytty ~arm64
 
 app-admin/eclean-kernel ~arm64
+	dev-python/pymountboot ~arm64
