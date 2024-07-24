@@ -8,3 +8,5 @@ virtual/rust -profiler
 
 app-crypt/gnupg smartcard
 sys-fs/btrfs-progs -man
+
+dev-libs/glib dbus
