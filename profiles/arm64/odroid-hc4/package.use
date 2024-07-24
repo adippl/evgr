@@ -13,6 +13,7 @@ sys-fs/btrfs-progs -man
 dev-libs/glib dbus
 dev-libs/xmlsec nss
 dev-python/pillow lcms tiff truetype xcb
+media-libs/lcms jpeg tiff
 dev-lang/swig pcre
 dev-cpp/eigen opengl
 dev-libs/json-c -threads
