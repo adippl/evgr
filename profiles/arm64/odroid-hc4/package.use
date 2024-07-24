@@ -17,3 +17,4 @@ dev-lang/swig pcre
 dev-cpp/eigen opengl
 dev-libs/json-c -threads
 sys-libs/libnvme dbus
+media-libs/tiff jpeg
