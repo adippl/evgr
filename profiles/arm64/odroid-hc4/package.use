@@ -1,3 +1,6 @@
 sys-devel/gcc -lto -go
 app-text/xmlto text
 net-libs/gnutls	-pkcs11 -tools
+
+dev-lang/rust profiler
+virtual/rust profiler
