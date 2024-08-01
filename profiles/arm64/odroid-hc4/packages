@@ -7,3 +7,4 @@
 #-*sys-boot/grub		# not needed on u-boot
 
 -*sys-power/acpid
+-*sys-kernel/linux-firmware
