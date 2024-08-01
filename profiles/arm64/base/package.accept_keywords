@@ -82,3 +82,5 @@ app-admin/eclean-kernel ~arm64
 #ceph
 dev-libs/rocksdb ~arm64
 dev-python/scikit-learn ~arm64
+
+net-misc/rclone ~arm64
