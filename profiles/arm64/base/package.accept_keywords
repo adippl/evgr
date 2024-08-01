@@ -86,13 +86,13 @@ dev-python/scikit-learn ~arm64
 net-misc/rclone ~arm64
 
 
-sys-cluster/ceph ~arm64                                                                                             │
-# required by sys-cluster/ceph-18.2.1-r2::gentoo                                                                               │
-# required by ceph (argument)                                                                                                  │
-dev-libs/rocksdb ~arm64                                                                                              │
-# required by sys-cluster/ceph-18.2.1-r2::gentoo                                                                               │
-# required by ceph (argument)                                                                                                  │
-dev-libs/thrift ~arm64                                                                                                 │
-# required by sys-cluster/ceph-18.2.1-r2::gentoo[mgr]                                                                          │
-# required by ceph (argument)                                                                                                  │
+sys-cluster/ceph ~arm64
+# required by sys-cluster/ceph-18.2.1-r2::gentoo
+# required by ceph (argument)
+dev-libs/rocksdb ~arm64
+# required by sys-cluster/ceph-18.2.1-r2::gentoo
+# required by ceph (argument)
+dev-libs/thrift ~arm64
+# required by sys-cluster/ceph-18.2.1-r2::gentoo[mgr]
+# required by ceph (argument)
 dev-python/scikit-learn ~arm64
