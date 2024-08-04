@@ -7,19 +7,19 @@ DESCRIPTION="moonlight nvidia game streaming client (appimage)"
 HOMEPAGE="https://moonlight-stream.org/"
 SRC_URI="https://github.com/moonlight-stream/moonlight-qt/releases/download/v${PV}/Moonlight-${PV}-x86_64.AppImage"
 
+S="${WORKDIR}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64"
-RESTRICT="strip mirror"
 
 DEPEND="
 	sys-fs/fuse:0
 	media-libs/libva
 	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
+RESTRICT="strip mirror"
+#BDEPEND=""
 
-S="${WORKDIR}"
 src_unpack(){
 	cp "${DISTDIR}"/${A} "${S}"/moonlight-bin
 	}
