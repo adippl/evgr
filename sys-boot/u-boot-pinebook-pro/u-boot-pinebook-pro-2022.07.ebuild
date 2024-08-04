@@ -6,9 +6,10 @@ MY_PV=$(ver_rs 2 -)
 MY_PN="u-boot"
 MY_P="${MY_PN}-v${MY_PV}"
 
-DESCRIPTION="U-boot"
+DESCRIPTION="U-boot compiled for pinebook pro"
 HOMEPAGE="https://www.denx.de/wiki/U-Boot"
 SRC_URI="https://gitlab.denx.de/${MY_PN}/${MY_PN}/-/archive/v${MY_PV}/${MY_PN}-v${MY_PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,8 +20,7 @@ DEPEND="
 	sys-firmware/trusted-firmware-a
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
-S="${WORKDIR}/${MY_P}"
+#BDEPEND=""
 PATCHES=(
 	#"${FILESDIR}/0001-Add-regulator-needed-for-usage-of-USB.patch"
 	#"${FILESDIR}/0002-Correct-boot-order-to-be-USB-SD-eMMC.patch"
