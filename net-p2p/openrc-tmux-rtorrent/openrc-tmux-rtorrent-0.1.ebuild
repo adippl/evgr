@@ -1,4 +1,4 @@
-# Copyright 2011-2022 Gentoo Authors
+# Copyright 2011-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,7 +12,7 @@ if [[ ${PVR} = "9999" ]] ; then
 	#EGIT_COMMIT="${PVR}"
 else
 	SRC_URI="https://github.com/adippl/openrc-tmux-rtorrent/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="amd64 ~arm64"
+	KEYWORDS="amd64"
 fi
 
 LICENSE="GPL-2"
@@ -36,6 +36,3 @@ DOCS=(
 	tmux-rtorrent.example
 	)
 RDEPEND="${DEPEND}"
-BDEPEND="
-	sys-devel/make
-	"
