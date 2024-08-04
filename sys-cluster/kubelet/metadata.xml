@@ -8,4 +8,9 @@
 	<upstream>
 		<remote-id type="github">kubernetes/kubernetes</remote-id>
 	</upstream>
+	<use>
+		<flag name="supervise-daemon">
+			install supervise-daemon openrc script
+		</flag>
+	</use>
 </pkgmetadata>
