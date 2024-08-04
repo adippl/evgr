@@ -29,4 +29,3 @@ DEPEND="
 	sys-fs/btrfs-progs
 	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
