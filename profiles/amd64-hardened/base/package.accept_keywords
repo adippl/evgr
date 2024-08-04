@@ -1,2 +1,4 @@
 ~sys-cluster/ceph-18.2.1
 ~sys-cluster/ceph-18.2.2
+
+net-misc/moonlight ~amd64

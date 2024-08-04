@@ -13,7 +13,7 @@ media-libs/freetype				-harfbuzz
 media-libs/sdl2-ttf				-harfbuzz
 media-libs/mesa					d3d9 wayland
 media-sound/cmus				-elogind
-media-video/ffmpeg				bluray libcaca openh264 openal jpeg2k v4l chromium
+media-video/ffmpeg				bluray libcaca openh264 openal jpeg2k v4l chromium libdrm
 media-video/mpv					cli archive libmpv -egl 
 net-wireless/wpa_supplicant		qt5
 www-client/chromium				hangouts proprietary-codecs -widevine
