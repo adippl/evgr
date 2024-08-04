@@ -17,15 +17,15 @@ EGIT_REPO_URI="$HOMEPAGE"
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~amd64 ~x86"
-IUSE=""
+#IUSE=""
 
 DOC=(
 	comp
 	)
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
+#DEPEND=""
+#RDEPEND="${DEPEND}"
+#BDEPEND=""
 
 src_install(){
 	dobin compsize

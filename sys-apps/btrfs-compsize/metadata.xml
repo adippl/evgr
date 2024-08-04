@@ -5,4 +5,7 @@
 		<email>gentoo.maintainer@acmelab.top</email>
 		<name>adip</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">kilobyte/compsize</remote-id>
+	</upstream>
 </pkgmetadata>

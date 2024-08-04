@@ -7,21 +7,20 @@ DESCRIPTION="btrfs: find compression type/ratio on a file or set of files"
 HOMEPAGE="https://github.com/kilobyte/compsize"
 
 SRC_URI="https://github.com/kilobyte/compsize/archive/refs/tags/v${PV}.tar.gz -> btrfs-compsize-${PV}.tar.gz"
+S="${WORKDIR}/compsize-${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE=""
+#IUSE=""
 
 DOC=(
 	comp
 	)
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
-
-S="${WORKDIR}/compsize-${PV}"
+#DEPEND=""
+#RDEPEND="${DEPEND}"
+#BDEPEND=""
 
 src_install(){
 	dobin compsize
