@@ -3,8 +3,8 @@
 
 EAPI=8
 
-DESCRIPTION="btrfs incremental backup utility"
-HOMEPAGE="https://github.com/JunxiongGuan/nvmetcli"
+DESCRIPTION="linux nvme target cli utility"
+HOMEPAGE="http://git.infradead.org/users/hch/nvmetcli.git"
 
 if [[ ${PVR} = "9999" ]] ; then
 	inherit git-r3
@@ -13,17 +13,14 @@ if [[ ${PVR} = "9999" ]] ; then
 else
 	SRC_URI="https://github.com/JunxiongGuan/nvmetcli/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
-KEYWORDS=""
 
-PYTHON_COMPAT=( python3_{9..11} )
-
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{12..13} )
 inherit distutils-r1
-
-RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS=""
+RESTRICT="mirror"
 
 DOCS=(
 	README
@@ -37,6 +34,5 @@ DEPEND="
 	dev-python/configshell-fb
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 distutils_enable_tests pytest

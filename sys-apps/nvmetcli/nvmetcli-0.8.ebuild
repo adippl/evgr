@@ -3,17 +3,13 @@
 
 EAPI=8
 
-DESCRIPTION="btrfs incremental backup utility"
-HOMEPAGE="https://github.com/JunxiongGuan/nvmetcli"
+DESCRIPTION="linux nvme target cli utility"
+HOMEPAGE="http://git.infradead.org/users/hch/nvmetcli.git"
 
-if [[ ${PVR} = "9999" ]] ; then
-	inherit git-r3
-	EGIT_REPO_URI="$HOMEPAGE"
-	EGIT_COMMIT="v${PVR}"
-else
-	SRC_URI="https://github.com/JunxiongGuan/nvmetcli/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
-fi
-KEYWORDS="amd64"
+inherit git-r3
+EGIT_REPO_URI="$HOMEPAGE"
+EGIT_COMMIT="v${PVR}"
+KEYWORDS="~amd64"
 
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{12..13} )
