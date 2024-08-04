@@ -11,9 +11,8 @@ SRC_URI="https://vicerveza.homeunix.net/~viric/soft/ts/ts-${PV}.tar.gz"
 
 SLOT="0"
 KEYWORDS="amd64"
-RESTRICT=""
-DEPEND="
-"
+#RESTRICT=""
+#DEPEND=""
 RDEPEND=${DEPEND}
 
 src_install() {
