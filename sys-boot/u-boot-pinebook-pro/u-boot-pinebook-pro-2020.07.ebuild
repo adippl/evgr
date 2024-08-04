@@ -8,7 +8,7 @@ MY_P="${MY_PN}-v${MY_PV}"
 
 DESCRIPTION="U-boot compiled for pinebook pro"
 HOMEPAGE="https://www.denx.de/wiki/U-Boot"
-SRC_URI="https://gitlab.denx.de/${MY_PN}/${MY_PN}/-/archive/v${MY_PV}/${MY_PN}-v${MY_PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://gitlab.denx.de/${MY_PN}/${MY_PN}/-/archive/v${MY_PV}/${MY_PN}-v${MY_PV}.tar.bz2 -> ${P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
