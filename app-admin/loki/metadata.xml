@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gentoo.maintainer@acmelab.top</email>
+		<name>adip</name>
+	</maintainer>
+	<use>
+		<flag name="server">install loki server binary</flag>
+		<flag name="promtail">install promtail log collection client</flag>
+		<flag name="systemd">systemd placeholder</flag>
+		<flag name="tools">install loki cli tools</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">NICMx/Jool</remote-id>
+	</upstream>
+</pkgmetadata>
