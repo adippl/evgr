@@ -1,5 +1,0 @@
-#these are here just to silence pkgcheck warnings
-twolame - support for twolame (mp3) codec
-vpx - support for vpx google video codecs
-vulkan - support for vulkan api
-x265 - support for x265 video codec

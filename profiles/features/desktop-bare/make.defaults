@@ -1,5 +1,5 @@
 #desktop media formats
-USE="${USE} ffmpeg twolame mp3 vorbis wavpack flac opus ogg vorbis x264 x265 vpx webp jpeg2k jpeg png svg pdf exif"
+USE="${USE} ffmpeg mp3 vorbis wavpack flac opus ogg vorbis x264 webp jpeg2k jpeg png svg pdf exif"
 
 #desktop compression formats
 USE="${USE} "
