@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="openrc script launching rtorrent in tmux, firejail and VPN network namespace"
 HOMEPAGE="https://github.com/adippl/openrc-tmux-rtorrent"
-SRC_URI=""
+#SRC_URI=""
 
 inherit git-r3
 EGIT_REPO_URI="https://github.com/adippl/openrc-tmux-rtorrent"
