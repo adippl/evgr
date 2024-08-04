@@ -5,6 +5,8 @@ EAPI=8
 
 DESCRIPTION="linux nvme target cli utility"
 HOMEPAGE="http://git.infradead.org/users/hch/nvmetcli.git"
+LICENSE="GPL-2"
+SLOT="0"
 
 if [[ ${PVR} = "9999" ]] ; then
 	inherit git-r3
@@ -18,8 +20,6 @@ DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{12..13} )
 inherit distutils-r1
 
-LICENSE="GPL-2"
-SLOT="0"
 RESTRICT="mirror"
 
 DOCS=(
