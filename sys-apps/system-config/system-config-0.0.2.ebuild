@@ -5,19 +5,11 @@ EAPI=8
 
 DESCRIPTION="system config files"
 HOMEPAGE="https://github.com/adippl"
+S="$WORKDIR"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=" amd64 arm64"
 
-DEPEND=""
-
-S="$WORKDIR"
-
-#src_prepare() {
-#	default
-#}
-#
 src_install() {
 	insinto /etc/bash/bashrc.d
 	doins "$FILESDIR/bash-aliases.sh"

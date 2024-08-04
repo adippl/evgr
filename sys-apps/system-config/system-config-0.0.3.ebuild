@@ -5,15 +5,12 @@ EAPI=8
 
 DESCRIPTION="system config files"
 HOMEPAGE="https://github.com/adippl"
+S="$WORKDIR"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=" amd64 arm64"
 IUSE="podman"
-
-DEPEND=""
-
-S="$WORKDIR"
 
 #src_prepare() {
 #	default
