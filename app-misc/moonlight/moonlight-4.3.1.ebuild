@@ -22,7 +22,7 @@ RDEPEND="
 	>=dev-qt/qtsvg-5.15.2-r10:5/5.15
 	>=dev-qt/qtquickcontrols2-5.15.2-r11:5
 	>=media-libs/opus-1.3.1-r2:0
-	>=media-sound/pulseaudio-15.0-r1:0
+	media-sound/pulseaudio
 	vaapi? (
 		>=media-libs/libva-2.12.0:0
 	)
