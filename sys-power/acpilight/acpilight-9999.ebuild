@@ -20,15 +20,15 @@ EGIT_BRANCH="c_rewrite"
 LICENSE="GPL-3+"
 SLOT="0"
 	KEYWORDS="amd64 arm64"
-IUSE=""
+#IUSE=""
 
-DEPEND=""
+#DEPEND=""
 RDEPEND="	virtual/udev
 			acct-group/video
 			!dev-libs/light
 			!x11-apps/xbacklight"
-RDEPEND="${DEPEND}"
-BDEPEND=""
+DEPEND="${RDEPEND}"
+#BDEPEND=""
 
 src_install(){
 	dobin xbacklight
