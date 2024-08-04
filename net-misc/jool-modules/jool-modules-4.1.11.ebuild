@@ -4,17 +4,18 @@
 EAPI=8
 
 MODULES_OPTIONAL_IUSE="module"
-inherit linux-mod-r1 linux-info
+inherit linux-mod-r1
 
 DESCRIPTION="kernel modules for jool SIIT and NAT64 implementation"
 HOMEPAGE="https://github.com/NICMx/Jool"
 
 SRC_URI="https://github.com/NICMx/Jool/releases/download/v${PV}/jool-${PV}.tar.gz -> ${P}.tar.gz"
-RESTRICT="mirror"
+S="${WORKDIR}/jool-${PV}/src/mod"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE="+module"
+RESTRICT="mirror"
 #IUSE="debug +module module-src"
 
 CONFIG_CHECK="NET INET"
@@ -23,8 +24,6 @@ DEPEND="
 	virtual/linux-sources
 	sys-kernel/gentoo-kernel-bin:=
 	"
-
-S="${WORKDIR}/jool-${PV}/src/mod"
 
 MODULES_KERNEL_MAX=6.6
 MODULES_KERNEL_MIN=6.1
@@ -36,7 +35,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	local modlist=( 
+	local modlist=(
 		jool_common=extra:common:common
 		jool=extra:nat64:nat64
 		jool_siit=extra:siit:siit
