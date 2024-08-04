@@ -29,4 +29,4 @@ DEPEND="
 	atool? ( app-arch/atool )
 	pdf? ( app-text/poppler ) "
 RDEPEND="${DEPEND}"
-BDEPEND=""
+#BDEPEND=""
