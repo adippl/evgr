@@ -9,16 +9,17 @@ HOMEPAGE="https://github.com/adippl/gentoo-kernel-config"
 [ "${PR}" = "r0" ] && mPR=""
 K_TYPE="pinebook-pro"
 K_ARCH="arm64"
-RESTRICT="mirror strip"
 MIRR="http://files.acmelab.top/gentoo-kernels"
 SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}.tar.xz"
+S="${WORKDIR}"
 
 LICENSE="GPL-2"
 SLOT="${PV}"
 KEYWORDS="arm64"
 IUSE="test-only"
+RESTRICT="mirror strip"
 
-REQUIRED_USE=""
+#REQUIRED_USE=""
 
 DEPEND="
 	sys-boot/u-boot-pinebook-pro
@@ -34,8 +35,6 @@ initramfs_file="initramfs-${K_ARCH}-${PV}-gentoo${mPR}-${K_TYPE}.img"
 sysmap_file="System.map-${K_ARCH}-${PV}-gentoo${mPR}-${K_TYPE}"
 config_file="config-${K_ARCH}-${PV}-gentoo${mPR}-${K_TYPE}"
 config_file_n="config-${PV}-gentoo${mPR}-${K_TYPE}"
-
-S="${WORKDIR}"
 
 src_install() {
 	dodir /lib/
