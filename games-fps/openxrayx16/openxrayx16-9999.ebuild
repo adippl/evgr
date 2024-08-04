@@ -7,11 +7,12 @@ inherit xdg-utils
 
 DESCRIPTION="Open-source xray engine"
 HOMEPAGE="https://github.com/OpenXRay/xray-16"
+S="${WORKDIR}"/"${PN}"-"${PV}"
 LICENSE="BSD"
 
 EGIT_REPO_URI="https://github.com/OpenXRay/xray-16.git"
 EGIT_BRANCH="dev"
-SRC_URI=""
+#SRC_URI=""
 
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="v${PVR}"
@@ -20,7 +21,7 @@ fi
 
 SLOT="0"
 IUSE="clang debug gold"
-RESTRICT=""
+#RESTRICT=""
 # contains all the shared libraries required by game executable
 DEPEND="
 	media-libs/glew
@@ -50,7 +51,7 @@ DEPEND="
 #
 BDEPEND="
 		${RDEPEND}
-		dev-util/cmake
+		dev-build/cmake
 		dev-vcs/git
 		dev-cpp/tbb
 		dev-libs/crypto++
@@ -64,8 +65,6 @@ BDEPEND="
 				sys-devel/binutils[gold]
 		)
 		"
-
-S="${WORKDIR}"/"${PN}"-"${PV}"
 
 src_configure() {
 	mkdir "${S}"/bin
