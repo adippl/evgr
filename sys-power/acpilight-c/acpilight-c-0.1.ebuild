@@ -8,26 +8,21 @@ DESCRIPTION="Replacement for xbacklight that uses the ACPI to set brightness. C 
 HOMEPAGE="https://github.com/adippl/acpilight"
 
 SRC_URI="https://github.com/adippl/acpilight/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/acpilight-${PV}"
 
 inherit udev
-
-RESTRICT="mirror"
 
 LICENSE="GPL-3+"
 SLOT="0"
 	KEYWORDS="amd64 arm64"
-IUSE=""
+RESTRICT="mirror"
 
-DEPEND=""
-RDEPEND="	virtual/udev
+DEPEND="	virtual/udev
 			acct-group/video
 			!dev-libs/light
 			!x11-apps/xbacklight
 			!sys-power/acpilight"
 RDEPEND="${DEPEND}"
-BDEPEND=""
-
-S="${WORKDIR}/acpilight-${PV}"
 
 src_install(){
 	dobin xbacklight

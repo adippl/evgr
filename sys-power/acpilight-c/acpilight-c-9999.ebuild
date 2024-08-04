@@ -13,23 +13,18 @@ fi
 
 inherit git-r3
 inherit udev
-#EGIT_REPO_URI="https://github.com/adippl/acpilight"
 EGIT_REPO_URI="${HOMEPAGE}"
 EGIT_BRANCH="c_rewrite"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 
-DEPEND=""
-RDEPEND="	virtual/udev
+DEPEND="	virtual/udev
 			acct-group/video
 			!dev-libs/light
 			!x11-apps/xbacklight
 			!sys-power/acpilight"
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_install(){
 	dobin xbacklight
