@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="Trusted Firmware for A profile Arm CPUs"
 HOMEPAGE="https://www.trustedfirmware.org/"
 #SRC_URI="https://git.trustedfirmware.org/TF-A/${PN}.git/snapshot/${P}.tar.gz"
-SRC_URI="https://git.trustedfirmware.org/plugins/gitiles/TF-A/trusted-firmware-a.git/+archive/35f4c7295bafeb32c8bcbdfb6a3f2e74a57e732b.tar.gz -> trusted-firmware-a-2.7.tar.gz"
+SRC_URI="https://git.trustedfirmware.org/plugins/gitiles/TF-A/trusted-firmware-a.git/+archive/35f4c7295bafeb32c8bcbdfb6a3f2e74a57e732b.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
