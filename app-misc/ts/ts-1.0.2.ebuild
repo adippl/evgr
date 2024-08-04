@@ -5,9 +5,8 @@ EAPI=7
 
 DESCRIPTION="task spooler"
 HOMEPAGE="https://vicerveza.homeunix.net/~viric/soft/ts/"
-LICENSE="GPL-2"
-
 SRC_URI="https://vicerveza.homeunix.net/~viric/soft/ts/ts-${PV}.tar.gz"
+LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="amd64"
