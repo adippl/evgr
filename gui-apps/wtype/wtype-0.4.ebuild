@@ -3,11 +3,11 @@
 
 EAPI=8
 
-SRC_URI="https://github.com/atx/wtype/archive/refs/tags/v${PV}.tar.gz -> wtype-${PV}.tar.gz"
-
 DESCRIPTION="xdotool type for wayland"
 HOMEPAGE="https://github.com/atx/wtype"
 EGIT_REPO_URI="$HOMEPAGE"
+
+SRC_URI="https://github.com/atx/wtype/archive/refs/tags/v${PV}.tar.gz -> wtype-${PV}.tar.gz"
 
 if [[ ${PVR} != "9999" ]] ; then
 	EGIT_COMMIT="v${PVR}"
@@ -21,4 +21,4 @@ DEPEND="
 	dev-libs/wayland
 	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
+#BDEPEND=""
