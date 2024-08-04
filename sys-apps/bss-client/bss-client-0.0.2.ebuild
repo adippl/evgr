@@ -5,6 +5,9 @@ EAPI=8
 
 DESCRIPTION="client for btrfs incremental backup utility"
 HOMEPAGE="https://github.com/adippl/bss"
+S="${WORKDIR}"
+LICENSE="GPL-2"
+SLOT="0"
 #SRC_URI=""
 
 if [[ ${PVR} != "9999" ]] ; then
@@ -15,9 +18,6 @@ KEYWORDS="amd64 arm64"
 #inherit git-r3
 #EGIT_REPO_URI="https://github.com/adippl/bss"
 
-LICENSE="GPL-2"
-SLOT="0"
-
 DEPEND="
 	app-shells/bash:*
 	virtual/ssh
@@ -26,8 +26,8 @@ DEPEND="
 	app-admin/doas
 	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
-S="${WORKDIR}"
+#BDEPEND=""
+
 src_prepare(){
 	eapply_user
 	true
