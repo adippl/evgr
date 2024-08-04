@@ -8,22 +8,16 @@ HOMEPAGE="https://github.com/adippl/"
 [ "${PR}" != "" ] && mPR="-${PR}"
 [ "${PR}" = "r0" ] && mPR=""
 K_TYPE="dist"
-RESTRICT="mirror strip"
 MIRR="http://files.acmelab.top/gentoo-kernels"
 SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}-netboot.tar.xz"
+S="${WORKDIR}"
 
 LICENSE="GPL-2"
 #SLOT="${PV}"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+netboot-server"
-
-DEPEND="
-	"
-RDEPEND="${DEPEND}"
-BDEPEND=""
-
-S="${WORKDIR}"
+RESTRICT="mirror strip"
 
 src_install() {
 	cp -r "${S}/boot/" "${D}/boot/"
