@@ -3,15 +3,14 @@
 
 EAPI=8
 
-DESCRIPTION=""
-HOMEPAGE="https://github.com/amanusk/s-tui"
 DESCRIPTION="CPU temperature, frequency, utilization and power monitoring"
+HOMEPAGE="https://github.com/amanusk/s-tui"
 SRC_URI="https://codeload.github.com/amanusk/s-tui/tar.gz/refs/tags/v${PV} -> ${P}.tar.gz"
+LICENSE="GPL-2"
 
-PYTHON_COMPAT=( python3_{9..12} )
-
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{12..13} )
 inherit distutils-r1
-#DISTUTILS_USE_PEP517="true"
 
 if [[ ${PVR} = "9999" ]] ; then
 	inherit git-r3
@@ -19,12 +18,9 @@ if [[ ${PVR} = "9999" ]] ; then
 	EGIT_SUBMODULES=()
 	EGIT_COMMIT="v${PVR}"
 fi
-KEYWORDS="amd64"
 
-RESTRICT="mirror"
-
-LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="amd64"
 IUSE="stress"
 
 DEPEND="
@@ -33,4 +29,4 @@ DEPEND="
 	stress? ( app-benchmarks/stress )
 	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
+#BDEPEND=""
