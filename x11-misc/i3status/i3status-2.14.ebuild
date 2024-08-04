@@ -6,7 +6,7 @@ inherit fcaps meson git-r3
 
 DESCRIPTION="generates a status bar for dzen2, xmobar or similar"
 HOMEPAGE="https://i3wm.org/i3status/"
-SRC_URI="https://i3wm.org/${PN}/${P}.tar.xz"
+#SRC_URI="https://i3wm.org/${PN}/${P}.tar.xz"
 
 #EGIT_REPO_URI="https://github.com/i3/i3status"
 #EGIT_BRANCH="master"
@@ -14,11 +14,10 @@ SRC_URI="https://i3wm.org/${PN}/${P}.tar.xz"
 EGIT_REPO_URI="https://github.com/adippl/i3status"
 EGIT_BRANCH="2.14-battery_idle_fix"
 EGIT_COMMIT="8962bbe12e088251b1cd6573a6ace599e3fa0fd7"
-SRC_URI=""
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~riscv ~x86"
+KEYWORDS="amd64 arm arm64"
 IUSE="pulseaudio"
 
 BDEPEND="virtual/pkgconfig"
@@ -27,7 +26,7 @@ RDEPEND="
 	dev-libs/confuse:=
 	dev-libs/libnl:3
 	media-libs/alsa-lib
-	pulseaudio? ( || ( media-sound/pulseaudio media-sound/apulse[sdk] ) )
+	pulseaudio? ( || ( media-sound/pulseaudio-daemon media-sound/apulse[sdk] ) )
 "
 
 DEPEND="
