@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="Scripts and tools to build ironic-python-agent"
 
-HOMEPAGE="https://github.com/adippl/bss"
+HOMEPAGE="https://github.com/openstack/ironic-python-agent-builder"
 #SRC_URI=""
 
 if [[ ${PVR} != "9999" ]] ; then
@@ -13,7 +13,8 @@ if [[ ${PVR} != "9999" ]] ; then
 	KEYWORDS="amd64"
 fi
 
-PYTHON_COMPAT=( python3_{9..10} )
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{12..13} )
 
 inherit git-r3 distutils-r1
 EGIT_REPO_URI="https://opendev.org/openstack/ironic-python-agent-builder"
@@ -30,6 +31,6 @@ DEPEND="
 	>=dev-python/pbr-2.0.0
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
+#BDEPEND=""
 
 distutils_enable_tests pytest
