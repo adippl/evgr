@@ -5,10 +5,6 @@
 		<email>gentoo.maintainer@acmelab.top</email>
 		<name>adip</name>
 	</maintainer>
-	<use>
-		<flag name="X">xorg clipboard support</flag>
-		<flag name="wayland">wayland clipboard support</flag>
-	</use>
 	<upstream>
 		<remote-id type="github">nyyManni/dmenu-wayland</remote-id>
 	</upstream>

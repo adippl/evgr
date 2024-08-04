@@ -17,7 +17,6 @@ else
 	EGIT_REPO_URI="$HOMEPAGE"
 fi
 
-
 LICENSE="MIT"
 SLOT="0"
 
