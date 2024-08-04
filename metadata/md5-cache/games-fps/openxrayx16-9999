@@ -1,4 +1,4 @@
-BDEPEND=dev-util/cmake dev-vcs/git dev-cpp/tbb dev-libs/crypto++ !clang? ( >sys-devel/gcc-7.5.0 ) clang? ( sys-devel/clang ) gold? ( sys-devel/binutils[gold] ) >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=dev-build/cmake dev-vcs/git dev-cpp/tbb dev-libs/crypto++ !clang? ( >sys-devel/gcc-7.5.0 ) clang? ( sys-devel/clang ) gold? ( sys-devel/binutils[gold] ) >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm unpack
 DEPEND=media-libs/glew media-libs/freeimage net-libs/liblockfile media-libs/openal dev-cpp/tbb dev-libs/crypto++ media-libs/libtheora media-libs/libogg media-libs/libvorbis media-libs/libsdl2 dev-libs/lzo media-libs/libjpeg-turbo sys-libs/readline dev-libs/libpcre2 dev-libs/libpcre app-arch/lzop media-libs/libglvnd
 DESCRIPTION=Open-source xray engine
@@ -9,5 +9,5 @@ IUSE=clang debug gold
 LICENSE=BSD
 PROPERTIES=live
 SLOT=0
-_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=9f871427d6fc702aef18f6b59432c366
+_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81	xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=7ffee917bf0b892e96dc13be518a16bf

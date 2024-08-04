@@ -9,5 +9,5 @@ KEYWORDS=arm64
 LICENSE=Broadcom
 PROPERTIES=live
 SLOT=0
-_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81
 _md5_=71e5d907e3758f284ae33d4763d892a9

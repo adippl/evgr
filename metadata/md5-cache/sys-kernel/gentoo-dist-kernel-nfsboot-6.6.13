@@ -10,4 +10,4 @@ RDEPEND=
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=http://files.acmelab.top/gentoo-kernels/linux-6.6.13-gentoo-dist-nfsboot.tar.xz
-_md5_=71d6652af036c51bb2b4856fb6be2fa8
+_md5_=14c6717282440b935adc721251cbb61c

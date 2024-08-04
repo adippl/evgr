@@ -1,4 +1,4 @@
-BDEPEND=sys-devel/make >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=unpack
 DEPEND=sys-apps/openrc app-misc/tmux net-p2p/rtorrent net-misc/curl[adns] sys-apps/firejail wg? ( sys-apps/iproute2 net-vpn/wireguard-tools )
 DESCRIPTION=openrc script launching rtorrent in tmux, firejail and VPN network namespace
@@ -10,5 +10,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=sys-apps/openrc app-misc/tmux net-p2p/rtorrent net-misc/curl[adns] sys-apps/firejail wg? ( sys-apps/iproute2 net-vpn/wireguard-tools )
 SLOT=0
-_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
-_md5_=c7442f2c30d02a02d833066701c8df5b
+_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81
+_md5_=0999c446e1087edf8b70f59b914ff791

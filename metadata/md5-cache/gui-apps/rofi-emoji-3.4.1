@@ -1,0 +1,16 @@
+BDEPEND=dev-build/autoconf dev-build/automake dev-build/libtool >=app-portage/elt-patches-20240116 sys-devel/gnuconfig || ( >=dev-build/automake-1.17-r1:1.17 >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3
+DEFINED_PHASES=configure prepare
+DEPEND=x11-misc/rofi X? ( x11-misc/xclip x11-misc/xdotool ) wayland? ( gui-apps/wl-clipboard gui-apps/wtype )
+DESCRIPTION=emoji selection plugin for x11-misc/rofi
+EAPI=8
+HOMEPAGE=https://github.com/Mange/rofi-emoji
+INHERIT=autotools
+IUSE=X wayland
+KEYWORDS=~amd64 ~arm64
+LICENSE=MIT
+RDEPEND=x11-misc/rofi X? ( x11-misc/xclip x11-misc/xdotool ) wayland? ( gui-apps/wl-clipboard gui-apps/wtype )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/Mange/rofi-emoji/archive/refs/tags/v3.4.1.tar.gz -> rofi-emoji-3.4.1.tar.gz
+_eclasses_=gnuconfig	a397adda6984a4c423e28ac274c1ba98	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	d12ccbad07b44642a75ac97a3334d8e0
+_md5_=72ebc68e6eae7a496cdb0d9769e6e63f

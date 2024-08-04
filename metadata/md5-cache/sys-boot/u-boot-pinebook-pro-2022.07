@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install postinst
 DEPEND=sys-apps/dtc sys-firmware/trusted-firmware-a
-DESCRIPTION=U-boot
+DESCRIPTION=U-boot compiled for pinebook pro
 EAPI=7
 HOMEPAGE=https://www.denx.de/wiki/U-Boot
 KEYWORDS=-* arm64
 LICENSE=GPL-2
 RDEPEND=sys-apps/dtc sys-firmware/trusted-firmware-a
 SLOT=0
-SRC_URI=https://gitlab.denx.de/u-boot/u-boot/-/archive/v2022.07/u-boot-v2022.07.tar.gz -> u-boot-pinebook-pro-2022.07.tar.gz
-_md5_=43a4e671179aba736901035a58eb6643
+SRC_URI=https://gitlab.denx.de/u-boot/u-boot/-/archive/v2022.07/u-boot-v2022.07.tar.bz2 -> u-boot-pinebook-pro-2022.07.tar.bz2
+_md5_=9486d2cd7efcea2674b0973be70a6496

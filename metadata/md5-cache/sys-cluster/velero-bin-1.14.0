@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DEPEND=
+DESCRIPTION=Velero kubernetes backup software
+EAPI=8
+HOMEPAGE=https://velero.io/
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=
+RESTRICT=strip mirror
+SLOT=0
+SRC_URI=https://github.com/vmware-tanzu/velero/releases/download/v1.14.0/velero-v1.14.0-linux-amd64.tar.gz
+_md5_=359fab9d6e89a9a492a87884d0ab54d2
