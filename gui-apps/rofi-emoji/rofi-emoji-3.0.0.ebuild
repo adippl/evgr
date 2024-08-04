@@ -9,12 +9,12 @@ DESCRIPTION="emoji selection plugin for x11-misc/rofi"
 HOMEPAGE="https://github.com/Mange/rofi-emoji"
 
 SRC_URI="https://github.com/Mange/rofi-emoji/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="amd64 arm64"
-RESTRICT="mirror"
-
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="amd64 arm64"
+
 IUSE="X wayland"
+RESTRICT="mirror"
 DOC="LICENSE README.md"
 
 BDEPEND="
