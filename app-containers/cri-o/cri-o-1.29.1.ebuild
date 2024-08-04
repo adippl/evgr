@@ -87,7 +87,7 @@ src_install() {
 
 	if use supervise-daemon ; then
 		newinitd "${FILESDIR}/crio.initd_supervise_daemon" crio
-	else 
+	else
 		newinitd "${FILESDIR}/crio.initd" crio
 	fi
 
