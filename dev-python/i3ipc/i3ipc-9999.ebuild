@@ -7,8 +7,9 @@ DESCRIPTION="An improved Python library to control i3wm and sway."
 HOMEPAGE="https://github.com/altdesktop/i3ipc-python"
 
 EGIT_REPO_URI="$HOMEPAGE"
-PYTHON_COMPAT=( python3_{9..10} )
+PYTHON_COMPAT=( python3_{12..13} )
 
+DISTUTILS_USE_PEP517=setuptools
 inherit git-r3 distutils-r1
 
 LICENSE="BSD"
@@ -26,7 +27,7 @@ DOCS=(
 DEPEND="
 	dev-python/pygobject
 	x11-libs/gtk+:3
-	<gui-libs/gtk-layer-shell-0.7.0
+	gui-libs/gtk-layer-shell
 	"
 #RDEPEND="${DEPEND}"
 #BDEPEND=""
