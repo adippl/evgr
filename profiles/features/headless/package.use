@@ -3,7 +3,7 @@ app-emulation/qemu			rbd
 
 sys-block/open-iscsi		rdma
 
-media-video/ffmpeg			bluray libcaca openh264 opus twolame x264 x265 wavpack vorbis openal jpeg2k mp3 webp vpx vaapi -opengl -opencl -svg
+media-video/ffmpeg			bluray libcaca openh264 opus twolame x264 x265 vorbis openal jpeg2k mp3 webp vpx vaapi -opengl -opencl -svg
 
 sys-apps/fwupd				minimal
 dev-libs/libjcat			pkcs7 gpg
@@ -12,13 +12,11 @@ dev-libs/libjcat			pkcs7 gpg
 mail-filter/opendkim    -sasl
 mail-mta/postfix        sasl dovecot-sasl berkdb
 net-mail/dovecot        sieve managesieve
-net-mail/mailutils      -ipv6 -pam -ssl -sasl
+net-mail/mailutils      -pam -ssl -sasl
 
 dev-lang/php pdo gd mysql curl intl zip truetype xmlwriter xmlreader apache2 
 media-gfx/imagemagick -openmp
 www-apps/nextcloud mysql
-
-sci-libs/tensorflow -cuda -python
 
 #fdupes
 dev-libs/libpcre2 pcre32

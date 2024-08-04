@@ -103,5 +103,6 @@ dev-python/scikit-learn ~arm64
 
 
 
-=app-admin/loki-2.8.3 **
-=sys-cluster/keepalived-2.2.8 **
+
+sys-cluster/keepalived **
+app-admin/loki ~arm64

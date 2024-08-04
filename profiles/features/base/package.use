@@ -5,10 +5,8 @@ sys-firmware/intel-microcode	initramfs
 sys-kernel/gentoo-sources		symlink
 sys-fs/lvm2						-thin lvm
 sys-apps/fwupd					minimal nvme uefi -systemd -introspection -elogind
-net-mail/mailutils				-ipv6 -pam -ssl -sasl
-net-fs/nfs-utils				nfsv41
+net-mail/mailutils				-pam -ssl -sasl
 net-misc/spice-gtk				usbredir
-net-fs/nfs-utils				nfsv41
 net-vpn/wireguard-tools			-wg-quick
 sys-process/procps				-elogind -nls
 net-nds/openldap				minimal
@@ -29,7 +27,7 @@ net-misc/spice-gtk				usbredir
 dev-vcs/git						-pcre -perl
 sys-devel/gcc					lto go fortran
 app-containers/containerd		btrfs -device-mapper
-app-containers/docker			btrfs -device-mapper -overlay
+app-containers/docker			btrfs -overlay
 app-emulation/libguestfs		-ocaml 
 app-containers/podman			-fuse btrfs
 sys-block/fio					aio curl

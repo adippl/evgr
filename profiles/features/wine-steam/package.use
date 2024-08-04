@@ -40,8 +40,6 @@ sys-apps/dbus abi_x86_32
 sys-apps/util-linux abi_x86_32
 sys-devel/gettext abi_x86_32
 sys-devel/llvm abi_x86_32
-sys-fs/eudev abi_x86_32
-sys-fs/udev abi_x86_32
 sys-libs/binutils-libs abi_x86_32
 sys-libs/gpm abi_x86_32
 sys-libs/ncurses abi_x86_32
@@ -138,7 +136,6 @@ sys-apps/dbus abi_x86_32
 sys-apps/util-linux abi_x86_32
 sys-devel/gettext abi_x86_32
 sys-devel/llvm abi_x86_32
-sys-fs/eudev abi_x86_32
 sys-libs/libcap abi_x86_32
 sys-libs/libunwind abi_x86_32
 sys-libs/ncurses abi_x86_32
@@ -204,7 +201,6 @@ media-plugins/gst-plugins-lame abi_x86_32
 media-plugins/gst-plugins-ldac abi_x86_32
 media-plugins/gst-plugins-libav abi_x86_32
 media-plugins/gst-plugins-libde265 abi_x86_32
-media-plugins/gst-plugins-libmms abi_x86_32
 media-plugins/gst-plugins-libnice abi_x86_32
 media-plugins/gst-plugins-libpng abi_x86_32
 media-plugins/gst-plugins-libvisual abi_x86_32
@@ -216,7 +212,6 @@ media-plugins/gst-plugins-mpeg2enc abi_x86_32
 media-plugins/gst-plugins-mpg123 abi_x86_32
 media-plugins/gst-plugins-mplex abi_x86_32
 media-plugins/gst-plugins-neon abi_x86_32
-media-plugins/gst-plugins-ofa abi_x86_32
 media-plugins/gst-plugins-openaptx abi_x86_32
 media-plugins/gst-plugins-opencv abi_x86_32
 media-plugins/gst-plugins-openh264 abi_x86_32

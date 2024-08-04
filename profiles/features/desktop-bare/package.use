@@ -9,16 +9,14 @@
 #desktop
 app-admin/pass					dmenu -git
 app-admin/pass-otp				-qrcode
-app-crypt/pinentry				-gnome-keyring
 media-libs/freetype				-harfbuzz
 media-libs/sdl2-ttf				-harfbuzz
 media-libs/mesa					d3d9 wayland
 media-sound/cmus				-elogind
 media-video/ffmpeg				bluray libcaca openh264 openal jpeg2k v4l chromium
 media-video/mpv					cli archive libmpv -egl 
-net-analyzer/wireshark			qt5
 net-wireless/wpa_supplicant		qt5
-www-client/chromium				hangouts proprietary-codecs -js-type-check -suid -widevine
+www-client/chromium				hangouts proprietary-codecs -widevine
 
 www-client/w3m					imlib
 x11-base/xorg-server			xephyr  -suid -minimal
@@ -43,7 +41,7 @@ app-crypt/gcr				gtk
 sys-devel/distcc			gtk
 net-analyzer/ettercap		gtk
 app-emulation/winetricks	gtk
-app-emulation/virt-manager	gtk gui
+app-emulation/virt-manager	gui
 app-emulation/qemu			gtk 
 app-crypt/pinentry			gtk
 
@@ -69,7 +67,7 @@ media-libs/libpulse				dbus
 media-libs/libvpx				postproc
 media-sound/audacity			id3tag
 media-sound/mpd					-alsa -network
-media-sound/ncmpcpp				lto taglib visualizer outputs
+media-sound/ncmpcpp				taglib visualizer outputs
 media-tv/v4l-utils				-bpf
 media-video/mkvtoolnix			gui
 media-video/obs-studio			v4l
@@ -80,7 +78,7 @@ net-print/cups-filters			jpeg png pdf
 net-print/gutenprint			cups ppds -readline
 net-print/hplip					hpijs minimal -X -snmp
 sci-mathematics/octave			gnuplot
-sys-apps/hwloc					cairo minizip
+sys-apps/hwloc					cairo
 sys-libs/zlib					minizip
 media-libs/libsdl2				haptic 
 # required by app-misc/moonlight-4.3.1::evgr
@@ -89,7 +87,6 @@ media-libs/libsdl2 kms
 
 
 #gms
-media-libs/sdl2-mixer mad
 games-simulation/openttd -icu -timidity -fluidsynth
 games-roguelike/cataclysm-dda xdg sdl sound -nls
 games-fps/gzdoom -non-free
