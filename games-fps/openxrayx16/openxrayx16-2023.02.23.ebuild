@@ -17,7 +17,7 @@ EGIT_BRANCH="dev"
 if [[ ${PVR} != "9999" ]] ; then
 	#EGIT_COMMIT="v${PVR}"
 	EGIT_COMMIT="5b2d3a30162e4e4ce86f77049a8b9cfaa5ecdbaa"
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 fi
 
 SLOT="0"
