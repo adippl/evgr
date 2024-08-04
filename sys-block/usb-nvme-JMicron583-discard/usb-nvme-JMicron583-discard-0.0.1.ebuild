@@ -8,6 +8,7 @@ DESCRIPTION="udev rules enabling discard on JMicron 583 usd nvme adapter"
 HOMEPAGE="https://github.com/adippl"
 #SRC_URI=""
 
+S="${WORKDIR}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm64"
@@ -16,7 +17,6 @@ KEYWORDS="amd64 arm64"
 RDEPEND="${DEPEND}"
 #BDEPEND=""
 
-S="${WORKDIR}"
 src_unpack(){
 	true
 	}
