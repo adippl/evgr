@@ -96,3 +96,7 @@ dev-libs/thrift ~arm64
 # required by sys-cluster/ceph-18.2.1-r2::gentoo[mgr]
 # required by ceph (argument)
 dev-python/scikit-learn ~arm64
+# required by sys-cluster/ceph-18.2.4-r2::gentoo[parquet]
+# required by @selected
+# required by @world (argument)
+~app-arch/lz4-1.10.0 ~arm64
