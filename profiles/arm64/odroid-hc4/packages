@@ -8,3 +8,4 @@
 
 -*sys-power/acpid
 -*sys-kernel/linux-firmware
+*dev-embedded/u-boot-tools
