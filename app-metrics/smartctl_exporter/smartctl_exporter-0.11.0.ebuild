@@ -6,12 +6,9 @@ EAPI=8
 DESCRIPTION="Export smartctl statistics to prometheus"
 HOMEPAGE="https://github.com/prometheus-community/smartctl_exporter"
 # Upstream LICENSE file is wrong see https://github.com/prometheus-community/smartctl_exporter/pull/113
-LICENSE="Apache-2.0"
-SLOT="0"
 BDEPEND="dev-util/promu"
 DEPEND="dev-lang/go"
 RDEPEND="sys-apps/smartmontools"
-KEYWORDS="amd64 ~x86"
 
 # uncomment the first setting of MY_PV for a normal release
 # MY_PV="v${PV/_rc/-rc.}"
@@ -34,6 +31,10 @@ SRC_URI="
 	${SRC_URI_VENDOR}
 	"
 
+LICENSE="Apache-2.0"
+SLOT="0"
+KEYWORDS="amd64"
+
 src_prepare() {
 	default
 	if [[ -n $SMARTCTL_EXPORTER_COMMIT ]]; then
@@ -46,7 +47,7 @@ src_compile() {
 }
 
 src_install() {
-	doinitd ${FILESDIR}/smartctl_exporter
+	doinitd "${FILESDIR}"/smartctl_exporter
 	dodoc *.md
 	dobin ${PN}
 }
