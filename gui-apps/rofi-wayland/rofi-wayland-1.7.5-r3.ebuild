@@ -12,7 +12,7 @@ S="${WORKDIR}"/rofi-${PV}+wayland3
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+drun +windowmode test +X +wayland"
 RESTRICT="!test? ( test )"
 
@@ -46,7 +46,7 @@ src_configure() {
 }
 
 #src_install() {
-#	
+#
 #}
 
 pkg_postinst() {
