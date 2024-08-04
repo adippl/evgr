@@ -7,17 +7,16 @@ DESCRIPTION="userspace tools for jool SIIT and NAT64 implementation"
 HOMEPAGE="https://github.com/NICMx/Jool"
 
 SRC_URI="https://github.com/NICMx/Jool/releases/download/v${PV}/jool-${PV}.tar.gz -> ${P}.tar.gz"
-RESTRICT="mirror"
+S="${WORKDIR}/jool-${PV}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE=""
-
-S="${WORKDIR}/jool-${PV}"
+RESTRICT="mirror"
+#IUSE=""
 
 DEPEND="
 	dev-libs/libnl
 	net-firewall/iptables
 	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
+#BDEPEND=""
