@@ -100,3 +100,8 @@ dev-python/scikit-learn ~arm64
 # required by @selected
 # required by @world (argument)
 ~app-arch/lz4-1.10.0 ~arm64
+
+
+
+=app-admin/loki-2.8.3 **
+=sys-cluster/keepalived-2.2.8 **
