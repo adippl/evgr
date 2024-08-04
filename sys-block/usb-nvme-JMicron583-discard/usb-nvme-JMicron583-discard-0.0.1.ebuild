@@ -6,15 +6,15 @@ EAPI=8
 inherit udev
 DESCRIPTION="udev rules enabling discard on JMicron 583 usd nvme adapter"
 HOMEPAGE="https://github.com/adippl"
-SRC_URI=""
+#SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm64"
 
-DEPEND=""
+#DEPEND=""
 RDEPEND="${DEPEND}"
-BDEPEND=""
+#BDEPEND=""
 
 S="${WORKDIR}"
 src_unpack(){
