@@ -8,22 +8,19 @@ HOMEPAGE="https://github.com/adippl/gentoo-kernel-config"
 [ "${PR}" != "" ] && mPR="-${PR}"
 [ "${PR}" = "r0" ] && mPR=""
 K_TYPE="dist"
-RESTRICT="mirror strip"
 MIRR="http://files.acmelab.top/gentoo-kernels"
 SRC_URI="${MIRR}/linux-${PV}-gentoo${mPR}-${K_TYPE}-nfsboot.tar.xz"
-
+S="${WORKDIR}"
 LICENSE="GPL-2"
-#SLOT="${PV}"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE="+nfsboot-server"
+RESTRICT="mirror strip"
 
 DEPEND="
 	"
 RDEPEND="${DEPEND}"
-BDEPEND=""
-
-S="${WORKDIR}"
+#BDEPEND=""
 
 #LINUX vmlinuz-dist-nfs
 #APPEND initramfs-nfs-only.img
