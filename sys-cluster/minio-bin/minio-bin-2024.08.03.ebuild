@@ -24,7 +24,7 @@ RESTRICT="strip mirror"
 #BDEPEND=""
 
 src_unpack(){
-	mv "${DISTDIR}"/${A} "${S}"/minio
+	cp "${DISTDIR}"/${A} "${S}"/minio
 	}
 src_prepare(){
 	eapply_user
