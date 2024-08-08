@@ -38,6 +38,6 @@ src_compile(){
 	}
 src_install(){
 	dobin minio
-	newinitd "${FILESDIR}/minio_initd" "${PN}"
-	newconfd "${FILESDIR}/minio_confd" "${PN}"
+	newinitd "${FILESDIR}/minio_initd" minio
+	newconfd "${FILESDIR}/minio_confd" minio
 	}
