@@ -1,0 +1,6 @@
+MINIO_ROOT_USER=TEST
+MINIO_ROOT_PASSWORD=TEST
+#MINIO_VOLUMES="/mnt/drive-{1...5}"
+MINIO_OPTS="--console-address :9001"
+minio_args="server $MINIO_VOLUMES $MINIO_OPTS"
+logfile="/var/log/$RC_SVCNAME.log"
