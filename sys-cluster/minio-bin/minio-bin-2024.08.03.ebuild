@@ -37,7 +37,7 @@ src_compile(){
 	true
 	}
 src_install(){
-	dobin moonlight-bin
+	dobin minio
 	newinitd "${FILESDIR}/minio_initd" "${PN}"
 	newconfd "${FILESDIR}/minio_confd" "${PN}"
 	}
