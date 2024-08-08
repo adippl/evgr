@@ -104,7 +104,7 @@ dev-python/scikit-learn ~arm64
 
 
 
-sys-cluster/keepalived **
-app-admin/loki ~arm64
-
+~app-admin/loki-2.8.3 **
+~sys-cluster/keepalived-2.2.8 **
+~sys-cluster/minio-bin-2024.08.03 ~arm64
 ~net-analyzer/bmon-4.0 **
