@@ -106,3 +106,5 @@ dev-python/scikit-learn ~arm64
 
 sys-cluster/keepalived **
 app-admin/loki ~arm64
+
+net-analyzer/bmon **
