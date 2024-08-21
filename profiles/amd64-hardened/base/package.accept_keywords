@@ -2,3 +2,5 @@
 ~sys-cluster/ceph-18.2.2
 
 net-misc/moonlight ~amd64
+
+~net-vpn/tailscale-1.72.0 ~amd64
