@@ -287,3 +287,11 @@ app-crypt/p11-kit abi_x86_32
 # required by @system
 # required by @world (argument)
 >=media-libs/libepoxy-1.5.10-r3 abi_x86_32
+
+# required by net-misc/curl-8.9.1-r1::gentoo[http3]
+# required by dev-lang/rust-1.80.1::gentoo
+# required by virtual/rust-1.80.1::gentoo
+# required by www-client/firefox-115.15.0::gentoo
+# required by @system
+# required by @world (argument)
+>=net-libs/nghttp3-1.5.0 abi_x86_32
