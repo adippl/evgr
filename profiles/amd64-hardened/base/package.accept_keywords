@@ -6,3 +6,12 @@ net-misc/moonlight ~amd64
 ~net-vpn/tailscale-1.72.0 ~amd64
 
 ~dev-libs/protobuf-c-1.5.0 ~amd64
+
+# required by games-util/lutris (argument)
+=games-util/lutris-0.5.17 ~amd64
+# required by games-util/lutris-0.5.17::gentoo[python_single_target_python3_12]
+# required by games-util/lutris (argument)
+=dev-python/moddb-0.11.0 ~amd64
+# required by games-util/lutris-0.5.17::gentoo[python_single_target_python3_12]
+# required by games-util/lutris (argument)
+=dev-python/pypresence-4.3.0 ~amd64

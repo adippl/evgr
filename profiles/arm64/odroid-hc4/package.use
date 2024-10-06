@@ -8,15 +8,3 @@ net-misc/curl -zstd
 # random use flags to be more inline with default binpkgs
 dev-lang/rust -profiler
 virtual/rust -profiler
-#app-crypt/gnupg smartcard
-#sys-fs/btrfs-progs -man
-#dev-libs/glib dbus
-
-#dev-libs/xmlsec nss
-#dev-python/pillow lcms tiff truetype xcb
-#media-libs/lcms jpeg tiff
-#dev-lang/swig pcre
-#dev-cpp/eigen opengl
-#dev-libs/json-c -threads
-#sys-libs/libnvme dbus
-#media-libs/tiff jpeg
