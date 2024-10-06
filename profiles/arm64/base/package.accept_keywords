@@ -80,7 +80,6 @@ app-admin/eclean-kernel ~arm64
 
 
 #ceph
-dev-libs/rocksdb ~arm64
 dev-python/scikit-learn ~arm64
 
 net-misc/rclone ~arm64
@@ -89,7 +88,7 @@ net-misc/rclone ~arm64
 #sys-cluster/ceph ~arm64
 # required by sys-cluster/ceph-18.2.1-r2::gentoo
 # required by ceph (argument)
-dev-libs/rocksdb ~arm64
+#dev-libs/rocksdb ~arm64
 # required by sys-cluster/ceph-18.2.1-r2::gentoo
 # required by ceph (argument)
 dev-libs/thrift ~arm64
