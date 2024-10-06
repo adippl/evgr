@@ -12,7 +12,7 @@ SRC_URI="https://github.com/facebook/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~arm64 ~ppc64 ~riscv ~x86"
-IUSE="cpu_flags_x86_avx cpu_flags_x86_avx2 cpu_flags_x86_sse4_2 jemalloc static-libs"
+IUSE="cpu_flags_x86_avx cpu_flags_x86_avx2 cpu_flags_x86_sse4_2 jemalloc static-libs lz4"
 
 DEPEND="
 	app-arch/bzip2:=
@@ -38,7 +38,7 @@ src_configure() {
 		-DFORCE_AVX2=$(usex cpu_flags_x86_avx2 ON OFF)
 		-DFORCE_AVX=$(usex cpu_flags_x86_avx ON OFF)
 		-DFORCE_SSE42=$(usex cpu_flags_x86_sse4_2 ON OFF)
-		-DWITH_LZ4=ON
+		-DWITH_LZ4=$(usex lz4 ON OFF)
 		-DPORTABLE=ON
 		-DWITH_JEMALLOC=$(usex jemalloc ON OFF)
 		# They're just examples/benchmarks.
