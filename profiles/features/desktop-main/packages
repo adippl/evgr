@@ -75,8 +75,8 @@
 *sys-fs/inotify-tools
 
 # work
-*app-emulation/diskimage-builder
-*dev-python/python-ironicclient
+#*app-emulation/diskimage-builder
+#*dev-python/python-ironicclient
 *dev-python/python-openstackclient
 *net-misc/s3cmd
 *net-vpn/openvpn
