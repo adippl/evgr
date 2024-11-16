@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="minio clustered object storage server"
 HOMEPAGE="https://min.io"
 
-RELEASE=2024-08-03T04-33-23Z""
+RELEASE="2024-11-07T00-52-20Z"
 SRC_URI="
 	amd64?   ( "https://dl.min.io/server/minio/release/linux-amd64/minio.RELEASE.${RELEASE}" -> ${PN}-amd64-${PVR} )
 	arm64?   ( "https://dl.min.io/server/minio/release/linux-arm64/minio.RELEASE.${RELEASE}" -> ${PN}-arm64-${PVR} )
