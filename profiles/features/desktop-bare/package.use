@@ -2,7 +2,7 @@
 # required by net-misc/nextcloud-client-3.8.2-r1::gentoo
 # required by @system
 # required by @world (argument)
->=dev-libs/qtkeychain-0.14.1-r1 qt5
+>=dev-libs/qtkeychain-0.14.1-r1 qt5 qt6
 
 
 
