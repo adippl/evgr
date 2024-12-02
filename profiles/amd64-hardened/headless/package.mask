@@ -1,4 +1,4 @@
->sys-cluster/kubeadm-1.29.1
->sys-cluster/kubectl-1.29.1
->sys-cluster/kubelet-1.29.1
->app-containers/cri-o-1.29.1
+>sys-cluster/kubeadm-1.29.7
+>sys-cluster/kubectl-1.29.7
+>sys-cluster/kubelet-1.29.7
+>app-containers/cri-o-1.29.7
