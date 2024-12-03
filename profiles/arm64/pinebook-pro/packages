@@ -14,7 +14,7 @@
 -*net-im/signal-desktop-bin	# missing arm64 keyword
 -*net-misc/s3cmd		# missing arm64 keyword
 -*sys-apps/btrfs-compsize	# missing arm64 keyword
--*sys-boot/woeusb		# missing arm64 keyword
+-*sys-boot/woeusb-ng		# missing arm64 keyword
 -*sys-fs/fuseiso		# missing arm64 keyword
 -*virtual/wine			# missing arm64 keyword
 -*app-emulation/winetricks	# missing arm64 keyword

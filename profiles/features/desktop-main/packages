@@ -80,7 +80,7 @@
 *dev-python/python-openstackclient
 *net-misc/s3cmd
 *net-vpn/openvpn
-*sys-boot/woeusb
+*sys-boot/woeusb-ng
 *sys-fs/squashfs-tools
 *www-client/chromium
 
