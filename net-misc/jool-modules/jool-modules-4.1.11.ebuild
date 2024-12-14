@@ -25,7 +25,7 @@ DEPEND="
 	sys-kernel/gentoo-kernel-bin:=
 	"
 
-MODULES_KERNEL_MAX=6.6
+MODULES_KERNEL_MAX=6.12
 MODULES_KERNEL_MIN=6.1
 
 pkg_setup() {
