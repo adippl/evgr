@@ -14,7 +14,7 @@ S="${WORKDIR}/jool-${PV}/src/mod"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+module"
+IUSE="+module +dist-kernel"
 RESTRICT="mirror"
 #IUSE="debug +module module-src"
 
@@ -23,6 +23,7 @@ CONFIG_CHECK="NET INET"
 DEPEND="
 	virtual/linux-sources
 	sys-kernel/gentoo-kernel-bin:=
+	=net-misc/jool-utils-${PV}
 	"
 
 MODULES_KERNEL_MAX=6.12
