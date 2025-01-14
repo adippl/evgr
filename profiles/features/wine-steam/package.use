@@ -39,7 +39,7 @@ sys-apps/attr abi_x86_32
 sys-apps/dbus abi_x86_32
 sys-apps/util-linux abi_x86_32
 sys-devel/gettext abi_x86_32
-sys-devel/llvm abi_x86_32
+llvm-core/llvm abi_x86_32
 sys-libs/binutils-libs abi_x86_32
 sys-libs/gpm abi_x86_32
 sys-libs/ncurses abi_x86_32
@@ -135,7 +135,7 @@ sys-apps/attr abi_x86_32
 sys-apps/dbus abi_x86_32
 sys-apps/util-linux abi_x86_32
 sys-devel/gettext abi_x86_32
-sys-devel/llvm abi_x86_32
+llvm-core/llvm abi_x86_32
 sys-libs/libcap abi_x86_32
 sys-libs/libunwind abi_x86_32
 sys-libs/ncurses abi_x86_32
