@@ -229,7 +229,7 @@ PATCHES=(
 	# https://bugs.gentoo.org/907739
 	"${FILESDIR}/ceph-18.2.0-cython3.patch"
 	# https://bugs.gentoo.org/936889
-	#"${FILESDIR}/ceph-18.2.1-gcc14.patch"
+	"${FILESDIR}/ceph-18.2.1-gcc14.patch"
 	"${FILESDIR}/ceph-18.2.4-liburing.patch"
 	"${FILESDIR}/ceph-18.2.4-spdk.patch"
 	# https://bugs.gentoo.org/941069
