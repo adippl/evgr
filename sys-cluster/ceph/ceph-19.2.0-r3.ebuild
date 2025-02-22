@@ -358,6 +358,7 @@ ceph_src_configure() {
 		-DCMAKE_DISABLE_FIND_PACKAGE_fmt=ON
 		-Wno-dev
 		-DCEPHADM_BUNDLED_DEPENDENCIES=none
+		-DDIAGNOSTICS_COLOR="always"
 	)
 
 	# this breaks when re-configuring for python impl
