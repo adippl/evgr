@@ -364,6 +364,7 @@ ceph_src_configure() {
 		-DCEPHADM_BUNDLED_DEPENDENCIES=none
 		# isa-l is very question mark exclamation mark
 		-DHAVE_NASM_X64=no
+		-DWITH_RADOSGW_D4N:BOOL=OFF
 		-DDIAGNOSTICS_COLOR="always"
 	)
 
