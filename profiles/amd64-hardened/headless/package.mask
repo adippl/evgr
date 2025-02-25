@@ -1,10 +1,10 @@
->sys-cluster/kubeadm-1.30.999
->sys-cluster/kubectl-1.30.999
->sys-cluster/kubelet-1.30.999
+>sys-cluster/kubeadm-1.32.999
+>sys-cluster/kubectl-1.32.999
+>sys-cluster/kubelet-1.32.999
 >app-containers/cri-o-1.31.999
 
 
-<sys-cluster/kubeadm-1.30.0
-<sys-cluster/kubectl-1.30.0
-<sys-cluster/kubelet-1.30.0
-<app-containers/cri-o-1.30.0
+<sys-cluster/kubeadm-1.32.0
+<sys-cluster/kubectl-1.32.0
+<sys-cluster/kubelet-1.32.0
+<app-containers/cri-o-1.32.0
