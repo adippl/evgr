@@ -1,0 +1,12 @@
+DEFINED_PHASES=-
+DEPEND=dev-libs/libnl net-firewall/iptables
+DESCRIPTION=userspace tools for jool SIIT and NAT64 implementation
+EAPI=8
+HOMEPAGE=https://github.com/NICMx/Jool
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=dev-libs/libnl net-firewall/iptables
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/NICMx/Jool/releases/download/v4.1.13/jool-4.1.13.tar.gz -> jool-utils-4.1.13.tar.gz
+_md5_=8e98b30c229d135ed49651dc2f7c5675

@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=precomiled linux kernel configured for servers running with root on NFS or ceph
+EAPI=7
+HOMEPAGE=https://github.com/adippl/
+IUSE=+netboot-server
+KEYWORDS=amd64
+LICENSE=GPL-2
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=http://files.acmelab.top/gentoo-kernels/linux-6.6.67-gentoo-dist-netboot.tar.xz
+_md5_=4de68b1d997791c9cca732faf9d5836a
