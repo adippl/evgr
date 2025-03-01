@@ -319,7 +319,8 @@ src_prepare() {
 	# everyone forgot to link to boost_url
 	sed -i -e 's~target_link_libraries(ceph-mds mds ${CMAKE_DL_LIBS} global-static ceph-common~target_link_libraries(ceph-mds mds ${CMAKE_DL_LIBS} global-static ceph-common boost_url~' src/CMakeLists.txt || die
 	sed -i -e 's/target_link_libraries(journal cls_journal_client)/target_link_libraries(journal cls_journal_client boost_url)/' src/journal/CMakeLists.txt || die
-	sed -i -e 's/${BLKID_LIBRARIES} ${CMAKE_DL_LIBS})/${BLKID_LIBRARIES} ${CMAKE_DL_LIBS} boost_url)/g' src/tools/cephfs/CMakeLists.txt || die
+	sed -i -e 's/${BLKID_LIBRARIES} ${CMAKE_DL_LIBS})/${BLKID_LIBRARIES} ${CMAKE_DL_LIBS} boost_url)/g' \
+		src/tools/cephfs/CMakeLists.txt || die
 }
 
 ceph_src_configure() {
