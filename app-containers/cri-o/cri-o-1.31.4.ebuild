@@ -20,6 +20,7 @@ COMMON_DEPEND="
 	app-crypt/gpgme:=
 	app-containers/conmon
 	app-containers/runc
+	app-containers/crun
 	dev-libs/glib:=
 	dev-libs/libassuan:=
 	dev-libs/libgpg-error:=
@@ -37,7 +38,7 @@ DEPEND="
 	${COMMON_DEPEND}
 	dev-go/go-md2man"
 RDEPEND="${COMMON_DEPEND}
-	!<app-containers/podman-1.3.2-r1
+	!app-containers/podman
 	selinux? ( sec-policy/selinux-crio )"
 BDEPEND="sys-apps/which"
 
