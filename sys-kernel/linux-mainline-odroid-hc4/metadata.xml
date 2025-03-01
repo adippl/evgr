@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gentoo.maintainer@acmelab.top</email>
+		<name>adip</name>
+	</maintainer>
+	<use>
+		<flag name="test-only">only kernel only in kexec paths</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">adippl/gentoo-kernel-config</remote-id>
+	</upstream>
+</pkgmetadata>
