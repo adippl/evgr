@@ -33,20 +33,25 @@ src_compile() {
 
 	if use server; then
 		einfo "Building cmd/${PN}/${PN}..."
-		CGO_ENABLED=0 go build -ldflags "-extldflags \"-static\" ${EGO_LDFLAGS}" -tags netgo -mod vendor -o cmd/${PN}/${PN} ./cmd/${PN} || die
+		CGO_ENABLED=0 go build -ldflags "-extldflags \"-static\" ${EGO_LDFLAGS}" -tags netgo -mod vendor \
+			-o cmd/${PN}/${PN} ./cmd/${PN} || die
 	fi
 	if use tools; then
 		einfo "Building cmd/logcli/logcli..."
-		CGO_ENABLED=0 go build -ldflags "-extldflags \"-static\" ${EGO_LDFLAGS}" -tags netgo -mod vendor -o cmd/logcli/logcli ./cmd/logcli || die
+		CGO_ENABLED=0 go build -ldflags "-extldflags \"-static\" ${EGO_LDFLAGS}" -tags netgo -mod vendor \
+			-o cmd/logcli/logcli ./cmd/logcli || die
 		einfo "Building cmd/${PN}-canary/${PN}-canary..."
-		CGO_ENABLED=0 go build -ldflags "-extldflags \"-static\" ${EGO_LDFLAGS}" -tags netgo -mod vendor -o cmd/${PN}-canary/${PN}-canary ./cmd/${PN}-canary || die
+		CGO_ENABLED=0 go build -ldflags "-extldflags \"-static\" ${EGO_LDFLAGS}" -tags netgo -mod vendor
+			-o cmd/${PN}-canary/${PN}-canary ./cmd/${PN}-canary || die
 	fi
 	if use promtail; then
 		einfo "Building cmd/${PN}/promtail..."
 		if use systemd; then
-			CGO_ENABLED=1 go build -ldflags "${EGO_LDFLAGS}" -tags netgo -mod vendor -o cmd/promtail/promtail ./clients/cmd/promtail || die
+			CGO_ENABLED=1 go build -ldflags "${EGO_LDFLAGS}" -tags netgo -mod vendor -o cmd/promtail/promtail \
+				./clients/cmd/promtail || die
 		else
-			CGO_ENABLED=0 go build -ldflags "${EGO_LDFLAGS}" -tags netgo -mod vendor -o cmd/promtail/promtail ./clients/cmd/promtail || die
+			CGO_ENABLED=0 go build -ldflags "${EGO_LDFLAGS}" -tags netgo -mod vendor -o cmd/promtail/promtail \
+				./clients/cmd/promtail || die
 		fi
 	fi
 }
