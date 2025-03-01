@@ -15,7 +15,7 @@ S="${WORKDIR}"
 LICENSE="GPL-2"
 #SLOT="${PV}"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS=""
 IUSE="+netboot-server"
 RESTRICT="mirror strip"
 
