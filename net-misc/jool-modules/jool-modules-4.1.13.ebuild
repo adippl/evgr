@@ -23,7 +23,6 @@ CONFIG_CHECK="NET INET"
 DEPEND="
 	virtual/linux-sources
 	sys-kernel/gentoo-kernel-bin:=
-	=net-misc/jool-utils-${PV}
 	"
 
 MODULES_KERNEL_MAX=6.12
