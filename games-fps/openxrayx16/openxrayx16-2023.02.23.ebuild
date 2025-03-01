@@ -21,7 +21,7 @@ if [[ ${PVR} != "9999" ]] ; then
 fi
 
 SLOT="0"
-IUSE="clang debug gold"
+IUSE="clang debug"
 #RESTRICT=""
 # contains all the shared libraries required by game executable
 DEPEND="
@@ -60,20 +60,14 @@ BDEPEND="
 			>sys-devel/gcc-7.5.0
 		)
 		clang? (
-				sys-devel/clang
-		)
-		gold? (
-				sys-devel/binutils[gold]
+				llvm-core/clang
 		)
 		"
 
 src_configure() {
 	mkdir "${S}"/bin
 	cd "${S}"/bin
-	CMARGS=" -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=/usr/bin "
-	if ! use gold ; then
-		CMARGS="$CMARGS -DXRAY_USE_DEFAULT_LINKER=true "
-	fi
+	CMARGS=" -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=/usr/bin -DXRAY_USE_DEFAULT_LINKER=true "
 	if use debug && use clang; then
 		CC=clang CXX=clang++ cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo $CMARGS
 	elif use clang; then
