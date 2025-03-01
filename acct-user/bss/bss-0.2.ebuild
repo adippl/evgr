@@ -12,5 +12,6 @@ ACCT_USER_SHELL=/bin/bash
 ACCT_USER_HOME_OWNER=bss:root
 ACCT_USER_HOME_PERMS=0550
 ACCT_USER_GROUPS=( nobody )
+KEYWORDS=" amd64 arm arm64 "
 
 acct-user_add_deps
