@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DESCRIPTION=minio clustered object storage cli tool
+EAPI=8
+HOMEPAGE=https://min.io
+KEYWORDS=amd64 arm64
+LICENSE=AGPL-3
+RESTRICT=strip mirror
+SLOT=0
+SRC_URI=amd64? ( https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2025-02-15T10-36-16Z -> mc-bin-amd64-2025.02.15 ) arm64? ( https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2025-02-15T10-36-16Z -> mc-bin-arm64-2025.02.15 )
+_md5_=9e85623d6a0941994740e3d41e148580
