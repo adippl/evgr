@@ -16,8 +16,8 @@ IUSE="hardened selinux supervise-daemon"
 BDEPEND=">=dev-lang/go-1.21.6"
 RDEPEND="selinux? ( sec-policy/selinux-kubernetes )"
 
-RESTRICT+=" test "
 S="${WORKDIR}/kubernetes-${PV}"
+RESTRICT+=" test "
 
 src_compile() {
 	CGO_LDFLAGS="$(usex hardened '-fno-PIC ' '')" \
