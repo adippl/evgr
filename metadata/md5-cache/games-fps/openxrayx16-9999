@@ -1,13 +1,13 @@
-BDEPEND=dev-build/cmake dev-vcs/git dev-cpp/tbb dev-libs/crypto++ !clang? ( >sys-devel/gcc-7.5.0 ) clang? ( sys-devel/clang ) gold? ( sys-devel/binutils[gold] ) >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=dev-build/cmake dev-vcs/git dev-cpp/tbb dev-libs/crypto++ !clang? ( >sys-devel/gcc-7.5.0 ) clang? ( llvm-core/clang ) >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm unpack
 DEPEND=media-libs/glew media-libs/freeimage net-libs/liblockfile media-libs/openal dev-cpp/tbb dev-libs/crypto++ media-libs/libtheora media-libs/libogg media-libs/libvorbis media-libs/libsdl2 dev-libs/lzo media-libs/libjpeg-turbo sys-libs/readline dev-libs/libpcre2 dev-libs/libpcre app-arch/lzop media-libs/libglvnd
 DESCRIPTION=Open-source xray engine
 EAPI=7
 HOMEPAGE=https://github.com/OpenXRay/xray-16
 INHERIT=git-r3 xdg-utils
-IUSE=clang debug gold
+IUSE=clang debug
 LICENSE=BSD
 PROPERTIES=live
 SLOT=0
-_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81	xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=7ffee917bf0b892e96dc13be518a16bf
+_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_md5_=8951701d486b4de82fb59eb290e6bfdb

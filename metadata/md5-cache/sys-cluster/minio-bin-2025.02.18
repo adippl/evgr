@@ -7,4 +7,4 @@ LICENSE=AGPL-3
 RESTRICT=strip mirror
 SLOT=0
 SRC_URI=amd64? ( https://dl.min.io/server/minio/release/linux-amd64/archive/minio.RELEASE.2025-02-18T16-25-55Z -> minio-bin-amd64-2025.02.18 ) arm64? ( https://dl.min.io/server/minio/release/linux-arm64/archive/minio.RELEASE.2025-02-18T16-25-55Z -> minio-bin-arm64-2025.02.18 )
-_md5_=2ac5e21b4f1d5dbf48c4f86adf7d5e8b
+_md5_=e8f835174c5c9b8b43d6c5a3c2e73561

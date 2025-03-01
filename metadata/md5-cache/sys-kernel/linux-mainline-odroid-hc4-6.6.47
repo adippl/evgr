@@ -1,0 +1,14 @@
+BDEPEND=
+DEFINED_PHASES=install
+DEPEND=
+DESCRIPTION=installer for precomiled linux kernel configured for laptops
+EAPI=7
+HOMEPAGE=https://github.com/adippl/gentoo-kernel-config
+IUSE=test-only
+KEYWORDS=arm64
+LICENSE=GPL-2
+RDEPEND=
+RESTRICT=mirror strip
+SLOT=6.6.47
+SRC_URI=http://files.acmelab.top/gentoo-kernels/linux-mainline-odroid-hc4-v6.6.47.tar.xz
+_md5_=d9f426308fcaacad66386daade51652e

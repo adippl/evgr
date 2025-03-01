@@ -1,13 +1,14 @@
-BDEPEND=dev-build/cmake dev-vcs/git dev-cpp/tbb dev-libs/crypto++ !clang? ( >sys-devel/gcc-7.5.0 ) clang? ( llvm-core/clang ) >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install postinst postrm unpack
+BDEPEND=dev-build/cmake dev-vcs/git dev-cpp/tbb dev-libs/crypto++ !clang? ( >sys-devel/gcc-7.5.0 ) clang? ( llvm-core/clang )
+DEFINED_PHASES=compile configure install postinst postrm
 DEPEND=media-libs/glew media-libs/freeimage net-libs/liblockfile media-libs/openal dev-cpp/tbb dev-libs/crypto++ media-libs/libtheora media-libs/libogg media-libs/libvorbis media-libs/libsdl2 dev-libs/lzo media-libs/libjpeg-turbo sys-libs/readline dev-libs/libpcre2 dev-libs/libpcre app-arch/lzop media-libs/libglvnd
 DESCRIPTION=Open-source xray engine
 EAPI=7
 HOMEPAGE=https://github.com/OpenXRay/xray-16
-INHERIT=git-r3 xdg-utils
+INHERIT=xdg-utils
 IUSE=clang debug
+KEYWORDS=amd64
 LICENSE=BSD
-PROPERTIES=live
 SLOT=0
-_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
-_md5_=20aba60e689c33081f7750c94ddc7bb0
+SRC_URI=https://github.com/OpenXRay/xray-16/archive/refs/tags/2921-january-2025-rc1.tar.gz -> openxrayx16-2025.01.21.tar.gz
+_eclasses_=xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_md5_=5632dbce877f08ff76f85a512a0eb864
