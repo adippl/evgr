@@ -87,7 +87,12 @@ src_install() {
 	keepdir /etc/crio
 	mv "${ED}/etc/crio/crio.conf"{,.example} || die
 
-	newinitd "${FILESDIR}/crio.initd" crio
+	if use supervise-daemon
+	then
+		newinitd "${FILESDIR}/crio.initd_supervise_daemon" crio
+	else
+		newinitd "${FILESDIR}/crio.initd" crio
+	fi
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/${PN}.logrotated" "${PN}"
