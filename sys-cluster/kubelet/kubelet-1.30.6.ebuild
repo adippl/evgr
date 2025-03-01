@@ -7,6 +7,7 @@ inherit go-module systemd
 DESCRIPTION="Kubernetes Node Agent"
 HOMEPAGE="https://kubernetes.io"
 SRC_URI="https://github.com/kubernetes/kubernetes/archive/v${PV}.tar.gz -> kubernetes-${PV}.tar.gz"
+S="${WORKDIR}/kubernetes-${PV}"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -16,7 +17,6 @@ IUSE="hardened selinux supervise-daemon"
 BDEPEND=">=dev-lang/go-1.21.6"
 RDEPEND="selinux? ( sec-policy/selinux-kubernetes )"
 
-S="${WORKDIR}/kubernetes-${PV}"
 RESTRICT+=" test "
 
 src_compile() {
