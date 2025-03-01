@@ -9,7 +9,7 @@ SRC_URI="https://codeload.github.com/amanusk/s-tui/tar.gz/refs/tags/v${PV} -> ${
 LICENSE="GPL-2"
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{12..13} )
+PYTHON_COMPAT=( python3_{12,13,13t} )
 inherit distutils-r1
 
 if [[ ${PVR} = "9999" ]] ; then

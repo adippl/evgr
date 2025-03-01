@@ -13,7 +13,7 @@ EGIT_REPO_URI="$HOMEPAGE"
 EGIT_SUBMODULES=()
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{12..13} )
+PYTHON_COMPAT=( python3_{12,13,13t} )
 inherit distutils-r1
 
 if [[ ${PVR} != "9999" ]] ; then
