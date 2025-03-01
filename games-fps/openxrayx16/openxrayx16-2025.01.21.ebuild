@@ -7,17 +7,16 @@ inherit xdg-utils
 
 DESCRIPTION="Open-source xray engine"
 HOMEPAGE="https://github.com/OpenXRay/xray-16"
-S="${WORKDIR}"/"${PN}"-"${PV}"
-LICENSE="BSD"
 
 #EGIT_REPO_URI="https://github.com/OpenXRay/xray-16.git"
 #EGIT_BRANCH="dev"
 SRC_URI="https://github.com/OpenXRay/xray-16/archive/refs/tags/2921-january-2025-rc1.tar.gz -> ${PN}-${PVR}.tar.gz"
+S="${WORKDIR}"/"${PN}"-"${PV}"
+LICENSE="BSD"
 
 EGIT_COMMIT="2921-january-2025-rc1"
-KEYWORDS="amd64"
-
 SLOT="0"
+KEYWORDS="amd64"
 IUSE="clang debug"
 #RESTRICT=""
 # contains all the shared libraries required by game executable

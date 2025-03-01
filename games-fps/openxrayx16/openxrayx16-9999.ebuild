@@ -14,7 +14,6 @@ EGIT_REPO_URI="https://github.com/OpenXRay/xray-16.git"
 EGIT_BRANCH="dev"
 #SRC_URI=""
 
-
 SLOT="0"
 IUSE="clang debug"
 #RESTRICT=""

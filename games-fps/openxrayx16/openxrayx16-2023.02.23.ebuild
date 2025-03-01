@@ -15,9 +15,8 @@ EGIT_BRANCH="dev"
 #SRC_URI=""
 
 EGIT_COMMIT="5b2d3a30162e4e4ce86f77049a8b9cfaa5ecdbaa"
-KEYWORDS="amd64"
-
 SLOT="0"
+KEYWORDS=""
 IUSE="clang debug"
 #RESTRICT=""
 # contains all the shared libraries required by game executable
