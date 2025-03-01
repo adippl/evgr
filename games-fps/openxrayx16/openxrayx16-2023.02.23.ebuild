@@ -14,11 +14,8 @@ EGIT_REPO_URI="https://github.com/OpenXRay/xray-16.git"
 EGIT_BRANCH="dev"
 #SRC_URI=""
 
-if [[ ${PVR} != "9999" ]] ; then
-	#EGIT_COMMIT="v${PVR}"
-	EGIT_COMMIT="5b2d3a30162e4e4ce86f77049a8b9cfaa5ecdbaa"
-	KEYWORDS="amd64"
-fi
+EGIT_COMMIT="5b2d3a30162e4e4ce86f77049a8b9cfaa5ecdbaa"
+KEYWORDS="amd64"
 
 SLOT="0"
 IUSE="clang debug"
