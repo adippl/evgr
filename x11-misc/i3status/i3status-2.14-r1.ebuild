@@ -2,22 +2,16 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-inherit fcaps meson git-r3
 
-DESCRIPTION="generates a status bar for dzen2, xmobar or similar"
+inherit fcaps meson
+
+DESCRIPTION="Generates a status bar for dzen2, xmobar or similar"
 HOMEPAGE="https://i3wm.org/i3status/"
-#SRC_URI="https://i3wm.org/${PN}/${P}.tar.xz"
-
-#EGIT_REPO_URI="https://github.com/i3/i3status"
-#EGIT_BRANCH="master"
-#EGIT_COMMIT="${PVR}"
-EGIT_REPO_URI="https://github.com/adippl/i3status"
-EGIT_BRANCH="2.14-battery_idle_fix"
-EGIT_COMMIT="8962bbe12e088251b1cd6573a6ace599e3fa0fd7"
+SRC_URI="https://i3wm.org/${PN}/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64 ~arm ~arm64 ~riscv x86"
 IUSE="pulseaudio"
 
 BDEPEND="virtual/pkgconfig"
@@ -26,17 +20,26 @@ RDEPEND="
 	dev-libs/confuse:=
 	dev-libs/libnl:3
 	media-libs/alsa-lib
-	pulseaudio? ( || ( media-sound/pulseaudio-daemon media-sound/apulse[sdk] ) )
+	pulseaudio? ( || ( media-libs/libpulse media-sound/apulse[sdk] ) )
 "
 
-DEPEND="
-	${RDEPEND}
+DEPEND="${RDEPEND}
 	app-text/asciidoc
 	app-text/xmlto
 "
 
-PATCHES=(
+PATCH=(
+	"${FILESDIR}/i3status-3.14-r1-battery-idle-fix.patch"
 )
+
+src_prepare() {
+	default
+
+	# Needs an ALSA master device, bug #840622
+	# Also skipped in CI:
+	# https://github.com/i3/i3status/blob/07ad5aef2deea1f10eb6c544593e7a87205f24f8/.github/workflows/main.yml#L34
+	rm -rf testcases/020-percentliteral-volume || die
+}
 
 src_configure() {
 	local emesonargs=(

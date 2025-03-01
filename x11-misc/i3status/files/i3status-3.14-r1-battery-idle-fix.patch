@@ -1,0 +1,25 @@
+commit 8962bbe12e088251b1cd6573a6ace599e3fa0fd7
+Author: ev <adam.prycki@gmail.com>
+Date:   Sun May 1 21:07:44 2022 +0200
+
+    battery idle state fix
+    
+    This commit fixes a bug which causes i3status to treat the same
+    "Not charging"  nad "Discharging" battery state on linux.
+
+diff --git a/src/print_battery_info.c b/src/print_battery_info.c
+index fad8bab..c3f2cb1 100644
+--- a/src/print_battery_info.c
++++ b/src/print_battery_info.c
+@@ -187,8 +187,10 @@ static bool slurp_battery_info(battery_info_ctx_t *ctx, struct battery_info *bat
+             batt_info->status = CS_CHARGING;
+         else if (BEGINS_WITH(last, "POWER_SUPPLY_STATUS=Full"))
+             batt_info->status = CS_FULL;
+-        else if (BEGINS_WITH(last, "POWER_SUPPLY_STATUS=Discharging") || BEGINS_WITH(last, "POWER_SUPPLY_STATUS=Not charging"))
++        else if (BEGINS_WITH(last, "POWER_SUPPLY_STATUS=Discharging"))
+             batt_info->status = CS_DISCHARGING;
++        else if (BEGINS_WITH(last, "POWER_SUPPLY_STATUS=Not charging"))
++            batt_info->status = CS_UNKNOWN;
+         else if (BEGINS_WITH(last, "POWER_SUPPLY_STATUS="))
+             batt_info->status = CS_UNKNOWN;
+         else if (BEGINS_WITH(last, "POWER_SUPPLY_CHARGE_FULL_DESIGN=") ||
