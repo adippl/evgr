@@ -43,3 +43,6 @@ dev-util/scanmem
 #openttd
 =games-util/catcodec-1.0.5
 =games-util/nml-0.7.1
+
+
+games-util/lutris
