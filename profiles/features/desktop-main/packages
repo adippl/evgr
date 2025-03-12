@@ -87,7 +87,6 @@
 
 # X and friends
 *app-arch/file-roller
-*app-misc/moonlight-bin
 #*app-office/abiword
 *app-office/gnumeric
 *gui-apps/rofi-emoji
