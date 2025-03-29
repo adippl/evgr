@@ -314,3 +314,14 @@ app-crypt/p11-kit abi_x86_32
 # required by app-crypt/libsecret-0.21.4-r2::gentoo
 # required by app-crypt/gcr-3.41.1-r2::gentoo
 >=sys-libs/gdbm-1.24 abi_x86_32
+
+
+# required by media-video/ffmpeg-6.1.2-r1::gentoo[libass]
+# required by media-plugins/alsa-plugins-1.2.12::gentoo
+# required by media-sound/pulseaudio-daemon-17.0-r1::gentoo[alsa,alsa-plugin]
+# required by media-libs/libpulse-17.0::gentoo
+# required by www-client/firefox-bin-136.0.4::gentoo
+# required by @system
+# required by @world (argument)
+>=media-libs/libass-0.17.1-r2 abi_x86_32
+
