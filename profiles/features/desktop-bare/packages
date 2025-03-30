@@ -1,4 +1,5 @@
 #system
+*net-dns/openresolv
 *net-fs/nfs-utils
 *net-misc/dhcpcd
 *net-wireless/wpa_supplicant

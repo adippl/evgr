@@ -1,5 +1,4 @@
 #system
-*net-dns/openresolv
 *net-vpn/tor
 *net-vpn/wireguard-tools
 *sys-apps/bss-client
