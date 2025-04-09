@@ -210,7 +210,7 @@ PATCHES=(
 	"${FILESDIR}/ceph-13.2.2-dont-install-sysvinit-script.patch"
 	"${FILESDIR}/ceph-14.2.0-dpdk-cflags.patch"
 	"${FILESDIR}/ceph-16.2.0-rocksdb-cmake.patch"
-	"${FILESDIR}/ceph-16.2.0-spdk-tinfo.patch"
+	#"${FILESDIR}/ceph-16.2.0-spdk-tinfo.patch"
 	"${FILESDIR}/ceph-16.2.0-jaeger-system-boost.patch"
 	"${FILESDIR}/ceph-17.2.0-pybind-boost-1.74.patch"
 	"${FILESDIR}/ceph-17.2.0-findre2.patch"
