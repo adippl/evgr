@@ -14,16 +14,16 @@ XSIMD_HASH="aeec9c872c8b475dedd7781336710f2dd2666cb2"
 DESCRIPTION="Ceph distributed filesystem"
 HOMEPAGE="https://ceph.com/"
 
-	#https://download.ceph.com/tarballs/${P}.tar.gz
 SRC_URI="
-	https://github.com/ceph/ceph/archive/refs/tags/v${PV}.tar.gz
-	parquet? ( https://github.com/xtensor-stack/xsimd/archive/${XSIMD_HASH}.tar.gz -> ceph-xsimd-19.2.1.tar.gz
+	https://download.ceph.com/tarballs/${P}.tar.gz
+	parquet? ( https://github.com/xtensor-stack/xsimd/archive/${XSIMD_HASH}.tar.gz -> ceph-xsimd-${PV}.tar.gz
 		mirror://apache/arrow/arrow-17.0.0/apache-arrow-17.0.0.tar.gz )
 "
 
 LICENSE="Apache-2.0 LGPL-2.1 CC-BY-SA-3.0 GPL-2 GPL-2+ LGPL-2+ LGPL-2.1 LGPL-3 GPL-3 BSD Boost-1.0 MIT public-domain"
 SLOT="0"
-#KEYWORDS="amd64 arm64"
+#KEYWORDS="~amd64 ~arm64 ~ppc64"
+KEYWORDS=""
 
 CPU_FLAGS_X86=(avx2 avx512f pclmul sse{,2,3,4_1,4_2} ssse3)
 
@@ -210,7 +210,7 @@ PATCHES=(
 	"${FILESDIR}/ceph-13.2.2-dont-install-sysvinit-script.patch"
 	"${FILESDIR}/ceph-14.2.0-dpdk-cflags.patch"
 	"${FILESDIR}/ceph-16.2.0-rocksdb-cmake.patch"
-	#"${FILESDIR}/ceph-16.2.0-spdk-tinfo.patch"
+	"${FILESDIR}/ceph-16.2.0-spdk-tinfo.patch"
 	"${FILESDIR}/ceph-16.2.0-jaeger-system-boost.patch"
 	"${FILESDIR}/ceph-17.2.0-pybind-boost-1.74.patch"
 	"${FILESDIR}/ceph-17.2.0-findre2.patch"
@@ -320,8 +320,7 @@ src_prepare() {
 	# everyone forgot to link to boost_url
 	sed -i -e 's~target_link_libraries(ceph-mds mds ${CMAKE_DL_LIBS} global-static ceph-common~target_link_libraries(ceph-mds mds ${CMAKE_DL_LIBS} global-static ceph-common boost_url~' src/CMakeLists.txt || die
 	sed -i -e 's/target_link_libraries(journal cls_journal_client)/target_link_libraries(journal cls_journal_client boost_url)/' src/journal/CMakeLists.txt || die
-	sed -i -e 's/${BLKID_LIBRARIES} ${CMAKE_DL_LIBS})/${BLKID_LIBRARIES} ${CMAKE_DL_LIBS} boost_url)/g' \
-		src/tools/cephfs/CMakeLists.txt || die
+	sed -i -e 's/${BLKID_LIBRARIES} ${CMAKE_DL_LIBS})/${BLKID_LIBRARIES} ${CMAKE_DL_LIBS} boost_url)/g' src/tools/cephfs/CMakeLists.txt || die
 }
 
 ceph_src_configure() {
@@ -368,7 +367,6 @@ ceph_src_configure() {
 		-DCMAKE_DISABLE_FIND_PACKAGE_fmt=ON
 		-Wno-dev
 		-DCEPHADM_BUNDLED_DEPENDENCIES=none
-		-DDIAGNOSTICS_COLOR="always"
 	)
 
 	# this breaks when re-configuring for python impl
