@@ -6,11 +6,12 @@ EAPI=8
 DESCRIPTION="minio clustered object storage cli tool"
 HOMEPAGE="https://min.io"
 
-RELEASE="2025-04-08T15-39-49Z"
+RELEASE="mc.RELEASE.2025-04-16T18-13-26Z"
+
 
 SRC_URI="
-	amd64?   ( "https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.${RELEASE}" -> ${PN}-amd64-${PVR} )
-	arm64?   ( "https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.${RELEASE}" -> ${PN}-arm64-${PVR} )
+	amd64?   ( "https://dl.min.io/client/mc/release/linux-amd64/archive/${RELEASE}" -> ${PN}-amd64-${PVR} )
+	arm64?   ( "https://dl.min.io/client/mc/release/linux-arm64/archive/${RELEASE}" -> ${PN}-arm64-${PVR} )
 "
 
 S="${WORKDIR}"
