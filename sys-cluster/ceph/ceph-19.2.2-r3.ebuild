@@ -241,9 +241,9 @@ PATCHES=(
 	"${FILESDIR}/ceph-19.2.1-exporter.patch"
 	"${FILESDIR}/ceph-19.2.1-isa-l.patch"
 	"${FILESDIR}/ceph-19.2.1-quiet-stringop-truncation.patch"
-	"${FILESDIR}/ceph-19.2.2-py313-1.patch"
-	"${FILESDIR}/ceph-19.2.2-py313-2.patch"
-	"${FILESDIR}/ceph-19.2.2-py313-3.patch"
+	#"${FILESDIR}/ceph-19.2.2-py313-1.patch"
+	#"${FILESDIR}/ceph-19.2.2-py313-2.patch"
+	#"${FILESDIR}/ceph-19.2.2-py313-3.patch"
 	"${FILESDIR}/ceph-19.2.2-gcc15.patch"
 )
 
