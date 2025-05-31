@@ -1,15 +1,16 @@
 # ceph on python3.12
-dev-python/flask python_targets_python3_12
-dev-python/more-itertools python_targets_python3_12
-dev-python/setuptools python_targets_python3_12
-dev-python/platformdirs python_targets_python3_12
-dev-python/setuptools-scm python_targets_python3_12
-dev-python/charset-normalizer python_targets_python3_12
-dev-python/typing-extensions python_targets_python3_12
-dev-python/zc-lockfile python_targets_python3_12
-dev-python/packaging python_targets_python3_12
-dev-python/scipy python_targets_python3_12
-dev-python/pythran python_targets_python3_12
-dev-python/zstandard python_targets_python3_12
-dev-python/cryptography python_targets_python3_12
-dev-util/maturin python_targets_python3_12
+sys-cluster/ceph				python_targets_python3_12 -python_targets_python3_13
+dev-python/flask				python_targets_python3_12 -python_targets_python3_13
+dev-python/more-itertools		python_targets_python3_12 -python_targets_python3_13
+dev-python/setuptools			python_targets_python3_12 -python_targets_python3_13
+dev-python/platformdirs			python_targets_python3_12 -python_targets_python3_13
+dev-python/setuptools-scm		python_targets_python3_12 -python_targets_python3_13
+dev-python/charset-normalizer	python_targets_python3_12 -python_targets_python3_13
+dev-python/typing-extensions	python_targets_python3_12 -python_targets_python3_13
+dev-python/zc-lockfile			python_targets_python3_12 -python_targets_python3_13
+dev-python/packaging			python_targets_python3_12 -python_targets_python3_13
+dev-python/scipy				python_targets_python3_12 -python_targets_python3_13
+dev-python/pythran				python_targets_python3_12 -python_targets_python3_13
+dev-python/zstandard			python_targets_python3_12 -python_targets_python3_13
+dev-python/cryptography			python_targets_python3_12 -python_targets_python3_13
+dev-util/maturin				python_targets_python3_12 -python_targets_python3_13
