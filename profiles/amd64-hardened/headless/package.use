@@ -32,4 +32,5 @@ dev-python/zstandard			python_targets_python3_12
 dev-python/cryptography			python_targets_python3_12
 dev-util/maturin				python_targets_python3_12
 dev-python/jaraco-collections	python_targets_python3_12
-dev-python/jaraco-functools	python_targets_python3_12
+dev-python/jaraco-functools		python_targets_python3_12
+dev-python/jaraco-text			python_targets_python3_12
