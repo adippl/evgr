@@ -8,3 +8,6 @@
 <sys-cluster/kubectl-1.32.0
 <sys-cluster/kubelet-1.32.0
 <app-containers/cri-o-1.31.0
+
+
+>sys-cluster/ceph-19.2.2-r2
