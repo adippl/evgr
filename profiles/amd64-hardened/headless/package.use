@@ -41,3 +41,4 @@ dev-python/natsort				python_targets_python3_12
 dev-python/pyyaml				python_targets_python3_12
 dev-python/pluggy				python_targets_python3_12
 dev-python/cffi					python_targets_python3_12
+dev-python/pycparser			python_targets_python3_12
