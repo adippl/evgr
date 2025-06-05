@@ -16,7 +16,7 @@ SRC_URI="
 S="${WORKDIR}"
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86 ~arm64 ~amd"
+KEYWORDS="amd64 ~x86 arm64 ~amd"
 
 #DEPEND=""
 RDEPEND="${DEPEND}"
