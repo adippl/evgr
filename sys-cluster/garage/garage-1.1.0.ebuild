@@ -508,6 +508,6 @@ KEYWORDS="~amd64"
 
 src_install(){
 	cargo_src_install
-	#dobin garage
+	dobin ${S}/target/release/garage
 	newinitd "${FILESDIR}/garage_initd" garage
 }
