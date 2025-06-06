@@ -495,6 +495,8 @@ SRC_URI="
 "
 SRC_URI+="https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v1.1.0.tar.gz -> ${PN}-${PVR}.tar.gz"
 
+S="${WORKDIR}/garage"
+
 
 LICENSE="AGPL-3"
 # Dependent crate licenses
