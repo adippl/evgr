@@ -5,7 +5,7 @@
 
 EAPI=8
 
-SRC_URI="https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v1.1.0.tar.gz -> garage-1.1.0.tar.gz"
+SRC_URI="https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v1.1.0.tar.gz -> ${PN}-${PVR}.tar.gz"
 
 CRATES="
 	addr2line@0.21.0
