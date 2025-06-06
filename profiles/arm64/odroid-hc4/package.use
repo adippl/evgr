@@ -8,3 +8,5 @@ net-misc/curl -zstd
 # random use flags to be more inline with default binpkgs
 dev-lang/rust -profiler
 virtual/rust -profiler
+
+sys-apps/systemd-utils			-boot -kernel-install
