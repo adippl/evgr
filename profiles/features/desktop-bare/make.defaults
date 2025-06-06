@@ -17,8 +17,10 @@ USE="${USE} -vala"
 INPUT_DEVICES="mouse synaptics keyboard"
 
 #PYTHON_TARGETS=" python3_12 python3_13 "
-PYTHON_TARGETS=" python3_12 "
-PYTHON_SINGLE_TARGET=" python3_12 "
+#PYTHON_TARGETS=" python3_12 "
+#PYTHON_SINGLE_TARGET=" python3_12 "
 
 
-USE="${USE} python_targets_python3_12" 
+USE="${USE} python_targets_python3_13 " 
+USE="${USE} python_targets_python3_12 " 
+USE="${USE} python_single_target_python3_12 " 
