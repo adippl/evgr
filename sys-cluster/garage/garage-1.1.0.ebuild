@@ -5,8 +5,6 @@
 
 EAPI=8
 
-SRC_URI="https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v1.1.0.tar.gz -> ${PN}-${PVR}.tar.gz"
-
 CRATES="
 	addr2line@0.21.0
 	adler@1.0.2
@@ -495,6 +493,8 @@ HOMEPAGE=""
 SRC_URI="
 	${CARGO_CRATE_URIS}
 "
+SRC_URI+="https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v1.1.0.tar.gz -> ${PN}-${PVR}.tar.gz"
+
 
 LICENSE="AGPL-3"
 # Dependent crate licenses
