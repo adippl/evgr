@@ -1,0 +1,18 @@
+#!/sbin/openrc-run
+# Copyright 2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="garage daemon"
+description=""
+command=/usr/bin/garage
+command_args="${garage_args} server"
+
+depend() {
+	need logger net
+}
+
+supervisor="supervise-daemon"
+#command_args_foreground="--foreground"
+pidfile="/run/garage.pid"
+
+supervise_daemon_args="--stdout /var/log/garage.stdout.log --stderr /var/log/garage.stderr.log"
