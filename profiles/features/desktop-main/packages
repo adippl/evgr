@@ -95,7 +95,7 @@
 *media-gfx/mcomix
 *media-gfx/ristretto
 *media-sound/audacity
-*media-video/jellyfin-media-player
+#*media-video/jellyfin-media-player
 *media-video/mkvtoolnix
 *net-im/signal-desktop-bin
 #*net-im/telegram-desktop
