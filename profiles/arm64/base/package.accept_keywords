@@ -33,7 +33,6 @@ x11-themes/numix-icon-theme **
 x11-themes/numix-gtk-theme **
 xfce-extra/thunar-archive-plugin ~arm64
 xfce-extra/thunar-media-tags-plugin **
-xfce-extra/thunar-vcs-plugin **
 x11-themes/gtk-engines-murrine ~arm64
 dev-go/go-bindata ~arm64
 dev-libs/libdispatch ~arm64

@@ -26,7 +26,6 @@ x11-misc/redshift				-gtk
 x11-terms/rxvt-unicode			perl fading-colors
 x11-themes/gtk-engines-murrine	-themes
 xfce-base/thunar				-pcre -trash-panel-plugin
-xfce-extra/thunar-vcs-plugin	-subversion
 sys-auth/elogind				-policykit
 media-sound/pulseaudio			bluetooth
 media-sound/pulseaudio-daemon	bluetooth dbus
