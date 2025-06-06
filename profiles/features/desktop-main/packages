@@ -23,8 +23,8 @@
 *dev-util/scanmem
 *mail-client/mutt
 *media-libs/exiftool
-*media-sound/mpd
-*media-sound/ncmpcpp
+#*media-sound/mpd
+#*media-sound/ncmpcpp
 *net-analyzer/bmon
 *net-analyzer/nethogs
 *net-analyzer/speedtest-cli

@@ -6,8 +6,8 @@
 -*app-misc/ranger		# missing arm64 keyword
 -*app-office/gnumeric		# missing arm64 keyword
 -*app-office/abiword		# probably not needed
--*media-sound/mpd		# missing arm64 keyword
--*media-sound/ncmpcpp		# missing arm64 keyword
+#-*media-sound/mpd		# missing arm64 keyword
+#-*media-sound/ncmpcpp		# missing arm64 keyword
 -*net-analyzer/ettercap		# missing arm64 keyword
 -*net-analyzer/nethogs		# missing arm64 keyword
 -*net-im/signal-desktop-bin	# missing arm64 keyword
