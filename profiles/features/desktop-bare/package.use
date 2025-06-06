@@ -110,8 +110,3 @@ dev-libs/boost		context python
 >=net-libs/libpsl-0.21.2 abi_x86_32
 
 dev-lang/rust abi_x86_32
-
-
-*/* PYTHON_TARGETS: -* python3_12 python3_13
-*/* PYTHON_SINGLE_TARGET: -* python3_12
-
