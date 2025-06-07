@@ -126,6 +126,6 @@ KEYWORDS="amd64"
 
 src_install(){
 	#cargo_src_install
-	dobin ${WORKDIR}/${PN}/target/release/${PN}
+	dobin ${WORKDIR}/${PN}-${PVR}/target/release/${PN}
 	newinitd "${FILESDIR}/${PN}_initd" ${PN}
 }
