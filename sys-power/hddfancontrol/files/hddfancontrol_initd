@@ -1,0 +1,19 @@
+#!/sbin/openrc-run
+# Copyright 2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="hddfancontrol daemon"
+description=""
+#command=/usr/bin/hddfancontrol
+command=/usr/local/bin/hddfancontrol
+command_args="${hddfancontrol_args}"
+
+depend() {
+	need logger
+}
+
+output_logger="/usr/bin/logger --tag lpmd"
+error_logger="/usr/bin/logger --tag lpmd_err"
+supervisor="supervise-daemon"
+command_user=root:root
+#supervise_daemon_args="${start_stop_daemon_args} --stdout /var/log/promtail.log --stderr /var/log/promtail.log "
