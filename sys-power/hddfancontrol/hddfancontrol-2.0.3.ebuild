@@ -117,6 +117,10 @@ SRC_URI="
 	https://github.com/desbma/hddfancontrol/archive/refs/tags/2.0.3.tar.gz -> ${PN}-${PVR}.tar.gz
 "
 
+BDEPEND="
+	>=dev-lang/rust-common-1.86
+	"
+
 
 LICENSE="GPL-3"
 # Dependent crate licenses
