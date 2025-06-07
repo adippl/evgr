@@ -122,7 +122,7 @@ LICENSE="GPL-3"
 # Dependent crate licenses
 LICENSE+=" Apache-2.0 BSD MIT MPL-2.0 Unicode-3.0"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 arm64"
 
 src_install(){
 	#cargo_src_install
