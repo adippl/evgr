@@ -114,7 +114,9 @@ DESCRIPTION="Daemon to regulate fan speed according to hard drive temperature on
 HOMEPAGE=""
 SRC_URI="
 	${CARGO_CRATE_URIS}
+	https://github.com/desbma/hddfancontrol/archive/refs/tags/2.0.3.tar.gz -> ${PN}-${PVR}.tar.gz
 "
+
 
 LICENSE="GPL-3"
 # Dependent crate licenses
