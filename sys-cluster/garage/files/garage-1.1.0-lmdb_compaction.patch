@@ -1,0 +1,30 @@
+From 9ec3f8cc3c09329761f711e35475b6272b6257ed Mon Sep 17 00:00:00 2001
+From: Baptiste Jonglez <git@bitsofnetworks.org>
+Date: Sat, 12 Apr 2025 23:18:50 +0200
+Subject: [PATCH] metadata: Create compact LMDB snapshots
+
+See #1006
+
+LMDB files never shrink, so we can end up with a large database that
+contains a smaller amount of actual data.
+
+Compacting the snapshots is an easy win: it will write faster to disk,
+take less space, and if needed you can reimport an already-compacted
+snapshot as the main database.
+---
+ src/db/lmdb_adapter.rs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/db/lmdb_adapter.rs b/src/db/lmdb_adapter.rs
+index 40f1c867..259aa566 100644
+--- a/src/db/lmdb_adapter.rs
++++ b/src/db/lmdb_adapter.rs
+@@ -109,7 +109,7 @@ impl IDb for LmdbDb {
+ 		let mut path = to.clone();
+ 		path.push("data.mdb");
+ 		self.db
+-			.copy_to_path(path, heed::CompactionOption::Disabled)?;
++			.copy_to_path(path, heed::CompactionOption::Enabled)?;
+ 		Ok(())
+ 	}
+ 
