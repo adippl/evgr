@@ -11,4 +11,4 @@ LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/OpenXRay/xray-16/archive/refs/tags/2921-january-2025-rc1.tar.gz -> openxrayx16-2025.01.21.tar.gz
 _eclasses_=xdg-utils	42869b3c8d86a70ef3cf75165a395e09
-_md5_=5632dbce877f08ff76f85a512a0eb864
+_md5_=b843dc3bfee7cf10563d0de4b9d56c94
