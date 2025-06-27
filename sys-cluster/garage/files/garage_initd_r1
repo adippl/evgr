@@ -1,0 +1,33 @@
+#!/sbin/openrc-run
+# Copyright 2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="garage daemon"
+description=""
+command=/usr/bin/garage
+command_args="${garage_args} server"
+
+: "${GARAGE_USER:="garage"}"
+: "${GARAGE_GROUP:="garage"}"
+: "${LOG_STDOUT:="/var/log/garage.stdout.log"}"
+: "${LOG_STDERR:="/var/log/garage.stderr.log"}"
+
+command_user="$GARAGE_USER:$GARAGE_GROUP"
+supervise_daemon_args="--stdout $LOG_STDOUT --stderr $LOG_STDERR"
+
+depend() {
+	need logger net
+}
+
+supervisor="supervise-daemon"
+pidfile="/run/garage.pid"
+
+#supervisor="start-stop-daemon"
+#output_logger="/usr/bin/logger --tag lpmd"
+#error_logger="/usr/bin/logger --tag lpmd_err"
+#command_background=true
+
+start_pre(){
+	touch $LOG_STDOUT $LOG_STDERR
+	chown $GARAGE_USER:$GARAGE_GROUP $LOG_STDOUT $LOG_STDERR
+}

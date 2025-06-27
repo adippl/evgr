@@ -517,5 +517,5 @@ RDEPEND="
 src_install(){
 	#cargo_src_install
 	dobin ${WORKDIR}/garage/target/release/garage
-	newinitd "${FILESDIR}/garage_initd" garage
+	newinitd "${FILESDIR}/garage_initd_r1" garage
 }
