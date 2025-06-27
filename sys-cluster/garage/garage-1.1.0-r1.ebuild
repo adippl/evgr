@@ -509,6 +509,11 @@ LICENSE+="
 SLOT="0"
 KEYWORDS="amd64"
 
+RDEPEND="
+	acct-user/garage
+	acct-group/garage
+"
+
 src_install(){
 	#cargo_src_install
 	dobin ${WORKDIR}/garage/target/release/garage
