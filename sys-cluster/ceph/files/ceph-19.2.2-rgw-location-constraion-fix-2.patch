@@ -1,0 +1,57 @@
+From 43a6f123e24a772cc48a3a045d2136e13355c2a5 Mon Sep 17 00:00:00 2001
+From: Shilpa Jagannath <smanjara@redhat.com>
+Date: Tue, 24 Sep 2024 17:12:02 -0400
+Subject: [PATCH] rgw/multisite: the create_bucket forward request omits the
+ the request body, thus missing some data if specified inside
+ CreateBucketConfiguration xml on the non-master zone. also, now that we
+ perform cksum validation against empty payloads, such a request would fail
+ with -ERR_AMZ_CONTENT_SHA256_MISMATCH due to a zero content-length but a
+ non-empty payload hash. this fix ensures that request body is forwarded
+ during create_bucket
+
+Signed-off-by: Shilpa Jagannath <smanjara@redhat.com>
+---
+ src/rgw/rgw_op.cc      | 1 -
+ src/rgw/rgw_op.h       | 1 +
+ src/rgw/rgw_rest_s3.cc | 4 ++++
+ 3 files changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/src/rgw/rgw_op.cc b/src/rgw/rgw_op.cc
+index b54805bdc7d4b..07f61ba60b4f7 100644
+--- a/src/rgw/rgw_op.cc
++++ b/src/rgw/rgw_op.cc
+@@ -3618,7 +3618,6 @@ void RGWCreateBucket::execute(optional_yield y)
+ 
+   if (!driver->is_meta_master()) {
+     // apply bucket creation on the master zone first
+-    bufferlist in_data;
+     JSONParser jp;
+     op_ret = rgw_forward_request_to_master(this, *s->penv.site, s->owner.id,
+                                            &in_data, &jp, s->info, y);
+diff --git a/src/rgw/rgw_op.h b/src/rgw/rgw_op.h
+index 47a4c3da60958..eaf34da4edbbb 100644
+--- a/src/rgw/rgw_op.h
++++ b/src/rgw/rgw_op.h
+@@ -1117,6 +1117,7 @@ class RGWCreateBucket : public RGWOp {
+   bool relaxed_region_enforcement = false;
+   RGWCORSConfiguration cors_config;
+   std::set<std::string> rmattr_names;
++  bufferlist in_data;
+ 
+   virtual bool need_metadata_upload() const { return false; }
+ 
+diff --git a/src/rgw/rgw_rest_s3.cc b/src/rgw/rgw_rest_s3.cc
+index 4a50baf1cb201..4e5aca8cf30d5 100644
+--- a/src/rgw/rgw_rest_s3.cc
++++ b/src/rgw/rgw_rest_s3.cc
+@@ -2492,6 +2492,10 @@ int RGWCreateBucket_ObjStore_S3::get_params(optional_yield y)
+   if ((op_ret < 0) && (op_ret != -ERR_LENGTH_REQUIRED))
+     return op_ret;
+ 
++  if (!driver->is_meta_master()) {
++    in_data.append(data);
++  }
++
+   if (data.length()) {
+     RGWCreateBucketParser parser;
+ 

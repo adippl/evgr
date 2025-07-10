@@ -246,7 +246,8 @@ PATCHES=(
 	"${FILESDIR}/ceph-19.2.2-py313-3.patch"
 	"${FILESDIR}/ceph-19.2.2-gcc15.patch"
 	"${FILESDIR}/ceph-19.2.2-ipv6.patch"
-	"${FILESDIR}/ceph-19.2.2-rgw-location-constraion-fix.patch"
+	"${FILESDIR}/ceph-19.2.2-rgw-location-constraion-fix-1.patch"
+	"${FILESDIR}/ceph-19.2.2-rgw-location-constraion-fix-2.patch"
 )
 
 check-reqs_export_vars() {
