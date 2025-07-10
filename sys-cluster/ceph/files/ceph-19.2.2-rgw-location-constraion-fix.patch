@@ -1,0 +1,444 @@
+From 19aa6f7244030720c7f4a11288d16946059b5b78 Mon Sep 17 00:00:00 2001
+From: Seena Fallah <seenafallah@gmail.com>
+Date: Mon, 19 Aug 2024 14:30:51 +0200
+Subject: [PATCH 1/2] rgw: respect location constraint in master zonegroup
+
+When creating a bucket with a location constraint specified by the
+user, this constraint is not included in createparams. Therefore,
+to create the bucket in the requested location, createparams and
+bucket_zonegroup must be replaced with the user-provided values.
+
+Fixes: https://tracker.ceph.com/issues/62309
+Signed-off-by: Seena Fallah <seenafallah@gmail.com>
+---
+ src/rgw/driver/daos/rgw_sal_daos.cc   |  2 -
+ src/rgw/driver/daos/rgw_sal_daos.h    |  1 -
+ src/rgw/driver/motr/rgw_sal_motr.cc   |  5 --
+ src/rgw/driver/motr/rgw_sal_motr.h    |  1 -
+ src/rgw/driver/rados/rgw_period.cc    | 14 -----
+ src/rgw/driver/rados/rgw_sal_rados.cc |  5 --
+ src/rgw/driver/rados/rgw_sal_rados.h  |  1 -
+ src/rgw/driver/rados/rgw_zone.h       |  1 -
+ src/rgw/rgw_common.cc                 |  1 +
+ src/rgw/rgw_common.h                  |  1 +
+ src/rgw/rgw_op.cc                     | 82 +++++++++++++++------------
+ src/rgw/rgw_sal.h                     |  2 -
+ src/rgw/rgw_sal_dbstore.cc            |  8 ---
+ src/rgw/rgw_sal_dbstore.h             |  1 -
+ src/rgw/rgw_sal_filter.h              |  3 -
+ src/rgw/services/svc_zone.cc          | 12 ----
+ src/rgw/services/svc_zone.h           |  1 -
+ src/test/rgw/rgw_multi/tests.py       | 22 ++++++-
+ 18 files changed, 68 insertions(+), 95 deletions(-)
+
+diff --git a/src/rgw/driver/daos/rgw_sal_daos.cc b/src/rgw/driver/daos/rgw_sal_daos.cc
+index a87d88c4b85bc..92dd7afe2fbc0 100644
+--- a/src/rgw/driver/daos/rgw_sal_daos.cc
++++ b/src/rgw/driver/daos/rgw_sal_daos.cc
+@@ -858,8 +858,6 @@ bool DaosZone::is_writeable() { return true; }
+ 
+ bool DaosZone::get_redirect_endpoint(std::string* endpoint) { return false; }
+ 
+-bool DaosZone::has_zonegroup_api(const std::string& api) const { return false; }
+-
+ const std::string& DaosZone::get_current_period_id() {
+   return current_period->get_id();
+ }
+diff --git a/src/rgw/driver/daos/rgw_sal_daos.h b/src/rgw/driver/daos/rgw_sal_daos.h
+index e382fdb04ae5e..5515579a44107 100644
+--- a/src/rgw/driver/daos/rgw_sal_daos.h
++++ b/src/rgw/driver/daos/rgw_sal_daos.h
+@@ -484,7 +484,6 @@ class DaosZone : public StoreZone {
+   virtual const std::string& get_name() const override;
+   virtual bool is_writeable() override;
+   virtual bool get_redirect_endpoint(std::string* endpoint) override;
+-  virtual bool has_zonegroup_api(const std::string& api) const override;
+   virtual const std::string& get_current_period_id() override;
+   virtual const RGWAccessKey& get_system_key() {
+     return zone_params->system_key;
+diff --git a/src/rgw/driver/motr/rgw_sal_motr.cc b/src/rgw/driver/motr/rgw_sal_motr.cc
+index b999673ac18a6..463ea8c5b11a5 100644
+--- a/src/rgw/driver/motr/rgw_sal_motr.cc
++++ b/src/rgw/driver/motr/rgw_sal_motr.cc
+@@ -1111,11 +1111,6 @@ bool MotrZone::get_redirect_endpoint(std::string* endpoint)
+   return false;
+ }
+ 
+-bool MotrZone::has_zonegroup_api(const std::string& api) const
+-{
+-  return (zonegroup.group.api_name == api);
+-}
+-
+ const std::string& MotrZone::get_current_period_id()
+ {
+   return current_period->get_id();
+diff --git a/src/rgw/driver/motr/rgw_sal_motr.h b/src/rgw/driver/motr/rgw_sal_motr.h
+index f92074b9d9457..0f99ae48e862c 100644
+--- a/src/rgw/driver/motr/rgw_sal_motr.h
++++ b/src/rgw/driver/motr/rgw_sal_motr.h
+@@ -525,7 +525,6 @@ class MotrZone : public StoreZone {
+     virtual const std::string& get_name() const override;
+     virtual bool is_writeable() override;
+     virtual bool get_redirect_endpoint(std::string* endpoint) override;
+-    virtual bool has_zonegroup_api(const std::string& api) const override;
+     virtual const std::string& get_current_period_id() override;
+     virtual const RGWAccessKey& get_system_key() { return zone_params->system_key; }
+     virtual const std::string& get_realm_name() { return realm->get_name(); }
+diff --git a/src/rgw/driver/rados/rgw_period.cc b/src/rgw/driver/rados/rgw_period.cc
+index f18e8e46bc5f0..aacb9b6a09af8 100644
+--- a/src/rgw/driver/rados/rgw_period.cc
++++ b/src/rgw/driver/rados/rgw_period.cc
+@@ -68,20 +68,6 @@ int RGWPeriod::delete_obj(const DoutPrefixProvider *dpp, optional_yield y)
+   return ret;
+ }
+ 
+-int RGWPeriod::add_zonegroup(const DoutPrefixProvider *dpp, const RGWZoneGroup& zonegroup, optional_yield y)
+-{
+-  if (zonegroup.realm_id != realm_id) {
+-    return 0;
+-  }
+-  int ret = period_map.update(zonegroup, cct);
+-  if (ret < 0) {
+-    ldpp_dout(dpp, 0) << "ERROR: updating period map: " << cpp_strerror(-ret) << dendl;
+-    return ret;
+-  }
+-
+-  return store_info(dpp, false, y);
+-}
+-
+ int RGWPeriod::update(const DoutPrefixProvider *dpp, optional_yield y)
+ {
+   auto zone_svc = sysobj_svc->get_zone_svc();
+diff --git a/src/rgw/driver/rados/rgw_sal_rados.cc b/src/rgw/driver/rados/rgw_sal_rados.cc
+index 11b86a25841c0..c4398402b2b29 100644
+--- a/src/rgw/driver/rados/rgw_sal_rados.cc
++++ b/src/rgw/driver/rados/rgw_sal_rados.cc
+@@ -4257,11 +4257,6 @@ bool RadosZone::get_redirect_endpoint(std::string* endpoint)
+   return true;
+ }
+ 
+-bool RadosZone::has_zonegroup_api(const std::string& api) const
+-{
+-  return store->svc()->zone->has_zonegroup_api(api);
+-}
+-
+ const std::string& RadosZone::get_current_period_id()
+ {
+   return store->svc()->zone->get_current_period_id();
+diff --git a/src/rgw/driver/rados/rgw_sal_rados.h b/src/rgw/driver/rados/rgw_sal_rados.h
+index be681c9f975cd..139a08dcc15b5 100644
+--- a/src/rgw/driver/rados/rgw_sal_rados.h
++++ b/src/rgw/driver/rados/rgw_sal_rados.h
+@@ -107,7 +107,6 @@ class RadosZone : public StoreZone {
+     virtual const std::string& get_name() const override;
+     virtual bool is_writeable() override;
+     virtual bool get_redirect_endpoint(std::string* endpoint) override;
+-    virtual bool has_zonegroup_api(const std::string& api) const override;
+     virtual const std::string& get_current_period_id() override;
+     virtual const RGWAccessKey& get_system_key() override;
+     virtual const std::string& get_realm_name() override;
+diff --git a/src/rgw/driver/rados/rgw_zone.h b/src/rgw/driver/rados/rgw_zone.h
+index c542abc76d687..5fb2b4b809664 100644
+--- a/src/rgw/driver/rados/rgw_zone.h
++++ b/src/rgw/driver/rados/rgw_zone.h
+@@ -769,7 +769,6 @@ class RGWPeriod
+   int create(const DoutPrefixProvider *dpp, optional_yield y, bool exclusive = true);
+   int delete_obj(const DoutPrefixProvider *dpp, optional_yield y);
+   int store_info(const DoutPrefixProvider *dpp, bool exclusive, optional_yield y);
+-  int add_zonegroup(const DoutPrefixProvider *dpp, const RGWZoneGroup& zonegroup, optional_yield y);
+ 
+   void fork();
+   int update(const DoutPrefixProvider *dpp, optional_yield y);
+diff --git a/src/rgw/rgw_common.cc b/src/rgw/rgw_common.cc
+index 68fb9a2927860..91e136ab94ec6 100644
+--- a/src/rgw/rgw_common.cc
++++ b/src/rgw/rgw_common.cc
+@@ -63,6 +63,7 @@ rgw_http_errors rgw_http_s3_errors({
+     { ERR_INVALID_DIGEST, {400, "InvalidDigest" }},
+     { ERR_BAD_DIGEST, {400, "BadDigest" }},
+     { ERR_INVALID_LOCATION_CONSTRAINT, {400, "InvalidLocationConstraint" }},
++    { ERR_ILLEGAL_LOCATION_CONSTRAINT_EXCEPTION, {400, "IllegalLocationConstraintException" }},
+     { ERR_ZONEGROUP_DEFAULT_PLACEMENT_MISCONFIGURATION, {400, "ZonegroupDefaultPlacementMisconfiguration" }},
+     { ERR_INVALID_BUCKET_NAME, {400, "InvalidBucketName" }},
+     { ERR_INVALID_OBJECT_NAME, {400, "InvalidObjectName" }},
+diff --git a/src/rgw/rgw_common.h b/src/rgw/rgw_common.h
+index a8f6a1107a919..6c0acaddf23cd 100644
+--- a/src/rgw/rgw_common.h
++++ b/src/rgw/rgw_common.h
+@@ -336,6 +336,7 @@ inline constexpr const char* RGW_REST_STS_XMLNS =
+ #define ERR_PRESIGNED_URL_EXPIRED			 2223
+ #define ERR_PRESIGNED_URL_DISABLED     2224
+ #define ERR_AUTHORIZATION        2225 // SNS 403 AuthorizationError
++#define ERR_ILLEGAL_LOCATION_CONSTRAINT_EXCEPTION 2226
+ 
+ #define ERR_BUSY_RESHARDING      2300 // also in cls_rgw_types.h, don't change!
+ #define ERR_NO_SUCH_ENTITY       2301
+diff --git a/src/rgw/rgw_op.cc b/src/rgw/rgw_op.cc
+index 67829e6320a6e..9e5f01e1daf8b 100644
+--- a/src/rgw/rgw_op.cc
++++ b/src/rgw/rgw_op.cc
+@@ -3564,54 +3564,62 @@ void RGWCreateBucket::execute(optional_yield y)
+   const rgw::SiteConfig& site = *s->penv.site;
+   const std::optional<RGWPeriod>& period = site.get_period();
+   const RGWZoneGroup& my_zonegroup = site.get_zonegroup();
+-
+-  if (s->system_request) {
+-    // allow system requests to override the target zonegroup. for forwarded
+-    // requests, we'll create the bucket for the originating zonegroup
+-    createparams.zonegroup_id = s->info.args.get(RGW_SYS_PARAM_PREFIX "zonegroup");
+-  }
+-
++  const std::string rgwx_zonegroup = s->info.args.get(RGW_SYS_PARAM_PREFIX "zonegroup");
+   const RGWZoneGroup* bucket_zonegroup = &my_zonegroup;
+-  if (createparams.zonegroup_id.empty()) {
+-    // default to the local zonegroup
+-    createparams.zonegroup_id = my_zonegroup.id;
+-  } else if (period) {
+-    auto z = period->period_map.zonegroups.find(createparams.zonegroup_id);
+-    if (z == period->period_map.zonegroups.end()) {
+-      ldpp_dout(this, 0) << "could not find zonegroup "
+-          << createparams.zonegroup_id << " in current period" << dendl;
+-      op_ret = -ENOENT;
+-      return;
+-    }
+-    bucket_zonegroup = &z->second;
+-  } else if (createparams.zonegroup_id != my_zonegroup.id) {
+-    ldpp_dout(this, 0) << "zonegroup does not match current zonegroup "
+-        << createparams.zonegroup_id << dendl;
+-    op_ret = -ENOENT;
+-    return;
+-  }
+ 
+-  // validate the LocationConstraint
++  // Validate LocationConstraint if it's provided and enforcement is strict
+   if (!location_constraint.empty() && !relaxed_region_enforcement) {
+-    // on the master zonegroup, allow any valid api_name. otherwise it has to
+-    // match the bucket's zonegroup
+-    if (period && my_zonegroup.is_master) {
+-      if (!period->period_map.zonegroups_by_api.count(location_constraint)) {
++    if (period) {
++      auto location_iter = period->period_map.zonegroups_by_api.find(location_constraint);
++      if (location_iter == period->period_map.zonegroups_by_api.end()) {
+         ldpp_dout(this, 0) << "location constraint (" << location_constraint
+             << ") can't be found." << dendl;
+         op_ret = -ERR_INVALID_LOCATION_CONSTRAINT;
+-        s->err.message = "The specified location-constraint is not valid";
++        s->err.message = fmt::format("The {} location constraint is not valid.",
++                                     location_constraint);
+         return;
+       }
+-    } else if (bucket_zonegroup->api_name != location_constraint) {
++      bucket_zonegroup = &location_iter->second;
++    } else if (location_constraint != my_zonegroup.api_name) { // if we don't have a period, we can only use the current zonegroup - so check if the location matches by api name here
+       ldpp_dout(this, 0) << "location constraint (" << location_constraint
+-          << ") doesn't match zonegroup (" << bucket_zonegroup->api_name
+-          << ')' << dendl;
+-      op_ret = -ERR_INVALID_LOCATION_CONSTRAINT;
+-      s->err.message = "The specified location-constraint is not valid";
++          << ") doesn't match zonegroup (" << my_zonegroup.api_name << ")" << dendl;
++      op_ret = -ERR_ILLEGAL_LOCATION_CONSTRAINT_EXCEPTION;
++      s->err.message = fmt::format("The {} location constraint is incompatible "
++                                   "for the region specific endpoint this request was sent to.",
++                                   location_constraint);
+       return;
+     }
+   }
++  // If it's a system request, use the provided zonegroup if available
++  else if (s->system_request && !rgwx_zonegroup.empty()) {
++    if (period) {
++      auto zonegroup_iter = period->period_map.zonegroups.find(rgwx_zonegroup);
++      if (zonegroup_iter == period->period_map.zonegroups.end()) {
++        ldpp_dout(this, 0) << "could not find zonegroup " << rgwx_zonegroup
++            << " in current period" << dendl;
++        op_ret = -ENOENT;
++        return;
++      }
++      bucket_zonegroup = &zonegroup_iter->second;
++    }
++  }
++
++  const bool enforce_location_match =
++    !period ||               // No period: no multisite, so no need to enforce location match.
++    !s->system_request ||    // All user requests are enforced to match zonegroup's location.
++    !my_zonegroup.is_master; // but if it's a system request (forwarded) only allow remote creation on master zonegroup.
++  if (enforce_location_match && !my_zonegroup.equals(bucket_zonegroup->get_id())) {
++    ldpp_dout(this, 0) << "location constraint (" << bucket_zonegroup->api_name
++        << ") doesn't match zonegroup (" << my_zonegroup.api_name << ")" << dendl;
++    op_ret = -ERR_ILLEGAL_LOCATION_CONSTRAINT_EXCEPTION;
++    s->err.message = fmt::format("The {} location constraint is incompatible "
++                                 "for the region specific endpoint this request was sent to.",
++                                 bucket_zonegroup->api_name);
++    return;
++  }
++
++  // Set the final zonegroup ID
++  createparams.zonegroup_id = bucket_zonegroup->id;
+ 
+   // select and validate the placement target
+   op_ret = select_bucket_placement(this, *bucket_zonegroup, s->user->get_info(),
+@@ -3620,7 +3628,7 @@ void RGWCreateBucket::execute(optional_yield y)
+     return;
+   }
+ 
+-  if (bucket_zonegroup == &my_zonegroup) {
++  if (my_zonegroup.equals(bucket_zonegroup->get_id())) {
+     // look up the zone placement pool
+     createparams.zone_placement = rgw::find_zone_placement(
+         this, site.get_zone_params(), createparams.placement_rule);
+diff --git a/src/rgw/rgw_sal.h b/src/rgw/rgw_sal.h
+index 769d743544239..0b7cb6bdecc10 100644
+--- a/src/rgw/rgw_sal.h
++++ b/src/rgw/rgw_sal.h
+@@ -1733,8 +1733,6 @@ class Zone {
+     virtual bool is_writeable() = 0;
+     /** Get the URL for the endpoint for redirecting to this zone */
+     virtual bool get_redirect_endpoint(std::string* endpoint) = 0;
+-    /** Check to see if the given API is supported in this zone */
+-    virtual bool has_zonegroup_api(const std::string& api) const = 0;
+     /** Get the current period ID for this zone */
+     virtual const std::string& get_current_period_id() = 0;
+     /** Get thes system access key for this zone */
+diff --git a/src/rgw/rgw_sal_dbstore.cc b/src/rgw/rgw_sal_dbstore.cc
+index d3af42cf2ec03..0504db3aa912e 100644
+--- a/src/rgw/rgw_sal_dbstore.cc
++++ b/src/rgw/rgw_sal_dbstore.cc
+@@ -458,14 +458,6 @@ namespace rgw::sal {
+     return false;
+   }
+ 
+-  bool DBZone::has_zonegroup_api(const std::string& api) const
+-  {
+-    if (api == "default")
+-      return true;
+-
+-    return false;
+-  }
+-
+   const std::string& DBZone::get_current_period_id()
+   {
+     return current_period->get_id();
+diff --git a/src/rgw/rgw_sal_dbstore.h b/src/rgw/rgw_sal_dbstore.h
+index 107ba735a63ac..f1c858c9f047d 100644
+--- a/src/rgw/rgw_sal_dbstore.h
++++ b/src/rgw/rgw_sal_dbstore.h
+@@ -309,7 +309,6 @@ class DBNotification : public StoreNotification {
+       virtual const std::string& get_name() const override;
+       virtual bool is_writeable() override;
+       virtual bool get_redirect_endpoint(std::string* endpoint) override;
+-      virtual bool has_zonegroup_api(const std::string& api) const override;
+       virtual const std::string& get_current_period_id() override;
+       virtual const RGWAccessKey& get_system_key() override;
+       virtual const std::string& get_realm_name() override;
+diff --git a/src/rgw/rgw_sal_filter.h b/src/rgw/rgw_sal_filter.h
+index 17b102f76199c..47f3442ee204f 100644
+--- a/src/rgw/rgw_sal_filter.h
++++ b/src/rgw/rgw_sal_filter.h
+@@ -108,9 +108,6 @@ class FilterZone : public Zone {
+   virtual bool get_redirect_endpoint(std::string* endpoint) override {
+       return next->get_redirect_endpoint(endpoint);
+   }
+-  virtual bool has_zonegroup_api(const std::string& api) const override {
+-      return next->has_zonegroup_api(api);
+-  }
+   virtual const std::string& get_current_period_id() override {
+       return next->get_current_period_id();
+   }
+diff --git a/src/rgw/services/svc_zone.cc b/src/rgw/services/svc_zone.cc
+index 70cf40eb6cb61..64472bb5472c0 100644
+--- a/src/rgw/services/svc_zone.cc
++++ b/src/rgw/services/svc_zone.cc
+@@ -657,18 +657,6 @@ const string& RGWSI_Zone::get_current_period_id() const
+   return current_period->get_id();
+ }
+ 
+-bool RGWSI_Zone::has_zonegroup_api(const std::string& api) const
+-{
+-  if (!current_period->get_id().empty()) {
+-    const auto& zonegroups_by_api = current_period->get_map().zonegroups_by_api;
+-    if (zonegroups_by_api.find(api) != zonegroups_by_api.end())
+-      return true;
+-  } else if (zonegroup->api_name == api) {
+-    return true;
+-  }
+-  return false;
+-}
+-
+ bool RGWSI_Zone::zone_is_writeable()
+ {
+   return writeable_zone && !get_zone().is_read_only();
+diff --git a/src/rgw/services/svc_zone.h b/src/rgw/services/svc_zone.h
+index c4a3a28f0d7b0..4262a0da6dce4 100644
+--- a/src/rgw/services/svc_zone.h
++++ b/src/rgw/services/svc_zone.h
+@@ -96,7 +96,6 @@ class RGWSI_Zone : public RGWServiceInstance
+   uint32_t get_zone_short_id() const;
+ 
+   const std::string& get_current_period_id() const;
+-  bool has_zonegroup_api(const std::string& api) const;
+ 
+   bool zone_is_writeable();
+   bool zone_syncs_from(const RGWZone& target_zone, const RGWZone& source_zone) const;
+diff --git a/src/test/rgw/rgw_multi/tests.py b/src/test/rgw/rgw_multi/tests.py
+index 2d49c7a0ce01c..b975a621aff4f 100644
+--- a/src/test/rgw/rgw_multi/tests.py
++++ b/src/test/rgw/rgw_multi/tests.py
+@@ -15,6 +15,7 @@
+ import boto.s3.connection
+ from boto.s3.website import WebsiteConfiguration
+ from boto.s3.cors import CORSConfiguration
++from botocore.exceptions import ClientError
+ 
+ from nose.tools import eq_ as eq
+ from nose.tools import assert_not_equal, assert_equal, assert_true, assert_false
+@@ -3634,4 +3635,23 @@ def test_copy_object_different_bucket():
+         CopySource = source_bucket.name + '/' + objname)
+     
+     zonegroup_bucket_checkpoint(zonegroup_conns, dest_bucket.name)
+-    
++
++def test_bucket_create_location_constraint():
++    for zonegroup in realm.current_period.zonegroups:
++        zonegroup_conns = ZonegroupConns(zonegroup)
++        for zg in realm.current_period.zonegroups:
++            z = zonegroup_conns.rw_zones[0]
++            bucket_name = gen_bucket_name()
++            if zg.name == zonegroup.name:
++                # my zonegroup should pass
++                z.s3_client.create_bucket(Bucket=bucket_name, CreateBucketConfiguration={'LocationConstraint': zg.name})
++                # check bucket location
++                response = z.s3_client.get_bucket_location(Bucket=bucket_name)
++                assert_equal(response['LocationConstraint'], zg.name)
++            else:
++                # other zonegroup should fail with 400
++                e = assert_raises(ClientError,
++                                  z.s3_client.create_bucket,
++                                    Bucket=bucket_name,
++                                    CreateBucketConfiguration={'LocationConstraint': zg.name})
++                assert e.response['ResponseMetadata']['HTTPStatusCode'] == 400
+
+From c21b5f7e0b1a48e7a4b4e21d1d357e8f2f26a1ac Mon Sep 17 00:00:00 2001
+From: Seena Fallah <seenafallah@gmail.com>
+Date: Thu, 19 Dec 2024 23:09:03 +0100
+Subject: [PATCH 2/2] qa/rgw: set api_name if not provided in create_zonegroup
+
+If api_name is not set in the config, use name as the api_name,
+otherwise on RGW it will be set to an empty string.
+
+Signed-off-by: Seena Fallah <seenafallah@gmail.com>
+---
+ qa/tasks/rgw_multisite.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/qa/tasks/rgw_multisite.py b/qa/tasks/rgw_multisite.py
+index e83a54efc2b4f..f93ca017fa2d4 100644
+--- a/qa/tasks/rgw_multisite.py
++++ b/qa/tasks/rgw_multisite.py
+@@ -361,6 +361,8 @@ def create_zonegroup(cluster, gateways, period, config):
+     if endpoints:
+         # replace client names with their gateway endpoints
+         config['endpoints'] = extract_gateway_endpoints(gateways, endpoints)
++    if not config.get('api_name'): # otherwise it will be set to an empty string
++        config['api_name'] = config['name']
+     zonegroup = multisite.ZoneGroup(config['name'], period)
+     # `zonegroup set` needs --default on command line, and 'is_master' in json
+     args = is_default_arg(config)
