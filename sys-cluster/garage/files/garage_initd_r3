@@ -4,8 +4,6 @@
 
 INSTANCE="${SVCNAME##*.}"
 
-ebegin inst "$INSTANCE"
-
 if [ -z "$INSTANCE" ] 
 then
 	garage_config="garage"
