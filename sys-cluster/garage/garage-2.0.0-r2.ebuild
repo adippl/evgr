@@ -519,6 +519,7 @@ src_install(){
 	#cargo_src_install
 	dobin ${WORKDIR}/garage/target/release/garage
 	newinitd "${FILESDIR}/garage_initd_r3" garage
-	dodir /etc/logrotate.d/
+	#dodir "/etc/logrotate.d/"
+	insinto "/etc/logrotate.d/"
 	doins "${FILESDIR}/logrotate"
 }
