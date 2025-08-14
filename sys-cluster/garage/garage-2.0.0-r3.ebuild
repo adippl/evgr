@@ -489,13 +489,14 @@ CRATES="
 
 inherit cargo
 
+RUST_MIN_VER="1.81.0"
+
 DESCRIPTION="Garage, an S3-compatible distributed object store for self-hosted deployments"
 HOMEPAGE="https://garagehq.deuxfleurs.fr/"
 SRC_URI="
 	${CARGO_CRATE_URIS}
 "
-#SRC_URI+="https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v1.1.0.tar.gz -> ${PN}-${PVR}.tar.gz"
-SRC_URI+="https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v2.0.0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI+="https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
 
 S="${WORKDIR}/garage"
 
@@ -517,9 +518,8 @@ RDEPEND="
 
 src_install(){
 	#cargo_src_install
-	dobin ${WORKDIR}/garage/target/release/garage
+	dobin "${WORKDIR}/garage/target/release/garage"
 	newinitd "${FILESDIR}/garage_initd_r3" garage
-	#dodir "/etc/logrotate.d/"
 	insinto "/etc/logrotate.d/"
 	newins "${FILESDIR}/${PN}.logrotate" "${PN}"
 }
