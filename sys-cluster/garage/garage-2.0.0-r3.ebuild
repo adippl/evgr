@@ -521,5 +521,5 @@ src_install(){
 	newinitd "${FILESDIR}/garage_initd_r3" garage
 	#dodir "/etc/logrotate.d/"
 	insinto "/etc/logrotate.d/"
-	newins "${FILESDIR}/${PN}" "${PN}"
+	newins "${FILESDIR}/${PN}.logrotate" "${PN}"
 }
