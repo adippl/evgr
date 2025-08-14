@@ -517,6 +517,8 @@ RDEPEND="
 
 src_install(){
 	#cargo_src_install
-	dobin ${WORKDIR}/garage/target/release/garage
+	dobin "${WORKDIR}/garage/target/release/garage"
 	newinitd "${FILESDIR}/garage_initd_r2" garage
+	insinto "/etc/logrotate.d/"
+	newins "${FILESDIR}/${PN}.logrotate" "${PN}"
 }
