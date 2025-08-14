@@ -494,7 +494,7 @@ SRC_URI="
 	${CARGO_CRATE_URIS}
 "
 #SRC_URI+="https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v1.1.0.tar.gz -> ${PN}-${PVR}.tar.gz"
-SRC_URI+="https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v1.1.0.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI+="https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
 
 S="${WORKDIR}/garage"
 
