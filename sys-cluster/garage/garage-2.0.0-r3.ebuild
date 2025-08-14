@@ -490,7 +490,7 @@ CRATES="
 inherit cargo
 
 DESCRIPTION="Garage, an S3-compatible distributed object store for self-hosted deployments"
-HOMEPAGE=""
+HOMEPAGE="https://garagehq.deuxfleurs.fr/"
 SRC_URI="
 	${CARGO_CRATE_URIS}
 "
