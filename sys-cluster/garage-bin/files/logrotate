@@ -1,0 +1,13 @@
+/var/log/garage*.log {
+	daily
+	rotate 7
+	compress
+	delaycompress
+	missingok
+	notifempty
+	copytruncate
+	dateext
+	dateformat -%Y%m%d
+	create 0640 garage garage
+}
+

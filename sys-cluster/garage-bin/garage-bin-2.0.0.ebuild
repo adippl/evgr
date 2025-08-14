@@ -18,10 +18,14 @@ LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86 arm64 ~amd"
 
-#DEPEND=""
-RDEPEND="${DEPEND}"
+DEPEND=""
+BDEPEND=""
+RDEPEND="
+	${DEPEND}
+	acct-user/garage
+	acct-group/garage
+"
 RESTRICT="strip mirror"
-#BDEPEND=""
 
 src_unpack(){
 	cp "${DISTDIR}"/${A} "${S}"/garage
@@ -38,6 +42,8 @@ src_compile(){
 	}
 src_install(){
 	dobin garage
-	newinitd "${FILESDIR}/garage_initd" garage
+	newinitd "${FILESDIR}/garage_initd_r3" garage
 	#newconfd "${FILESDIR}/garage_confd" garage
+	insinto "/etc/logrotate.d/"
+	newins "${FILESDIR}/${PN}" "${PN}"
 	}
