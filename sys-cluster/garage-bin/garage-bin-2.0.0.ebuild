@@ -6,20 +6,22 @@ EAPI=8
 DESCRIPTION="garage distributed storage"
 HOMEPAGE="https://garagehq.deuxfleurs.fr"
 
+BASE_URL="https://garagehq.deuxfleurs.fr/_releases"
+
 SRC_URI="
-	amd64?   ( "https://garagehq.deuxfleurs.fr/_releases/v${PV}/x86_64-unknown-linux-musl/garage"       -> ${PN}-amd64-${PVR} )
-	x86?     ( "https://garagehq.deuxfleurs.fr/_releases/v${PV}/i686-unknown-linux-musl/garage"         -> ${PN}-x86-${PVR} )
-	arm64?   ( "https://garagehq.deuxfleurs.fr/_releases/v${PV}/aarch64-unknown-linux-musl/garage"      -> ${PN}-arm64-${PVR} )
-	arm?     ( "https://garagehq.deuxfleurs.fr/_releases/v${PV}/armv6l-unknown-linux-musleabihf/garage" -> ${PN}-arm-${PVR} )
+	amd64?   ( "${BASE_URL}/v${PV}/x86_64-unknown-linux-musl/garage"       -> ${PN}-amd64-${PVR} )
+	x86?     ( "${BASE_URL}/v${PV}/i686-unknown-linux-musl/garage"         -> ${PN}-x86-${PVR} )
+	arm64?   ( "${BASE_URL}/v${PV}/aarch64-unknown-linux-musl/garage"      -> ${PN}-arm64-${PVR} )
+	arm?     ( "${BASE_URL}/v${PV}/armv6l-unknown-linux-musleabihf/garage" -> ${PN}-arm-${PVR} )
 "
 
 S="${WORKDIR}"
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86 arm64 ~amd"
+KEYWORDS=" amd64 arm arm64 x86 "
 
-DEPEND=""
-BDEPEND=""
+DEPEND="!sys-cluster/garage"
+#BDEPEND=""
 RDEPEND="
 	${DEPEND}
 	acct-user/garage
@@ -43,7 +45,6 @@ src_compile(){
 src_install(){
 	dobin garage
 	newinitd "${FILESDIR}/garage_initd_r3" garage
-	#newconfd "${FILESDIR}/garage_confd" garage
 	insinto "/etc/logrotate.d/"
-	newins "${FILESDIR}/${PN}" "${PN}"
+	newins "${FILESDIR}/garage.logrotate" "garage"
 	}
