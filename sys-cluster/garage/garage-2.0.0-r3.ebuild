@@ -511,7 +511,11 @@ LICENSE+="
 SLOT="0"
 KEYWORDS="amd64"
 
+DEPEND="
+	!sys-cluster/garage-bin
+"
 RDEPEND="
+	${DEPEND}
 	acct-user/garage
 	acct-group/garage
 "
