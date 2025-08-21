@@ -39,3 +39,9 @@ sys-cluster/ceph numa
 sys-apps/hwloc numa
 app-emulation/qemu numa
 app-emulation/libvirt numa
+
+
+# required by dev-db/redis-8.0.3::gentoo[jemalloc]
+# required by net-analyzer/ntopng-6.0::gentoo
+# required by ntopng (argument)
+dev-libs/jemalloc stats
