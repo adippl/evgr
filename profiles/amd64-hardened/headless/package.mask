@@ -10,4 +10,4 @@
 <app-containers/cri-o-1.31.0
 
 
->sys-cluster/ceph-19.2.2-r2
+>sys-cluster/ceph-19.2.3
