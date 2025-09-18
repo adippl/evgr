@@ -1,11 +1,18 @@
-MINIO_VOLUMES="http://ghw-hc4-{1...4}.example.top/mnt/drive-{1...2}"
+MINIO_VOLUMES="http://node-{1...4}.example.top/mnt/drive-{1...2}"
 MINIO_OPTS="--console-address :9001"
 minio_args="server $MINIO_VOLUMES $MINIO_OPTS"
 logfile="/var/log/$RC_SVCNAME.log"
 
-set -a
+# BEGIN environment variables
+set -a  # enable auto-export variables
 MINIO_ROOT_USER=TEST
-MINIO_ROOT_PASSWORD=TEST
+#MINIO_ROOT_PASSWORD=TEST
+source /etc/minio_secret
+MINIO_ADDRESS=":9000"
+MINIO_CONSOLE_ADDRESS=":9001"
+MINIO_BROWSER="on"
 MINIO_STORAGE_CLASS_STANDARD="EC:3"
 MINIO_STORAGE_CLASS_RRS="EC:2"
+#MINIO_ERASURE_SET_DRIVE_COUNT="8"
 set +a
+## END environment variables
