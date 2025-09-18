@@ -22,7 +22,8 @@ RESTRICT="strip mirror"
 #BDEPEND=""
 
 src_unpack(){
-	cp "${DISTDIR}"/${A} "${S}"/warp
+	tar xvf "${DISTDIR}"/${A}  -C "${S}"
+	#cp "${DISTDIR}"/${A} "${S}"/warp
 	}
 src_prepare(){
 	eapply_user
