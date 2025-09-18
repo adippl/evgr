@@ -523,6 +523,9 @@ S="${WORKDIR}/garage"
 #PATCHES="
 #"
 
+IUSE=" fjall "
+
+
 LICENSE="AGPL-3"
 # Dependent crate licenses
 LICENSE+="
@@ -539,6 +542,13 @@ RDEPEND="
 	acct-user/garage
 	acct-group/garage
 "
+
+src_configure() {
+	local myfeatures=(
+		$(usev fjall)
+	)
+	cargo_src_configure
+}
 
 src_install(){
 	#cargo_src_install
