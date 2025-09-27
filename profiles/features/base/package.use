@@ -66,7 +66,8 @@ sys-cluster/minikube	libvirt
 app-text/ghostscript-gpl cups
 
 
-media-video/ffmpeg	openssl
+#media-video/ffmpeg	openssl
+media-video/ffmpeg			bluray libcaca openh264 opus twolame lame x264 x265 vorbis openal jpeg2k mp3 webp vpx vaapi -opengl -opencl -svg
 
 # required by app-containers/containers-common-0.56.0-r1::gentoo
 # required by app-containers/podman-4.7.2::gentoo
