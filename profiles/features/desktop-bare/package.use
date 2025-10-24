@@ -110,3 +110,16 @@ dev-libs/boost		context python
 >=net-libs/libpsl-0.21.2 abi_x86_32
 
 dev-lang/rust abi_x86_32
+
+# required by x11-libs/pango-1.57.0::gentoo
+# required by gui-libs/libdecor-0.2.3::gentoo
+# required by media-libs/libsdl2-2.32.6::gentoo
+# required by app-emulation/wine-vanilla-10.0-r2::gentoo[sdl]
+# required by virtual/wine-0-r11::gentoo
+# required by @system
+# required by @world (argument)
+>=media-libs/freetype-2.14.1-r1 harfbuzz
+# required by net-misc/nextcloud-client-3.16.6::gentoo
+# required by @system
+# required by @world (argument)
+>=dev-qt/qt5compat-6.9.3 qml
