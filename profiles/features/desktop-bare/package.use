@@ -47,7 +47,7 @@ app-crypt/pinentry			gtk
 
 
 #desktop-tools
-app-emulation/qemu				virgl ssh
+app-emulation/qemu				virgl
 app-emulation/wine-vanilla		-ldap -udisks 
 app-office/abiword				spell latex math -goffice -readline -introspection
 app-office/libreoffice			-gtk
