@@ -44,6 +44,7 @@ sys-libs/binutils-libs abi_x86_32
 sys-libs/gpm abi_x86_32
 sys-libs/ncurses abi_x86_32
 sys-libs/readline abi_x86_32
+virtual/zlib abi_x86_32
 sys-libs/zlib abi_x86_32
 virtual/libiconv abi_x86_32
 virtual/libudev abi_x86_32
@@ -139,6 +140,7 @@ llvm-core/llvm abi_x86_32
 sys-libs/libcap abi_x86_32
 sys-libs/libunwind abi_x86_32
 sys-libs/ncurses abi_x86_32
+virtual/zlib abi_x86_32
 sys-libs/zlib abi_x86_32
 virtual/glu abi_x86_32
 virtual/jpeg abi_x86_32
