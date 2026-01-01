@@ -31,7 +31,6 @@
 *sys-boot/grub
 *sys-fs/btrfs-progs
 *sys-fs/dosfstools
-*sys-fs/ncdu
 *sys-kernel/linux-firmware
 *sys-power/acpid
 *sys-process/htop

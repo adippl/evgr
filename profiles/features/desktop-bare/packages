@@ -13,6 +13,7 @@
 *media-sound/cmus
 *net-fs/sshfs
 *sys-fs/fuseiso
+*sys-fs/ncdu
 
 # X and friends
 *lxde-base/lxappearance
