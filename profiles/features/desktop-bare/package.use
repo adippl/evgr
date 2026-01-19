@@ -133,3 +133,8 @@ dev-lang/rust abi_x86_32
 # required by @system
 # required by @world (argument)
 >=media-libs/gegl-0.4.64-r1 introspection lcms
+
+# required by dev-embedded/u-boot-tools-2025.01-r1::gentoo
+# required by @system
+# required by @world (argument)
+sys-apps/dtc python

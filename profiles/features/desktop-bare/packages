@@ -46,3 +46,9 @@
 *x11-themes/numix-icon-theme
 *x11-wm/i3
 *xfce-base/thunar
+
+# printing
+net-print/cups
+net-print/cups-meta
+net-print/cups-filters
+
