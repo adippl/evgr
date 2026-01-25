@@ -9,7 +9,7 @@ SRC_URI="https://vicerveza.homeunix.net/~viric/soft/ts/ts-${PV}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 ~arm64"
 #RESTRICT=""
 #DEPEND=""
 RDEPEND=${DEPEND}
