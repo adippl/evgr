@@ -11,7 +11,7 @@ S="${WORKDIR}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS=""
 IUSE="vaapi"
 
 RDEPEND="
@@ -19,8 +19,8 @@ RDEPEND="
 	>=media-libs/libsdl2-2.0.16-r1:0[kms]
 	>=media-libs/sdl2-ttf-2.0.15:0
 	>=media-video/ffmpeg-4.4-r1:0
-	>=dev-qt/qtsvg-5.15.2-r10:5/5.15
-	>=dev-qt/qtquickcontrols2-5.15.2-r11:5
+	dev-qt/qtsvg
+	dev-qt/qtquickcontrols2
 	>=media-libs/opus-1.3.1-r2:0
 	media-libs/libpulse
 	vaapi? (
