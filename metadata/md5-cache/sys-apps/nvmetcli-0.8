@@ -1,4 +1,4 @@
-BDEPEND=test? ( dev-python/configshell-fb >=dev-python/pytest-7.4.4[python_targets_python3_12(-)?,python_targets_python3_13(-)?] ) >=dev-vcs/git-1.8.2.1[curl] python_targets_python3_12? ( dev-lang/python:3.12 ) python_targets_python3_13? ( dev-lang/python:3.13 ) >=dev-python/gpep517-15[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/setuptools-69.0.3[python_targets_python3_12(-)?,python_targets_python3_13(-)?]
+BDEPEND=test? ( dev-python/configshell-fb >=dev-python/pytest-7.4.4[python_targets_python3_12(-)?,python_targets_python3_13(-)?] ) >=dev-vcs/git-1.8.2.1[curl] python_targets_python3_12? ( dev-lang/python:3.12 ) python_targets_python3_13? ( dev-lang/python:3.13 ) >=dev-python/gpep517-16[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/setuptools-78.1.0[python_targets_python3_12(-)?,python_targets_python3_13(-)?]
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=dev-python/configshell-fb
 DESCRIPTION=linux nvme target cli utility
@@ -13,5 +13,5 @@ RDEPEND=dev-python/configshell-fb python_targets_python3_12? ( dev-lang/python:3
 REQUIRED_USE=|| ( python_targets_python3_12 python_targets_python3_13 )
 RESTRICT=mirror !test? ( test )
 SLOT=0
-_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81	toolchain-funcs	6afdb6107430c1832ca7e16aacbf8fa1	multilib	b2a329026f2e404e9e371097dda47f96	flag-o-matic	357f1a896fbedcd06e5ce55419c49eb9	out-of-source-utils	dbf9e34ee8964084651e25907fa8f52c	multibuild	4650a65187015567b4e041bb9bfdb364	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	b7726144f5af59e186d66746d0f513e5	python-r1	fa2daad0051275fa416115c76e53b1de	distutils-r1	85ccd3b54a6533fb120ee52b7c76a3df
+_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81	toolchain-funcs	30214924c0c3b92ec7dbf24fc70d60d3	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	out-of-source-utils	dbf9e34ee8964084651e25907fa8f52c	multibuild	4650a65187015567b4e041bb9bfdb364	multilib	404b65bd5212cff83b3935c685419d08	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	3a59a39e97af0f7c03f49cf3c22f262b	python-utils-r1	dbb8c4d794033ad7e7221eaf567a6c90	python-r1	0e15b2ab9cfc87d7474678201d6bca38	distutils-r1	776bbaa25e9fa0dc9ac6f039ca37f701
 _md5_=87dcaf0e70f37cb5ef17a0e0f00f617c
