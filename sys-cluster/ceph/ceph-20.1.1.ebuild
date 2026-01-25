@@ -3,37 +3,53 @@
 
 EAPI=8
 
+CMAKE_WARN_UNUSED_CLI=no # false positives unless all USE flags are on
 PYTHON_COMPAT=( python3_{10..13} )
 LUA_COMPAT=( lua5-{3..4} )
 
 inherit check-reqs bash-completion-r1 cmake flag-o-matic lua-single multiprocessing \
 		python-r1 udev readme.gentoo-r1 toolchain-funcs systemd tmpfiles
 
-XSIMD_HASH="aeec9c872c8b475dedd7781336710f2dd2666cb2"
-
 DESCRIPTION="Ceph distributed filesystem"
 HOMEPAGE="https://ceph.com/"
 
 SRC_URI="
 	https://download.ceph.com/tarballs/${P}.tar.gz
-	parquet? ( https://github.com/xtensor-stack/xsimd/archive/${XSIMD_HASH}.tar.gz -> ceph-xsimd-${PV}.tar.gz
+	parquet? ( https://github.com/xtensor-stack/xsimd/archive/13.0.0.tar.gz -> ceph-xsimd-${PV}.tar.gz
 		mirror://apache/arrow/arrow-17.0.0/apache-arrow-17.0.0.tar.gz )
+	parquet? ( mirror://apache/arrow/arrow-17.0.0/apache-arrow-17.0.0.tar.gz )
 "
 
 LICENSE="Apache-2.0 LGPL-2.1 CC-BY-SA-3.0 GPL-2 GPL-2+ LGPL-2+ LGPL-2.1 LGPL-3 GPL-3 BSD Boost-1.0 MIT public-domain"
 SLOT="0"
-KEYWORDS="amd64 ~arm64"
-
-CPU_FLAGS_X86=(avx2 avx512f pclmul sse{,2,3,4_1,4_2} ssse3)
+KEYWORDS="~amd64"
 
 IUSE="
 	babeltrace +cephfs custom-cflags diskprediction dpdk fuse grafana
-	jemalloc jaeger kafka kerberos ldap lttng +mgr +parquet pmdk rabbitmq
+	jemalloc jaeger kafka kerberos ldap lttng +mgr nvmeof +parquet pmdk rabbitmq
 	+radosgw rbd-rwl rbd-ssd rdma rgw-lua selinux +ssl spdk +sqlite +system-boost
 	systemd +tcmalloc test +uring xfs zbd
 "
 
+CPU_FLAGS_X86=(avx2 avx512f pclmul sse{,2,3,4_1,4_2} ssse3)
 IUSE+="$(printf "cpu_flags_x86_%s\n" ${CPU_FLAGS_X86[@]})"
+
+REQUIRED_USE="
+	${PYTHON_REQUIRED_USE}
+	${LUA_REQUIRED_USE}
+	?? ( jemalloc tcmalloc )
+	diskprediction? ( mgr )
+	kafka? ( radosgw )
+	mgr? ( cephfs )
+	rabbitmq? ( radosgw )
+	rgw-lua? ( radosgw )
+	nvmeof? ( spdk )
+"
+
+RESTRICT="!test? ( test )"
+
+# tests need root access, and network access
+RESTRICT+=" test"
 
 DEPEND="
 	${LUA_DEPS}
@@ -43,8 +59,7 @@ DEPEND="
 	virtual/libudev:=
 	app-arch/bzip2:=
 	app-arch/lz4:=
-	app-arch/snappy:=
-	>=app-arch/snappy-1.1.9-r1
+	>=app-arch/snappy-1.1.9-r1:=
 	app-arch/zstd:=
 	app-shells/bash:0
 	app-misc/jq:=
@@ -53,7 +68,6 @@ DEPEND="
 	dev-lang/jsonnet:=
 	dev-libs/libaio:=
 	dev-libs/libnl:3=
-	dev-libs/libxml2:=
 	dev-libs/libevent:=
 	dev-libs/libutf8proc:=
 	dev-libs/nss:=
@@ -85,12 +99,13 @@ DEPEND="
 	!jemalloc? ( >=dev-util/google-perftools-2.6.1:= )
 	jaeger? (
 		dev-cpp/nlohmann_json:=
-		<dev-cpp/opentelemetry-cpp-1.10.0:=[jaeger]
+		<dev-cpp/opentelemetry-cpp-1.10:=[jaeger,prometheus]
 	)
 	kafka? ( dev-libs/librdkafka:= )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap:= )
 	lttng? ( dev-util/lttng-ust:= )
+	nvmeof? ( net-libs/grpc:= )
 	parquet? (
 		>=app-arch/lz4-1.10
 		dev-cpp/xsimd
@@ -182,30 +197,9 @@ RDEPEND="
 	)
 	selinux? ( sec-policy/selinux-ceph )
 "
-REQUIRED_USE="
-	${PYTHON_REQUIRED_USE}
-	${LUA_REQUIRED_USE}
-	?? ( jemalloc tcmalloc )
-	diskprediction? ( mgr )
-	kafka? ( radosgw )
-	mgr? ( cephfs )
-	rabbitmq? ( radosgw )
-	rgw-lua? ( radosgw )
-"
-
-RESTRICT="
-	!test? ( test )
-"
-
-# tests need root access, and network access
-RESTRICT+="test"
-
-# false positives unless all USE flags are on
-CMAKE_WARN_UNUSED_CLI=no
 
 PATCHES=(
 	"${FILESDIR}/ceph-12.2.0-use-provided-cpu-flag-values.patch"
-	"${FILESDIR}/ceph-14.2.0-cflags.patch"
 	"${FILESDIR}/ceph-17.2.1-no-virtualenvs.patch"
 	"${FILESDIR}/ceph-13.2.2-dont-install-sysvinit-script.patch"
 	"${FILESDIR}/ceph-14.2.0-dpdk-cflags.patch"
@@ -217,34 +211,19 @@ PATCHES=(
 	"${FILESDIR}/ceph-18.2.0-system-opentelemetry.patch"
 	"${FILESDIR}/ceph-17.2.0-osd_class_dir.patch"
 	"${FILESDIR}/ceph-17.2.0-gcc12-header.patch"
-	"${FILESDIR}/ceph-17.2.3-flags.patch"
 	# https://bugs.gentoo.org/866165
 	"${FILESDIR}/ceph-17.2.5-suppress-cmake-warning.patch"
 	"${FILESDIR}/ceph-17.2.5-gcc13-deux.patch"
-	# https://bugs.gentoo.org/905626
-	"${FILESDIR}/ceph-17.2.6-arrow-flatbuffers-c++14.patch"
 	# https://bugs.gentoo.org/868891
-	"${FILESDIR}/ceph-17.2.6-cmake.patch"
 	"${FILESDIR}/ceph-18.2.0-cyclic-deps.patch"
 	# https://bugs.gentoo.org/907739
 	"${FILESDIR}/ceph-18.2.0-cython3.patch"
 	# https://bugs.gentoo.org/936889
 	"${FILESDIR}/ceph-18.2.4-liburing.patch"
 	"${FILESDIR}/ceph-18.2.4-spdk.patch"
-	# https://bugs.gentoo.org/941069
-	"${FILESDIR}/ceph-19.2.0-importlib.patch"
-	"${FILESDIR}/ceph-19.2.1-uuid.patch"
-	"${FILESDIR}/ceph-19.2.1-graylog.patch"
-	"${FILESDIR}/ceph-19.2.1-librbd.patch"
-	"${FILESDIR}/ceph-19.2.1-rgw.patch"
-	"${FILESDIR}/ceph-19.2.1-immutableobjectcache.patch"
-	"${FILESDIR}/ceph-19.2.1-mgr.patch"
-	"${FILESDIR}/ceph-19.2.1-exporter.patch"
 	"${FILESDIR}/ceph-19.2.1-isa-l.patch"
-	"${FILESDIR}/ceph-19.2.2-py313-1.patch"
-	"${FILESDIR}/ceph-19.2.2-py313-2.patch"
-	"${FILESDIR}/ceph-19.2.2-py313-3.patch"
-	"${FILESDIR}/ceph-19.2.2-gcc15.patch"
+	"${FILESDIR}/ceph-20.1.0-nvmeof.patch"
+	"${FILESDIR}/ceph-20.1.0-opentelemetry.patch"
 )
 
 check-reqs_export_vars() {
@@ -303,7 +282,7 @@ src_prepare() {
 	local lua_version
 	lua_version=$(ver_cut 1-2 $(lua_get_version))
 	sed "s:find_package(Lua [0-9][.][0-9] REQUIRED):find_package(Lua ${lua_version} EXACT REQUIRED):" \
-		-i src/CMakeLists.txt
+		-i src/CMakeLists.txt || die
 
 	if use spdk; then
 		# https://bugs.gentoo.org/871942
@@ -317,12 +296,9 @@ src_prepare() {
 
 	if use parquet; then
 		# hammer in newer version of parquet/arrow
-		rm -rf src/arrow/
+		rm -r src/arrow/ || die
 		mv "${WORKDIR}/apache-arrow-17.0.0" src/arrow || die
 	fi
-
-	# newer boost don't support no header-only
-	sed -i -e 's~#include <boost/url/src.hpp>~#include <boost/url.hpp>~' src/mds/BoostUrlImpl.cc || die
 
 	# everyone forgot to link to boost_url
 	sed -i -e 's~target_link_libraries(ceph-mds mds ${CMAKE_DL_LIBS} global-static ceph-common~target_link_libraries(ceph-mds mds ${CMAKE_DL_LIBS} global-static ceph-common boost_url~' src/CMakeLists.txt || die
@@ -375,6 +351,7 @@ ceph_src_configure() {
 		-DCMAKE_DISABLE_FIND_PACKAGE_fmt=ON
 		-Wno-dev
 		-DCEPHADM_BUNDLED_DEPENDENCIES=none
+		-DWITH_NVMEOF_GATEWAY_MONITOR_CLIENT:BOOL=$(usex nvmeof)
 	)
 
 	# this breaks when re-configuring for python impl
@@ -419,11 +396,11 @@ ceph_src_configure() {
 	rm -f "${BUILD_DIR:-${S}}/CMakeCache.txt" \
 		|| die "failed to remove cmake cache"
 
-	# hopefully this will not be necessary in the next release
-	use parquet && export ARROW_XSIMD_URL="file:///${DISTDIR}/ceph-xsimd-${PV}.tar.gz"
-
 	# https://bugs.gentoo.org/927066
 	filter-lto
+
+	# hopefully this will not be necessary in the next release
+	use parquet && export ARROW_XSIMD_URL="file:///${DISTDIR}/ceph-xsimd-${PV}.tar.gz"
 
 	cmake_src_configure
 
