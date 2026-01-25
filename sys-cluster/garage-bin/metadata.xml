@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gentoo.maintainer@acmelab.top</email>
+		<name>adip</name>
+	</maintainer>
+	<use>
+		<flag name="fjall">Build garage with Fjall DB support</flag>
+	</use>
+	<upstream>
+		<bugs-to>https://git.deuxfleurs.fr/Deuxfleurs/garage</bugs-to>
+	</upstream>
+</pkgmetadata>
