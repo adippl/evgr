@@ -5,9 +5,6 @@
 		<email>gentoo.maintainer@acmelab.top</email>
 		<name>adip</name>
 	</maintainer>
-	<use>
-		<flag name="fjall">Build garage with Fjall DB support</flag>
-	</use>
 	<upstream>
 		<bugs-to>https://git.deuxfleurs.fr/Deuxfleurs/garage</bugs-to>
 	</upstream>
