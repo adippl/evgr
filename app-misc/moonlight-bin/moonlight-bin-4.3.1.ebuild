@@ -10,7 +10,7 @@ SRC_URI="https://github.com/moonlight-stream/moonlight-qt/releases/download/v${P
 S="${WORKDIR}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS=""
 
 DEPEND="
 	sys-fs/fuse:0
