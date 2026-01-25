@@ -540,7 +540,7 @@ LICENSE+="
 
 SLOT="0"
 
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 DEPEND="
 	!sys-cluster/garage-bin
