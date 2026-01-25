@@ -18,7 +18,7 @@ SRC_URI="
 S="${WORKDIR}"
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS=" amd64 arm arm64 x86 "
+KEYWORDS=" ~amd64 ~arm ~arm64 ~x86 "
 
 DEPEND="!sys-cluster/garage"
 #BDEPEND=""
