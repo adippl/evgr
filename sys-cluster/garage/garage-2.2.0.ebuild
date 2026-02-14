@@ -517,7 +517,7 @@ CRATES="
 
 inherit cargo
 
-RUST_MIN_VER="1.81.0"
+RUST_MIN_VER="1.89.0"
 
 DESCRIPTION="Garage, an S3-compatible distributed object store for self-hosted deployments"
 HOMEPAGE="https://garagehq.deuxfleurs.fr/"
