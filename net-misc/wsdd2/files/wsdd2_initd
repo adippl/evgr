@@ -1,0 +1,17 @@
+#!/sbin/openrc-run
+# Copyright 2026 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="wsdd2 daemon"
+description=""
+command=/usr/sbin/garage
+command_args=""
+
+supervise_daemon_args="--stdout $LOG_STDOUT --stderr $LOG_STDERR"
+
+depend() {
+	need logger net
+}
+
+supervisor="supervise-daemon"
+pidfile="/run/wsdd2.pid"

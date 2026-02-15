@@ -18,3 +18,10 @@ DEPEND="
 	"
 RDEPEND="${DEPEND}"
 #BDEPEND=""
+
+src_install(){
+	dosbin wsdd2
+	newinitd "${FILESDIR}/wsdd2_initd" wsdd2
+	#insinto "/etc/logrotate.d/"
+	#newins "${FILESDIR}/wsdd2.logrotate" "wsdd2"
+	}
