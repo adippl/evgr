@@ -4,10 +4,13 @@
 
 name="wsdd2 daemon"
 description=""
-command=/usr/sbin/garage
+command=/usr/sbin/wsdd2
 command_args=""
 
-supervise_daemon_args="--stdout $LOG_STDOUT --stderr $LOG_STDERR"
+#supervise_daemon_args="--stdout $LOG_STDOUT --stderr $LOG_STDERR"
+
+output_logger="/usr/bin/logger --tag wsdd2"
+error_logger="/usr/bin/logger --tag wsdd2_err"
 
 depend() {
 	need logger net
