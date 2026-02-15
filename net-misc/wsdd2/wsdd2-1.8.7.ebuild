@@ -10,7 +10,7 @@ SRC_URI="https://github.com/Netgear/wsdd2/archive/refs/tags/${PV}.tar.gz -> ${P}
 S="${WORKDIR}/wsdd2-${PV}"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 RESTRICT="mirror"
 #IUSE=""
 
