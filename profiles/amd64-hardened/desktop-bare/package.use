@@ -333,3 +333,9 @@ app-crypt/p11-kit abi_x86_32
 # required by @system
 # required by @world (argument)
 >=media-libs/libdisplay-info-0.3.0 abi_x86_32
+
+# required by dev-libs/elfutils-0.194::gentoo[debuginfod]
+# required by dev-debug/gdb-16.3::gentoo[debuginfod]
+# required by @system
+# required by @world (argument)
+>=dev-libs/json-c-0.18 abi_x86_32
