@@ -18,6 +18,7 @@ RESTRICT="mirror"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
+EGO_SUM=1
 
 #src_unpack() {
 #	#git-r3_src_unpack
