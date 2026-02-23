@@ -11,7 +11,7 @@ else
 	seaweedfs_config="$INSTANCE"
 fi
 
-name="seaweedfs daemon"
+name="${SVCNAME} daemon"
 description=""
 command=/usr/bin/weed
 command_args="${seaweedfs_args}"
@@ -19,10 +19,10 @@ command_args="${seaweedfs_args}"
 
 #: "${SEAWEEDFS_USER:="seaweedfs"}"
 #: "${SEAWEEDFS_GROUP:="seaweedfs"}"
-: "${LOG_STDOUT:="/var/log/$seaweedfs_config.stdout.log"}"
-: "${LOG_STDERR:="/var/log/$seaweedfs_config.stderr.log"}"
+: "${LOG_STDOUT:="/var/log/${SVCNAME}.stdout.log"}"
+: "${LOG_STDERR:="/var/log/${SVCNAME}.stderr.log"}"
 
-command_user="$SEAWEEDFS_USER:$SEAWEEDFS_GROUP"
+#command_user="$SEAWEEDFS_USER:$SEAWEEDFS_GROUP"
 supervise_daemon_args="--stdout $LOG_STDOUT --stderr $LOG_STDERR"
 
 depend() {
@@ -37,7 +37,11 @@ pidfile="/run/${INSTANCE}.pid"
 #error_logger="/usr/bin/logger --tag lpmd_err"
 #command_background=true
 
-start_pre(){
-	touch $LOG_STDOUT $LOG_STDERR
-	chown $SEAWEEDFS_USER:$SEAWEEDFS_GROUP $LOG_STDOUT $LOG_STDERR
-}
+#start_pre(){
+#	touch $LOG_STDOUT $LOG_STDERR
+#	chown $SEAWEEDFS_USER:$SEAWEEDFS_GROUP $LOG_STDOUT $LOG_STDERR
+#}
+
+#start_pre(){
+#	ebegin "$INSTANCE"
+#}
