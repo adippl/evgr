@@ -19,11 +19,11 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-src_unpack() {
-	#git-r3_src_unpack
-	go-module_live_vendor # This is needed most of the time except when the source includes the vendor files too, like the lazygit project
-	default
-}
+#src_unpack() {
+#	#git-r3_src_unpack
+#	go-module_live_vendor # This is needed most of the time except when the source includes the vendor files too, like the lazygit project
+#	default
+#}
 
 src_compile() {
 	go build
