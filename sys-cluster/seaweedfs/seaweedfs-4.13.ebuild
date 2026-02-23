@@ -13,10 +13,17 @@ SRC_URI+=" https://s3.home.acmelab.cc/evgr-distfiles/${PN}/${P}-deps.tar.xz "
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64"
+RESTRICT="mirror"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
+
+src_unpack() {
+	#git-r3_src_unpack
+	go-module_live_vendor # This is needed most of the time except when the source includes the vendor files too, like the lazygit project
+	default
+}
 
 src_compile() {
 	go build
