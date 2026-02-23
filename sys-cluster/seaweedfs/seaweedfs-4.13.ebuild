@@ -36,4 +36,5 @@ src_compile() {
 src_install() {
 	dobin weed
 	default
+	newinitd "${FILESDIR}/seaweedfs_initd" seaweedfs
 }
