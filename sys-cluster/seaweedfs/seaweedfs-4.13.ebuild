@@ -27,6 +27,8 @@ BDEPEND=""
 #	default
 #}
 
+S="${WORKDIR}/${P}/weed"
+
 src_compile() {
 	go build
 }
