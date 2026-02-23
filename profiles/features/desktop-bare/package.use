@@ -138,3 +138,8 @@ dev-lang/rust abi_x86_32
 # required by @system
 # required by @world (argument)
 sys-apps/dtc python
+
+# required by www-client/chromium-145.0.7632.109::gentoo[llvm_slot_21,-bundled-toolchain]
+# required by @system
+# required by @world (argument)
+>=dev-lang/rust-1.92.0_p1-r1 rustfmt
