@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="amd64"
 RESTRICT="mirror"
 
-DEPEND=""
+DEPEND="
+	>dev-lang/go-1.24.9
+	"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
