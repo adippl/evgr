@@ -8,7 +8,7 @@ inherit go-module
 DESCRIPTION=""
 HOMEPAGE="https://github.com/seaweedfs/seaweedfs"
 SRC_URI=" https://github.com/seaweedfs/seaweedfs/archive/refs/tags/4.13.tar.gz -> ${P} "
-#SRC_URI+=" https://s3.home.acmelab.cc/evgr-distfiles/${PN}/${P}-deps.tar.xz "
+SRC_URI+=" https://s3.home.acmelab.cc/evgr-distfiles/seaweedfs/${P}-deps.tar.xz "
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -18,7 +18,6 @@ RESTRICT="mirror"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
-EGO_SUM=1
 
 #src_unpack() {
 #	#git-r3_src_unpack
