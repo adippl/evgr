@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gentoo.maintainer@acmelab.top</email>
+		<name>ev</name>
+	</maintainer>
+	<upstream>
+		<bugs-to>https://github.com/seaweedfs/seaweedfs</bugs-to>
+		<remote-id type="github">seaweedfs/seaweedfs</remote-id>
+	</upstream>
+</pkgmetadata>

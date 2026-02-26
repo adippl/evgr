@@ -20,7 +20,7 @@ RESTRICT="mirror"
 DEPEND="
 	"
 BDEPEND="
-	>dev-lang/go-1.24.9
+	>dev-lang/go-1.24.9-r0
 "
 
 RDEPEND="
