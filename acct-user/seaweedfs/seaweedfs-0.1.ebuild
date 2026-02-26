@@ -11,6 +11,6 @@ ACCT_USER_GROUPS=( seaweedfs )
 
 ACCT_USER_HOME="/var/lib/seaweedfs"
 ACCT_USER_HOME_OWNER="seaweedfs:seaweedfs"
-ACCT_USER_HOME_PERMS="0750"
+ACCT_USER_HOME_PERMS="0550"
 
 acct-user_add_deps
