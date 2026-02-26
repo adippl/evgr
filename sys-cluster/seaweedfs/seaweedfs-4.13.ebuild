@@ -5,10 +5,12 @@ EAPI=8
 
 inherit go-module
 
-DESCRIPTION=""
+DESCRIPTION="seaweedfs distributed filesystem"
 HOMEPAGE="https://github.com/seaweedfs/seaweedfs"
-SRC_URI=" https://github.com/seaweedfs/seaweedfs/archive/refs/tags/4.13.tar.gz -> ${P}.tar.xz "
+SRC_URI=" https://github.com/seaweedfs/seaweedfs/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.xz "
 SRC_URI+=" https://s3.home.acmelab.cc/evgr-distfiles/seaweedfs/${P}-deps.tar.xz "
+
+S="${WORKDIR}/${P}/weed"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -26,14 +28,6 @@ RDEPEND="
 	acct-user/seaweedfs
 	acct-group/seaweedfs
 "
-
-#src_unpack() {
-#	#git-r3_src_unpack
-#	go-module_live_vendor # This is needed most of the time except when the source includes the vendor files too, like the lazygit project
-#	default
-#}
-
-S="${WORKDIR}/${P}/weed"
 
 src_compile() {
 	go build

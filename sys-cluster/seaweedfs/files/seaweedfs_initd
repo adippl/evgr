@@ -40,6 +40,7 @@ pidfile="/run/seaweedfs/${INSTANCE}.pid"
 start_pre(){
 	touch $LOG_STDOUT $LOG_STDERR
 	chown $SEAWEEDFS_USER:$SEAWEEDFS_GROUP $LOG_STDOUT $LOG_STDERR
+	mkdir -p /run/seaweedfs
 }
 
 #start_pre(){
