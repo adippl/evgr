@@ -15,11 +15,18 @@ SLOT="0"
 KEYWORDS="amd64 arm64"
 RESTRICT="mirror"
 
-DEPEND="
+#DEPEND="
+#	>dev-lang/go-1.24.9
+#	"
+BDEPEND="
 	>dev-lang/go-1.24.9
-	"
-RDEPEND="${DEPEND}"
-BDEPEND=""
+"
+
+RDEPEND="
+	${DEPEND}
+	acct-user/garage
+	acct-group/garage
+"
 
 #src_unpack() {
 #	#git-r3_src_unpack
@@ -37,4 +44,7 @@ src_install() {
 	dobin weed
 	default
 	newinitd "${FILESDIR}/seaweedfs_initd" seaweedfs
+	insinto "/etc/logrotate.d/"
+	newins "${FILESDIR}/${PN}.logrotate" "${PN}"
+	mkdir -p ${D}/var/log/seaweedfs
 }

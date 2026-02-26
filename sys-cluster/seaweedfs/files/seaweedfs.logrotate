@@ -1,0 +1,13 @@
+/var/log/seaweedfs/*.log {
+	daily
+	rotate 7
+	compress
+	delaycompress
+	missingok
+	notifempty
+	copytruncate
+	dateext
+	dateformat -%Y%m%d
+	create 0640 seaweedfs seaweedfs
+}
+
