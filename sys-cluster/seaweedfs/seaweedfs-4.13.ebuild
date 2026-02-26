@@ -15,9 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 arm64"
 RESTRICT="mirror"
 
-#DEPEND="
-#	>dev-lang/go-1.24.9
-#	"
+DEPEND="
+	"
 BDEPEND="
 	>dev-lang/go-1.24.9
 "
@@ -46,5 +45,5 @@ src_install() {
 	newinitd "${FILESDIR}/seaweedfs_initd" seaweedfs
 	insinto "/etc/logrotate.d/"
 	newins "${FILESDIR}/${PN}.logrotate" "${PN}"
-	mkdir -p ${D}/var/log/seaweedfs
+	keepdir /var/log/seaweedfs
 }
