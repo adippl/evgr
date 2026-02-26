@@ -23,8 +23,8 @@ BDEPEND="
 
 RDEPEND="
 	${DEPEND}
-	acct-user/garage
-	acct-group/garage
+	acct-user/seaweedfs
+	acct-group/seaweedfs
 "
 
 #src_unpack() {
