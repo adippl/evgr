@@ -7,7 +7,7 @@ inherit go-module
 
 DESCRIPTION="seaweedfs distributed filesystem"
 HOMEPAGE="https://github.com/seaweedfs/seaweedfs"
-SRC_URI=" https://github.com/seaweedfs/seaweedfs/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.xz "
+SRC_URI=" https://github.com/seaweedfs/seaweedfs/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz "
 SRC_URI+=" https://s3.home.acmelab.cc/evgr-distfiles/seaweedfs/${P}-deps.tar.xz "
 
 S="${WORKDIR}/${P}/weed"
