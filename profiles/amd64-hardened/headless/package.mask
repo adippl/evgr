@@ -14,4 +14,4 @@
 
 
 # ceph 19 doesn't build on boost 1.89
->dev-libs/boost-1.88-r9990
+>dev-libs/boost-1.89.0
