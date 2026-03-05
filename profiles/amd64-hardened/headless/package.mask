@@ -10,4 +10,8 @@
 <app-containers/cri-o-1.31.0
 
 
->sys-cluster/ceph-19.2.3
+>sys-cluster/ceph-19.3.0
+
+
+# ceph 19 doesn't build on boost 1.89
+>dev-libs/boost-1.88-r9990
