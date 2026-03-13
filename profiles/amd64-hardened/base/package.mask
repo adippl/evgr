@@ -1,4 +1,0 @@
-# masking to prevent rollback
-<=sys-cluster/ceph-19.2.0
-# masking to prevent major version upgrade
->sys-cluster/ceph-19.3.0
