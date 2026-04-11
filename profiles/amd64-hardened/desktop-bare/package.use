@@ -339,3 +339,9 @@ app-crypt/p11-kit abi_x86_32
 # required by @system
 # required by @world (argument)
 >=dev-libs/json-c-0.18 abi_x86_32
+
+# required by net-misc/curl-8.19.0::gentoo[quic,openssl]
+# required by sys-apps/smartmontools-7.5-r1::gentoo
+# required by @system
+# required by @world (argument)
+>=net-libs/ngtcp2-1.22.0 abi_x86_32
