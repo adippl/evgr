@@ -234,6 +234,8 @@ PATCHES=(
 	"${FILESDIR}/ceph-20.1.1-boost-url-linking.patch"
 	# https://bugs.gentoo.org/969039
 	"${FILESDIR}"/ceph-20.1.1-boost-1.89-{1,2,3}.patch
+	"${FILESDIR}/0003-ceph-mgr-only-suggest-mgr-plugins.patch"
+	"${FILESDIR}/0010-disable-elastic_shared_blob-to-prevent-crashing-OSDs.patch"
 	"${FILESDIR}/0014-mgr-fix-module-import-by-making-NOTIFY_TYPES-in-py-m.patch"
 )
 
