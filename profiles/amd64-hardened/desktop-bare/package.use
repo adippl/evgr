@@ -345,3 +345,15 @@ app-crypt/p11-kit abi_x86_32
 # required by @system
 # required by @world (argument)
 >=net-libs/ngtcp2-1.22.0 abi_x86_32
+
+# required by media-libs/libplacebo-7.360.1::gentoo
+# required by media-video/mpv-0.41.0-r1::gentoo
+# required by @system
+# required by @world (argument)
+>=media-libs/shaderc-2026.1 abi_x86_32
+# required by media-libs/shaderc-2026.1::gentoo
+# required by media-libs/libplacebo-7.360.1::gentoo
+# required by media-video/mpv-0.41.0-r1::gentoo
+# required by @system
+# required by @world (argument)
+>=dev-util/glslang-1.4.341.0 abi_x86_32
