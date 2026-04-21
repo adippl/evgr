@@ -20,6 +20,7 @@
 -*x11-misc/urxvt-font-size	# missing arm64 keyword
 -*media-video/jellyfin-media-player	# missing arm64 keyword
 -*net-im/discord		# missing arm64 keyword
+-*app-misc/srm 			# missing arm64 keyword
 
 -*media-sound/pulseaudio
 -*media-sound/pulsemixer
