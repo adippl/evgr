@@ -156,5 +156,5 @@ x11-misc/i3status -pulseaudio
 
 net-print/cups -X -usb
 www-client/w3m -imlib
-gui-libs/gtk+ -vim-syntax
+x11-libs/gtk+ -vim-syntax
 gui-libs/libdecor dbus
