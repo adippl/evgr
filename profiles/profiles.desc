@@ -19,3 +19,5 @@ arm64 arm64/base stable
 arm64 arm64/pinebook-pro-bare stable
 arm64 arm64/pinebook-pro stable
 arm64 arm64/odroid-hc4 stable
+arm64 arm64/asahi stable
+arm64 arm64/asahi-desktop stable
