@@ -154,6 +154,7 @@ sys-apps/dtc python
 
 dev-qt/qtbase dbus
 dev-qt/qttools qml
+kde-frameworks/kguiaddons dbus
 
 gnome-base/librsvg vala
 
