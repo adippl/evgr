@@ -22,9 +22,6 @@
 -*net-im/discord		# missing arm64 keyword
 -*app-misc/srm 			# missing arm64 keyword
 
--*media-sound/pulseaudio
--*media-sound/pulsemixer
-*media-video/pipewire
 
 -*dev-lisp/sbcl
 -*dev-util/scanmem
@@ -49,10 +46,13 @@
 -*x11-base/xorg-server
 
 -*www-client/chromium
+-*net-vpn/openvpn
 
 -*virtual/dist-kernel
 -*sys-kernel/gentoo-kernel
 -*sys-kernel/genkernel
 
 -*media-sound/pulseaudio-daemon
--*net-vpn/openvpn
+-*media-sound/pulseaudio
+-*media-sound/pulsemixer
+*media-video/pipewire
