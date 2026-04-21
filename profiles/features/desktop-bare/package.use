@@ -151,3 +151,5 @@ sys-apps/dtc python
 dev-qt/qtbase dbus
 
 gnome-base/librsvg vala
+
+x11-misc/i3status -pulseaudio
