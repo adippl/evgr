@@ -56,3 +56,4 @@
 -*media-sound/pulseaudio
 -*media-sound/pulsemixer
 *media-video/pipewire
+sys-auth/rtkit
