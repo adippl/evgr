@@ -114,3 +114,8 @@ x11-libs/goffice ~arm64
 ~sys-cluster/keepalived-2.2.8 **
 ~sys-cluster/minio-bin-2024.08.03 ~arm64
 ~net-analyzer/bmon-4.0 **
+
+lxde-base/lxappearance ~arm64
+media-video/mkvtoolnix ~arm64
+net-analyzer/nethogs ~arm64
+net-news/newsboat ~arm64
