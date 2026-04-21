@@ -55,7 +55,7 @@ net-proxy/haproxy		-slz
 #dev
 app-misc/jq			-oniguruma
 dev-python/numpy	lapack
-net-libs/nodejs		-snapshot -npm inspector
+#net-libs/nodejs		-snapshot -npm inspector
 dev-lang/mono		minimal
 
 sys-cluster/minikube	libvirt
