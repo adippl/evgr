@@ -65,6 +65,7 @@ media-gfx/ristretto ~arm64
 media-sound/audacity ~arm64
 media-libs/libsoundtouch ~arm64
 media-libs/portsmf ~arm64
+media-libs/suil ~arm64
 
 net-misc/tigervnc ~arm64
 sys-block/fio ~arm64
