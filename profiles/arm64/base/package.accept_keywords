@@ -106,6 +106,9 @@ dev-python/scikit-learn ~arm64
 
 
 
+app-office/gnumeric ~arm64
+x11-libs/goffice ~arm64
+
 
 ~app-admin/loki-2.8.3 **
 ~sys-cluster/keepalived-2.2.8 **
