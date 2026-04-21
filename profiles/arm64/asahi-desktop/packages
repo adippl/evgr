@@ -58,6 +58,7 @@
 -*media-sound/pulseaudio
 -*media-sound/pulsemixer
 *media-video/pipewire
+*sys-apps/speakersafetyd
 *sys-auth/rtkit
 *media-sound/helvum
 *media-sound/wiremix
