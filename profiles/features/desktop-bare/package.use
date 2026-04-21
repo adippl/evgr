@@ -53,6 +53,7 @@ dev-qt/qtbase				cups gtk libproxy
 media-sound/mpg123-base		sdl
 
 media-gfx/gimp				-jpeg2k jpegxl mng
+app-text/poppler			-png
 
 #desktop-tools
 app-emulation/qemu				virgl
