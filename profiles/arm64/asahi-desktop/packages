@@ -35,6 +35,8 @@
 -*x11-drivers/xf86-input-libinput
 -*x11-drivers/xf86-input-synaptics
 
+-*virtual/dist-kernel
+
 -*www-client/firefox
 
 # keep xorg packages for backwards compatibility
