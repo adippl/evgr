@@ -58,6 +58,8 @@ dev-python/numpy	lapack
 #net-libs/nodejs		-snapshot -npm inspector
 dev-lang/mono		minimal
 
+dev-debug/gdb		-lzma -zstd
+
 sys-cluster/minikube	libvirt
 
 

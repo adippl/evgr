@@ -2,5 +2,6 @@
 *sys-kernel/linux-firmware
 *sys-apps/asahi-meta
 *virtual/dist-kernel:asahi
+-*virtual/dist-kernel
 
 -*sys-kernel/genkernel
