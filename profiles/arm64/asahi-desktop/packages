@@ -46,6 +46,7 @@
 -*x11-terms/rxvt-unicode
 -*x11-wm/i3
 -*x11-base/xorg-drivers
+-*x11-base/xorg-server
 
 -*www-client/chromium
 
