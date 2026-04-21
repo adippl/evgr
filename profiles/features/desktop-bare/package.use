@@ -19,7 +19,7 @@ media-libs/libwebp				-opengl
 media-sound/cmus				-elogind
 media-video/ffmpeg				bluray libcaca openh264 openal jpeg2k v4l chromium libdrm x264 x265
 media-video/mpv					cli archive libmpv -egl 
-net-wireless/wpa_supplicant		gui
+net-wireless/wpa_supplicant		gui dbus
 www-client/chromium				hangouts proprietary-codecs -widevine
 
 www-client/w3m					imlib
