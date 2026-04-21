@@ -180,4 +180,4 @@ app-emulation/spice				-opus
 app-text/gspell					vala
 app-crypt/gcr					-vala
 dev-libs/botan					-lzma
-media-libs/imlib2				-imlib2
+media-libs/imlib2				-jpegxl
