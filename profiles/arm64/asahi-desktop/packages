@@ -29,3 +29,4 @@
 -*dev-lisp/sbcl
 -*dev-util/scanmem
 -*sys-fs/simple-mtpfs
+-*x11-misc/xss-lock
