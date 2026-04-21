@@ -50,6 +50,7 @@ app-crypt/pinentry			gtk qt6
 
 gui-libs/gtk				cups
 dev-qt/qtbase				cups gtk libproxy
+media-sound/mpg123-base		sdl
 
 
 
