@@ -48,6 +48,9 @@ app-emulation/virt-manager	gui
 app-emulation/qemu			gtk 
 app-crypt/pinentry			gtk qt6
 
+gui-libs/gtk				cups
+dev-qt/qtbase				cups gtk libproxy
+
 
 
 #desktop-tools
