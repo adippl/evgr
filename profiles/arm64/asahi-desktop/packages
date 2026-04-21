@@ -21,6 +21,6 @@
 -*media-video/jellyfin-media-player	# missing arm64 keyword
 -*net-im/discord		# missing arm64 keyword
 
--*media-sound/pulseaudio 
+-*media-sound/pulseaudio
 -*media-sound/pulsemixer
 *media-video/pipewire
