@@ -9,7 +9,7 @@
 #-*media-sound/mpd		# missing arm64 keyword
 #-*media-sound/ncmpcpp		# missing arm64 keyword
 -*net-analyzer/ettercap		# missing arm64 keyword
--*net-analyzer/nethogs		# missing arm64 keyword
+#-*net-analyzer/nethogs		# missing arm64 keyword
 -*net-im/signal-desktop-bin	# missing arm64 keyword
 -*net-misc/s3cmd		# missing arm64 keyword
 -*sys-apps/btrfs-compsize	# missing arm64 keyword
