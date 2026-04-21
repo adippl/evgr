@@ -167,5 +167,6 @@ www-client/w3m -imlib
 x11-libs/gtk+ -vim-syntax
 gui-libs/libdecor dbus
 
-media-plugins/alsa-plugins -ffmpeg
-media-libs/libjxl gif
+media-plugins/alsa-plugins	-ffmpeg
+media-libs/libjxl			gif
+media-libs/jasper			-jpeg -opengl
