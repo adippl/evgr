@@ -60,6 +60,8 @@ dev-lang/mono		minimal
 
 dev-debug/gdb		-lzma -zstd
 
+net-vpn/tor			-lzma -zstd
+
 sys-cluster/minikube	libvirt
 
 
