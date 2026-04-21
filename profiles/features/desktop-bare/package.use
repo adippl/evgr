@@ -143,3 +143,5 @@ sys-apps/dtc python
 # required by @system
 # required by @world (argument)
 >=dev-lang/rust-1.92.0_p1-r1 rustfmt
+
+dev-qt/qtbase dbus
