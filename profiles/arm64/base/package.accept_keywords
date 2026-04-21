@@ -61,8 +61,11 @@ dev-lang/mono ~arm64
 dev-lang/tcc ~arm64
 media-gfx/mcomix ~arm64
 media-gfx/ristretto ~arm64
+
 media-sound/audacity ~arm64
 media-libs/libsoundtouch ~arm64
+media-libs/portsmf ~arm64
+
 net-misc/tigervnc ~arm64
 sys-block/fio ~arm64
 
