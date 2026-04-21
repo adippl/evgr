@@ -27,3 +27,4 @@
 *media-video/pipewire
 
 -*dev-lisp/sbcl
+-*dev-util/scanmem
