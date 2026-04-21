@@ -168,3 +168,4 @@ x11-libs/gtk+ -vim-syntax
 gui-libs/libdecor dbus
 
 media-plugins/alsa-plugins -ffmpeg
+media-libs/libjxl gif
