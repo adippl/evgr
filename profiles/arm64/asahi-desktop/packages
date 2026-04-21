@@ -47,3 +47,7 @@
 -*x11-wm/i3
 
 -*www-client/chromium
+
+-*virtual/dist-kernel
+-*sys-kernel/gentoo-kernel
+-*sys-kernel/genkernel
