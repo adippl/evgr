@@ -51,3 +51,5 @@
 -*virtual/dist-kernel
 -*sys-kernel/gentoo-kernel
 -*sys-kernel/genkernel
+
+-*media-sound/pulseaudio-daemon
