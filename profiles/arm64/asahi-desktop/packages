@@ -36,3 +36,16 @@
 -*x11-drivers/xf86-input-synaptics
 
 -*www-client/firefox
+
+# keep xorg packages for backwards compatibility
+-*media-gfx/scrot
+-*x11-apps/xinput
+-*x11-apps/xkill
+-*x11-apps/xmodmap
+-*x11-apps/xrandr
+-*x11-misc/arandr
+-*x11-misc/i3lock
+-*x11-misc/urxvt-font-size
+-*x11-misc/xautolock
+-*x11-terms/rxvt-unicode
+-*x11-wm/i3
