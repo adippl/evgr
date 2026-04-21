@@ -49,3 +49,5 @@
 -*x11-misc/xautolock
 -*x11-terms/rxvt-unicode
 -*x11-wm/i3
+
+-*www-client/chromium
