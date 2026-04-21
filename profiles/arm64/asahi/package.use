@@ -1,1 +1,1 @@
-sys-devel/gcc -zstd -lto -go
+sys-devel/gcc -lto -go
