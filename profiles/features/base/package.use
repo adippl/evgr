@@ -12,7 +12,7 @@ sys-process/procps				-elogind -nls
 net-nds/openldap				minimal
 sys-apps/util-linux				udev
 sys-process/procps				-elogind
-net-mail/isync					sasl
+#net-mail/isync					sasl
 sys-power/s-tui					stress
 sys-kernel/gentoo-kernel-bin	initramfs
 sys-kernel/installkernel		dracut
