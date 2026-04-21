@@ -70,7 +70,7 @@
 *sys-cluster/kubectl
 *sys-cluster/minikube
 *sys-devel/crossdev
-*sys-devel/distcc
+#*sys-devel/distcc
 *sys-fs/inotify-tools
 
 # work
