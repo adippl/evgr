@@ -30,3 +30,7 @@
 -*dev-util/scanmem
 -*sys-fs/simple-mtpfs
 -*x11-misc/xss-lock
+
+-*x11-drivers/xf86-input-evdev
+-*x11-drivers/xf86-input-libinput
+-*x11-drivers/xf86-input-synaptics
