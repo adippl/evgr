@@ -52,7 +52,7 @@ gui-libs/gtk				cups
 dev-qt/qtbase				cups gtk libproxy
 media-sound/mpg123-base		sdl
 
-media-gfx/gimp				-jpeg2k jpegxl nmg
+media-gfx/gimp				-jpeg2k jpegxl mng
 
 #desktop-tools
 app-emulation/qemu				virgl
