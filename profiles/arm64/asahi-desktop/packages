@@ -30,6 +30,8 @@
 
 -*www-client/firefox
 
+*net-misc/networkmanager
+
 # keep xorg packages for backwards compatibility
 -*media-gfx/scrot
 -*x11-apps/xinput

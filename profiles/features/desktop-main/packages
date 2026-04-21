@@ -78,6 +78,7 @@
 #*dev-python/python-ironicclient
 *dev-python/python-openstackclient
 *net-misc/s3cmd
+*net-misc/rclone
 *net-vpn/openvpn
 *sys-boot/woeusb-ng
 *sys-fs/squashfs-tools
