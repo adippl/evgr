@@ -2,3 +2,4 @@ app-office/gnumeric ~arm64
 lxde-base/lxappearance ~arm64
 media-video/mkvtoolnix ~arm64
 net-analyzer/nethogs ~arm64
+net-news/newsboat ~arm64
