@@ -176,3 +176,4 @@ media-libs/gegl				-ffmpeg -jpeg2k sdl tiff
 sys-process/procps				-elogind -nls
 net-analyzer/wireshark			-opus
 dev-lang/swig					pcre
+app-emulation/spice				-opus
