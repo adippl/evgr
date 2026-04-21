@@ -28,3 +28,4 @@
 
 -*dev-lisp/sbcl
 -*dev-util/scanmem
+-*sys-fs/simple-mtpfs
