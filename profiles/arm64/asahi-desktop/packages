@@ -59,3 +59,5 @@
 -*media-sound/pulsemixer
 *media-video/pipewire
 sys-auth/rtkit
+media-sound/helvum
+media-sound/wiremix

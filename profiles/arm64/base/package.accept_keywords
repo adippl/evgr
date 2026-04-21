@@ -122,3 +122,4 @@ net-analyzer/nethogs ~arm64
 net-news/newsboat ~arm64
 dev-libs/stfl ~arm64
 media-sound/helvum ~arm64
+media-sound/wiremix **
