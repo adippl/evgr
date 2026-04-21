@@ -1,4 +1,6 @@
-dev-lang/rust-bin
-sys-kernel/linux-firmware
-sys-apps/asahi-meta
-virtual/dist-kernel:asahi
+*dev-lang/rust-bin
+*sys-kernel/linux-firmware
+*sys-apps/asahi-meta
+*virtual/dist-kernel:asahi
+
+-*sys-kernel/genkernel
