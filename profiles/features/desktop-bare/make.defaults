@@ -11,8 +11,8 @@ USE="${USE} vulkan opengl vaapi cairo"
 USE="${USE} X xft alsa pulseaudio openal -gpm -dbus -qt5 -gnome -kde "
 USE="${USE} udev elogind -policykit "
 
-#desktop bloat
-USE="${USE} -vala"
+##desktop bloat
+#USE="${USE} -vala"
 
 INPUT_DEVICES="mouse synaptics keyboard"
 
