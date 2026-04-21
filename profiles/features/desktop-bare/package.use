@@ -46,7 +46,7 @@ net-analyzer/ettercap		gtk
 app-emulation/winetricks	gtk
 app-emulation/virt-manager	gui
 app-emulation/qemu			gtk 
-app-crypt/pinentry			gtk
+app-crypt/pinentry			gtk qt6
 
 
 
