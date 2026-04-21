@@ -149,3 +149,5 @@ sys-apps/dtc python
 >=dev-lang/rust-1.92.0_p1-r1 rustfmt
 
 dev-qt/qtbase dbus
+
+gnome-base/librsvg vala
