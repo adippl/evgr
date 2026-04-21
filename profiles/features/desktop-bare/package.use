@@ -54,6 +54,7 @@ media-sound/mpg123-base		sdl
 
 media-gfx/gimp				-jpeg2k jpegxl mng
 app-text/poppler			-png
+media-libs/gexiv2			vala
 
 #desktop-tools
 app-emulation/qemu				virgl
