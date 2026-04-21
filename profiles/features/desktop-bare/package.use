@@ -172,3 +172,5 @@ media-plugins/alsa-plugins	-ffmpeg
 media-libs/libjxl			gif
 media-libs/jasper			-jpeg -opengl
 media-libs/gegl				-ffmpeg -jpeg2k sdl tiff
+
+sys-process/procps				-elogind -nls
