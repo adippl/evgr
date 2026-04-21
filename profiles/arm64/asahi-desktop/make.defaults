@@ -1,3 +1,4 @@
 VIDEO_CARDS=" -* asahi"
 
 USE="${USE} lcms "
+USE="${USE} pipewire "
