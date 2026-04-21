@@ -10,7 +10,8 @@ USE="${USE} icu vim-syntax zstd lzma threads bindist"
 USE="${USE} -ldap -smartcard -upnp"
 
 #bloat
-USE="${USE} -systemd -vala -pcre -perl"
+#USE="${USE} -systemd -vala -pcre -perl"
+USE="${USE} -systemd -pcre -perl"
 
 GRUB_PLATFORMS="efi-64 pc"
 QEMU_USER_TARGETS="i386 x86_64 arm aarch64"
