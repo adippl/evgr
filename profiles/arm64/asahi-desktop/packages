@@ -44,6 +44,7 @@
 -*x11-wm/i3
 -*x11-base/xorg-drivers
 -*x11-base/xorg-server
+-*x11-drivers/xf86-input-synaptics
 
 -*www-client/chromium
 -*net-vpn/openvpn
