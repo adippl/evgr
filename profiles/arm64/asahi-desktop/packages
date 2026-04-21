@@ -25,3 +25,5 @@
 -*media-sound/pulseaudio
 -*media-sound/pulsemixer
 *media-video/pipewire
+
+-*dev-lisp/sbcl
