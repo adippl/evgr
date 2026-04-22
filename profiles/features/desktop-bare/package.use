@@ -163,6 +163,7 @@ gnome-base/librsvg vala
 
 #x11-misc/i3status -pulseaudio
 sys-apps/asahi-meta sound
+media-video/pipewire lv2 sound-server
 
 net-print/cups -X -usb
 www-client/w3m -imlib
