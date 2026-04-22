@@ -31,6 +31,10 @@
 
 *net-misc/networkmanager
 
+*net-vpn/tailscale
+*x11-apps/mesa-progs
+*mail-client/thunderbird
+
 # keep xorg packages for backwards compatibility
 -*media-gfx/scrot
 -*x11-apps/xinput

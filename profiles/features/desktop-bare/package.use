@@ -161,7 +161,8 @@ kde-frameworks/kguiaddons dbus
 
 gnome-base/librsvg vala
 
-x11-misc/i3status -pulseaudio
+#x11-misc/i3status -pulseaudio
+sys-apps/asahi-meta audio
 
 net-print/cups -X -usb
 www-client/w3m -imlib
