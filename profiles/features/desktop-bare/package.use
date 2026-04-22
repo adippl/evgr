@@ -183,3 +183,4 @@ app-text/gspell					vala
 app-crypt/gcr					-vala
 dev-libs/botan					-lzma
 media-libs/imlib2				-jpegxl
+dev-util/glslang				pcre
