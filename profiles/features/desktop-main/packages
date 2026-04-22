@@ -69,6 +69,7 @@
 *sys-block/fio
 *sys-cluster/kubectl
 *sys-cluster/minikube
+app-admin/opentofu
 *sys-devel/crossdev
 #*sys-devel/distcc
 *sys-fs/inotify-tools
