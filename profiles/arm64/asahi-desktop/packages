@@ -34,6 +34,7 @@
 *net-vpn/tailscale
 *x11-apps/mesa-progs
 *mail-client/thunderbird
+-*mail-client/thunderbird-bin
 
 # keep xorg packages for backwards compatibility
 -*media-gfx/scrot
