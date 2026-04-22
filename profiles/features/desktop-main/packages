@@ -84,6 +84,8 @@
 *sys-fs/squashfs-tools
 *www-client/chromium
 
+*media-video/libva-utils
+
 
 # X and friends
 *app-arch/file-roller
