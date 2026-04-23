@@ -1,1 +1,12 @@
-app-misc/ranger ~arm64
+# required by muvm (argument)
+app-emulation/muvm ~arm64
+
+# required by FEX (argument)
+app-emulation/FEX ~arm64
+
+# required by app-emulation/FEX-2604::asahi
+# required by FEX (argument)
+app-emulation/fex-rootfs-gentoo ~arm64
+
+# required by games-util/steam::asahi (argument)
+games-util/steam ~arm64

@@ -122,5 +122,6 @@ app-admin/opentofu
 #gms
 #*games-simulation/openttd
 
+*x11-misc/xss-lock
 
 *net-im/discord

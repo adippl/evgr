@@ -123,3 +123,17 @@ net-news/newsboat ~arm64
 dev-libs/stfl ~arm64
 media-sound/helvum ~arm64
 media-sound/wiremix **
+
+net-misc/moonlight ~arm64
+
+
+app-misc/ranger ~arm64
+x11-misc/xss-lock **
+
+games-strategy/0ad ~arm64
+
+app-benchmarks/stress ~arm64
+
+gui-apps/wev **
+
+media-sound/wiremix **
