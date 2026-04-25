@@ -63,7 +63,8 @@ app-office/abiword				spell latex math -goffice -readline -introspection
 app-office/libreoffice			-gtk
 app-text/evince					postscript
 app-text/ghostscript-gpl		cups
-app-text/mupdf					-opengl -javascript
+#app-text/mupdf					-opengl -javascript
+net-print/libcupsfilters		dbus tiff
 dev-libs/libjcat				gpg pkcs7
 dev-libs/libpcre2				pcre32
 dev-libs/xmlsec					nss

@@ -111,6 +111,7 @@ app-admin/opentofu
 *xfce-extra/thunar-archive-plugin
 *xfce-extra/thunar-media-tags-plugin
 
+*net-print/cups-meta
 
 #*media-video/libva-utils
 #*media-libs/libva-intel-driver
