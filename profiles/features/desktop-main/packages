@@ -110,6 +110,7 @@ app-admin/opentofu
 *x11-misc/redshift
 *xfce-extra/thunar-archive-plugin
 *xfce-extra/thunar-media-tags-plugin
+*gui-apps/mako
 
 *net-print/cups-meta
 
