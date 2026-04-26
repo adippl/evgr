@@ -7,7 +7,7 @@
 
 
 #desktop
-app-admin/pass					dmenu -git
+app-admin/pass					-git
 app-admin/pass-otp				-qrcode
 media-libs/freetype				-harfbuzz
 media-libs/sdl2-ttf				-harfbuzz
