@@ -138,4 +138,4 @@ gui-apps/wev **
 
 media-sound/wiremix **
 
-games-action/prismlauncher ~arm64
+<=games-action/prismlauncher-10 ~arm64
