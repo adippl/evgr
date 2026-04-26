@@ -139,3 +139,4 @@ gui-apps/wev **
 media-sound/wiremix **
 
 <=games-action/prismlauncher-10.0.0 ~arm64
+dev-cpp/tomlplusplus ~arm64
