@@ -68,3 +68,7 @@
 *sys-auth/rtkit
 *media-sound/helvum
 *media-sound/wiremix
+
+*app-emulation/muvm
+*app-emulation/FEX
+*app-emulation/fex-rootfs-gentoo

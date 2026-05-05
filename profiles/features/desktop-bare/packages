@@ -1,4 +1,5 @@
 #system
+*virtual/resolvconf
 *net-dns/openresolv
 *net-fs/nfs-utils
 *net-misc/dhcpcd
