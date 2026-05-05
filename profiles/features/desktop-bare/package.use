@@ -69,7 +69,7 @@ dev-libs/libjcat				gpg pkcs7
 dev-libs/libpcre2				pcre32
 dev-libs/xmlsec					nss
 dev-python/PyQt5				widgets gui multimedia declarative network printsupport sql webchannel dbus
-dev-qt/qtmultimedia				widgets dbus qml -vaapi
+dev-qt/qtmultimedia				widgets vaapi -gstreamer
 dev-qt/qtwebsockets				qml
 dev-qt/qtwebchannel				qml
 dev-qt/qtwebengine				widgets
