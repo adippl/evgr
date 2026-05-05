@@ -13,7 +13,7 @@ USE="${USE} -ldap -smartcard -upnp"
 #USE="${USE} -systemd -vala -pcre -perl"
 USE="${USE} -systemd -pcre -perl"
 
-ACCEPT_LICENSE="linux-fw-redistributable"
+ACCEPT_LICENSE="@FREE linux-fw-redistributable"
 
 GRUB_PLATFORMS="efi-64 pc"
 QEMU_USER_TARGETS="i386 x86_64 arm aarch64"
