@@ -31,7 +31,7 @@ app-containers/docker			btrfs -overlay
 app-emulation/libguestfs		-ocaml 
 app-containers/podman			-fuse btrfs
 sys-block/fio					aio curl
-net-libs/gnutls					pkcs11 tools
+net-libs/gnutls					pkcs11 tools -zstd
 
 
 #k8s
