@@ -16,7 +16,7 @@ USE="${USE} udev elogind -policykit "
 
 INPUT_DEVICES="mouse synaptics keyboard"
 
-ACCEPT_LICENSE="unRAR"
+ACCEPT_LICENSE="${ACCEPT_LICENSE} unRAR"
 
 #PYTHON_TARGETS=" python3_12 python3_13 "
 #PYTHON_TARGETS=" python3_12 "
