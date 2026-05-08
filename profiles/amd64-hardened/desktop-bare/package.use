@@ -378,3 +378,13 @@ app-crypt/p11-kit abi_x86_32
 # required by @system
 # required by @world (argument)
 >=media-libs/giflib-5.2.2 abi_x86_32
+
+# required by net-libs/gnutls-3.8.12-r1::gentoo[post-quantum]
+# required by mail-mta/nullmailer-2.2-r2::evgr
+# required by virtual/mta-1-r2::gentoo
+# required by net-mail/mailutils-3.18::gentoo
+# required by virtual/mailx-4::gentoo
+# required by sys-apps/smartmontools-7.5-r1::gentoo
+# required by @system
+# required by @world (argument)
+>=dev-libs/leancrypto-1.7.2-r3 abi_x86_32
