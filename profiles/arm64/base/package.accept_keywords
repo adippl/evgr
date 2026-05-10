@@ -9,7 +9,7 @@ app-emulation/diskimage-builder ~arm64
 app-office/abiword ~arm64
 dev-python/python-ironicclient ~arm64
 dev-python/python-openstachclient ~arm64
-	dev-python/osc-lib ~arm64
+	#dev-python/osc-lib ~arm64
 	dev-python/python-keystoneclient ~arm64
 	dev-python/python-novaclient ~arm64
 	dev-python/python-cinderclient ~arm64
