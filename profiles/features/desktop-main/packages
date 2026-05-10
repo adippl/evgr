@@ -128,7 +128,7 @@ app-admin/opentofu
 
 *x11-misc/xss-lock
 *net-misc/moonlight
-*dev-java/openjdk-bin:8
-*dev-java/openjdk-bin:17
+#*dev-java/openjdk-bin:8
+#*dev-java/openjdk-bin:17
 *net-im/discord
 *games-action/prismlauncher
