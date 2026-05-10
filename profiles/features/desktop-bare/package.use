@@ -36,6 +36,7 @@ media-sound/pulseaudio-daemon	bluetooth dbus
 www-client/firefox				eme-free -clang dbus
 net-wireless/lorcon 			python
 media-video/pipewire			extra dbus bluetooth
+net-misc/moonlight				-X
 
 
 
