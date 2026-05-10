@@ -2,6 +2,7 @@ sys-devel/gcc -lto -go
 
 # asahi-meta
 dev-lang/rust-bin rust-src
+dev-lang/rust rust-src
 
 # asahi-meta
 sys-kernel/installkernel dracut
