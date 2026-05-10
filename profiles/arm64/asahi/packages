@@ -1,5 +1,7 @@
 *dev-lang/rust-bin
 *sys-kernel/linux-firmware
+*sys-kernel/asahi-sources
+*sys-kernel/asahi-kernel
 *sys-apps/asahi-meta
 *virtual/dist-kernel:asahi
 -*virtual/dist-kernel

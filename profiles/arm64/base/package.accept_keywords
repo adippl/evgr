@@ -139,3 +139,5 @@ gui-apps/wev **
 <=games-action/prismlauncher-10.0.0 ~arm64
 dev-cpp/tomlplusplus ~arm64
 dev-cpp/gulrak-filesystem ~arm64
+
+=net-misc/s3cmd-2.4.0 **

@@ -8,6 +8,7 @@
 *sys-fs/simple-mtpfs
 *sys-kernel/genkernel
 *sys-power/powertop
+*app-backup/restic
 
 # CLI
 *app-admin/pass
@@ -37,6 +38,7 @@
 *net-news/newsboat
 *sys-apps/firejail
 *sys-process/parallel
+*sys-process/btop
 
 # dev
 *app-admin/ansible
@@ -111,7 +113,7 @@ app-admin/opentofu
 *xfce-extra/thunar-archive-plugin
 *xfce-extra/thunar-media-tags-plugin
 *gui-apps/mako
-
+*gui-apps/wev
 *net-print/cups-meta
 
 #*media-video/libva-utils
@@ -125,5 +127,8 @@ app-admin/opentofu
 #*games-simulation/openttd
 
 *x11-misc/xss-lock
-
+*net-misc/moonlight
+*dev-java/openjdk-bin:8
+*dev-java/openjdk-bin:17
 *net-im/discord
+*games-action/prismlauncher

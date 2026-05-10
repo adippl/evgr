@@ -10,7 +10,7 @@
 -*net-analyzer/ettercap		# missing arm64 keyword
 #-*net-analyzer/nethogs		# missing arm64 keyword
 -*net-im/signal-desktop-bin	# missing arm64 keyword
--*net-misc/s3cmd		# missing arm64 keyword
+#-*net-misc/s3cmd		# missing arm64 keyword
 -*sys-apps/btrfs-compsize	# missing arm64 keyword
 -*sys-boot/woeusb-ng		# missing arm64 keyword
 -*sys-fs/fuseiso		# missing arm64 keyword
@@ -53,7 +53,7 @@
 -*x11-drivers/xf86-input-synaptics
 -*x11-drivers/xf86-input-evdev
 
--*www-client/chromium
+#-*www-client/chromium
 -*net-vpn/openvpn
 
 -*virtual/dist-kernel
@@ -62,7 +62,7 @@
 
 -*media-sound/pulseaudio-daemon
 -*media-sound/pulseaudio
--*media-sound/pulsemixer
+*media-sound/pulsemixer
 *media-video/pipewire
 #*sys-apps/speakersafetyd
 *sys-auth/rtkit
