@@ -29,8 +29,8 @@ sys-cluster/kubectl ~arm64
 sys-power/powertop ~arm64
 x11-misc/i3status ~arm64
 x11-terms/rxvt-unicode ~arm64
-x11-themes/numix-icon-theme **
-x11-themes/numix-gtk-theme **
+x11-themes/numix-icon-theme ~arm64
+x11-themes/numix-gtk-theme ~arm64
 xfce-extra/thunar-archive-plugin ~arm64
 xfce-extra/thunar-media-tags-plugin **
 x11-themes/gtk-engines-murrine ~arm64
