@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=!sys-cluster/garage
+DESCRIPTION=garage distributed storage
+EAPI=8
+HOMEPAGE=https://garagehq.deuxfleurs.fr
+LICENSE=AGPL-3
+RDEPEND=!sys-cluster/garage acct-user/garage acct-group/garage
+RESTRICT=strip mirror
+SLOT=0
+SRC_URI=amd64? ( https://garagehq.deuxfleurs.fr/_releases/v0.8.5/x86_64-unknown-linux-musl/garage -> garage-bin-amd64-0.8.5 ) x86? ( https://garagehq.deuxfleurs.fr/_releases/v0.8.5/i686-unknown-linux-musl/garage -> garage-bin-x86-0.8.5 ) arm64? ( https://garagehq.deuxfleurs.fr/_releases/v0.8.5/aarch64-unknown-linux-musl/garage -> garage-bin-arm64-0.8.5 ) arm? ( https://garagehq.deuxfleurs.fr/_releases/v0.8.5/armv6l-unknown-linux-musleabihf/garage -> garage-bin-arm-0.8.5 )
+_md5_=7d86e7bcc98a48cec07fff0ae4dfe64a
