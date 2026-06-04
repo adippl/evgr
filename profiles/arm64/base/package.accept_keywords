@@ -140,7 +140,7 @@ gui-apps/wev **
 dev-cpp/tomlplusplus ~arm64
 dev-cpp/gulrak-filesystem ~arm64
 
-=net-misc/s3cmd-2.4.0 **
+net-misc/s3cmd **
 
 sys-apps/earlyoom ~arm64
 app-portage/pycargoebuild ~arm64
