@@ -143,3 +143,4 @@ dev-cpp/gulrak-filesystem ~arm64
 =net-misc/s3cmd-2.4.0 **
 
 sys-apps/earlyoom ~arm64
+app-portage/pycargoebuild ~arm64
