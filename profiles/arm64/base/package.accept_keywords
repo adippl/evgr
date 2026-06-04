@@ -113,7 +113,7 @@ x11-libs/goffice ~arm64
 ~app-admin/loki-2.8.3 **
 ~sys-cluster/keepalived-2.2.8 **
 ~sys-cluster/minio-bin-2024.08.03 ~arm64
-~net-analyzer/bmon-4.0 **
+~net-analyzer/bmon-4.0 ~arm64
 
 lxde-base/lxappearance ~arm64
 media-video/mkvtoolnix ~arm64
