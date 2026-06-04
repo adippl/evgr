@@ -144,3 +144,9 @@ net-misc/s3cmd **
 
 sys-apps/earlyoom ~arm64
 app-portage/pycargoebuild ~arm64
+
+# required by app-admin/opentofu (argument)
+=app-admin/opentofu-1.10.6 **
+# required by app-admin/opentofu-1.10.6::gentoo
+# required by app-admin/opentofu (argument)
+=dev-go/gox-1.0.1 ~arm64
