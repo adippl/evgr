@@ -4,7 +4,7 @@ USE="${USE} "
 USE="${USE} udev"
 
 #misc
-USE="${USE} icu vim-syntax threads bindist"
+USE="${USE} icu vim-syntax bindist"
 
 #security
 USE="${USE} -ldap -upnp"
