@@ -4,10 +4,10 @@ USE="${USE} "
 USE="${USE} udev"
 
 #misc
-USE="${USE} icu vim-syntax zstd lzma threads bindist"
+USE="${USE} icu vim-syntax threads bindist"
 
 #security
-USE="${USE} -ldap -smartcard -upnp"
+USE="${USE} -ldap -upnp"
 
 #bloat
 #USE="${USE} -systemd -vala -pcre -perl"
