@@ -1,3 +1,6 @@
+# required by muvm
+dev-libs/libkrun ~arm64
+dev-libs/libkrunfw ~arm64
 # required by muvm (argument)
 app-emulation/muvm ~arm64
 
