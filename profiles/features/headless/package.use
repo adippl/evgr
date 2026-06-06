@@ -34,11 +34,11 @@ dev-libs/boost python context
 #for www-apps/cgit
 app-misc/mime-types nginx
 
-#numa
-sys-cluster/ceph numa
-sys-apps/hwloc numa
-app-emulation/qemu numa
-app-emulation/libvirt numa
+##numa
+#sys-cluster/ceph numa
+#sys-apps/hwloc numa
+#app-emulation/qemu numa
+#app-emulation/libvirt numa
 
 
 # required by dev-db/redis-8.0.3::gentoo[jemalloc]
