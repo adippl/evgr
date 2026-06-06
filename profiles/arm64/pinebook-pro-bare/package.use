@@ -1,3 +1,2 @@
-sys-devel/gcc -zstd -lto -go
 app-text/xmlto text
 net-wireless/wpa_supplicant -dbus

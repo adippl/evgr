@@ -1,3 +1,2 @@
-#sys-devel/gcc -zstd -lto -go
 sys-apps/systemd-utils			-boot -kernel-install
 sys-auth/elogind -policykit
