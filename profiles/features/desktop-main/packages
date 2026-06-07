@@ -52,7 +52,7 @@
 *dev-debug/valgrind
 *dev-embedded/u-boot-tools
 *dev-lang/go
-*dev-lang/mono
+#*dev-lang/mono
 *dev-lang/tcc
 *dev-libs/criterion
 *dev-lisp/sbcl
