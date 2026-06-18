@@ -113,7 +113,6 @@ dev-ruby/bundler	-doc
 
 #dev-libs/boost		context python
 dev-libs/boost		context -python -lzma -zstd
-#sys-cluster/ceph	-cephfs -radosgw -sqlite -mgr -parquet
 
 
 

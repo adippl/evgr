@@ -1,5 +1,5 @@
-app-emulation/libvirt		rbd
-app-emulation/qemu			rbd
+#app-emulation/libvirt		rbd
+#app-emulation/qemu			rbd
 
 sys-block/open-iscsi		rdma
 
@@ -34,7 +34,6 @@ dev-libs/boost python context
 app-misc/mime-types nginx
 
 ##numa
-#sys-cluster/ceph numa
 #sys-apps/hwloc numa
 #app-emulation/qemu numa
 #app-emulation/libvirt numa
