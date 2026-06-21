@@ -94,3 +94,5 @@ virtual/rust profiler
 
 # required by app-emulation/FEX-2605::asahi[thunks]
 sys-fs/squashfs-tools zstd
+
+app-admin/eclean-kernel zstd
