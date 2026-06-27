@@ -1,1 +1,7 @@
-COMMON_FLAGS=" -O2 -pipe -mcpu=apple-m1+crc+aes+sha3+fp16"
+COMMON_FLAGS="-O2 -pipe -mcpu=apple-m1+crc+aes+sha3+fp16"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+CHOST="aarch64-unknown-linux-gnu"
+LC_MESSAGES=C.UTF-8
