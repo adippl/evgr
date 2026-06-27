@@ -1,0 +1,1 @@
+COMMON_FLAGS=" -O2 -pipe -mcpu=apple-m1+crc+aes+sha3+fp16"

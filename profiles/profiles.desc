@@ -21,3 +21,4 @@ arm64 arm64/pinebook-pro stable
 arm64 arm64/odroid-hc4 stable
 arm64 arm64/asahi stable
 arm64 arm64/asahi-desktop stable
+arm64 arm64/asahi-m1 exp
