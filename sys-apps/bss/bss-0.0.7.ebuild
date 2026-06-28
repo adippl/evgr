@@ -18,7 +18,7 @@ SRC_URI="https://github.com/adippl/bss/archive/refs/tags/${PV}.tar.gz -> ${PN}-$
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS=""
+KEYWORDS="amd64 arm64"
 
 DOCS=(
 	bsstab
