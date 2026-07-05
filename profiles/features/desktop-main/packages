@@ -66,7 +66,7 @@
 *net-dns/bind-tools
 *net-misc/iperf
 *net-misc/tigervnc
-*sys-apps/btrfs-compsize
+#*sys-apps/btrfs-compsize
 *sys-apps/ipmitool
 *sys-block/fio
 *sys-cluster/kubectl
