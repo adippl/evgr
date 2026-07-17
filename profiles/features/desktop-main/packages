@@ -63,7 +63,7 @@
 *net-analyzer/nmap
 *net-analyzer/wireshark
 *net-dialup/picocom
-*net-dns/bind-tools
+*net-dns/bind
 *net-misc/iperf
 *net-misc/tigervnc
 #*sys-apps/btrfs-compsize
