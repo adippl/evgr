@@ -186,3 +186,18 @@ app-crypt/gcr					-vala
 dev-libs/botan					-lzma
 media-libs/imlib2				-jpegxl
 sys-libs/slang					pcre
+
+
+# freecad
+#
+# required by media-gfx/freecad-1.1.1::gentoo
+# required by =media-gfx/freecad-1.1.1 (argument)
+sci-libs/opencascade json
+# required by media-gfx/freecad-1.1.1::gentoo[gui,python_single_target_python3_14]
+# required by =media-gfx/freecad-1.1.1 (argument)
+dev-python/pyside uitools
+# required by virtual/imagemagick-tools-1::gentoo
+# required by dev-python/matplotlib-3.10.9::gentoo
+# required by media-gfx/freecad-1.1.1::gentoo[gui,python_single_target_python3_14]
+# required by =media-gfx/freecad-1.1.1 (argument)
+media-gfx/imagemagick tiff

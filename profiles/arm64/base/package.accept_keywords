@@ -134,3 +134,49 @@ app-portage/pycargoebuild ~arm64
 app-admin/helm ~arm64
 
 games-util/lgogdownloader **
+
+
+# freecad
+#
+# required by media-gfx/freecad-1.1.1::gentoo
+# required by =media-gfx/freecad-1.1.1 (argument)
+=sci-libs/opencascade-7.8.1-r1 ~arm64
+# required by sci-libs/vtk-9.5.2::gentoo[-minimal]
+# required by media-gfx/freecad-1.1.1::gentoo[-fem,smesh]
+# required by =media-gfx/freecad-1.1.1 (argument)
+=media-libs/libharu-2.4.6 ~arm64
+# required by media-gfx/freecad-1.1.1::gentoo[smesh]
+# required by =media-gfx/freecad-1.1.1 (argument)
+=sci-libs/med-5.0.0 **
+# required by media-libs/coin-4.0.6::gentoo
+# required by media-libs/quarter-1.2.3::gentoo
+# required by dev-python/pivy-0.6.10::gentoo[-test,quarter]
+# required by media-gfx/freecad-1.1.1::gentoo[gui,python_single_target_python3_14]
+# required by =media-gfx/freecad-1.1.1 (argument)
+=media-libs/simage-1.8.4 ~arm64
+# required by dev-python/pivy-0.6.10::gentoo[-test,quarter]
+# required by media-gfx/freecad-1.1.1::gentoo[gui,python_single_target_python3_14]
+# required by =media-gfx/freecad-1.1.1 (argument)
+=media-libs/quarter-1.2.3 **
+# required by media-gfx/freecad-1.1.1::gentoo[python_single_target_python3_14]
+# required by =media-gfx/freecad-1.1.1 (argument)
+=dev-python/pycxx-7.2.1 **
+# required by sci-libs/vtk-9.5.2::gentoo
+# required by media-gfx/freecad-1.1.1::gentoo[-fem,smesh]
+# required by =media-gfx/freecad-1.1.1 (argument)
+=dev-libs/pegtl-3.2.8-r1 ~arm64
+# required by media-gfx/freecad-1.1.1::gentoo[-fem,smesh]
+# required by =media-gfx/freecad-1.1.1 (argument)
+=sci-libs/vtk-9.5.2 ~arm64
+# required by media-gfx/freecad-1.1.1::gentoo[gui,python_single_target_python3_14]
+# required by =media-gfx/freecad-1.1.1 (argument)
+=dev-python/pivy-0.6.10 **
+# required by =media-gfx/freecad-1.1.1 (argument)
+=media-gfx/freecad-1.1.1 **
+# required by media-gfx/freecad-1.1.1::gentoo[gui]
+# required by =media-gfx/freecad-1.1.1 (argument)
+=media-libs/coin-4.0.6 ~arm64
+# required by sci-libs/vtk-9.5.2::gentoo[cgns]
+# required by media-gfx/freecad-1.1.1::gentoo[-fem,smesh]
+# required by =media-gfx/freecad-1.1.1 (argument)
+=sci-libs/cgnslib-4.5.1 ~arm64
