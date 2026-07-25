@@ -52,6 +52,8 @@ app-emulation/virt-manager ~arm64
 	dev-python/libvirt-python ~arm64
 dev-python/setuptools-rust ~arm64
 
+=net-wireless/bluetui-0.8.1 **
+
 www-client/chromium:stable ~arm64
 app-arch/pxz ~arm64
 app-misc/srm ~arm64
@@ -140,43 +142,92 @@ games-util/lgogdownloader **
 #
 # required by media-gfx/freecad-1.1.1::gentoo
 # required by =media-gfx/freecad-1.1.1 (argument)
-=sci-libs/opencascade-7.8.1-r1 ~arm64
+sci-libs/opencascade ~arm64
 # required by sci-libs/vtk-9.5.2::gentoo[-minimal]
 # required by media-gfx/freecad-1.1.1::gentoo[-fem,smesh]
 # required by =media-gfx/freecad-1.1.1 (argument)
-=media-libs/libharu-2.4.6 ~arm64
+media-libs/libharu ~arm64
 # required by media-gfx/freecad-1.1.1::gentoo[smesh]
 # required by =media-gfx/freecad-1.1.1 (argument)
-=sci-libs/med-5.0.0 **
+sci-libs/med **
 # required by media-libs/coin-4.0.6::gentoo
 # required by media-libs/quarter-1.2.3::gentoo
 # required by dev-python/pivy-0.6.10::gentoo[-test,quarter]
 # required by media-gfx/freecad-1.1.1::gentoo[gui,python_single_target_python3_14]
 # required by =media-gfx/freecad-1.1.1 (argument)
-=media-libs/simage-1.8.4 ~arm64
+media-libs/simage ~arm64
 # required by dev-python/pivy-0.6.10::gentoo[-test,quarter]
 # required by media-gfx/freecad-1.1.1::gentoo[gui,python_single_target_python3_14]
 # required by =media-gfx/freecad-1.1.1 (argument)
-=media-libs/quarter-1.2.3 **
+media-libs/quarter **
 # required by media-gfx/freecad-1.1.1::gentoo[python_single_target_python3_14]
 # required by =media-gfx/freecad-1.1.1 (argument)
-=dev-python/pycxx-7.2.1 **
+dev-python/pycxx **
 # required by sci-libs/vtk-9.5.2::gentoo
 # required by media-gfx/freecad-1.1.1::gentoo[-fem,smesh]
 # required by =media-gfx/freecad-1.1.1 (argument)
-=dev-libs/pegtl-3.2.8-r1 ~arm64
+dev-libs/pegtl ~arm64
 # required by media-gfx/freecad-1.1.1::gentoo[-fem,smesh]
 # required by =media-gfx/freecad-1.1.1 (argument)
-=sci-libs/vtk-9.5.2 ~arm64
+sci-libs/vtk ~arm64
 # required by media-gfx/freecad-1.1.1::gentoo[gui,python_single_target_python3_14]
 # required by =media-gfx/freecad-1.1.1 (argument)
-=dev-python/pivy-0.6.10 **
+dev-python/pivy **
 # required by =media-gfx/freecad-1.1.1 (argument)
 =media-gfx/freecad-1.1.1 **
 # required by media-gfx/freecad-1.1.1::gentoo[gui]
 # required by =media-gfx/freecad-1.1.1 (argument)
-=media-libs/coin-4.0.6 ~arm64
+media-libs/coin ~arm64
 # required by sci-libs/vtk-9.5.2::gentoo[cgns]
 # required by media-gfx/freecad-1.1.1::gentoo[-fem,smesh]
 # required by =media-gfx/freecad-1.1.1 (argument)
-=sci-libs/cgnslib-4.5.1 ~arm64
+sci-libs/cgnslib ~arm64
+
+
+# required by sci-ml/caffe2-2.12.0-r2::gentoo
+# required by sci-ml/pytorch-2.12.0::gentoo
+# required by sci-ml/pytorch (argument)
+sci-ml/onnx ~arm64
+# required by dev-libs/sleef-3.9.0::gentoo
+# required by sci-ml/caffe2-2.12.0-r2::gentoo
+# required by sci-ml/pytorch-2.12.0::gentoo
+# required by sci-ml/pytorch (argument)
+dev-cpp/tlfloat ~arm64
+# required by sci-ml/pytorch (argument)
+sci-ml/pytorch ~arm64
+# required by sci-ml/pytorch-2.12.0::gentoo
+# required by sci-ml/pytorch (argument)
+sci-ml/caffe2 ~arm64
+# required by sci-ml/caffe2-2.12.0-r2::gentoo
+# required by sci-ml/pytorch-2.12.0::gentoo
+# required by sci-ml/pytorch (argument)
+dev-libs/pocketfft ~arm64
+# required by sci-ml/caffe2-2.12.0-r2::gentoo
+# required by sci-ml/pytorch-2.12.0::gentoo
+# required by sci-ml/pytorch (argument)
+dev-libs/FXdiv ~arm64
+# required by sci-ml/caffe2-2.12.0-r2::gentoo
+# required by sci-ml/pytorch-2.12.0::gentoo
+# required by sci-ml/pytorch (argument)
+dev-libs/sleef ~arm64
+# required by sci-ml/caffe2-2.12.0-r2::gentoo
+# required by sci-ml/pytorch-2.12.0::gentoo
+# required by sci-ml/pytorch (argument)
+sci-ml/FP16 ~arm64
+# required by sci-ml/caffe2-2.12.0-r2::gentoo
+# required by sci-ml/pytorch-2.12.0::gentoo
+# required by sci-ml/pytorch (argument)
+dev-libs/cpuinfo ~arm64
+
+# required by sci-ml/ollama (argument)
+sci-ml/ollama **
+# required by sci-ml/ollama-0.32.2::gentoo
+# required by sci-ml/ollama (argument)
+sci-ml/ggml ~arm64
+
+# required by =sci-ml/llama-cpp-0_pre10107 (argument)
+sci-ml/llama-cpp-0 ~arm64
+
+=dev-python/python-manilaclient-6.2.0 ~arm64
+# required by =dev-python/python-openstackclient-10.2.1 (argument)
+=dev-python/python-openstackclient-10.2.1 ~arm64
