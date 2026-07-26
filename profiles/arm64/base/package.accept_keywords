@@ -226,7 +226,7 @@ sci-ml/ollama **
 sci-ml/ggml ~arm64
 
 # required by =sci-ml/llama-cpp-0_pre10107 (argument)
-sci-ml/llama-cpp-0 ~arm64
+sci-ml/llama-cpp ~arm64
 
 =dev-python/python-manilaclient-6.2.0 ~arm64
 # required by =dev-python/python-openstackclient-10.2.1 (argument)
