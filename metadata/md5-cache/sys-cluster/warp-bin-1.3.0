@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DESCRIPTION=minio warp s3 benchmarking tool
+EAPI=8
+HOMEPAGE=https://github.com/minio/warp
+KEYWORDS=amd64 arm64
+LICENSE=AGPL-3
+RESTRICT=strip mirror
+SLOT=0
+SRC_URI=amd64? ( https://github.com/minio/warp/releases/download/v1.3.0/warp_Linux_x86_64.tar.gz -> warp-bin-amd64-1.3.0 ) arm64? ( https://github.com/minio/warp/releases/download/v1.3.0/warp_Linux_arm64.tar.gz -> warp-bin-arm64-1.3.0 )
+_md5_=8d6806bcea85d8aef895086f70139b53
