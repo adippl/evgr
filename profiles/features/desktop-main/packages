@@ -145,3 +145,6 @@
 #*dev-java/openjdk-bin:17
 *net-im/discord
 *games-action/prismlauncher
+
+*virtual/old-minecraft-openjdk-bin
+*virtual/orca-slicer-deps
