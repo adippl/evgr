@@ -71,7 +71,16 @@
 *sys-block/fio
 *sys-cluster/kubectl
 *sys-cluster/minikube
-app-admin/opentofu
+*app-admin/opentofu
+*app-admin/helm
+*app-admin/awscli
+*app-benchmarks/stress
+*app-misc/hyfetch
+*app-portage/pycargoebuild
+#*dev-java/openjdk-bin:17
+#*dev-java/openjdk-bin:8
+#*net-libs/webkit-gtk:4.1
+*media-gfx/freecad
 *sys-devel/crossdev
 #*sys-devel/distcc
 *sys-fs/inotify-tools
@@ -115,6 +124,10 @@ app-admin/opentofu
 *gui-apps/mako
 *gui-apps/wev
 *net-print/cups-meta
+*net-misc/ipv6calc
+*net-wireless/bluetui
+*sys-apps/earlyoom
+*sys-apps/ethtool
 
 #*media-video/libva-utils
 #*media-libs/libva-intel-driver

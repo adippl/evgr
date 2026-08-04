@@ -49,7 +49,7 @@
 *xfce-base/thunar
 
 # printing
-net-print/cups
-net-print/cups-meta
-net-print/cups-filters
+*net-print/cups
+*net-print/cups-meta
+*net-print/cups-filters
 
