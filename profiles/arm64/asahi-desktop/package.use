@@ -1,2 +1,3 @@
 sys-apps/systemd-utils			-boot -kernel-install
 sys-auth/elogind -policykit
+sys-apps/asahi-meta mesa
