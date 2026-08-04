@@ -7,6 +7,7 @@
 
 
 #desktop
+gui-apps/swayidle				elogind
 app-admin/pass					-git
 app-admin/pass-otp				-qrcode
 media-libs/freetype				-harfbuzz
