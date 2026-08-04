@@ -14,3 +14,6 @@ app-emulation/fex-rootfs-gentoo ~arm64
 
 # required by games-util/steam::asahi (argument)
 games-util/steam ~arm64
+
+sys-fs/simple-mtpfs **
+sys-boot/woeusb-ng **

@@ -53,3 +53,6 @@
 *net-print/cups-meta
 *net-print/cups-filters
 
+
+# misc
+*app-arch/7zip
