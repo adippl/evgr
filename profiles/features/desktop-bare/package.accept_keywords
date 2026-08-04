@@ -48,3 +48,5 @@ dev-util/scanmem
 games-util/lutris
 dev-python/moddb
 dev-python/pypresence
+
+net-wireless/bluetui
