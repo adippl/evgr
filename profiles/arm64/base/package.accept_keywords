@@ -135,7 +135,7 @@ app-portage/pycargoebuild ~arm64
 
 app-admin/helm ~arm64
 
-<=games-util/lgogdownloader-9999 **
+<games-util/lgogdownloader-9999 **
 
 
 # freecad
