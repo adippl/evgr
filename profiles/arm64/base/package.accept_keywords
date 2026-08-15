@@ -233,3 +233,5 @@ sci-ml/llama-cpp ~arm64
 =dev-python/python-openstackclient-10.2.1 ~arm64
 
 =app-misc/hyfetch-2.0.2 ~arm64
+
+net-misc/ipv6calc **
