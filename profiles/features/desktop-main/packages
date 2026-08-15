@@ -75,7 +75,7 @@
 *app-admin/helm
 *app-admin/awscli
 *app-benchmarks/stress
-*app-misc/hyfetch
+#*app-misc/hyfetch
 *app-portage/pycargoebuild
 #*dev-java/openjdk-bin:17
 #*dev-java/openjdk-bin:8
